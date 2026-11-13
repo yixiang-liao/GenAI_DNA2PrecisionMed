@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="zh-Hant" data-lang="zh">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reference Genome · DNA → Precision Medicine</title>
+<link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="../../index.html">DNA<span>→</span>PM</a>
+  <nav class="topnav"><a href="../../wiki/index.html"><span lang="zh-Hant">Wiki</span><span lang="en">Wiki</span></a><a href="../../wiki/glossary.html"><span lang="zh-Hant">術語詞典</span><span lang="en">Glossary</span></a><a href="../../wiki/graph.html"><span lang="zh-Hant">概念關聯</span><span lang="en">Concept Map</span></a><a href="../../wiki/evidence.html"><span lang="zh-Hant">證據追溯</span><span lang="en">Evidence</span></a><a href="../../slides/index.html"><span lang="zh-Hant">教學簡報</span><span lang="en">Slides</span></a><a href="../../workflow.html"><span lang="zh-Hant">工作流程</span><span lang="en">Workflow</span></a></nav>
+  <button class="lang-toggle" type="button" data-lang-toggle aria-label="Switch language">EN</button>
+</header>
+<main class="wrap">
+
+<p class="crumbs"><a href="../index.html">Wiki</a> / <a href="../index.html#sequencing"><span lang="zh-Hant">定序與變異分析</span><span lang="en">Sequencing &amp; Variant Analysis</span></a></p>
+<article class="concept" data-concept="reference-genome">
+  <h1><span lang="zh-Hant">參考基因體</span><span lang="en">Reference Genome</span></h1>
+  <p class="meta"><span>Concept ID: <code>reference-genome</code></span> · <span>Last Updated: 2026-11-13</span></p>
+  <div class="layers">
+    <section class="card layer-beginner"><h2><span lang="zh-Hant">初學者</span><span lang="en">Beginner</span></h2><p lang="zh-Hant">參考基因體是一本「標準版」說明書。我們把每個人讀到的片段對照它，就能找出哪裡不一樣。</p><p lang="en">A reference genome is a &quot;standard edition&quot; of the book. We compare each person&#x27;s reads against it to find differences.</p></section>
+    <section class="card layer-advanced"><h2><span lang="zh-Hant">進階</span><span lang="en">Advanced</span></h2><p lang="zh-Hant">參考基因體是比對與變異座標的基準。T2T-CHM13（2022）補上舊參考缺少的約 8%，包括著絲粒與近端著絲粒染色體短臂。參考只是座標系統，不代表「正常」或「理想」的人類序列。</p><p lang="en">The reference genome is the coordinate system for alignment and variant calls. T2T-CHM13 (2022) filled the ~8% missing from earlier references, including centromeres and acrocentric short arms. A reference is a coordinate system, not a &quot;normal&quot; human sequence.</p></section>
+  </div>
+  <section class="card"><h2><span lang="zh-Hant">例子</span><span lang="en">Examples</span></h2><ul><li><span lang="zh-Hant">（示意）變異 chr7:1,234,567 G&gt;A 的座標依賴所用的參考版本。</span><span lang="en">(Illustrative) The coordinate of a variant like chr7:1,234,567 G&gt;A depends on the reference build used.</span></li></ul></section>
+  <section class="card"><h2><span lang="zh-Hant">證據</span><span lang="en">Evidence References</span></h2><ul class="claims"><li class="claim" id="claim-C-SEQ-08"><div class="claim-head"><a href="../evidence.html#C-SEQ-08"><code>C-SEQ-08</code></a> <span class="badge badge-single_study"><span lang="zh-Hant">單一研究</span><span lang="en">Single Study Finding</span></span></div><p><span lang="zh-Hant">T2T Consortium 發表完整的 30.55 億鹼基對人類基因體 T2T-CHM13，補上先前參考基因體缺少的約 8%，除 Y 染色體外所有染色體皆無缺口。</span><span lang="en">The T2T Consortium presented T2T-CHM13, a complete 3.055-billion-base-pair human genome that adds the ~8% missing from earlier references, with gapless assemblies for all chromosomes except Y.</span></p><ul class="ev"><li><a href="../papers/S07.html">S07</a> · <span class="loc">Abstract</span> · <a href="../evidence.html#E018">E018</a></li></ul></li></ul></section>
+  
+  <section class="card two-col">
+    <div><h2><span lang="zh-Hant">相關概念</span><span lang="en">Related Concepts</span></h2><ul><li><a href="wgs.html"><span lang="zh-Hant">全基因體定序</span><span lang="en">Whole Genome Sequencing</span></a></li><li><a href="variant-calling.html"><span lang="zh-Hant">變異偵測</span><span lang="en">Variant Calling</span></a></li><li><a href="genetic-variant.html"><span lang="zh-Hant">遺傳變異</span><span lang="en">Genetic Variant</span></a></li></ul></div>
+    <div><h2><span lang="zh-Hant">概念關係</span><span lang="en">Relationships</span></h2><ul class="edges"><li><a href="reference-genome.html">Reference Genome</a> <span class="rel">— coordinate system for →</span> <a href="variant-calling.html">Variant Calling</a></li></ul></div>
+  </section>
+</article>
+</main>
+<footer class="foot">
+  <p lang="zh-Hant">教育用途，非臨床診斷工具。所有 PRS 數值皆為模擬資料。</p><p lang="en">For education only — not a clinical tool. All PRS numbers are simulated.</p>
+</footer>
+<script src="../../assets/js/site.js"></script>
+</body>
+</html>

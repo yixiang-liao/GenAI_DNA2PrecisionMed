@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="zh-Hant" data-lang="zh">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RNA Sequencing · DNA → Precision Medicine</title>
+<link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="../../index.html">DNA<span>→</span>PM</a>
+  <nav class="topnav"><a href="../../wiki/index.html"><span lang="zh-Hant">Wiki</span><span lang="en">Wiki</span></a><a href="../../wiki/glossary.html"><span lang="zh-Hant">術語詞典</span><span lang="en">Glossary</span></a><a href="../../wiki/graph.html"><span lang="zh-Hant">概念關聯</span><span lang="en">Concept Map</span></a><a href="../../wiki/evidence.html"><span lang="zh-Hant">證據追溯</span><span lang="en">Evidence</span></a><a href="../../slides/index.html"><span lang="zh-Hant">教學簡報</span><span lang="en">Slides</span></a><a href="../../workflow.html"><span lang="zh-Hant">工作流程</span><span lang="en">Workflow</span></a></nav>
+  <button class="lang-toggle" type="button" data-lang-toggle aria-label="Switch language">EN</button>
+</header>
+<main class="wrap">
+
+<p class="crumbs"><a href="../index.html">Wiki</a> / <a href="../index.html#transcriptomics"><span lang="zh-Hant">轉錄體學</span><span lang="en">Transcriptomics</span></a></p>
+<article class="concept" data-concept="rna-seq">
+  <h1><span lang="zh-Hant">RNA 定序</span><span lang="en">RNA Sequencing</span> <span class="abbr">(RNA-seq)</span></h1>
+  <p class="meta"><span>Concept ID: <code>rna-seq</code></span> · <span>Last Updated: 2026-11-13</span></p>
+  <div class="layers">
+    <section class="card layer-beginner"><h2><span lang="zh-Hant">初學者</span><span lang="en">Beginner</span></h2><p lang="zh-Hant">RNA-seq 把細胞裡的 RNA 抓出來定序，數一數每個基因的「影印本」有幾份，就知道哪些基因正在忙。</p><p lang="en">RNA-seq sequences the RNA in cells and counts the &quot;photocopies&quot; of each gene, revealing which genes are busy.</p></section>
+    <section class="card layer-advanced"><h2><span lang="zh-Hant">進階</span><span lang="en">Advanced</span></h2><p lang="zh-Hant">流程：RNA 萃取 → 建庫（如 poly-A 選擇）→ 定序 → 品質控制 → 比對或 pseudo-alignment → 定量 → 差異表現／剪接／功能分析／eQTL。沒有一條流程適用所有研究；RNA-seq 也不是做完 WGS 才能做的下一步。</p><p lang="en">Workflow: RNA extraction → library prep (e.g. poly-A selection) → sequencing → QC → alignment or pseudo-alignment → quantification → differential expression / splicing / functional analysis / eQTL. No single pipeline fits all studies, and RNA-seq is not a step that requires WGS first.</p></section>
+  </div>
+  <section class="card"><h2><span lang="zh-Hant">例子</span><span lang="en">Examples</span></h2><ul><li><span lang="zh-Hant">比較藥物處理前後的細胞，看哪些基因表現上升。</span><span lang="en">Compare cells before and after drug treatment to see which genes go up.</span></li></ul></section>
+  <section class="card"><h2><span lang="zh-Hant">證據</span><span lang="en">Evidence References</span></h2><ul class="claims"><li class="claim" id="claim-C-TX-01"><div class="claim-head"><a href="../evidence.html#C-TX-01"><code>C-TX-01</code></a> <span class="badge badge-consensus"><span lang="zh-Hant">共識</span><span lang="en">Consensus</span></span></div><p><span lang="zh-Hant">RNA-seq 以深度定序技術分析轉錄體，相較其他方法能更精確測量轉錄本及其 isoform 的量。</span><span lang="en">RNA-seq profiles the transcriptome with deep-sequencing technologies and measures transcript and isoform levels more precisely than other methods.</span></p><ul class="ev"><li><a href="../papers/S08.html">S08</a> · <span class="loc">Abstract</span> · <a href="../evidence.html#E020">E020</a></li></ul></li><li class="claim" id="claim-C-TX-02"><div class="claim-head"><a href="../evidence.html#C-TX-02"><code>C-TX-02</code></a> <span class="badge badge-consensus"><span lang="zh-Hant">共識</span><span lang="en">Consensus</span></span></div><p><span lang="zh-Hant">沒有一條 RNA-seq 分析流程適用所有情境；主要步驟包含實驗設計、品質控制、比對、定量、差異表現、選擇性剪接、功能分析與 eQTL mapping 等。</span><span lang="en">No single RNA-seq analysis pipeline fits all cases; major steps include experimental design, quality control, alignment, quantification, differential expression, alternative splicing, functional analysis and eQTL mapping.</span></p><ul class="ev"><li><a href="../papers/S09.html">S09</a> · <span class="loc">Abstract</span> · <a href="../evidence.html#E021">E021</a></li></ul></li></ul></section>
+  
+  <section class="card two-col">
+    <div><h2><span lang="zh-Hant">相關概念</span><span lang="en">Related Concepts</span></h2><ul><li><a href="gene-expression.html"><span lang="zh-Hant">基因表現</span><span lang="en">Gene Expression</span></a></li><li><a href="tpm.html"><span lang="zh-Hant">每百萬轉錄本數</span><span lang="en">Transcripts Per Million</span></a></li><li><a href="differential-expression.html"><span lang="zh-Hant">差異基因表現分析</span><span lang="en">Differential Gene Expression</span></a></li><li><a href="ngs.html"><span lang="zh-Hant">次世代定序</span><span lang="en">Next-Generation Sequencing</span></a></li></ul></div>
+    <div><h2><span lang="zh-Hant">概念關係</span><span lang="en">Relationships</span></h2><ul class="edges"><li><a href="ngs.html">Next-Generation Sequencing</a> <span class="rel">— enables →</span> <a href="rna-seq.html">RNA Sequencing</a></li><li><a href="rna-seq.html">RNA Sequencing</a> <span class="rel">— measures →</span> <a href="gene-expression.html">Gene Expression</a></li><li><a href="rna-seq.html">RNA Sequencing</a> <span class="rel">— produces →</span> <a href="expression-matrix.html">Gene Expression Matrix</a></li></ul></div>
+  </section>
+</article>
+</main>
+<footer class="foot">
+  <p lang="zh-Hant">教育用途，非臨床診斷工具。所有 PRS 數值皆為模擬資料。</p><p lang="en">For education only — not a clinical tool. All PRS numbers are simulated.</p>
+</footer>
+<script src="../../assets/js/site.js"></script>
+</body>
+</html>

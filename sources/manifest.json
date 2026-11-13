@@ -1,0 +1,759 @@
+{
+  "sources": [
+    {
+      "id": "S01",
+      "title": "Talking Glossary of Genomic and Genetic Terms",
+      "authors": "National Human Genome Research Institute (NHGRI), NIH",
+      "year": 2026,
+      "type": "official_document",
+      "doi": null,
+      "url": "https://www.genome.gov/genetics-glossary",
+      "topics": [
+        "molecular",
+        "sequencing",
+        "gwas"
+      ],
+      "batch": 1,
+      "ingestion_status": "verified",
+      "access_date": "2026-11-13",
+      "notes": "Official NIH glossary; used for basic definitions (DNA, gene, locus, allele, SNP, genotype, phenotype). Year = access year (living document).",
+      "verification": {
+        "resolver": "http",
+        "http_status": 200,
+        "resolved_title": "Talking Glossary of Genetic Terms | NHGRI",
+        "checked_at": "2026-11-13T09:57:12+09:00",
+        "errors": []
+      }
+    },
+    {
+      "id": "S02",
+      "title": "MedlinePlus Genetics: Help Me Understand Genetics",
+      "authors": "U.S. National Library of Medicine, NIH",
+      "year": 2026,
+      "type": "official_document",
+      "doi": null,
+      "url": "https://medlineplus.gov/genetics/understanding/",
+      "topics": [
+        "molecular",
+        "precision"
+      ],
+      "batch": 1,
+      "ingestion_status": "verified",
+      "access_date": "2026-11-13",
+      "notes": "Official NIH consumer-level primer; chromosomes, mutations (germline vs somatic), precision medicine.",
+      "verification": {
+        "resolver": "http",
+        "http_status": 200,
+        "resolved_title": "Help Me Understand Genetics: MedlinePlus Genetics",
+        "checked_at": "2026-11-13T09:57:12+09:00",
+        "errors": []
+      }
+    },
+    {
+      "id": "S03",
+      "title": "Coming of age: ten years of next-generation sequencing technologies",
+      "authors": "Goodwin S, McPherson JD, McCombie WR",
+      "year": 2016,
+      "type": "journal_article",
+      "doi": "10.1038/nrg.2016.49",
+      "url": null,
+      "topics": [
+        "sequencing"
+      ],
+      "batch": 1,
+      "ingestion_status": "verified",
+      "access_date": "2026-11-13",
+      "notes": "Review of NGS platforms (short- and long-read).",
+      "verification": {
+        "resolver": "crossref",
+        "http_status": 200,
+        "resolved_title": "Coming of age: ten years of next-generation sequencing technologies",
+        "resolved_year": 2016,
+        "resolved_container": "Nature Reviews Genetics",
+        "title_similarity": 1.0,
+        "pmid": "27184599",
+        "checked_at": "2026-11-13T09:57:12+09:00",
+        "errors": []
+      }
+    },
+    {
+      "id": "S04",
+      "title": "The variant call format and VCFtools",
+      "authors": "Danecek P, Auton A, Abecasis G, et al.",
+      "year": 2011,
+      "type": "journal_article",
+      "doi": "10.1093/bioinformatics/btr330",
+      "url": null,
+      "topics": [
+        "sequencing"
+      ],
+      "batch": 1,
+      "ingestion_status": "verified",
+      "access_date": "2026-11-13",
+      "notes": "Defines VCF.",
+      "verification": {
+        "resolver": "crossref",
+        "http_status": 200,
+        "resolved_title": "The variant call format and VCFtools",
+        "resolved_year": 2011,
+        "resolved_container": "Bioinformatics",
+        "title_similarity": 1.0,
+        "pmid": "21653522",
+        "checked_at": "2026-11-13T09:57:12+09:00",
+        "errors": []
+      }
+    },
+    {
+      "id": "S05",
+      "title": "The Genome Analysis Toolkit: a MapReduce framework for analyzing next-generation DNA sequencing data",
+      "authors": "McKenna A, Hanna M, Banks E, et al.",
+      "year": 2010,
+      "type": "journal_article",
+      "doi": "10.1101/gr.107524.110",
+      "url": null,
+      "topics": [
+        "sequencing"
+      ],
+      "batch": 1,
+      "ingestion_status": "verified",
+      "access_date": "2026-11-13",
+      "notes": "GATK; variant calling framework.",
+      "verification": {
+        "resolver": "crossref",
+        "http_status": 200,
+        "resolved_title": "The Genome Analysis Toolkit: A MapReduce framework for analyzing next-generation DNA sequencing data",
+        "resolved_year": 2010,
+        "resolved_container": "Genome Research",
+        "title_similarity": 1.0,
+        "pmid": "20644199",
+        "checked_at": "2026-11-13T09:57:12+09:00",
+        "errors": []
+      }
+    },
+    {
+      "id": "S06",
+      "title": "A global reference for human genetic variation",
+      "authors": "The 1000 Genomes Project Consortium",
+      "year": 2015,
+      "type": "journal_article",
+      "doi": "10.1038/nature15393",
+      "url": null,
+      "topics": [
+        "molecular",
+        "sequencing",
+        "gwas"
+      ],
+      "batch": 2,
+      "ingestion_status": "verified",
+      "access_date": "2026-11-13",
+      "notes": "2,504 genomes from 26 populations; reference panel for variation and imputation.",
+      "verification": {
+        "resolver": "crossref",
+        "http_status": 200,
+        "resolved_title": "A global reference for human genetic variation",
+        "resolved_year": 2015,
+        "resolved_container": "Nature",
+        "title_similarity": 1.0,
+        "pmid": "26432245",
+        "checked_at": "2026-11-13T09:57:26+09:00",
+        "errors": []
+      }
+    },
+    {
+      "id": "S07",
+      "title": "The complete sequence of a human genome",
+      "authors": "Nurk S, Koren S, Rhie A, et al.",
+      "year": 2022,
+      "type": "journal_article",
+      "doi": "10.1126/science.abj6987",
+      "url": null,
+      "topics": [
+        "molecular",
+        "sequencing"
+      ],
+      "batch": 2,
+      "ingestion_status": "verified",
+      "access_date": "2026-11-13",
+      "notes": "T2T-CHM13 gap-free assembly.",
+      "verification": {
+        "resolver": "crossref",
+        "http_status": 200,
+        "resolved_title": "The complete sequence of a human genome",
+        "resolved_year": 2022,
+        "resolved_container": "Science",
+        "title_similarity": 1.0,
+        "pmid": "35357919",
+        "checked_at": "2026-11-13T09:57:26+09:00",
+        "errors": []
+      }
+    },
+    {
+      "id": "S08",
+      "title": "RNA-Seq: a revolutionary tool for transcriptomics",
+      "authors": "Wang Z, Gerstein M, Snyder M",
+      "year": 2009,
+      "type": "journal_article",
+      "doi": "10.1038/nrg2484",
+      "url": null,
+      "topics": [
+        "transcriptomics"
+      ],
+      "batch": 2,
+      "ingestion_status": "verified",
+      "access_date": "2026-11-13",
+      "notes": "Classic RNA-seq review.",
+      "verification": {
+        "resolver": "crossref",
+        "http_status": 200,
+        "resolved_title": "RNA-Seq: a revolutionary tool for transcriptomics",
+        "resolved_year": 2009,
+        "resolved_container": "Nature Reviews Genetics",
+        "title_similarity": 1.0,
+        "pmid": "19015660",
+        "checked_at": "2026-11-13T09:57:26+09:00",
+        "errors": []
+      }
+    },
+    {
+      "id": "S09",
+      "title": "A survey of best practices for RNA-seq data analysis",
+      "authors": "Conesa A, Madrigal P, Tarazona S, et al.",
+      "year": 2016,
+      "type": "journal_article",
+      "doi": "10.1186/s13059-016-0881-8",
+      "url": null,
+      "topics": [
+        "transcriptomics",
+        "multiomics"
+      ],
+      "batch": 2,
+      "ingestion_status": "verified",
+      "access_date": "2026-11-13",
+      "notes": "Design, QC, quantification, DE, integration with other data.",
+      "verification": {
+        "resolver": "crossref",
+        "http_status": 200,
+        "resolved_title": "A survey of best practices for RNA-seq data analysis",
+        "resolved_year": 2016,
+        "resolved_container": "Genome Biology",
+        "title_similarity": 1.0,
+        "pmid": "26813401",
+        "checked_at": "2026-11-13T09:57:26+09:00",
+        "errors": []
+      }
+    },
+    {
+      "id": "S10",
+      "title": "Measurement of mRNA abundance using RNA-seq data: RPKM measure is inconsistent among samples",
+      "authors": "Wagner GP, Kin K, Lynch VJ",
+      "year": 2012,
+      "type": "journal_article",
+      "doi": "10.1007/s12064-012-0162-3",
+      "url": null,
+      "topics": [
+        "transcriptomics"
+      ],
+      "batch": 2,
+      "ingestion_status": "verified",
+      "access_date": "2026-11-13",
+      "notes": "Introduces TPM rationale.",
+      "verification": {
+        "resolver": "crossref",
+        "http_status": 200,
+        "resolved_title": "Measurement of mRNA abundance using RNA-seq data: RPKM measure is inconsistent among samples",
+        "resolved_year": 2012,
+        "resolved_container": "Theory in Biosciences",
+        "title_similarity": 1.0,
+        "pmid": "22872506",
+        "checked_at": "2026-11-13T09:57:26+09:00",
+        "errors": []
+      }
+    },
+    {
+      "id": "S11",
+      "title": "Moderated estimation of fold change and dispersion for RNA-seq data with DESeq2",
+      "authors": "Love MI, Huber W, Anders S",
+      "year": 2014,
+      "type": "journal_article",
+      "doi": "10.1186/s13059-014-0550-8",
+      "url": null,
+      "topics": [
+        "transcriptomics"
+      ],
+      "batch": 3,
+      "ingestion_status": "verified",
+      "access_date": "2026-11-13",
+      "notes": "Differential expression with count models.",
+      "verification": {
+        "resolver": "crossref",
+        "http_status": 200,
+        "resolved_title": "Moderated estimation of fold change and dispersion for RNA-seq data with DESeq2",
+        "resolved_year": 2014,
+        "resolved_years": {
+          "issued": 2014,
+          "published-online": 2014
+        },
+        "resolved_container": "Genome Biology",
+        "title_similarity": 1.0,
+        "pmid": "25516281",
+        "checked_at": "2026-11-13T10:00:16+09:00",
+        "errors": []
+      }
+    },
+    {
+      "id": "S12",
+      "title": "Genome-wide association studies",
+      "authors": "Uffelmann E, Huang QQ, Munung NS, et al.",
+      "year": 2021,
+      "type": "journal_article",
+      "doi": "10.1038/s43586-021-00056-9",
+      "url": null,
+      "topics": [
+        "gwas",
+        "prs"
+      ],
+      "batch": 3,
+      "ingestion_status": "verified",
+      "access_date": "2026-11-13",
+      "notes": "Nature Reviews Methods Primers on GWAS.",
+      "verification": {
+        "resolver": "crossref",
+        "http_status": 200,
+        "resolved_title": "Genome-wide association studies",
+        "resolved_year": 2021,
+        "resolved_years": {
+          "issued": 2021,
+          "published-online": 2021
+        },
+        "resolved_container": "Nature Reviews Methods Primers",
+        "title_similarity": 1.0,
+        "pmid": "openalex",
+        "checked_at": "2026-11-13T10:00:16+09:00",
+        "errors": []
+      }
+    },
+    {
+      "id": "S13",
+      "title": "10 Years of GWAS Discovery: Biology, Function, and Translation",
+      "authors": "Visscher PM, Wray NR, Zhang Q, et al.",
+      "year": 2017,
+      "type": "journal_article",
+      "doi": "10.1016/j.ajhg.2017.06.005",
+      "url": null,
+      "topics": [
+        "gwas",
+        "prs"
+      ],
+      "batch": 3,
+      "ingestion_status": "verified",
+      "access_date": "2026-11-13",
+      "notes": "Review of GWAS findings and translation.",
+      "verification": {
+        "resolver": "crossref",
+        "http_status": 200,
+        "resolved_title": "10 Years of GWAS Discovery: Biology, Function, and Translation",
+        "resolved_year": 2017,
+        "resolved_years": {
+          "issued": 2017,
+          "published-print": 2017
+        },
+        "resolved_container": "The American Journal of Human Genetics",
+        "title_similarity": 1.0,
+        "pmid": "28686856",
+        "checked_at": "2026-11-13T10:00:16+09:00",
+        "errors": []
+      }
+    },
+    {
+      "id": "S14",
+      "title": "Linkage disequilibrium — understanding the evolutionary past and mapping the medical future",
+      "authors": "Slatkin M",
+      "year": 2008,
+      "type": "journal_article",
+      "doi": "10.1038/nrg2361",
+      "url": null,
+      "topics": [
+        "gwas"
+      ],
+      "batch": 3,
+      "ingestion_status": "verified",
+      "access_date": "2026-11-13",
+      "notes": "LD review.",
+      "verification": {
+        "resolver": "crossref",
+        "http_status": 200,
+        "resolved_title": "Linkage disequilibrium — understanding the evolutionary past and mapping the medical future",
+        "resolved_year": 2008,
+        "resolved_years": {
+          "issued": 2008,
+          "published-print": 2008
+        },
+        "resolved_container": "Nature Reviews Genetics",
+        "title_similarity": 1.0,
+        "pmid": "18427557",
+        "checked_at": "2026-11-13T10:00:16+09:00",
+        "errors": []
+      }
+    },
+    {
+      "id": "S15",
+      "title": "The NHGRI-EBI GWAS Catalog: knowledgebase and deposition resource",
+      "authors": "Sollis E, Mosaku A, Abid A, et al.",
+      "year": 2023,
+      "type": "database",
+      "doi": "10.1093/nar/gkac1010",
+      "url": null,
+      "topics": [
+        "gwas"
+      ],
+      "batch": 3,
+      "ingestion_status": "verified",
+      "access_date": "2026-11-13",
+      "notes": "EMBL-EBI / NHGRI curated GWAS database.",
+      "verification": {
+        "resolver": "crossref",
+        "http_status": 200,
+        "resolved_title": "The NHGRI-EBI GWAS Catalog: knowledgebase and deposition resource",
+        "resolved_year": 2022,
+        "resolved_years": {
+          "issued": 2022,
+          "published-print": 2023,
+          "published-online": 2022
+        },
+        "resolved_container": "Nucleic Acids Research",
+        "title_similarity": 1.0,
+        "pmid": "36350656",
+        "checked_at": "2026-11-13T10:00:16+09:00",
+        "errors": []
+      }
+    },
+    {
+      "id": "S16",
+      "title": "Tutorial: a guide to performing polygenic risk score analyses",
+      "authors": "Choi SW, Mak TSH, O'Reilly PF",
+      "year": 2020,
+      "type": "journal_article",
+      "doi": "10.1038/s41596-020-0353-1",
+      "url": null,
+      "topics": [
+        "prs"
+      ],
+      "batch": 4,
+      "ingestion_status": "verified",
+      "access_date": "2026-11-13",
+      "notes": "PRS methods: base/target data, QC, clumping+thresholding, validation.",
+      "verification": {
+        "resolver": "crossref",
+        "http_status": 200,
+        "resolved_title": "Tutorial: a guide to performing polygenic risk score analyses",
+        "resolved_year": 2020,
+        "resolved_years": {
+          "issued": 2020,
+          "published-print": 2020,
+          "published-online": 2020
+        },
+        "resolved_container": "Nature Protocols",
+        "title_similarity": 1.0,
+        "pmid": "32709988",
+        "checked_at": "2026-11-13T09:58:15+09:00",
+        "errors": []
+      }
+    },
+    {
+      "id": "S17",
+      "title": "The personal and clinical utility of polygenic risk scores",
+      "authors": "Torkamani A, Wineinger NE, Topol EJ",
+      "year": 2018,
+      "type": "journal_article",
+      "doi": "10.1038/s41576-018-0018-x",
+      "url": null,
+      "topics": [
+        "prs",
+        "precision"
+      ],
+      "batch": 4,
+      "ingestion_status": "verified",
+      "access_date": "2026-11-13",
+      "notes": "Review of PRS utility and limitations.",
+      "verification": {
+        "resolver": "crossref",
+        "http_status": 200,
+        "resolved_title": "The personal and clinical utility of polygenic risk scores",
+        "resolved_year": 2018,
+        "resolved_years": {
+          "issued": 2018,
+          "published-print": 2018,
+          "published-online": 2018
+        },
+        "resolved_container": "Nature Reviews Genetics",
+        "title_similarity": 1.0,
+        "pmid": "29789686",
+        "checked_at": "2026-11-13T09:58:15+09:00",
+        "errors": []
+      }
+    },
+    {
+      "id": "S18",
+      "title": "Clinical use of current polygenic risk scores may exacerbate health disparities",
+      "authors": "Martin AR, Kanai M, Kamatani Y, et al.",
+      "year": 2019,
+      "type": "journal_article",
+      "doi": "10.1038/s41588-019-0379-x",
+      "url": null,
+      "topics": [
+        "prs",
+        "precision",
+        "gwas"
+      ],
+      "batch": 4,
+      "ingestion_status": "verified",
+      "access_date": "2026-11-13",
+      "notes": "PRS accuracy drops in non-European ancestries.",
+      "verification": {
+        "resolver": "crossref",
+        "http_status": 200,
+        "resolved_title": "Clinical use of current polygenic risk scores may exacerbate health disparities",
+        "resolved_year": 2019,
+        "resolved_years": {
+          "issued": 2019,
+          "published-print": 2019,
+          "published-online": 2019
+        },
+        "resolved_container": "Nature Genetics",
+        "title_similarity": 1.0,
+        "pmid": "30926966",
+        "checked_at": "2026-11-13T09:58:15+09:00",
+        "errors": []
+      }
+    },
+    {
+      "id": "S19",
+      "title": "The Polygenic Score Catalog as an open database for reproducibility and systematic evaluation",
+      "authors": "Lambert SA, Gil L, Jupp S, et al.",
+      "year": 2021,
+      "type": "database",
+      "doi": "10.1038/s41588-021-00783-5",
+      "url": null,
+      "topics": [
+        "prs"
+      ],
+      "batch": 4,
+      "ingestion_status": "verified",
+      "access_date": "2026-11-13",
+      "notes": "PGS Catalog (EMBL-EBI).",
+      "verification": {
+        "resolver": "crossref",
+        "http_status": 200,
+        "resolved_title": "The Polygenic Score Catalog as an open database for reproducibility and systematic evaluation",
+        "resolved_year": 2021,
+        "resolved_years": {
+          "issued": 2021,
+          "published-print": 2021,
+          "published-online": 2021
+        },
+        "resolved_container": "Nature Genetics",
+        "title_similarity": 1.0,
+        "pmid": "33692568",
+        "checked_at": "2026-11-13T09:58:15+09:00",
+        "errors": []
+      }
+    },
+    {
+      "id": "S20",
+      "title": "Genome-wide polygenic scores for common diseases identify individuals with risk equivalent to monogenic mutations",
+      "authors": "Khera AV, Chaffin M, Aragam KG, et al.",
+      "year": 2018,
+      "type": "journal_article",
+      "doi": "10.1038/s41588-018-0183-z",
+      "url": null,
+      "topics": [
+        "prs",
+        "precision"
+      ],
+      "batch": 4,
+      "ingestion_status": "verified",
+      "access_date": "2026-11-13",
+      "notes": "UK Biobank genome-wide PRS for 5 diseases.",
+      "verification": {
+        "resolver": "crossref",
+        "http_status": 200,
+        "resolved_title": "Genome-wide polygenic scores for common diseases identify individuals with risk equivalent to monogenic mutations",
+        "resolved_year": 2018,
+        "resolved_years": {
+          "issued": 2018,
+          "published-print": 2018,
+          "published-online": 2018
+        },
+        "resolved_container": "Nature Genetics",
+        "title_similarity": 1.0,
+        "pmid": "30104762",
+        "checked_at": "2026-11-13T09:58:15+09:00",
+        "errors": []
+      }
+    },
+    {
+      "id": "S21",
+      "title": "Multi-omics approaches to disease",
+      "authors": "Hasin Y, Seldin M, Lusis A",
+      "year": 2017,
+      "type": "journal_article",
+      "doi": "10.1186/s13059-017-1215-1",
+      "url": null,
+      "topics": [
+        "multiomics",
+        "precision"
+      ],
+      "batch": 5,
+      "ingestion_status": "verified",
+      "access_date": "2026-11-13",
+      "notes": "Review of multi-omics integration strategies.",
+      "verification": {
+        "resolver": "crossref",
+        "http_status": 200,
+        "resolved_title": "Multi-omics approaches to disease",
+        "resolved_year": 2017,
+        "resolved_years": {
+          "issued": 2017,
+          "published-print": 2017,
+          "published-online": 2017
+        },
+        "resolved_container": "Genome Biology",
+        "title_similarity": 1.0,
+        "pmid": "28476144",
+        "checked_at": "2026-11-13T09:58:27+09:00",
+        "errors": []
+      }
+    },
+    {
+      "id": "S22",
+      "title": "The Cancer Genome Atlas Pan-Cancer analysis project",
+      "authors": "The Cancer Genome Atlas Research Network; Weinstein JN, Collisson EA, et al.",
+      "year": 2013,
+      "type": "journal_article",
+      "doi": "10.1038/ng.2764",
+      "url": null,
+      "topics": [
+        "multiomics",
+        "precision",
+        "sequencing"
+      ],
+      "batch": 5,
+      "ingestion_status": "verified",
+      "access_date": "2026-11-13",
+      "notes": "TCGA Pan-Cancer: multi-platform molecular profiling across tumor types.",
+      "verification": {
+        "resolver": "crossref",
+        "http_status": 200,
+        "resolved_title": "The Cancer Genome Atlas Pan-Cancer analysis project",
+        "resolved_year": 2013,
+        "resolved_years": {
+          "issued": 2013,
+          "published-print": 2013,
+          "published-online": 2013
+        },
+        "resolved_container": "Nature Genetics",
+        "title_similarity": 1.0,
+        "pmid": "24071849",
+        "checked_at": "2026-11-13T09:58:27+09:00",
+        "errors": []
+      }
+    },
+    {
+      "id": "S23",
+      "title": "A New Initiative on Precision Medicine",
+      "authors": "Collins FS, Varmus H",
+      "year": 2015,
+      "type": "journal_article",
+      "doi": "10.1056/NEJMp1500523",
+      "url": null,
+      "topics": [
+        "precision"
+      ],
+      "batch": 5,
+      "ingestion_status": "verified",
+      "access_date": "2026-11-13",
+      "notes": "NIH Precision Medicine Initiative; cancer near-term focus.",
+      "verification": {
+        "resolver": "crossref",
+        "http_status": 200,
+        "resolved_title": "A New Initiative on Precision Medicine",
+        "resolved_year": 2015,
+        "resolved_years": {
+          "issued": 2015,
+          "published-print": 2015
+        },
+        "resolved_container": "New England Journal of Medicine",
+        "title_similarity": 1.0,
+        "pmid": "25635347",
+        "checked_at": "2026-11-13T09:58:27+09:00",
+        "errors": []
+      }
+    },
+    {
+      "id": "S24",
+      "title": "Genomics is failing on diversity",
+      "authors": "Popejoy AB, Fullerton SM",
+      "year": 2016,
+      "type": "journal_article",
+      "doi": "10.1038/538161a",
+      "url": null,
+      "topics": [
+        "gwas",
+        "precision",
+        "prs"
+      ],
+      "batch": 5,
+      "ingestion_status": "verified",
+      "access_date": "2026-11-13",
+      "notes": "Ancestry composition of GWAS participants.",
+      "verification": {
+        "resolver": "crossref",
+        "http_status": 200,
+        "resolved_title": "Genomics is failing on diversity",
+        "resolved_year": 2016,
+        "resolved_years": {
+          "issued": 2016,
+          "published-print": 2016,
+          "published-online": 2016
+        },
+        "resolved_container": "Nature",
+        "title_similarity": 1.0,
+        "pmid": "27734877",
+        "checked_at": "2026-11-13T09:58:27+09:00",
+        "errors": []
+      }
+    },
+    {
+      "id": "S25",
+      "title": "Standards and guidelines for the interpretation of sequence variants: a joint consensus recommendation of the American College of Medical Genetics and Genomics and the Association for Molecular Pathology",
+      "authors": "Richards S, Aziz N, Bale S, et al.",
+      "year": 2015,
+      "type": "journal_article",
+      "doi": "10.1038/gim.2015.30",
+      "url": null,
+      "topics": [
+        "sequencing",
+        "precision"
+      ],
+      "batch": 5,
+      "ingestion_status": "verified",
+      "access_date": "2026-11-13",
+      "notes": "ACMG/AMP 5-tier variant classification.",
+      "verification": {
+        "resolver": "crossref",
+        "http_status": 200,
+        "resolved_title": "Standards and guidelines for the interpretation of sequence variants: a joint consensus recommendation of the American College of Medical Genetics and Genomics and the Association for Molecular Pathology",
+        "resolved_year": 2015,
+        "resolved_years": {
+          "issued": 2015,
+          "published-print": 2015
+        },
+        "resolved_container": "Genetics in Medicine",
+        "title_similarity": 1.0,
+        "pmid": "25741868",
+        "checked_at": "2026-11-13T09:58:27+09:00",
+        "errors": []
+      }
+    }
+  ]
+}

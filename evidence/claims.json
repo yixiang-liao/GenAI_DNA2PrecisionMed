@@ -1,0 +1,1172 @@
+{
+  "claims": [
+    {
+      "id": "C-MOL-01",
+      "concept_id": "dna",
+      "classification": "consensus",
+      "status": "verified",
+      "text": {
+        "zh": "DNA 是攜帶遺傳資訊的分子，由 A、C、G、T 四種鹼基組成；A 與 T 配對、C 與 G 配對。",
+        "en": "DNA is the molecule that carries genetic information; it uses four bases (A, C, G, T), with A pairing with T and C pairing with G."
+      },
+      "evidence": [
+        {
+          "id": "E001",
+          "source_id": "S01",
+          "location": "Glossary entry \"Deoxyribonucleic Acid (DNA)\""
+        }
+      ],
+      "related_slide_ids": []
+    },
+    {
+      "id": "C-MOL-02",
+      "concept_id": "rna",
+      "classification": "consensus",
+      "status": "verified",
+      "text": {
+        "zh": "RNA 與 DNA 結構相似，但多為單股、骨架使用核糖（ribose），並以尿嘧啶（U）取代胸腺嘧啶（T）；細胞中有 mRNA、rRNA、tRNA 等，部分 RNA 參與基因表現調控。",
+        "en": "RNA resembles DNA but is most often single-stranded, uses ribose instead of deoxyribose, and uses uracil (U) instead of thymine (T); cells contain mRNA, rRNA and tRNA, and some RNAs regulate gene expression."
+      },
+      "evidence": [
+        {
+          "id": "E002",
+          "source_id": "S01",
+          "location": "Glossary entry \"Ribonucleic Acid (RNA)\""
+        }
+      ],
+      "related_slide_ids": []
+    },
+    {
+      "id": "C-MOL-03",
+      "concept_id": "chromosome",
+      "classification": "consensus",
+      "status": "verified",
+      "text": {
+        "zh": "染色體是由蛋白質與一條 DNA 分子組成的線狀結構；人類有 22 對體染色體與 1 對性染色體，共 46 條。",
+        "en": "A chromosome is a threadlike structure of protein and a single DNA molecule; humans have 22 pairs of autosomes and one pair of sex chromosomes, 46 in total."
+      },
+      "evidence": [
+        {
+          "id": "E003",
+          "source_id": "S01",
+          "location": "Glossary entry \"Chromosome\""
+        }
+      ],
+      "related_slide_ids": []
+    },
+    {
+      "id": "C-MOL-04",
+      "concept_id": "gene",
+      "classification": "consensus",
+      "status": "verified",
+      "text": {
+        "zh": "基因是遺傳的基本單位，多數基因編碼蛋白質；人類約有 20,000 個蛋白質編碼基因。",
+        "en": "The gene is the basic unit of inheritance; most genes code for proteins, and humans have approximately 20,000 protein-coding genes."
+      },
+      "evidence": [
+        {
+          "id": "E004",
+          "source_id": "S01",
+          "location": "Glossary entry \"Gene\""
+        }
+      ],
+      "related_slide_ids": []
+    },
+    {
+      "id": "C-MOL-05",
+      "concept_id": "locus",
+      "classification": "consensus",
+      "status": "verified",
+      "text": {
+        "zh": "Locus（基因座）是基因體中的一個實體位置，例如一個基因或其他 DNA 片段，類似街道地址；複數為 loci。",
+        "en": "A locus is a physical site in a genome, such as a gene or another DNA segment, somewhat like a street address; the plural is loci."
+      },
+      "evidence": [
+        {
+          "id": "E005",
+          "source_id": "S01",
+          "location": "Glossary entry \"Locus\""
+        }
+      ],
+      "related_slide_ids": []
+    },
+    {
+      "id": "C-MOL-06",
+      "concept_id": "allele",
+      "classification": "consensus",
+      "status": "verified",
+      "text": {
+        "zh": "Allele（對偶基因）是同一基因體位置上的不同 DNA 序列版本；每個人在該位置從父母各得一個 allele，兩者相同為同型合子（homozygous），不同為異型合子（heterozygous）。",
+        "en": "An allele is one of two or more versions of DNA sequence at a given genomic location; an individual inherits two alleles, one from each parent — identical alleles make the individual homozygous, different alleles heterozygous."
+      },
+      "evidence": [
+        {
+          "id": "E006",
+          "source_id": "S01",
+          "location": "Glossary entry \"Allele\""
+        }
+      ],
+      "related_slide_ids": []
+    },
+    {
+      "id": "C-MOL-07",
+      "concept_id": "snp",
+      "classification": "consensus",
+      "status": "verified",
+      "text": {
+        "zh": "SNP（單核苷酸多態性）是發生在單一鹼基位置的基因體變異，研究者探討 SNP 是否及如何影響健康、疾病、藥物反應與其他性狀。",
+        "en": "A single nucleotide polymorphism (SNP) is a genomic variant at a single base position; scientists study if and how SNPs influence health, disease, drug response and other traits."
+      },
+      "evidence": [
+        {
+          "id": "E007",
+          "source_id": "S01",
+          "location": "Glossary entry \"Single Nucleotide Polymorphisms (SNPs)\""
+        }
+      ],
+      "related_slide_ids": []
+    },
+    {
+      "id": "C-MOL-08",
+      "concept_id": "genetic-variant",
+      "classification": "single_study",
+      "status": "verified",
+      "text": {
+        "zh": "1000 Genomes Project 重建了 26 個族群、2,504 人的基因體，共描述超過 8,800 萬個變異（約 8,470 萬個 SNP、360 萬個短插入/刪除與 6 萬個結構變異）。",
+        "en": "The 1000 Genomes Project reconstructed the genomes of 2,504 individuals from 26 populations and characterized over 88 million variants (84.7 million SNPs, 3.6 million short indels and 60,000 structural variants)."
+      },
+      "evidence": [
+        {
+          "id": "E008",
+          "source_id": "S06",
+          "location": "Abstract"
+        }
+      ],
+      "related_slide_ids": []
+    },
+    {
+      "id": "C-MOL-09",
+      "concept_id": "genotype",
+      "classification": "consensus",
+      "status": "verified",
+      "text": {
+        "zh": "Genotype（基因型）是對某一基因座上變異類型的判定；部分基因型會影響個體可觀察的性狀，即 phenotype。",
+        "en": "A genotype is a scoring of the type of variant present at a given locus; some genotypes contribute to an individual's observable traits, called the phenotype."
+      },
+      "evidence": [
+        {
+          "id": "E009",
+          "source_id": "S01",
+          "location": "Glossary entry \"Genotype\""
+        }
+      ],
+      "related_slide_ids": []
+    },
+    {
+      "id": "C-MOL-10",
+      "concept_id": "phenotype",
+      "classification": "consensus",
+      "status": "verified",
+      "text": {
+        "zh": "Phenotype（表現型）是個體可觀察的性狀，例如身高、眼睛顏色與血型；它同時由基因型與環境因素決定。",
+        "en": "Phenotype refers to an individual's observable traits, such as height, eye colour and blood type, and is determined by both genotype and environmental factors."
+      },
+      "evidence": [
+        {
+          "id": "E010",
+          "source_id": "S01",
+          "location": "Glossary entry \"Phenotype\""
+        }
+      ],
+      "related_slide_ids": []
+    },
+    {
+      "id": "C-SEQ-01",
+      "concept_id": "ngs",
+      "classification": "consensus",
+      "status": "verified",
+      "text": {
+        "zh": "人類基因體計畫完成後，定序技術進步使每百萬鹼基成本下降、已定序基因體數量增加；有些方法追求單位時間內最多鹼基，有些則追求更長的連續讀段以解析結構複雜區域。",
+        "en": "Since the Human Genome Project, sequencing advances have lowered the cost per megabase and increased the number of sequenced genomes; some approaches maximize bases per unit time while others sequence longer contiguous DNA to resolve structurally complex regions."
+      },
+      "evidence": [
+        {
+          "id": "E011",
+          "source_id": "S03",
+          "location": "Abstract"
+        }
+      ],
+      "related_slide_ids": []
+    },
+    {
+      "id": "C-SEQ-02",
+      "concept_id": "ngs",
+      "classification": "uncertain",
+      "status": "verified",
+      "note": "Time-sensitive: describes the 2016 state of the field; costs and throughput of long-read platforms have changed since.",
+      "text": {
+        "zh": "（截至 2016 年）長讀段定序克服了讀段長度限制，但成本明顯較高、通量較低，限制了其普及。此描述具時效性。",
+        "en": "(As of 2016) long-read sequencing overcomes read-length limits but was considerably more expensive and lower-throughput, limiting adoption. This statement is time-sensitive."
+      },
+      "evidence": [
+        {
+          "id": "E012",
+          "source_id": "S03",
+          "location": "Main text, section on long-read sequencing"
+        }
+      ],
+      "related_slide_ids": []
+    },
+    {
+      "id": "C-SEQ-03",
+      "concept_id": "wes",
+      "classification": "consensus",
+      "status": "verified",
+      "text": {
+        "zh": "Exome（外顯子體）是基因體中所有外顯子的序列，代表蛋白質編碼部分，約占人類基因體的 1.5%。",
+        "en": "The exome is the sequence of all exons in a genome — the protein-coding portion — and is about 1.5% of the human genome."
+      },
+      "evidence": [
+        {
+          "id": "E013",
+          "source_id": "S01",
+          "location": "Glossary entry \"Exome\""
+        }
+      ],
+      "related_slide_ids": []
+    },
+    {
+      "id": "C-SEQ-04",
+      "concept_id": "wgs",
+      "classification": "single_study",
+      "status": "verified",
+      "text": {
+        "zh": "1000 Genomes Project 結合低覆蓋度全基因體定序、深度外顯子定序與高密度微陣列基因分型，說明 WGS、WES 與 array 可互補使用，而非只能擇一。",
+        "en": "The 1000 Genomes Project combined low-coverage whole-genome sequencing, deep exome sequencing and dense microarray genotyping — WGS, WES and arrays can be used together rather than only one at a time."
+      },
+      "evidence": [
+        {
+          "id": "E014",
+          "source_id": "S06",
+          "location": "Abstract"
+        }
+      ],
+      "related_slide_ids": []
+    },
+    {
+      "id": "C-SEQ-05",
+      "concept_id": "vcf",
+      "classification": "consensus",
+      "status": "verified",
+      "text": {
+        "zh": "VCF（Variant Call Format）是儲存 SNP、插入/刪除與結構變異及其註解的通用格式，通常壓縮並建立索引以快速查詢；最初為 1000 Genomes Project 開發。",
+        "en": "The Variant Call Format (VCF) is a generic format for storing SNPs, indels and structural variants with annotations; it is usually compressed and indexed for fast retrieval and was developed for the 1000 Genomes Project."
+      },
+      "evidence": [
+        {
+          "id": "E015",
+          "source_id": "S04",
+          "location": "Abstract (Summary)"
+        }
+      ],
+      "related_slide_ids": []
+    },
+    {
+      "id": "C-SEQ-06",
+      "concept_id": "variant-calling",
+      "classification": "consensus",
+      "status": "verified",
+      "text": {
+        "zh": "GATK 是為 NGS 資料設計的分析框架，提供覆蓋度計算與 SNP calling 等工具，已用於 1000 Genomes Project 與 TCGA 等大型計畫。",
+        "en": "GATK is an analysis framework for next-generation sequencing data, providing tools such as coverage calculators and SNP calling, used in large projects including the 1000 Genomes Project and TCGA."
+      },
+      "evidence": [
+        {
+          "id": "E016",
+          "source_id": "S05",
+          "location": "Abstract"
+        }
+      ],
+      "related_slide_ids": []
+    },
+    {
+      "id": "C-SEQ-07",
+      "concept_id": "mutation",
+      "classification": "consensus",
+      "status": "verified",
+      "text": {
+        "zh": "遺傳性（germline）變異由父母傳給子女，存在於幾乎所有細胞；後天（somatic）變異在生命中某時發生，只存在部分細胞，且不會遺傳給下一代。",
+        "en": "Hereditary (germline) variants are passed from parent to child and are present in virtually every cell; acquired (somatic) variants arise during life, are present only in some cells, and cannot be passed to the next generation."
+      },
+      "evidence": [
+        {
+          "id": "E017",
+          "source_id": "S02",
+          "location": "Page \"What is a gene variant and how do variants occur?\""
+        }
+      ],
+      "related_slide_ids": []
+    },
+    {
+      "id": "C-SEQ-08",
+      "concept_id": "reference-genome",
+      "classification": "single_study",
+      "status": "verified",
+      "text": {
+        "zh": "T2T Consortium 發表完整的 30.55 億鹼基對人類基因體 T2T-CHM13，補上先前參考基因體缺少的約 8%，除 Y 染色體外所有染色體皆無缺口。",
+        "en": "The T2T Consortium presented T2T-CHM13, a complete 3.055-billion-base-pair human genome that adds the ~8% missing from earlier references, with gapless assemblies for all chromosomes except Y."
+      },
+      "evidence": [
+        {
+          "id": "E018",
+          "source_id": "S07",
+          "location": "Abstract"
+        }
+      ],
+      "related_slide_ids": []
+    },
+    {
+      "id": "C-SEQ-09",
+      "concept_id": "variant-classification",
+      "classification": "consensus",
+      "status": "verified",
+      "text": {
+        "zh": "ACMG/AMP 建議以 pathogenic、likely pathogenic、uncertain significance、likely benign、benign 五級術語描述孟德爾疾病基因中的變異，並依族群、計算、功能、共分離等證據分類。",
+        "en": "ACMG/AMP recommend five terms — pathogenic, likely pathogenic, uncertain significance, likely benign, benign — for variants in Mendelian disease genes, classified using population, computational, functional and segregation evidence."
+      },
+      "evidence": [
+        {
+          "id": "E019",
+          "source_id": "S25",
+          "location": "Abstract"
+        }
+      ],
+      "related_slide_ids": []
+    },
+    {
+      "id": "C-TX-01",
+      "concept_id": "rna-seq",
+      "classification": "consensus",
+      "status": "verified",
+      "text": {
+        "zh": "RNA-seq 以深度定序技術分析轉錄體，相較其他方法能更精確測量轉錄本及其 isoform 的量。",
+        "en": "RNA-seq profiles the transcriptome with deep-sequencing technologies and measures transcript and isoform levels more precisely than other methods."
+      },
+      "evidence": [
+        {
+          "id": "E020",
+          "source_id": "S08",
+          "location": "Abstract"
+        }
+      ],
+      "related_slide_ids": []
+    },
+    {
+      "id": "C-TX-02",
+      "concept_id": "rna-seq",
+      "classification": "consensus",
+      "status": "verified",
+      "text": {
+        "zh": "沒有一條 RNA-seq 分析流程適用所有情境；主要步驟包含實驗設計、品質控制、比對、定量、差異表現、選擇性剪接、功能分析與 eQTL mapping 等。",
+        "en": "No single RNA-seq analysis pipeline fits all cases; major steps include experimental design, quality control, alignment, quantification, differential expression, alternative splicing, functional analysis and eQTL mapping."
+      },
+      "evidence": [
+        {
+          "id": "E021",
+          "source_id": "S09",
+          "location": "Abstract"
+        }
+      ],
+      "related_slide_ids": []
+    },
+    {
+      "id": "C-TX-03",
+      "concept_id": "tpm",
+      "classification": "single_study",
+      "status": "verified",
+      "text": {
+        "zh": "Wagner 等人指出 RPKM 在不同樣本間不一致，提出修正版 TPM（transcripts per million），使樣本內平均相對莫耳濃度維持不變。",
+        "en": "Wagner et al. showed that RPKM is inconsistent among samples and proposed TPM (transcripts per million), which respects the invariance of average relative molar concentration."
+      },
+      "evidence": [
+        {
+          "id": "E022",
+          "source_id": "S10",
+          "location": "Abstract"
+        }
+      ],
+      "related_slide_ids": []
+    },
+    {
+      "id": "C-TX-04",
+      "concept_id": "gene-expression",
+      "classification": "consensus",
+      "status": "verified",
+      "text": {
+        "zh": "單看讀段數不足以比較不同樣本的表現量，因為讀段數受轉錄本長度、總讀段數與定序偏差影響，需要正規化。",
+        "en": "Read counts alone are not sufficient to compare expression among samples, because they depend on transcript length, total number of reads and sequencing biases; normalization is needed."
+      },
+      "evidence": [
+        {
+          "id": "E023",
+          "source_id": "S09",
+          "location": "Main text, section \"Quantification\""
+        }
+      ],
+      "related_slide_ids": []
+    },
+    {
+      "id": "C-TX-05",
+      "concept_id": "differential-expression",
+      "classification": "consensus",
+      "status": "verified",
+      "text": {
+        "zh": "差異表現分析面對重複數少、離散計數、動態範圍大與離群值等問題；DESeq2 以收縮估計（shrinkage）穩定 dispersion 與 fold change 的估計。",
+        "en": "Differential expression analysis faces small replicate numbers, discrete counts, large dynamic range and outliers; DESeq2 uses shrinkage estimation of dispersions and fold changes to stabilize estimates."
+      },
+      "evidence": [
+        {
+          "id": "E024",
+          "source_id": "S11",
+          "location": "Abstract"
+        }
+      ],
+      "related_slide_ids": []
+    },
+    {
+      "id": "C-TX-06",
+      "concept_id": "expression-matrix",
+      "classification": "consensus",
+      "status": "verified",
+      "text": {
+        "zh": "差異分析的輸入是計數資料，例如 RNA-seq 中每個基因的讀段數，並比較不同實驗條件之間的系統性變化。",
+        "en": "Differential analysis takes count data — such as read counts per gene in RNA-seq — and tests for systematic changes across experimental conditions."
+      },
+      "evidence": [
+        {
+          "id": "E025",
+          "source_id": "S11",
+          "location": "Abstract"
+        }
+      ],
+      "related_slide_ids": []
+    },
+    {
+      "id": "C-TX-07",
+      "concept_id": "gene-expression",
+      "classification": "consensus",
+      "status": "verified",
+      "text": {
+        "zh": "RNA-seq 研究已改變我們對真核生物轉錄體範圍與複雜度的認識。",
+        "en": "Studies using RNA-seq have altered our view of the extent and complexity of eukaryotic transcriptomes."
+      },
+      "evidence": [
+        {
+          "id": "E026",
+          "source_id": "S08",
+          "location": "Abstract"
+        }
+      ],
+      "related_slide_ids": []
+    },
+    {
+      "id": "C-GW-01",
+      "concept_id": "gwas",
+      "classification": "consensus",
+      "status": "verified",
+      "text": {
+        "zh": "GWAS 在大量個體的基因體中檢測數十萬個變異，找出與特定性狀或疾病「統計上相關」的變異。",
+        "en": "GWAS test hundreds of thousands of genetic variants across many genomes to find those statistically associated with a specific trait or disease."
+      },
+      "evidence": [
+        {
+          "id": "E027",
+          "source_id": "S12",
+          "location": "Abstract"
+        },
+        {
+          "id": "E028",
+          "source_id": "S01",
+          "location": "Glossary entry \"Genome-Wide Association Studies (GWAS)\""
+        }
+      ],
+      "related_slide_ids": []
+    },
+    {
+      "id": "C-GW-02",
+      "concept_id": "gwas",
+      "classification": "consensus",
+      "status": "verified",
+      "text": {
+        "zh": "GWAS 結果可用於理解性狀生物學、估計遺傳率、計算遺傳相關、臨床風險預測、藥物開發，以及推論風險因子與健康結果之間可能的因果關係。",
+        "en": "GWAS results are used to gain insight into a phenotype's biology, estimate heritability, calculate genetic correlations, make clinical risk predictions, inform drug development and infer potential causal relationships between risk factors and outcomes."
+      },
+      "evidence": [
+        {
+          "id": "E029",
+          "source_id": "S12",
+          "location": "Abstract"
+        }
+      ],
+      "related_slide_ids": []
+    },
+    {
+      "id": "C-GW-03",
+      "concept_id": "p-value",
+      "classification": "consensus",
+      "status": "verified",
+      "text": {
+        "zh": "GWAS 常用的全基因體顯著閾值為 p < 5 × 10⁻⁸；Visscher 等人（2017）統計約 10,000 個以此標準定義的強關聯。",
+        "en": "GWAS conventionally use a genome-wide significance threshold of p < 5 × 10⁻⁸; Visscher et al. (2017) counted about 10,000 strong associations defined this way."
+      },
+      "evidence": [
+        {
+          "id": "E030",
+          "source_id": "S13",
+          "location": "Main text, section \"Discoveries\" (definition of strong association)"
+        }
+      ],
+      "related_slide_ids": []
+    },
+    {
+      "id": "C-GW-04",
+      "concept_id": "ld",
+      "classification": "consensus",
+      "status": "verified",
+      "text": {
+        "zh": "Linkage disequilibrium（LD）是不同基因座上 allele 的非隨機關聯，受重組、天擇、遺傳漂變與突變影響，被用來定位與性狀或疾病相關的基因。",
+        "en": "Linkage disequilibrium (LD) is the nonrandom association of alleles at different loci; it is shaped by recombination, selection, drift and mutation, and is used to map genes associated with traits and diseases."
+      },
+      "evidence": [
+        {
+          "id": "E031",
+          "source_id": "S14",
+          "location": "Abstract; main text on recombination"
+        }
+      ],
+      "related_slide_ids": []
+    },
+    {
+      "id": "C-GW-05",
+      "concept_id": "gwas",
+      "classification": "consensus",
+      "status": "verified",
+      "text": {
+        "zh": "關聯不等於因果：GWAS 找到的顯著 SNP 通常透過 LD 標記附近未知的因果變異，之後仍需搜尋附近直接影響性狀的變異。",
+        "en": "Association is not causation: a significant GWAS SNP often tags unknown causal variants through LD, and nearby variants that directly contribute to the trait must still be searched for."
+      },
+      "evidence": [
+        {
+          "id": "E032",
+          "source_id": "S13",
+          "location": "Main text, discussion of power and LD (r²) between genotyped and unknown causal variants"
+        },
+        {
+          "id": "E033",
+          "source_id": "S01",
+          "location": "Glossary entry \"Genome-Wide Association Studies (GWAS)\" (definition and narration: correlation, not causation)"
+        }
+      ],
+      "related_slide_ids": []
+    },
+    {
+      "id": "C-GW-06",
+      "concept_id": "effect-size",
+      "classification": "consensus",
+      "status": "verified",
+      "text": {
+        "zh": "在二元（病例/對照）性狀中，GWAS 回報的效應量通常是 odds ratio；用於計算 PRS 時會取 log(OR) 作為權重。",
+        "en": "For binary (case/control) phenotypes, GWAS effect sizes are typically reported as odds ratios, and log(OR) is used as the weight when calculating PRS."
+      },
+      "evidence": [
+        {
+          "id": "E034",
+          "source_id": "S16",
+          "location": "Main text, section on effect size / PRS calculation"
+        }
+      ],
+      "related_slide_ids": []
+    },
+    {
+      "id": "C-GW-07",
+      "concept_id": "gwas-catalog",
+      "classification": "single_study",
+      "status": "verified",
+      "note": "Snapshot counts as of the 2023 database paper.",
+      "text": {
+        "zh": "NHGRI-EBI GWAS Catalog 收錄超過 45,000 篇已發表 GWAS、5,000 多種人類性狀的變異—性狀關聯，以及超過 40,000 組完整 summary statistics（2023 年資料）。",
+        "en": "The NHGRI-EBI GWAS Catalog contains variant–trait associations for >45,000 published GWAS across >5,000 human traits and >40,000 full summary-statistics datasets (as of 2023)."
+      },
+      "evidence": [
+        {
+          "id": "E035",
+          "source_id": "S15",
+          "location": "Abstract"
+        }
+      ],
+      "related_slide_ids": []
+    },
+    {
+      "id": "C-GW-08",
+      "concept_id": "gwas-diversity",
+      "classification": "single_study",
+      "status": "verified",
+      "text": {
+        "zh": "2009 年分析顯示 96% 的 GWAS 參與者為歐洲血統；2016 年非歐洲比例增至近 20%，但成長多來自亞洲族群，非洲、拉丁美洲、西語裔與原住民合計仍不到 4%。",
+        "en": "A 2009 analysis found 96% of GWAS participants were of European descent; by 2016 non-European participants rose to nearly 20%, mostly from Asian populations, while African, Latin American, Hispanic and indigenous peoples together were under 4%."
+      },
+      "evidence": [
+        {
+          "id": "E036",
+          "source_id": "S24",
+          "location": "Main text, opening paragraphs (PMC5089703)"
+        }
+      ],
+      "related_slide_ids": []
+    },
+    {
+      "id": "C-GW-09",
+      "concept_id": "manhattan-plot",
+      "classification": "uncertain",
+      "status": "pending_verification",
+      "missing_evidence": "No verified source in the current corpus describes the Manhattan plot axes (genomic position vs −log10 p). S12 (Uffelmann 2021) likely does, but its full text could not be retrieved for verification. Needs a human-approved source (e.g. replace one source or raise the source cap).",
+      "text": {
+        "zh": "曼哈頓圖以 x 軸表示染色體位置、y 軸表示 −log₁₀(p)，每個點代表一個 SNP。",
+        "en": "A Manhattan plot shows genomic position on the x-axis and −log10(p) on the y-axis, one point per SNP."
+      },
+      "evidence": [],
+      "related_slide_ids": []
+    },
+    {
+      "id": "C-PRS-01",
+      "concept_id": "prs",
+      "classification": "consensus",
+      "status": "verified",
+      "text": {
+        "zh": "PRS（多基因風險分數）是根據個體基因型與 GWAS 資料計算、估計其對某性狀或疾病遺傳傾向（genetic liability）的分數；目前的 PRS 通常只解釋性狀變異的一小部分。",
+        "en": "A polygenic risk score (PRS) estimates an individual's genetic liability to a trait or disease from their genotype profile and GWAS data; current PRSs typically explain only a small fraction of trait variance."
+      },
+      "evidence": [
+        {
+          "id": "E037",
+          "source_id": "S16",
+          "location": "Abstract"
+        }
+      ],
+      "related_slide_ids": []
+    },
+    {
+      "id": "C-PRS-02",
+      "concept_id": "prs-calculation",
+      "classification": "consensus",
+      "status": "verified",
+      "text": {
+        "zh": "標準 PRS 是個體風險 allele 的加總，並以 GWAS 估計的效應量加權：PRS = Σ βᵢ × Gᵢ。",
+        "en": "A standard PRS is the sum of an individual's risk alleles weighted by GWAS effect size estimates: PRS = Σ βᵢ × Gᵢ."
+      },
+      "evidence": [
+        {
+          "id": "E038",
+          "source_id": "S16",
+          "location": "Introduction (definition of PRS as weighted sum)"
+        }
+      ],
+      "related_slide_ids": []
+    },
+    {
+      "id": "C-PRS-03",
+      "concept_id": "prs-calculation",
+      "classification": "consensus",
+      "status": "verified",
+      "text": {
+        "zh": "常見的「標準方法」是 C+T（clumping + thresholding）：以 clumping 處理 LD，再依 P 值門檻篩選 SNP；另有 LASSO、BLUP 等收縮方法。",
+        "en": "The standard approach is C+T (clumping + thresholding): LD is handled by clumping and SNPs are selected by P-value threshold; shrinkage methods such as LASSO or BLUP are alternatives."
+      },
+      "evidence": [
+        {
+          "id": "E039",
+          "source_id": "S16",
+          "location": "Section 3, PRS calculation methods"
+        }
+      ],
+      "related_slide_ids": []
+    },
+    {
+      "id": "C-PRS-04",
+      "concept_id": "prs-portability",
+      "classification": "consensus",
+      "status": "verified",
+      "text": {
+        "zh": "目前的 PRS 在歐洲血統個體中準確度高出數倍，原因是 GWAS 以歐洲族群為主；若直接用於臨床，可能擴大健康不平等。",
+        "en": "Current PRSs are several times more accurate in individuals of European ancestry because GWAS are Eurocentric; using them clinically as-is may exacerbate health disparities."
+      },
+      "evidence": [
+        {
+          "id": "E040",
+          "source_id": "S18",
+          "location": "Abstract"
+        },
+        {
+          "id": "E041",
+          "source_id": "S24",
+          "location": "Main text, opening paragraphs"
+        }
+      ],
+      "related_slide_ids": []
+    },
+    {
+      "id": "C-PRS-05",
+      "concept_id": "pgs-catalog",
+      "classification": "consensus",
+      "status": "verified",
+      "text": {
+        "zh": "PGS Catalog 是公開資料庫，收錄已發表分數的變異、allele 與權重，以及可重現所需的標準化 metadata。",
+        "en": "The PGS Catalog is an open resource of published scores — variants, alleles and weights — with consistently curated metadata for reproducibility."
+      },
+      "evidence": [
+        {
+          "id": "E042",
+          "source_id": "S19",
+          "location": "Abstract"
+        }
+      ],
+      "related_slide_ids": []
+    },
+    {
+      "id": "C-PRS-06",
+      "concept_id": "prs-validation",
+      "classification": "single_study",
+      "status": "verified",
+      "text": {
+        "zh": "Khera 等人在 UK Biobank（英國血統參與者）建立並驗證五種疾病的全基因體 PRS，可找出 8.0%（冠狀動脈疾病）到 1.5%（乳癌）的人口具三倍以上風險。",
+        "en": "Khera et al. developed and validated genome-wide PRS for five diseases in UK Biobank participants of British ancestry, identifying 8.0% (coronary artery disease) to 1.5% (breast cancer) of the population at >3-fold risk."
+      },
+      "evidence": [
+        {
+          "id": "E043",
+          "source_id": "S20",
+          "location": "Abstract; Methods (UK Biobank, 409,258 participants of British ancestry)"
+        }
+      ],
+      "related_slide_ids": []
+    },
+    {
+      "id": "C-PRS-07",
+      "concept_id": "prs-validation",
+      "classification": "consensus",
+      "status": "verified",
+      "text": {
+        "zh": "PRS 驗證時，base（GWAS）資料與 target 資料不能有樣本重疊，否則 PRS 與性狀的關聯會被嚴重高估。",
+        "en": "When validating a PRS, sample overlap between base (GWAS) and target data must be eliminated, because it can substantially inflate the PRS–trait association."
+      },
+      "evidence": [
+        {
+          "id": "E044",
+          "source_id": "S16",
+          "location": "Section on QC of base and target data, \"Sample overlap\""
+        }
+      ],
+      "related_slide_ids": []
+    },
+    {
+      "id": "C-PRS-08",
+      "concept_id": "allele-dosage",
+      "classification": "consensus",
+      "status": "verified",
+      "text": {
+        "zh": "每人在一個位置有兩個 allele（父母各一），因此某 effect allele 的劑量（dosage）為 0、1 或 2；PRS 即加總這些 allele 並以效應量加權。",
+        "en": "Each person carries two alleles at a location (one from each parent), so the dosage of an effect allele is 0, 1 or 2; a PRS sums these alleles weighted by effect size."
+      },
+      "evidence": [
+        {
+          "id": "E045",
+          "source_id": "S01",
+          "location": "Glossary entry \"Allele\""
+        },
+        {
+          "id": "E046",
+          "source_id": "S16",
+          "location": "Introduction (sum of risk alleles weighted by effect size)"
+        }
+      ],
+      "related_slide_ids": []
+    },
+    {
+      "id": "C-PRS-09",
+      "concept_id": "prs",
+      "classification": "uncertain",
+      "status": "verified",
+      "text": {
+        "zh": "PRS 的個人與臨床效用仍有爭議：早期認為用 DNA 預測疾病幾乎沒有幫助，近期研究則顯示可用於找出可能受益的族群（群體層級分層）。",
+        "en": "The personal and clinical utility of PRS is debated: early work judged DNA-based prediction to add little, while recent efforts show utility for identifying groups who could benefit (group-level stratification)."
+      },
+      "evidence": [
+        {
+          "id": "E047",
+          "source_id": "S17",
+          "location": "Abstract"
+        }
+      ],
+      "related_slide_ids": []
+    },
+    {
+      "id": "C-PRS-10",
+      "concept_id": "genetic-risk",
+      "classification": "single_study",
+      "status": "verified",
+      "text": {
+        "zh": "PRS 研究多以「相對風險」（例如比其餘人口高三倍）表達結果；作者也指出臨床上需同時評估與溝通絕對風險和相對風險。",
+        "en": "PRS results are usually expressed as relative risk (e.g., >3-fold versus the rest of the population); the authors note that both absolute and relative risks must be assessed and communicated."
+      },
+      "evidence": [
+        {
+          "id": "E048",
+          "source_id": "S20",
+          "location": "Abstract; Discussion (absolute and relative risks)"
+        }
+      ],
+      "related_slide_ids": []
+    },
+    {
+      "id": "C-PRS-11",
+      "concept_id": "effect-weight",
+      "classification": "consensus",
+      "status": "verified",
+      "text": {
+        "zh": "PRS 的權重（effect weight）來自最有檢定力的 GWAS 所估計的效應量（或 Z 分數），並以 summary statistics 形式取得。",
+        "en": "PRS weights come from effect size estimates (or Z-scores) of the most powerful GWAS, obtained as summary statistics."
+      },
+      "evidence": [
+        {
+          "id": "E049",
+          "source_id": "S16",
+          "location": "Introduction"
+        }
+      ],
+      "related_slide_ids": []
+    },
+    {
+      "id": "C-PRS-12",
+      "concept_id": "prs",
+      "classification": "uncertain",
+      "status": "pending_verification",
+      "missing_evidence": "No source in the corpus reports outcome evidence (e.g. randomized trials) that PRS-guided screening reduces disease incidence or mortality. Not shown on the site until such evidence is ingested.",
+      "text": {
+        "zh": "以 PRS 引導的篩檢可降低疾病發生率或死亡率。",
+        "en": "PRS-guided screening reduces disease incidence or mortality."
+      },
+      "evidence": [],
+      "related_slide_ids": []
+    },
+    {
+      "id": "C-MO-01",
+      "concept_id": "multi-omics",
+      "classification": "consensus",
+      "status": "verified",
+      "text": {
+        "zh": "相較單一體學研究，多體學提供理解疾病背後「資訊流動」的機會；常見體學包含基因體、轉錄體、蛋白體與代謝體等。",
+        "en": "Compared with single-omics studies, multi-omics offers the opportunity to understand the flow of information underlying disease; layers include the genome, transcriptome, proteome and metabolome."
+      },
+      "evidence": [
+        {
+          "id": "E050",
+          "source_id": "S21",
+          "location": "Abstract"
+        }
+      ],
+      "related_slide_ids": []
+    },
+    {
+      "id": "C-MO-02",
+      "concept_id": "data-integration",
+      "classification": "consensus",
+      "status": "verified",
+      "text": {
+        "zh": "多體學整合可從不同起點出發：genome first 從 GWAS 位點開始探究其致病機制，phenotype first 從其他層次出發，另有 environment first；並非只有一條固定路徑。",
+        "en": "Multi-omics integration can start from different points: genome-first starts from an associated locus to find mechanisms, phenotype-first starts from another layer, and there is also environment-first — there is no single fixed path."
+      },
+      "evidence": [
+        {
+          "id": "E051",
+          "source_id": "S21",
+          "location": "Main text, section on integration approaches"
+        }
+      ],
+      "related_slide_ids": []
+    },
+    {
+      "id": "C-MO-03",
+      "concept_id": "cancer-genomics",
+      "classification": "single_study",
+      "status": "verified",
+      "text": {
+        "zh": "TCGA 在 DNA、RNA、蛋白質與表觀遺傳層次分析大量腫瘤；Pan-Cancer 計畫比較了最先完成的 12 種腫瘤類型。",
+        "en": "TCGA profiled large numbers of tumours at the DNA, RNA, protein and epigenetic levels; the Pan-Cancer initiative compared the first 12 tumour types."
+      },
+      "evidence": [
+        {
+          "id": "E052",
+          "source_id": "S22",
+          "location": "Abstract"
+        }
+      ],
+      "related_slide_ids": []
+    },
+    {
+      "id": "C-MO-04",
+      "concept_id": "biomarker",
+      "classification": "uncertain",
+      "status": "verified",
+      "note": "Stated as an aim of the Pan-Cancer project, not a demonstrated result.",
+      "text": {
+        "zh": "TCGA Pan-Cancer 的目標之一，是將對某癌症有效的療法延伸到具相似基因體特徵的其他癌症（屬研究目標，非已證實結果）。",
+        "en": "One aim of TCGA Pan-Cancer is to extend therapies effective in one cancer type to others with a similar genomic profile (a research aim, not a demonstrated result)."
+      },
+      "evidence": [
+        {
+          "id": "E053",
+          "source_id": "S22",
+          "location": "Abstract"
+        }
+      ],
+      "related_slide_ids": []
+    },
+    {
+      "id": "C-MO-05",
+      "concept_id": "pathway-analysis",
+      "classification": "consensus",
+      "status": "verified",
+      "text": {
+        "zh": "RNA-seq 分析常包含功能分析（例如 gene set enrichment analysis），並可與其他功能基因體技術整合。",
+        "en": "RNA-seq analysis commonly includes functional analysis (e.g. gene set enrichment analysis) and can be integrated with other functional genomics techniques."
+      },
+      "evidence": [
+        {
+          "id": "E054",
+          "source_id": "S09",
+          "location": "Abstract; abbreviation list (GSEA)"
+        }
+      ],
+      "related_slide_ids": []
+    },
+    {
+      "id": "C-MO-06",
+      "concept_id": "genomics",
+      "classification": "consensus",
+      "status": "verified",
+      "text": {
+        "zh": "基因分型晶片促成大規模 GWAS，全轉錄本測量方法則催生了「integrative genetics」，為多體學奠定基礎。",
+        "en": "Genotyping arrays enabled large-scale GWAS and methods for global transcript levels gave rise to integrative genetics, the foundation of multi-omics."
+      },
+      "evidence": [
+        {
+          "id": "E055",
+          "source_id": "S21",
+          "location": "Abstract"
+        }
+      ],
+      "related_slide_ids": []
+    },
+    {
+      "id": "C-MO-07",
+      "concept_id": "data-integration",
+      "classification": "consensus",
+      "status": "verified",
+      "text": {
+        "zh": "eQTL mapping 將基因型與基因表現量連結，是 RNA-seq 分析的步驟之一，也是 Mutation/變異資料與 RNA Expression 整合的典型例子。",
+        "en": "eQTL mapping links genotype to gene expression; it is one of the RNA-seq analysis steps and a typical example of integrating variant data with RNA expression."
+      },
+      "evidence": [
+        {
+          "id": "E056",
+          "source_id": "S09",
+          "location": "Abstract"
+        }
+      ],
+      "related_slide_ids": []
+    },
+    {
+      "id": "C-PM-01",
+      "concept_id": "precision-medicine",
+      "classification": "consensus",
+      "status": "verified",
+      "text": {
+        "zh": "精準醫療是一種新興的疾病治療與預防方式，考量每個人在基因、環境與生活型態上的差異，有別於針對「平均的人」設計的一體適用策略。",
+        "en": "Precision medicine is an emerging approach to disease treatment and prevention that takes into account individual variability in genes, environment and lifestyle, unlike one-size-fits-all strategies designed for the average person."
+      },
+      "evidence": [
+        {
+          "id": "E057",
+          "source_id": "S02",
+          "location": "Page \"What is precision medicine?\""
+        }
+      ],
+      "related_slide_ids": []
+    },
+    {
+      "id": "C-PM-02",
+      "concept_id": "precision-medicine",
+      "classification": "consensus",
+      "status": "verified",
+      "text": {
+        "zh": "美國 Precision Medicine Initiative（2015）的近期重點是癌症，長期目標是產生適用於所有健康與疾病的知識。",
+        "en": "The US Precision Medicine Initiative (2015) had a near-term focus on cancers and a longer-term aim to generate knowledge applicable to the whole range of health and disease."
+      },
+      "evidence": [
+        {
+          "id": "E058",
+          "source_id": "S23",
+          "location": "Abstract"
+        }
+      ],
+      "related_slide_ids": []
+    },
+    {
+      "id": "C-PM-03",
+      "concept_id": "clinical-application",
+      "classification": "consensus",
+      "status": "verified",
+      "text": {
+        "zh": "ACMG 強烈建議臨床分子遺傳檢測在 CLIA 認證實驗室進行，結果由具專科認證的臨床分子遺傳學家或同等專家判讀。",
+        "en": "ACMG strongly recommends that clinical molecular genetic testing be performed in a CLIA-approved laboratory, with results interpreted by a board-certified clinical molecular geneticist or equivalent."
+      },
+      "evidence": [
+        {
+          "id": "E059",
+          "source_id": "S25",
+          "location": "Abstract"
+        }
+      ],
+      "related_slide_ids": []
+    },
+    {
+      "id": "C-PM-04",
+      "concept_id": "disease-prediction",
+      "classification": "single_study",
+      "status": "verified",
+      "text": {
+        "zh": "Khera 等人主張可以開始考慮將多基因風險預測納入臨床照護；在冠狀動脈疾病中，高 PRS 族群的盛行率是具同等風險之罕見單基因突變攜帶率的 20 倍。",
+        "en": "Khera et al. proposed that it is time to contemplate including polygenic risk prediction in clinical care; for coronary artery disease, the high-PRS group was 20-fold more prevalent than carriers of rare monogenic mutations with comparable risk."
+      },
+      "evidence": [
+        {
+          "id": "E060",
+          "source_id": "S20",
+          "location": "Abstract"
+        }
+      ],
+      "related_slide_ids": []
+    },
+    {
+      "id": "C-PM-05",
+      "concept_id": "ethics-equity",
+      "classification": "consensus",
+      "status": "verified",
+      "text": {
+        "zh": "要實現公平的 PRS 應用，遺傳研究必須優先提升族群多樣性，並公開 summary statistics，避免擴大對弱勢族群的健康不平等。",
+        "en": "To realize the equitable potential of PRS, genetic studies must prioritize diversity and publicly share summary statistics so that disparities are not increased for underserved groups."
+      },
+      "evidence": [
+        {
+          "id": "E061",
+          "source_id": "S18",
+          "location": "Abstract"
+        },
+        {
+          "id": "E062",
+          "source_id": "S24",
+          "location": "Main text"
+        }
+      ],
+      "related_slide_ids": []
+    },
+    {
+      "id": "C-PM-06",
+      "concept_id": "cancer-genomics",
+      "classification": "consensus",
+      "status": "verified",
+      "text": {
+        "zh": "癌症基因體研究比較不同腫瘤譜系的分子異常，以建立共通性、差異與新主題的整合圖像。",
+        "en": "Cancer genomics compares molecular aberrations across tumour lineages to build an integrated picture of commonalities, differences and emergent themes."
+      },
+      "evidence": [
+        {
+          "id": "E063",
+          "source_id": "S22",
+          "location": "Abstract"
+        }
+      ],
+      "related_slide_ids": []
+    },
+    {
+      "id": "C-PM-07",
+      "concept_id": "genetic-risk",
+      "classification": "consensus",
+      "status": "verified",
+      "text": {
+        "zh": "大多數常見疾病具遺傳成分，且多數疾病風險本質上是多基因的；但表現型同時受環境因素影響。",
+        "en": "Most common diseases have a genetic component and most disease risk is polygenic in nature, while phenotype is also shaped by environmental factors."
+      },
+      "evidence": [
+        {
+          "id": "E064",
+          "source_id": "S20",
+          "location": "Abstract (introductory sentences)"
+        },
+        {
+          "id": "E065",
+          "source_id": "S01",
+          "location": "Glossary entry \"Phenotype\""
+        }
+      ],
+      "related_slide_ids": []
+    }
+  ],
+  "conflicts": [
+    {
+      "id": "CF-01",
+      "topic": {
+        "zh": "PRS 是否已可進入臨床照護",
+        "en": "Is PRS ready for clinical care?"
+      },
+      "claim_ids": [
+        "C-PM-04",
+        "C-PRS-04",
+        "C-PRS-09"
+      ],
+      "source_ids": [
+        "S20",
+        "S18",
+        "S17"
+      ],
+      "positions": {
+        "S20": "Proposes it is time to contemplate including polygenic risk prediction in clinical care.",
+        "S18": "Clinical use of current PRS may exacerbate health disparities because accuracy is several-fold higher in European ancestry.",
+        "S17": "Utility is debated; evidence supports group-level stratification."
+      },
+      "factors": "Population: S20 developed and tested in UK Biobank participants of British ancestry only (409,258), so its performance claims do not speak to other ancestries; S18 explicitly evaluates cross-ancestry accuracy. Design: S20 is a single-cohort development/validation study; S18 is a perspective synthesizing multi-ancestry analyses; S17 is a review. Outcome: S20 reports relative-risk stratification, not clinical outcome benefit.",
+      "handling": "Both positions are shown side by side. Claims are classified separately (S20 single_study; S18 consensus with S24 support; overall utility = uncertain). The site states that PRS performance depends on ancestry and that outcome benefit is not established (C-PRS-12 pending). No single conclusion chosen."
+    },
+    {
+      "id": "CF-02",
+      "topic": {
+        "zh": "表現量單位：RPKM/FPKM 與 TPM",
+        "en": "Expression units: RPKM/FPKM vs TPM"
+      },
+      "claim_ids": [
+        "C-TX-03",
+        "C-TX-04"
+      ],
+      "source_ids": [
+        "S10",
+        "S09"
+      ],
+      "positions": {
+        "S10": "RPKM is inconsistent among samples; TPM should be used instead.",
+        "S09": "RPKM/FPKM/TPM are within-sample normalized measures; read counts alone cannot compare samples and normalization choice depends on the scenario."
+      },
+      "factors": "S10 is a theoretical argument about one property (average invariance); S09 is a broad best-practice survey covering many quantification scenarios. Neither claims TPM alone is sufficient for between-sample differential expression.",
+      "handling": "Wiki teaches TPM as a within-sample relative abundance measure with its limitation, and points to count-based models (DESeq2, S11) for differential expression. Not presented as 'TPM solves normalization'."
+    }
+  ]
+}

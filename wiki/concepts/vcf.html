@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="zh-Hant" data-lang="zh">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Variant Call Format · DNA → Precision Medicine</title>
+<link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="../../index.html">DNA<span>→</span>PM</a>
+  <nav class="topnav"><a href="../../wiki/index.html"><span lang="zh-Hant">Wiki</span><span lang="en">Wiki</span></a><a href="../../wiki/glossary.html"><span lang="zh-Hant">術語詞典</span><span lang="en">Glossary</span></a><a href="../../wiki/graph.html"><span lang="zh-Hant">概念關聯</span><span lang="en">Concept Map</span></a><a href="../../wiki/evidence.html"><span lang="zh-Hant">證據追溯</span><span lang="en">Evidence</span></a><a href="../../slides/index.html"><span lang="zh-Hant">教學簡報</span><span lang="en">Slides</span></a><a href="../../workflow.html"><span lang="zh-Hant">工作流程</span><span lang="en">Workflow</span></a></nav>
+  <button class="lang-toggle" type="button" data-lang-toggle aria-label="Switch language">EN</button>
+</header>
+<main class="wrap">
+
+<p class="crumbs"><a href="../index.html">Wiki</a> / <a href="../index.html#sequencing"><span lang="zh-Hant">定序與變異分析</span><span lang="en">Sequencing &amp; Variant Analysis</span></a></p>
+<article class="concept" data-concept="vcf">
+  <h1><span lang="zh-Hant">變異呼叫格式</span><span lang="en">Variant Call Format</span> <span class="abbr">(VCF)</span></h1>
+  <p class="meta"><span>Concept ID: <code>vcf</code></span> · <span>Last Updated: 2026-11-13</span></p>
+  <div class="layers">
+    <section class="card layer-beginner"><h2><span lang="zh-Hant">初學者</span><span lang="en">Beginner</span></h2><p lang="zh-Hant">VCF 是記錄「哪裡不一樣」的標準表格：哪條染色體、哪個位置、原本是什麼、變成什麼，以及每個人的基因型。</p><p lang="en">VCF is the standard table of &quot;where it differs&quot;: chromosome, position, reference, alternate, and each person&#x27;s genotype.</p></section>
+    <section class="card layer-advanced"><h2><span lang="zh-Hant">進階</span><span lang="en">Advanced</span></h2><p lang="zh-Hant">VCF 為文字格式，含 header（##）與固定欄位 CHROM, POS, ID, REF, ALT, QUAL, FILTER, INFO, FORMAT 及樣本欄；可存 SNP、indel 與結構變異，常以 bgzip 壓縮並以 tabix 建索引。</p><p lang="en">VCF is a text format with header lines (##) and fixed columns CHROM, POS, ID, REF, ALT, QUAL, FILTER, INFO, FORMAT plus sample columns; it stores SNPs, indels and SVs and is usually bgzip-compressed and tabix-indexed.</p></section>
+  </div>
+  <section class="card"><h2><span lang="zh-Hant">例子</span><span lang="en">Examples</span></h2><ul><li><span lang="zh-Hant">（示意）chr1  1000  demo1  A  G  …  GT  0|1 → 此人在該位置為 A/G</span><span lang="en">(Illustrative) chr1  1000  demo1  A  G  …  GT  0|1 → this person is A/G at that site</span></li></ul></section>
+  <section class="card"><h2><span lang="zh-Hant">證據</span><span lang="en">Evidence References</span></h2><ul class="claims"><li class="claim" id="claim-C-SEQ-05"><div class="claim-head"><a href="../evidence.html#C-SEQ-05"><code>C-SEQ-05</code></a> <span class="badge badge-consensus"><span lang="zh-Hant">共識</span><span lang="en">Consensus</span></span></div><p><span lang="zh-Hant">VCF（Variant Call Format）是儲存 SNP、插入/刪除與結構變異及其註解的通用格式，通常壓縮並建立索引以快速查詢；最初為 1000 Genomes Project 開發。</span><span lang="en">The Variant Call Format (VCF) is a generic format for storing SNPs, indels and structural variants with annotations; it is usually compressed and indexed for fast retrieval and was developed for the 1000 Genomes Project.</span></p><ul class="ev"><li><a href="../papers/S04.html">S04</a> · <span class="loc">Abstract (Summary)</span> · <a href="../evidence.html#E015">E015</a></li></ul></li></ul></section>
+  
+  <section class="card two-col">
+    <div><h2><span lang="zh-Hant">相關概念</span><span lang="en">Related Concepts</span></h2><ul><li><a href="variant-calling.html"><span lang="zh-Hant">變異偵測</span><span lang="en">Variant Calling</span></a></li><li><a href="genotype.html"><span lang="zh-Hant">基因型</span><span lang="en">Genotype</span></a></li><li><a href="genetic-variant.html"><span lang="zh-Hant">遺傳變異</span><span lang="en">Genetic Variant</span></a></li></ul></div>
+    <div><h2><span lang="zh-Hant">概念關係</span><span lang="en">Relationships</span></h2><ul class="edges"><li><a href="variant-calling.html">Variant Calling</a> <span class="rel">— outputs →</span> <a href="vcf.html">Variant Call Format</a></li></ul></div>
+  </section>
+</article>
+</main>
+<footer class="foot">
+  <p lang="zh-Hant">教育用途，非臨床診斷工具。所有 PRS 數值皆為模擬資料。</p><p lang="en">For education only — not a clinical tool. All PRS numbers are simulated.</p>
+</footer>
+<script src="../../assets/js/site.js"></script>
+</body>
+</html>

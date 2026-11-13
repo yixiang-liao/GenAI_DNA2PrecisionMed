@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="zh-Hant" data-lang="zh">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gene Expression Matrix · DNA → Precision Medicine</title>
+<link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="../../index.html">DNA<span>→</span>PM</a>
+  <nav class="topnav"><a href="../../wiki/index.html"><span lang="zh-Hant">Wiki</span><span lang="en">Wiki</span></a><a href="../../wiki/glossary.html"><span lang="zh-Hant">術語詞典</span><span lang="en">Glossary</span></a><a href="../../wiki/graph.html"><span lang="zh-Hant">概念關聯</span><span lang="en">Concept Map</span></a><a href="../../wiki/evidence.html"><span lang="zh-Hant">證據追溯</span><span lang="en">Evidence</span></a><a href="../../slides/index.html"><span lang="zh-Hant">教學簡報</span><span lang="en">Slides</span></a><a href="../../workflow.html"><span lang="zh-Hant">工作流程</span><span lang="en">Workflow</span></a></nav>
+  <button class="lang-toggle" type="button" data-lang-toggle aria-label="Switch language">EN</button>
+</header>
+<main class="wrap">
+
+<p class="crumbs"><a href="../index.html">Wiki</a> / <a href="../index.html#transcriptomics"><span lang="zh-Hant">轉錄體學</span><span lang="en">Transcriptomics</span></a></p>
+<article class="concept" data-concept="expression-matrix">
+  <h1><span lang="zh-Hant">基因表現矩陣</span><span lang="en">Gene Expression Matrix</span></h1>
+  <p class="meta"><span>Concept ID: <code>expression-matrix</code></span> · <span>Last Updated: 2026-11-13</span></p>
+  <div class="layers">
+    <section class="card layer-beginner"><h2><span lang="zh-Hant">初學者</span><span lang="en">Beginner</span></h2><p lang="zh-Hant">把結果整理成一張大表：每一列是一個基因、每一欄是一個樣本，格子裡是讀段數或表現量。</p><p lang="en">Results are arranged in a big table: one row per gene, one column per sample, with counts or expression values in the cells.</p></section>
+    <section class="card layer-advanced"><h2><span lang="zh-Hant">進階</span><span lang="en">Advanced</span></h2><p lang="zh-Hant">原始計數矩陣（genes × samples，非負整數）是 DESeq2 等差異分析的輸入；TPM 矩陣適合視覺化與樣本內比較。矩陣需搭配樣本資訊表（條件、批次）才能建模，並處理批次效應。</p><p lang="en">A raw count matrix (genes × samples, non-negative integers) is the input to DESeq2-style differential analysis; TPM matrices suit visualization and within-sample comparison. A sample sheet (condition, batch) is required for modelling and batch correction.</p></section>
+  </div>
+  <section class="card"><h2><span lang="zh-Hant">例子</span><span lang="en">Examples</span></h2><ul><li><span lang="zh-Hant">20,000 個基因 × 12 個樣本 = 240,000 個數值。</span><span lang="en">20,000 genes × 12 samples = 240,000 values.</span></li></ul></section>
+  <section class="card"><h2><span lang="zh-Hant">證據</span><span lang="en">Evidence References</span></h2><ul class="claims"><li class="claim" id="claim-C-TX-06"><div class="claim-head"><a href="../evidence.html#C-TX-06"><code>C-TX-06</code></a> <span class="badge badge-consensus"><span lang="zh-Hant">共識</span><span lang="en">Consensus</span></span></div><p><span lang="zh-Hant">差異分析的輸入是計數資料，例如 RNA-seq 中每個基因的讀段數，並比較不同實驗條件之間的系統性變化。</span><span lang="en">Differential analysis takes count data — such as read counts per gene in RNA-seq — and tests for systematic changes across experimental conditions.</span></p><ul class="ev"><li><a href="../papers/S11.html">S11</a> · <span class="loc">Abstract</span> · <a href="../evidence.html#E025">E025</a></li></ul></li></ul></section>
+  
+  <section class="card two-col">
+    <div><h2><span lang="zh-Hant">相關概念</span><span lang="en">Related Concepts</span></h2><ul><li><a href="differential-expression.html"><span lang="zh-Hant">差異基因表現分析</span><span lang="en">Differential Gene Expression</span></a></li><li><a href="tpm.html"><span lang="zh-Hant">每百萬轉錄本數</span><span lang="en">Transcripts Per Million</span></a></li><li><a href="data-integration.html"><span lang="zh-Hant">資料整合</span><span lang="en">Data Integration</span></a></li></ul></div>
+    <div><h2><span lang="zh-Hant">概念關係</span><span lang="en">Relationships</span></h2><ul class="edges"><li><a href="rna-seq.html">RNA Sequencing</a> <span class="rel">— produces →</span> <a href="expression-matrix.html">Gene Expression Matrix</a></li><li><a href="expression-matrix.html">Gene Expression Matrix</a> <span class="rel">— normalized as →</span> <a href="tpm.html">Transcripts Per Million</a></li><li><a href="expression-matrix.html">Gene Expression Matrix</a> <span class="rel">— input to →</span> <a href="differential-expression.html">Differential Gene Expression</a></li></ul></div>
+  </section>
+</article>
+</main>
+<footer class="foot">
+  <p lang="zh-Hant">教育用途，非臨床診斷工具。所有 PRS 數值皆為模擬資料。</p><p lang="en">For education only — not a clinical tool. All PRS numbers are simulated.</p>
+</footer>
+<script src="../../assets/js/site.js"></script>
+</body>
+</html>

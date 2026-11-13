@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="zh-Hant" data-lang="zh">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Linkage Disequilibrium · DNA → Precision Medicine</title>
+<link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="../../index.html">DNA<span>→</span>PM</a>
+  <nav class="topnav"><a href="../../wiki/index.html"><span lang="zh-Hant">Wiki</span><span lang="en">Wiki</span></a><a href="../../wiki/glossary.html"><span lang="zh-Hant">術語詞典</span><span lang="en">Glossary</span></a><a href="../../wiki/graph.html"><span lang="zh-Hant">概念關聯</span><span lang="en">Concept Map</span></a><a href="../../wiki/evidence.html"><span lang="zh-Hant">證據追溯</span><span lang="en">Evidence</span></a><a href="../../slides/index.html"><span lang="zh-Hant">教學簡報</span><span lang="en">Slides</span></a><a href="../../workflow.html"><span lang="zh-Hant">工作流程</span><span lang="en">Workflow</span></a></nav>
+  <button class="lang-toggle" type="button" data-lang-toggle aria-label="Switch language">EN</button>
+</header>
+<main class="wrap">
+
+<p class="crumbs"><a href="../index.html">Wiki</a> / <a href="../index.html#gwas"><span lang="zh-Hant">GWAS 與統計遺傳學</span><span lang="en">GWAS &amp; Statistical Genetics</span></a></p>
+<article class="concept" data-concept="ld">
+  <h1><span lang="zh-Hant">連鎖不平衡</span><span lang="en">Linkage Disequilibrium</span> <span class="abbr">(LD)</span></h1>
+  <p class="meta"><span>Concept ID: <code>ld</code></span> · <span>Last Updated: 2026-11-13</span></p>
+  <div class="layers">
+    <section class="card layer-beginner"><h2><span lang="zh-Hant">初學者</span><span lang="en">Beginner</span></h2><p lang="zh-Hant">距離很近的 SNP 常常「一起被遺傳」，像同一節車廂的乘客一起上下車。所以看到其中一個，就能猜到另一個。</p><p lang="en">SNPs close together are often inherited together, like passengers in the same carriage. Seeing one lets you guess the other.</p></section>
+    <section class="card layer-advanced"><h2><span lang="zh-Hant">進階</span><span lang="en">Advanced</span></h2><p lang="zh-Hant">LD 是不同基因座 allele 的非隨機關聯。常用 D = p_AB − p_A·p_B 與 r² = D² / [p_A(1−p_A)p_B(1−p_B)]。重組會隨世代打散 LD，且 LD 結構因族群歷史而異；這也是 GWAS 結果與 PRS 跨族群移植性受限的原因之一。</p><p lang="en">LD is the nonrandom association of alleles at different loci, measured by D = p_AB − p_A·p_B and r² = D² / [p_A(1−p_A)p_B(1−p_B)]. Recombination erodes LD over generations, and LD patterns differ by population history — one reason GWAS hits and PRS transfer imperfectly across ancestries.</p></section>
+  </div>
+  <section class="card"><h2><span lang="zh-Hant">例子</span><span lang="en">Examples</span></h2><ul><li><span lang="zh-Hant">r² = 1：兩個 SNP 完全相關，檢定任一個的結果相同。</span><span lang="en">r² = 1: two SNPs are perfectly correlated; testing either gives the same result.</span></li></ul></section>
+  <section class="card"><h2><span lang="zh-Hant">證據</span><span lang="en">Evidence References</span></h2><ul class="claims"><li class="claim" id="claim-C-GW-04"><div class="claim-head"><a href="../evidence.html#C-GW-04"><code>C-GW-04</code></a> <span class="badge badge-consensus"><span lang="zh-Hant">共識</span><span lang="en">Consensus</span></span></div><p><span lang="zh-Hant">Linkage disequilibrium（LD）是不同基因座上 allele 的非隨機關聯，受重組、天擇、遺傳漂變與突變影響，被用來定位與性狀或疾病相關的基因。</span><span lang="en">Linkage disequilibrium (LD) is the nonrandom association of alleles at different loci; it is shaped by recombination, selection, drift and mutation, and is used to map genes associated with traits and diseases.</span></p><ul class="ev"><li><a href="../papers/S14.html">S14</a> · <span class="loc">Abstract; main text on recombination</span> · <a href="../evidence.html#E031">E031</a></li></ul></li><li class="claim" id="claim-C-GW-05"><div class="claim-head"><a href="../evidence.html#C-GW-05"><code>C-GW-05</code></a> <span class="badge badge-consensus"><span lang="zh-Hant">共識</span><span lang="en">Consensus</span></span></div><p><span lang="zh-Hant">關聯不等於因果：GWAS 找到的顯著 SNP 通常透過 LD 標記附近未知的因果變異，之後仍需搜尋附近直接影響性狀的變異。</span><span lang="en">Association is not causation: a significant GWAS SNP often tags unknown causal variants through LD, and nearby variants that directly contribute to the trait must still be searched for.</span></p><ul class="ev"><li><a href="../papers/S13.html">S13</a> · <span class="loc">Main text, discussion of power and LD (r²) between genotyped and unknown causal variants</span> · <a href="../evidence.html#E032">E032</a></li><li><a href="../papers/S01.html">S01</a> · <span class="loc">Glossary entry &quot;Genome-Wide Association Studies (GWAS)&quot; (definition and narration: correlation, not causation)</span> · <a href="../evidence.html#E033">E033</a></li></ul></li></ul></section>
+  
+  <section class="card two-col">
+    <div><h2><span lang="zh-Hant">相關概念</span><span lang="en">Related Concepts</span></h2><ul><li><a href="gwas.html"><span lang="zh-Hant">全基因體關聯研究</span><span lang="en">Genome-Wide Association Study</span></a></li><li><a href="snp.html"><span lang="zh-Hant">單核苷酸多態性</span><span lang="en">Single Nucleotide Polymorphism</span></a></li><li><a href="prs-calculation.html"><span lang="zh-Hant">PRS 計算</span><span lang="en">PRS Calculation</span></a></li><li><a href="prs-portability.html"><span lang="zh-Hant">PRS 跨族群適用性</span><span lang="en">PRS Portability Across Ancestries</span></a></li></ul></div>
+    <div><h2><span lang="zh-Hant">概念關係</span><span lang="en">Relationships</span></h2><ul class="edges"><li><a href="ld.html">Linkage Disequilibrium</a> <span class="rel">— explains tagging in →</span> <a href="gwas.html">Genome-Wide Association Study</a></li></ul></div>
+  </section>
+</article>
+</main>
+<footer class="foot">
+  <p lang="zh-Hant">教育用途，非臨床診斷工具。所有 PRS 數值皆為模擬資料。</p><p lang="en">For education only — not a clinical tool. All PRS numbers are simulated.</p>
+</footer>
+<script src="../../assets/js/site.js"></script>
+</body>
+</html>

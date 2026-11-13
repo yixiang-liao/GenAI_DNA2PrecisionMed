@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="zh-Hant" data-lang="zh">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Data Integration · DNA → Precision Medicine</title>
+<link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="../../index.html">DNA<span>→</span>PM</a>
+  <nav class="topnav"><a href="../../wiki/index.html"><span lang="zh-Hant">Wiki</span><span lang="en">Wiki</span></a><a href="../../wiki/glossary.html"><span lang="zh-Hant">術語詞典</span><span lang="en">Glossary</span></a><a href="../../wiki/graph.html"><span lang="zh-Hant">概念關聯</span><span lang="en">Concept Map</span></a><a href="../../wiki/evidence.html"><span lang="zh-Hant">證據追溯</span><span lang="en">Evidence</span></a><a href="../../slides/index.html"><span lang="zh-Hant">教學簡報</span><span lang="en">Slides</span></a><a href="../../workflow.html"><span lang="zh-Hant">工作流程</span><span lang="en">Workflow</span></a></nav>
+  <button class="lang-toggle" type="button" data-lang-toggle aria-label="Switch language">EN</button>
+</header>
+<main class="wrap">
+
+<p class="crumbs"><a href="../index.html">Wiki</a> / <a href="../index.html#multiomics"><span lang="zh-Hant">多體學整合</span><span lang="en">Multi-Omics Integration</span></a></p>
+<article class="concept" data-concept="data-integration">
+  <h1><span lang="zh-Hant">資料整合</span><span lang="en">Data Integration</span></h1>
+  <p class="meta"><span>Concept ID: <code>data-integration</code></span> · <span>Last Updated: 2026-11-13</span></p>
+  <div class="layers">
+    <section class="card layer-beginner"><h2><span lang="zh-Hant">初學者</span><span lang="en">Beginner</span></h2><p lang="zh-Hant">把 DNA 變異和 RNA 表現量放在一起看：例如某個變異是不是讓附近基因的表現變高或變低。</p><p lang="en">Put DNA variants and RNA expression side by side: for example, does a variant make a nearby gene&#x27;s expression go up or down?</p></section>
+    <section class="card layer-advanced"><h2><span lang="zh-Hant">進階</span><span lang="en">Advanced</span></h2><p lang="zh-Hant">整合策略可分為 genome first（從 GWAS locus 出發找機制）、phenotype first 與 environment first。典型例子是 eQTL mapping：以 genotype 預測表現量 (expression ~ dosage)。挑戰包括樣本對應、批次效應、不同資料尺度與缺失值。</p><p lang="en">Strategies include genome-first (from a GWAS locus toward mechanism), phenotype-first and environment-first. A typical example is eQTL mapping: expression ~ dosage. Challenges include sample matching, batch effects, differing data scales and missing values.</p></section>
+  </div>
+  <section class="card"><h2><span lang="zh-Hant">例子</span><span lang="en">Examples</span></h2><ul><li><span lang="zh-Hant">（示意）帶 G/G 的人某基因表現量平均高於 A/A：該 SNP 可能是 eQTL。</span><span lang="en">(Illustrative) G/G carriers express a gene more than A/A carriers on average: the SNP may be an eQTL.</span></li></ul></section>
+  <section class="card"><h2><span lang="zh-Hant">證據</span><span lang="en">Evidence References</span></h2><ul class="claims"><li class="claim" id="claim-C-MO-02"><div class="claim-head"><a href="../evidence.html#C-MO-02"><code>C-MO-02</code></a> <span class="badge badge-consensus"><span lang="zh-Hant">共識</span><span lang="en">Consensus</span></span></div><p><span lang="zh-Hant">多體學整合可從不同起點出發：genome first 從 GWAS 位點開始探究其致病機制，phenotype first 從其他層次出發，另有 environment first；並非只有一條固定路徑。</span><span lang="en">Multi-omics integration can start from different points: genome-first starts from an associated locus to find mechanisms, phenotype-first starts from another layer, and there is also environment-first — there is no single fixed path.</span></p><ul class="ev"><li><a href="../papers/S21.html">S21</a> · <span class="loc">Main text, section on integration approaches</span> · <a href="../evidence.html#E051">E051</a></li></ul></li><li class="claim" id="claim-C-MO-07"><div class="claim-head"><a href="../evidence.html#C-MO-07"><code>C-MO-07</code></a> <span class="badge badge-consensus"><span lang="zh-Hant">共識</span><span lang="en">Consensus</span></span></div><p><span lang="zh-Hant">eQTL mapping 將基因型與基因表現量連結，是 RNA-seq 分析的步驟之一，也是 Mutation/變異資料與 RNA Expression 整合的典型例子。</span><span lang="en">eQTL mapping links genotype to gene expression; it is one of the RNA-seq analysis steps and a typical example of integrating variant data with RNA expression.</span></p><ul class="ev"><li><a href="../papers/S09.html">S09</a> · <span class="loc">Abstract</span> · <a href="../evidence.html#E056">E056</a></li></ul></li></ul></section>
+  
+  <section class="card two-col">
+    <div><h2><span lang="zh-Hant">相關概念</span><span lang="en">Related Concepts</span></h2><ul><li><a href="multi-omics.html"><span lang="zh-Hant">多體學</span><span lang="en">Multi-Omics</span></a></li><li><a href="expression-matrix.html"><span lang="zh-Hant">基因表現矩陣</span><span lang="en">Gene Expression Matrix</span></a></li><li><a href="gwas.html"><span lang="zh-Hant">全基因體關聯研究</span><span lang="en">Genome-Wide Association Study</span></a></li><li><a href="mutation.html"><span lang="zh-Hant">突變（生殖細胞系 / 體細胞）</span><span lang="en">Mutation (Germline / Somatic)</span></a></li></ul></div>
+    <div><h2><span lang="zh-Hant">概念關係</span><span lang="en">Relationships</span></h2><ul class="edges"><li><a href="data-integration.html">Data Integration</a> <span class="rel">— method of →</span> <a href="multi-omics.html">Multi-Omics</a></li></ul></div>
+  </section>
+</article>
+</main>
+<footer class="foot">
+  <p lang="zh-Hant">教育用途，非臨床診斷工具。所有 PRS 數值皆為模擬資料。</p><p lang="en">For education only — not a clinical tool. All PRS numbers are simulated.</p>
+</footer>
+<script src="../../assets/js/site.js"></script>
+</body>
+</html>

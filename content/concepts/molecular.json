@@ -1,0 +1,322 @@
+{
+  "domain": "molecular",
+  "concepts": [
+    {
+      "id": "dna",
+      "zh": "去氧核糖核酸",
+      "en": "Deoxyribonucleic Acid",
+      "abbr": "DNA",
+      "beginner": {
+        "zh": "DNA 就像一本用四個字母（A、C、G、T）寫成的說明書，記錄生物如何長成、如何運作。兩股 DNA 像拉鍊一樣扣在一起：A 一定對 T，C 一定對 G。",
+        "en": "DNA is like an instruction book written with four letters (A, C, G, T) describing how an organism is built and runs. Two strands zip together: A always pairs with T, and C with G."
+      },
+      "advanced": {
+        "zh": "DNA 是由去氧核糖、磷酸骨架與四種含氮鹼基組成的雙股聚合物，兩股以互補鹼基配對（A–T、C–G）反向平行結合。互補性讓 DNA 能被複製，也讓定序與比對成為可能：讀到一股即可推得另一股。",
+        "en": "DNA is a double-stranded polymer of a deoxyribose–phosphate backbone and four nitrogenous bases; the antiparallel strands are held by complementary pairing (A–T, C–G). Complementarity enables replication and underlies sequencing and alignment: reading one strand determines the other."
+      },
+      "examples": {
+        "zh": [
+          "序列 5'-ATGC-3' 的互補股是 3'-TACG-5'。"
+        ],
+        "en": [
+          "The complement of 5'-ATGC-3' is 3'-TACG-5'."
+        ]
+      },
+      "related": [
+        "rna",
+        "chromosome",
+        "gene"
+      ],
+      "claims": [
+        "C-MOL-01"
+      ],
+      "updated": "2026-11-13"
+    },
+    {
+      "id": "rna",
+      "zh": "核糖核酸",
+      "en": "Ribonucleic Acid",
+      "abbr": "RNA",
+      "beginner": {
+        "zh": "如果 DNA 是存放在圖書館裡的原版說明書，RNA 就像拿出去用的影印本。RNA 通常只有一股，並用 U 取代 T。",
+        "en": "If DNA is the master copy kept in the library, RNA is the photocopy taken out to be used. RNA is usually single-stranded and uses U instead of T."
+      },
+      "advanced": {
+        "zh": "RNA 以核糖為骨架、使用 A/U/C/G，多為單股。主要類型包括 mRNA（攜帶編碼訊息）、rRNA、tRNA，以及參與基因表現調控的 RNA。RNA-seq 測量的就是細胞中 RNA 的組成與量。",
+        "en": "RNA has a ribose backbone, uses A/U/C/G and is mostly single-stranded. Major types are mRNA (carrying coding information), rRNA, tRNA and regulatory RNAs. RNA-seq measures the composition and abundance of cellular RNA."
+      },
+      "examples": {
+        "zh": [
+          "DNA 片段 ATG 轉錄成 mRNA 時，對應序列為 AUG。"
+        ],
+        "en": [
+          "The DNA segment ATG corresponds to AUG in the transcribed mRNA."
+        ]
+      },
+      "related": [
+        "dna",
+        "gene-expression",
+        "rna-seq"
+      ],
+      "claims": [
+        "C-MOL-02"
+      ],
+      "updated": "2026-11-13"
+    },
+    {
+      "id": "chromosome",
+      "zh": "染色體",
+      "en": "Chromosome",
+      "abbr": "",
+      "beginner": {
+        "zh": "整套 DNA 很長，所以被分成好幾「冊」包裝起來，每一冊就是一條染色體。人類細胞裡有 23 對、共 46 條。",
+        "en": "The whole DNA is very long, so it is packed into several \"volumes\" — each volume is a chromosome. Human cells have 23 pairs, 46 in total."
+      },
+      "advanced": {
+        "zh": "每條染色體由一條連續的 DNA 分子與蛋白質組成。人類有 22 對體染色體（autosome）與一對性染色體（XX 或 XY）。基因體座標通常寫成「染色體:位置」，例如 chr1:12345。",
+        "en": "Each chromosome is one continuous DNA molecule packaged with proteins. Humans have 22 autosome pairs and one sex-chromosome pair (XX or XY). Genomic coordinates are written as chromosome:position, e.g. chr1:12345."
+      },
+      "examples": {
+        "zh": [
+          "同一對染色體中，一條來自母親、一條來自父親。"
+        ],
+        "en": [
+          "In each chromosome pair, one copy comes from the mother and one from the father."
+        ]
+      },
+      "related": [
+        "dna",
+        "locus",
+        "allele"
+      ],
+      "claims": [
+        "C-MOL-03"
+      ],
+      "updated": "2026-11-13"
+    },
+    {
+      "id": "gene",
+      "zh": "基因",
+      "en": "Gene",
+      "abbr": "",
+      "beginner": {
+        "zh": "基因是說明書裡的一個「章節」，通常負責製造一種蛋白質。人類大約有 2 萬個會做蛋白質的基因。",
+        "en": "A gene is a \"chapter\" of the instruction book, usually describing how to make one protein. Humans have about 20,000 protein-coding genes."
+      },
+      "advanced": {
+        "zh": "基因是遺傳的基本單位，包含外顯子、內含子與調控序列。多數基因經轉錄與轉譯產生蛋白質，也有基因只產生功能性 RNA。蛋白質編碼基因的外顯子合起來就是 exome。",
+        "en": "The gene is the basic unit of inheritance, comprising exons, introns and regulatory sequence. Most genes are transcribed and translated into proteins; some yield only functional RNA. Exons of protein-coding genes together form the exome."
+      },
+      "examples": {
+        "zh": [
+          "（示意）若某基因的外顯子發生改變，可能改變其蛋白質產物；位於基因之間的變異則可能影響調控。"
+        ],
+        "en": [
+          "(Illustrative) A change in a gene's exon may alter its protein product, while a variant between genes may affect regulation."
+        ]
+      },
+      "related": [
+        "locus",
+        "chromosome",
+        "wes",
+        "gene-expression"
+      ],
+      "claims": [
+        "C-MOL-04"
+      ],
+      "updated": "2026-11-13"
+    },
+    {
+      "id": "locus",
+      "zh": "基因座",
+      "en": "Locus",
+      "abbr": "",
+      "beginner": {
+        "zh": "Locus 就是「地址」：告訴你在哪一條染色體的哪個位置。基因是內容，locus 是位置。",
+        "en": "A locus is an \"address\": which chromosome and which position. A gene is content; a locus is a place."
+      },
+      "advanced": {
+        "zh": "Locus 可以指單一鹼基位置，也可以指一段區域，例如一個基因或 GWAS 找到的關聯區段。GWAS 論文常說的「risk locus」是一個關聯區域，未必等於某一個基因。",
+        "en": "A locus can be a single base position or a region such as a gene or a GWAS association interval. A \"risk locus\" in a GWAS paper is an associated region, not necessarily a single gene."
+      },
+      "examples": {
+        "zh": [
+          "（示意）「chr1:1,000,000」是一個單鹼基 locus；「chr1:1,000,000–1,050,000」是一個區域 locus。"
+        ],
+        "en": [
+          "(Illustrative) \"chr1:1,000,000\" is a single-base locus; \"chr1:1,000,000–1,050,000\" is a regional locus."
+        ]
+      },
+      "related": [
+        "gene",
+        "allele",
+        "snp",
+        "gwas"
+      ],
+      "claims": [
+        "C-MOL-05"
+      ],
+      "updated": "2026-11-13"
+    },
+    {
+      "id": "allele",
+      "zh": "對偶基因",
+      "en": "Allele",
+      "abbr": "",
+      "beginner": {
+        "zh": "同一個地址上可能有不同「版本」的字，例如有人是 A、有人是 G，這些版本就叫 allele。每人在每個位置有兩份：一份來自爸爸、一份來自媽媽。",
+        "en": "The same address can hold different \"versions\" — some people have A, others G. Those versions are alleles. Everyone has two copies at each position: one from each parent."
+      },
+      "advanced": {
+        "zh": "Allele 是某基因體位置上的序列版本，可以是單一鹼基或一段序列。兩份相同為 homozygous，不同為 heterozygous。在 GWAS/PRS 中需明確區分 reference allele、alternate allele 與 effect allele。",
+        "en": "An allele is a sequence version at a genomic position (single base or segment). Two identical copies = homozygous; different = heterozygous. GWAS/PRS work must distinguish reference, alternate and effect alleles."
+      },
+      "examples": {
+        "zh": [
+          "某位置基因型為 A/G：此人帶有一個 A allele 和一個 G allele（heterozygous）。"
+        ],
+        "en": [
+          "Genotype A/G at a site: one A allele and one G allele (heterozygous)."
+        ]
+      },
+      "related": [
+        "snp",
+        "genotype",
+        "effect-allele",
+        "allele-dosage"
+      ],
+      "claims": [
+        "C-MOL-06"
+      ],
+      "updated": "2026-11-13"
+    },
+    {
+      "id": "snp",
+      "zh": "單核苷酸多態性",
+      "en": "Single Nucleotide Polymorphism",
+      "abbr": "SNP",
+      "beginner": {
+        "zh": "SNP 是說明書中只差「一個字母」的地方。大部分 SNP 不影響健康，但有些會和疾病、藥物反應或身高等性狀有關。",
+        "en": "A SNP is a place where the instruction book differs by a single letter. Most SNPs do not affect health, but some are linked to disease, drug response or traits like height."
+      },
+      "advanced": {
+        "zh": "SNP 是單一鹼基位置的變異，常以 rsID（dbSNP 編號）表示。GWAS 主要以 SNP 為檢定單位；由於 LD，被檢定的 SNP 常只是附近因果變異的標記（tag）。",
+        "en": "A SNP is a variant at a single base position, usually named by its dbSNP rsID. GWAS test mainly SNPs; because of LD, a tested SNP is often a tag for a nearby causal variant."
+      },
+      "examples": {
+        "zh": [
+          "某 SNP 在多數人是 C，少數人是 T。"
+        ],
+        "en": [
+          "At a given SNP most people carry C and a minority carry T."
+        ]
+      },
+      "related": [
+        "allele",
+        "genetic-variant",
+        "gwas",
+        "ld"
+      ],
+      "claims": [
+        "C-MOL-07"
+      ],
+      "updated": "2026-11-13"
+    },
+    {
+      "id": "genetic-variant",
+      "zh": "遺傳變異",
+      "en": "Genetic Variant",
+      "abbr": "",
+      "beginner": {
+        "zh": "任何和參考序列不一樣的地方都叫變異：可能是換一個字（SNP）、少幾個字或多幾個字（indel），或是一大段被搬動（結構變異）。",
+        "en": "Any difference from the reference sequence is a variant: a swapped letter (SNP), a few letters missing or added (indel), or a large rearranged segment (structural variant)."
+      },
+      "advanced": {
+        "zh": "變異依大小與型態分為 SNV/SNP、indel 與 structural variant（含 CNV）。1000 Genomes Project 在 2,504 人中描述超過 8,800 萬個變異，說明人類變異極為豐富，且大多數是常見、非致病的。",
+        "en": "Variants are classified by size and form: SNV/SNP, indel, and structural variants (including CNVs). The 1000 Genomes Project described >88 million variants in 2,504 people, showing that human variation is abundant and mostly common and benign."
+      },
+      "examples": {
+        "zh": [
+          "參考序列 ACGT，樣本序列 ACCT：第 3 個位置為 G→C 的 SNV。"
+        ],
+        "en": [
+          "Reference ACGT, sample ACCT: a G→C SNV at position 3."
+        ]
+      },
+      "related": [
+        "snp",
+        "mutation",
+        "vcf",
+        "reference-genome"
+      ],
+      "claims": [
+        "C-MOL-08"
+      ],
+      "updated": "2026-11-13"
+    },
+    {
+      "id": "genotype",
+      "zh": "基因型",
+      "en": "Genotype",
+      "abbr": "",
+      "beginner": {
+        "zh": "基因型就是你在某個位置拿到的兩份版本組合，例如 A/A、A/G 或 G/G。它寫在 DNA 裡，不是肉眼看得到的特徵。",
+        "en": "Your genotype is the pair of versions you carry at a position, e.g. A/A, A/G or G/G. It is written in your DNA, not something you can see."
+      },
+      "advanced": {
+        "zh": "Genotype 是對某 locus 變異類型的判定，可為硬判定（0/1/2）或 imputation 得到的機率性 dosage（0–2 的小數）。Genotype 只是 phenotype 的影響因素之一，必須和環境一起考慮。",
+        "en": "A genotype is the call of variant type at a locus — either a hard call (0/1/2) or a probabilistic imputed dosage (a decimal in 0–2). Genotype is only one influence on phenotype, alongside environment."
+      },
+      "examples": {
+        "zh": [
+          "VCF 中的 0/1 代表一個 reference allele 加一個 alternate allele。"
+        ],
+        "en": [
+          "0/1 in a VCF means one reference and one alternate allele."
+        ]
+      },
+      "related": [
+        "phenotype",
+        "allele",
+        "allele-dosage",
+        "vcf"
+      ],
+      "claims": [
+        "C-MOL-09"
+      ],
+      "updated": "2026-11-13"
+    },
+    {
+      "id": "phenotype",
+      "zh": "表現型",
+      "en": "Phenotype",
+      "abbr": "",
+      "beginner": {
+        "zh": "表現型是看得到或量得到的特徵，例如身高、血型或是否罹病。它受到基因和環境（飲食、運動、生活）一起影響。",
+        "en": "A phenotype is a trait you can see or measure — height, blood type, or having a disease. It is shaped by both genes and environment (diet, exercise, lifestyle)."
+      },
+      "advanced": {
+        "zh": "Phenotype 可以是連續性狀（身高、LDL）或二元性狀（病例/對照），這會決定 GWAS 使用線性或邏輯斯迴歸，效應量也分別以 β 或 OR 表示。Genotype → Phenotype 不是決定論關係。",
+        "en": "Phenotypes can be quantitative (height, LDL) or binary (case/control), which determines linear vs logistic regression in GWAS and β vs OR as the effect size. Genotype → phenotype is not deterministic."
+      },
+      "examples": {
+        "zh": [
+          "同卵雙胞胎基因型幾乎相同，但體重可能因生活型態而不同。"
+        ],
+        "en": [
+          "Identical twins share nearly the same genotype but may differ in weight due to lifestyle."
+        ]
+      },
+      "related": [
+        "genotype",
+        "gwas",
+        "effect-size",
+        "genetic-risk"
+      ],
+      "claims": [
+        "C-MOL-10"
+      ],
+      "updated": "2026-11-13"
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="zh-Hant" data-lang="zh">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Effect Allele · DNA → Precision Medicine</title>
+<link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="../../index.html">DNA<span>→</span>PM</a>
+  <nav class="topnav"><a href="../../wiki/index.html"><span lang="zh-Hant">Wiki</span><span lang="en">Wiki</span></a><a href="../../wiki/glossary.html"><span lang="zh-Hant">術語詞典</span><span lang="en">Glossary</span></a><a href="../../wiki/graph.html"><span lang="zh-Hant">概念關聯</span><span lang="en">Concept Map</span></a><a href="../../wiki/evidence.html"><span lang="zh-Hant">證據追溯</span><span lang="en">Evidence</span></a><a href="../../slides/index.html"><span lang="zh-Hant">教學簡報</span><span lang="en">Slides</span></a><a href="../../workflow.html"><span lang="zh-Hant">工作流程</span><span lang="en">Workflow</span></a></nav>
+  <button class="lang-toggle" type="button" data-lang-toggle aria-label="Switch language">EN</button>
+</header>
+<main class="wrap">
+
+<p class="crumbs"><a href="../index.html">Wiki</a> / <a href="../index.html#prs"><span lang="zh-Hant">多基因風險分數</span><span lang="en">Polygenic Risk Score</span></a></p>
+<article class="concept" data-concept="effect-allele">
+  <h1><span lang="zh-Hant">效應對偶基因</span><span lang="en">Effect Allele</span></h1>
+  <p class="meta"><span>Concept ID: <code>effect-allele</code></span> · <span>Last Updated: 2026-11-13</span></p>
+  <div class="layers">
+    <section class="card layer-beginner"><h2><span lang="zh-Hant">初學者</span><span lang="en">Beginner</span></h2><p lang="zh-Hant">GWAS 會指定一個版本作為「被計算的那個」，叫 effect allele。效應量描述的就是每多帶一個 effect allele 的影響。</p><p lang="en">A GWAS designates one version as the counted one — the effect allele. The effect size describes the impact of each extra copy of it.</p></section>
+    <section class="card layer-advanced"><h2><span lang="zh-Hant">進階</span><span lang="en">Advanced</span></h2><p lang="zh-Hant">Effect allele 不一定是 alternate allele 或少見 allele，也不一定增加風險（β 可為負）。合併 GWAS 與目標 genotype 時必須對齊 allele（含 strand flip 與 palindromic SNP 如 A/T、C/G），否則權重符號會錯。</p><p lang="en">The effect allele is not necessarily the alternate or minor allele, nor necessarily risk-increasing (β can be negative). When combining GWAS with target genotypes, alleles must be harmonized (strand flips, palindromic A/T, C/G SNPs) or weights get the wrong sign.</p></section>
+  </div>
+  <section class="card"><h2><span lang="zh-Hant">例子</span><span lang="en">Examples</span></h2><ul><li><span lang="zh-Hant">GWAS：effect allele = G、β = +0.1；某人為 A/G → dosage = 1。</span><span lang="en">GWAS: effect allele G, β = +0.1; a person with A/G → dosage 1.</span></li></ul></section>
+  <section class="card"><h2><span lang="zh-Hant">證據</span><span lang="en">Evidence References</span></h2><ul class="claims"><li class="claim" id="claim-C-PRS-08"><div class="claim-head"><a href="../evidence.html#C-PRS-08"><code>C-PRS-08</code></a> <span class="badge badge-consensus"><span lang="zh-Hant">共識</span><span lang="en">Consensus</span></span></div><p><span lang="zh-Hant">每人在一個位置有兩個 allele（父母各一），因此某 effect allele 的劑量（dosage）為 0、1 或 2；PRS 即加總這些 allele 並以效應量加權。</span><span lang="en">Each person carries two alleles at a location (one from each parent), so the dosage of an effect allele is 0, 1 or 2; a PRS sums these alleles weighted by effect size.</span></p><ul class="ev"><li><a href="../papers/S01.html">S01</a> · <span class="loc">Glossary entry &quot;Allele&quot;</span> · <a href="../evidence.html#E045">E045</a></li><li><a href="../papers/S16.html">S16</a> · <span class="loc">Introduction (sum of risk alleles weighted by effect size)</span> · <a href="../evidence.html#E046">E046</a></li></ul></li><li class="claim" id="claim-C-GW-06"><div class="claim-head"><a href="../evidence.html#C-GW-06"><code>C-GW-06</code></a> <span class="badge badge-consensus"><span lang="zh-Hant">共識</span><span lang="en">Consensus</span></span></div><p><span lang="zh-Hant">在二元（病例/對照）性狀中，GWAS 回報的效應量通常是 odds ratio；用於計算 PRS 時會取 log(OR) 作為權重。</span><span lang="en">For binary (case/control) phenotypes, GWAS effect sizes are typically reported as odds ratios, and log(OR) is used as the weight when calculating PRS.</span></p><ul class="ev"><li><a href="../papers/S16.html">S16</a> · <span class="loc">Main text, section on effect size / PRS calculation</span> · <a href="../evidence.html#E034">E034</a></li></ul></li></ul></section>
+  
+  <section class="card two-col">
+    <div><h2><span lang="zh-Hant">相關概念</span><span lang="en">Related Concepts</span></h2><ul><li><a href="allele.html"><span lang="zh-Hant">對偶基因</span><span lang="en">Allele</span></a></li><li><a href="allele-dosage.html"><span lang="zh-Hant">對偶基因劑量</span><span lang="en">Allele Dosage</span></a></li><li><a href="effect-size.html"><span lang="zh-Hant">效應量（Beta / Odds Ratio）</span><span lang="en">Effect Size (Beta / Odds Ratio)</span></a></li><li><a href="effect-weight.html"><span lang="zh-Hant">效應權重</span><span lang="en">Effect Weight</span></a></li></ul></div>
+    <div><h2><span lang="zh-Hant">概念關係</span><span lang="en">Relationships</span></h2><ul class="edges"><li><a href="effect-allele.html">Effect Allele</a> <span class="rel">— counted as →</span> <a href="allele-dosage.html">Allele Dosage</a></li></ul></div>
+  </section>
+</article>
+</main>
+<footer class="foot">
+  <p lang="zh-Hant">教育用途，非臨床診斷工具。所有 PRS 數值皆為模擬資料。</p><p lang="en">For education only — not a clinical tool. All PRS numbers are simulated.</p>
+</footer>
+<script src="../../assets/js/site.js"></script>
+</body>
+</html>

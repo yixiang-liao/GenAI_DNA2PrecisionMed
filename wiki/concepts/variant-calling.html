@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="zh-Hant" data-lang="zh">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Variant Calling · DNA → Precision Medicine</title>
+<link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="../../index.html">DNA<span>→</span>PM</a>
+  <nav class="topnav"><a href="../../wiki/index.html"><span lang="zh-Hant">Wiki</span><span lang="en">Wiki</span></a><a href="../../wiki/glossary.html"><span lang="zh-Hant">術語詞典</span><span lang="en">Glossary</span></a><a href="../../wiki/graph.html"><span lang="zh-Hant">概念關聯</span><span lang="en">Concept Map</span></a><a href="../../wiki/evidence.html"><span lang="zh-Hant">證據追溯</span><span lang="en">Evidence</span></a><a href="../../slides/index.html"><span lang="zh-Hant">教學簡報</span><span lang="en">Slides</span></a><a href="../../workflow.html"><span lang="zh-Hant">工作流程</span><span lang="en">Workflow</span></a></nav>
+  <button class="lang-toggle" type="button" data-lang-toggle aria-label="Switch language">EN</button>
+</header>
+<main class="wrap">
+
+<p class="crumbs"><a href="../index.html">Wiki</a> / <a href="../index.html#sequencing"><span lang="zh-Hant">定序與變異分析</span><span lang="en">Sequencing &amp; Variant Analysis</span></a></p>
+<article class="concept" data-concept="variant-calling">
+  <h1><span lang="zh-Hant">變異偵測</span><span lang="en">Variant Calling</span></h1>
+  <p class="meta"><span>Concept ID: <code>variant-calling</code></span> · <span>Last Updated: 2026-11-13</span></p>
+  <div class="layers">
+    <section class="card layer-beginner"><h2><span lang="zh-Hant">初學者</span><span lang="en">Beginner</span></h2><p lang="zh-Hant">把讀到的片段對回參考基因體後，電腦逐一檢查每個位置，判斷這個人是否帶有不同的版本，這就是 variant calling。</p><p lang="en">After reads are aligned to the reference, software checks each position to decide whether the person carries a different version — that is variant calling.</p></section>
+    <section class="card layer-advanced"><h2><span lang="zh-Hant">進階</span><span lang="en">Advanced</span></h2><p lang="zh-Hant">典型步驟：比對（alignment）→ 去除重複 → 鹼基品質校正 → 統計模型判定 genotype → 過濾。GATK 提供這類工具框架並用於 1000 Genomes 與 TCGA。Germline 與 somatic calling 的統計假設不同，後者需處理腫瘤純度與次克隆。</p><p lang="en">Typical steps: alignment → duplicate marking → base-quality recalibration → statistical genotype calling → filtering. GATK provides such a framework and was used in 1000 Genomes and TCGA. Germline and somatic calling differ: somatic calling must handle tumour purity and subclones.</p></section>
+  </div>
+  <section class="card"><h2><span lang="zh-Hant">例子</span><span lang="en">Examples</span></h2><ul><li><span lang="zh-Hant">某位置 30 條讀段中 15 條是 A、15 條是 G：可能是 heterozygous A/G。</span><span lang="en">15 of 30 reads show A and 15 show G at a site: likely heterozygous A/G.</span></li></ul></section>
+  <section class="card"><h2><span lang="zh-Hant">證據</span><span lang="en">Evidence References</span></h2><ul class="claims"><li class="claim" id="claim-C-SEQ-06"><div class="claim-head"><a href="../evidence.html#C-SEQ-06"><code>C-SEQ-06</code></a> <span class="badge badge-consensus"><span lang="zh-Hant">共識</span><span lang="en">Consensus</span></span></div><p><span lang="zh-Hant">GATK 是為 NGS 資料設計的分析框架，提供覆蓋度計算與 SNP calling 等工具，已用於 1000 Genomes Project 與 TCGA 等大型計畫。</span><span lang="en">GATK is an analysis framework for next-generation sequencing data, providing tools such as coverage calculators and SNP calling, used in large projects including the 1000 Genomes Project and TCGA.</span></p><ul class="ev"><li><a href="../papers/S05.html">S05</a> · <span class="loc">Abstract</span> · <a href="../evidence.html#E016">E016</a></li></ul></li></ul></section>
+  
+  <section class="card two-col">
+    <div><h2><span lang="zh-Hant">相關概念</span><span lang="en">Related Concepts</span></h2><ul><li><a href="vcf.html"><span lang="zh-Hant">變異呼叫格式</span><span lang="en">Variant Call Format</span></a></li><li><a href="ngs.html"><span lang="zh-Hant">次世代定序</span><span lang="en">Next-Generation Sequencing</span></a></li><li><a href="mutation.html"><span lang="zh-Hant">突變（生殖細胞系 / 體細胞）</span><span lang="en">Mutation (Germline / Somatic)</span></a></li><li><a href="reference-genome.html"><span lang="zh-Hant">參考基因體</span><span lang="en">Reference Genome</span></a></li></ul></div>
+    <div><h2><span lang="zh-Hant">概念關係</span><span lang="en">Relationships</span></h2><ul class="edges"><li><a href="wgs.html">Whole Genome Sequencing</a> <span class="rel">— input to →</span> <a href="variant-calling.html">Variant Calling</a></li><li><a href="wes.html">Whole Exome Sequencing</a> <span class="rel">— input to →</span> <a href="variant-calling.html">Variant Calling</a></li><li><a href="reference-genome.html">Reference Genome</a> <span class="rel">— coordinate system for →</span> <a href="variant-calling.html">Variant Calling</a></li><li><a href="variant-calling.html">Variant Calling</a> <span class="rel">— outputs →</span> <a href="vcf.html">Variant Call Format</a></li></ul></div>
+  </section>
+</article>
+</main>
+<footer class="foot">
+  <p lang="zh-Hant">教育用途，非臨床診斷工具。所有 PRS 數值皆為模擬資料。</p><p lang="en">For education only — not a clinical tool. All PRS numbers are simulated.</p>
+</footer>
+<script src="../../assets/js/site.js"></script>
+</body>
+</html>

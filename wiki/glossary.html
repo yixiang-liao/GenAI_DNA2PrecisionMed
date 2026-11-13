@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="zh-Hant" data-lang="zh">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Glossary · DNA → Precision Medicine</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="../index.html">DNA<span>→</span>PM</a>
+  <nav class="topnav"><a href="../wiki/index.html"><span lang="zh-Hant">Wiki</span><span lang="en">Wiki</span></a><a href="../wiki/glossary.html" aria-current=page><span lang="zh-Hant">術語詞典</span><span lang="en">Glossary</span></a><a href="../wiki/graph.html"><span lang="zh-Hant">概念關聯</span><span lang="en">Concept Map</span></a><a href="../wiki/evidence.html"><span lang="zh-Hant">證據追溯</span><span lang="en">Evidence</span></a><a href="../slides/index.html"><span lang="zh-Hant">教學簡報</span><span lang="en">Slides</span></a><a href="../workflow.html"><span lang="zh-Hant">工作流程</span><span lang="en">Workflow</span></a></nav>
+  <button class="lang-toggle" type="button" data-lang-toggle aria-label="Switch language">EN</button>
+</header>
+<main class="wrap">
+
+<h1><span lang="zh-Hant">互動術語詞典</span><span lang="en">Interactive Glossary</span></h1>
+<div class="toolbar">
+  <input type="search" id="g-q" placeholder="搜尋 Search: SNP, 基因, dosage…" aria-label="Search glossary">
+  <select id="g-domain" aria-label="Domain"><option value="">All domains · 全部領域</option><option value="molecular">Molecular Biology Foundations · 分子生物學基礎</option><option value="sequencing">Sequencing &amp; Variant Analysis · 定序與變異分析</option><option value="transcriptomics">Transcriptomics · 轉錄體學</option><option value="gwas">GWAS &amp; Statistical Genetics · GWAS 與統計遺傳學</option><option value="prs">Polygenic Risk Score · 多基因風險分數</option><option value="multiomics">Multi-Omics Integration · 多體學整合</option><option value="precision">Precision Medicine · 精準醫療</option></select>
+  <div class="seg" role="group" aria-label="Level">
+    <button type="button" data-level="beginner" aria-pressed="true">Beginner</button>
+    <button type="button" data-level="advanced" aria-pressed="false">Advanced</button>
+  </div>
+</div>
+<p class="muted" id="g-count"></p>
+<div id="g-list" class="glossary"></div>
+<noscript><p>Glossary needs JavaScript; see the <a href="index.html">Wiki index</a>.</p></noscript>
+<script src="../assets/js/site-data.js"></script>
+<script src="../assets/js/glossary.js"></script>
+</main>
+<footer class="foot">
+  <p lang="zh-Hant">教育用途，非臨床診斷工具。所有 PRS 數值皆為模擬資料。</p><p lang="en">For education only — not a clinical tool. All PRS numbers are simulated.</p>
+</footer>
+<script src="../assets/js/site.js"></script>
+</body>
+</html>

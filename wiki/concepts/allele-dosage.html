@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="zh-Hant" data-lang="zh">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Allele Dosage · DNA → Precision Medicine</title>
+<link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="../../index.html">DNA<span>→</span>PM</a>
+  <nav class="topnav"><a href="../../wiki/index.html"><span lang="zh-Hant">Wiki</span><span lang="en">Wiki</span></a><a href="../../wiki/glossary.html"><span lang="zh-Hant">術語詞典</span><span lang="en">Glossary</span></a><a href="../../wiki/graph.html"><span lang="zh-Hant">概念關聯</span><span lang="en">Concept Map</span></a><a href="../../wiki/evidence.html"><span lang="zh-Hant">證據追溯</span><span lang="en">Evidence</span></a><a href="../../slides/index.html"><span lang="zh-Hant">教學簡報</span><span lang="en">Slides</span></a><a href="../../workflow.html"><span lang="zh-Hant">工作流程</span><span lang="en">Workflow</span></a></nav>
+  <button class="lang-toggle" type="button" data-lang-toggle aria-label="Switch language">EN</button>
+</header>
+<main class="wrap">
+
+<p class="crumbs"><a href="../index.html">Wiki</a> / <a href="../index.html#prs"><span lang="zh-Hant">多基因風險分數</span><span lang="en">Polygenic Risk Score</span></a></p>
+<article class="concept" data-concept="allele-dosage">
+  <h1><span lang="zh-Hant">對偶基因劑量</span><span lang="en">Allele Dosage</span> <span class="abbr">(G)</span></h1>
+  <p class="meta"><span>Concept ID: <code>allele-dosage</code></span> · <span>Last Updated: 2026-11-13</span></p>
+  <div class="layers">
+    <section class="card layer-beginner"><h2><span lang="zh-Hant">初學者</span><span lang="en">Beginner</span></h2><p lang="zh-Hant">Dosage 就是「數一數你有幾個 effect allele」：0 個、1 個或 2 個。</p><p lang="en">Dosage means counting your effect alleles: 0, 1 or 2.</p></section>
+    <section class="card layer-advanced"><h2><span lang="zh-Hant">進階</span><span lang="en">Advanced</span></h2><p lang="zh-Hant">硬判定 dosage ∈ {0,1,2}；imputation 給出期望劑量 E[G] = P(het) + 2·P(hom-alt)，為 0–2 的小數。例如 P(het)=0.4、P(hom)=0.5 → dosage = 1.4。</p><p lang="en">Hard-called dosage ∈ {0,1,2}; imputation yields expected dosage E[G] = P(het) + 2·P(hom-alt), a decimal in 0–2. E.g. P(het)=0.4, P(hom)=0.5 → dosage 1.4.</p></section>
+  </div>
+  <section class="card"><h2><span lang="zh-Hant">例子</span><span lang="en">Examples</span></h2><ul><li><span lang="zh-Hant">effect allele = G：A/A → 0，A/G → 1，G/G → 2。</span><span lang="en">Effect allele G: A/A → 0, A/G → 1, G/G → 2.</span></li></ul></section>
+  <section class="card"><h2><span lang="zh-Hant">證據</span><span lang="en">Evidence References</span></h2><ul class="claims"><li class="claim" id="claim-C-PRS-08"><div class="claim-head"><a href="../evidence.html#C-PRS-08"><code>C-PRS-08</code></a> <span class="badge badge-consensus"><span lang="zh-Hant">共識</span><span lang="en">Consensus</span></span></div><p><span lang="zh-Hant">每人在一個位置有兩個 allele（父母各一），因此某 effect allele 的劑量（dosage）為 0、1 或 2；PRS 即加總這些 allele 並以效應量加權。</span><span lang="en">Each person carries two alleles at a location (one from each parent), so the dosage of an effect allele is 0, 1 or 2; a PRS sums these alleles weighted by effect size.</span></p><ul class="ev"><li><a href="../papers/S01.html">S01</a> · <span class="loc">Glossary entry &quot;Allele&quot;</span> · <a href="../evidence.html#E045">E045</a></li><li><a href="../papers/S16.html">S16</a> · <span class="loc">Introduction (sum of risk alleles weighted by effect size)</span> · <a href="../evidence.html#E046">E046</a></li></ul></li></ul></section>
+  
+  <section class="card two-col">
+    <div><h2><span lang="zh-Hant">相關概念</span><span lang="en">Related Concepts</span></h2><ul><li><a href="effect-allele.html"><span lang="zh-Hant">效應對偶基因</span><span lang="en">Effect Allele</span></a></li><li><a href="genotype.html"><span lang="zh-Hant">基因型</span><span lang="en">Genotype</span></a></li><li><a href="prs-calculation.html"><span lang="zh-Hant">PRS 計算</span><span lang="en">PRS Calculation</span></a></li></ul></div>
+    <div><h2><span lang="zh-Hant">概念關係</span><span lang="en">Relationships</span></h2><ul class="edges"><li><a href="effect-allele.html">Effect Allele</a> <span class="rel">— counted as →</span> <a href="allele-dosage.html">Allele Dosage</a></li><li><a href="allele-dosage.html">Allele Dosage</a> <span class="rel">— G in Σβ·G →</span> <a href="prs-calculation.html">PRS Calculation</a></li></ul></div>
+  </section>
+</article>
+</main>
+<footer class="foot">
+  <p lang="zh-Hant">教育用途，非臨床診斷工具。所有 PRS 數值皆為模擬資料。</p><p lang="en">For education only — not a clinical tool. All PRS numbers are simulated.</p>
+</footer>
+<script src="../../assets/js/site.js"></script>
+</body>
+</html>

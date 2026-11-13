@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="zh-Hant" data-lang="zh">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gene Expression · DNA → Precision Medicine</title>
+<link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="../../index.html">DNA<span>→</span>PM</a>
+  <nav class="topnav"><a href="../../wiki/index.html"><span lang="zh-Hant">Wiki</span><span lang="en">Wiki</span></a><a href="../../wiki/glossary.html"><span lang="zh-Hant">術語詞典</span><span lang="en">Glossary</span></a><a href="../../wiki/graph.html"><span lang="zh-Hant">概念關聯</span><span lang="en">Concept Map</span></a><a href="../../wiki/evidence.html"><span lang="zh-Hant">證據追溯</span><span lang="en">Evidence</span></a><a href="../../slides/index.html"><span lang="zh-Hant">教學簡報</span><span lang="en">Slides</span></a><a href="../../workflow.html"><span lang="zh-Hant">工作流程</span><span lang="en">Workflow</span></a></nav>
+  <button class="lang-toggle" type="button" data-lang-toggle aria-label="Switch language">EN</button>
+</header>
+<main class="wrap">
+
+<p class="crumbs"><a href="../index.html">Wiki</a> / <a href="../index.html#transcriptomics"><span lang="zh-Hant">轉錄體學</span><span lang="en">Transcriptomics</span></a></p>
+<article class="concept" data-concept="gene-expression">
+  <h1><span lang="zh-Hant">基因表現</span><span lang="en">Gene Expression</span></h1>
+  <p class="meta"><span>Concept ID: <code>gene-expression</code></span> · <span>Last Updated: 2026-11-13</span></p>
+  <div class="layers">
+    <section class="card layer-beginner"><h2><span lang="zh-Hant">初學者</span><span lang="en">Beginner</span></h2><p lang="zh-Hant">每個細胞都有同一本說明書，但肝細胞和腦細胞「翻開來用」的章節不同。一個基因被讀取（轉錄成 RNA）的多寡，就是它的表現量。</p><p lang="en">Every cell has the same book, but liver and brain cells open different chapters. How much a gene is read (transcribed into RNA) is its expression level.</p></section>
+    <section class="card layer-advanced"><h2><span lang="zh-Hant">進階</span><span lang="en">Advanced</span></h2><p lang="zh-Hant">基因表現通常以 mRNA 豐度近似，會隨組織、時間與狀態改變。讀段數受轉錄本長度、定序深度與偏差影響，因此跨樣本比較前需要正規化。表現量改變不等於 DNA 突變：兩者分屬不同分子層次。</p><p lang="en">Gene expression is usually approximated by mRNA abundance, which varies by tissue, time and state. Read counts depend on transcript length, depth and biases, so normalization precedes cross-sample comparison. Expression change is not DNA mutation: they are different molecular layers.</p></section>
+  </div>
+  <section class="card"><h2><span lang="zh-Hant">例子</span><span lang="en">Examples</span></h2><ul><li><span lang="zh-Hant">同一人的肝臟與腦組織，DNA 相同但表現譜不同。</span><span lang="en">A person&#x27;s liver and brain share DNA but have different expression profiles.</span></li></ul></section>
+  <section class="card"><h2><span lang="zh-Hant">證據</span><span lang="en">Evidence References</span></h2><ul class="claims"><li class="claim" id="claim-C-TX-04"><div class="claim-head"><a href="../evidence.html#C-TX-04"><code>C-TX-04</code></a> <span class="badge badge-consensus"><span lang="zh-Hant">共識</span><span lang="en">Consensus</span></span></div><p><span lang="zh-Hant">單看讀段數不足以比較不同樣本的表現量，因為讀段數受轉錄本長度、總讀段數與定序偏差影響，需要正規化。</span><span lang="en">Read counts alone are not sufficient to compare expression among samples, because they depend on transcript length, total number of reads and sequencing biases; normalization is needed.</span></p><ul class="ev"><li><a href="../papers/S09.html">S09</a> · <span class="loc">Main text, section &quot;Quantification&quot;</span> · <a href="../evidence.html#E023">E023</a></li></ul></li><li class="claim" id="claim-C-TX-07"><div class="claim-head"><a href="../evidence.html#C-TX-07"><code>C-TX-07</code></a> <span class="badge badge-consensus"><span lang="zh-Hant">共識</span><span lang="en">Consensus</span></span></div><p><span lang="zh-Hant">RNA-seq 研究已改變我們對真核生物轉錄體範圍與複雜度的認識。</span><span lang="en">Studies using RNA-seq have altered our view of the extent and complexity of eukaryotic transcriptomes.</span></p><ul class="ev"><li><a href="../papers/S08.html">S08</a> · <span class="loc">Abstract</span> · <a href="../evidence.html#E026">E026</a></li></ul></li></ul></section>
+  
+  <section class="card two-col">
+    <div><h2><span lang="zh-Hant">相關概念</span><span lang="en">Related Concepts</span></h2><ul><li><a href="rna.html"><span lang="zh-Hant">核糖核酸</span><span lang="en">Ribonucleic Acid</span></a></li><li><a href="rna-seq.html"><span lang="zh-Hant">RNA 定序</span><span lang="en">RNA Sequencing</span></a></li><li><a href="tpm.html"><span lang="zh-Hant">每百萬轉錄本數</span><span lang="en">Transcripts Per Million</span></a></li><li><a href="mutation.html"><span lang="zh-Hant">突變（生殖細胞系 / 體細胞）</span><span lang="en">Mutation (Germline / Somatic)</span></a></li></ul></div>
+    <div><h2><span lang="zh-Hant">概念關係</span><span lang="en">Relationships</span></h2><ul class="edges"><li><a href="rna-seq.html">RNA Sequencing</a> <span class="rel">— measures →</span> <a href="gene-expression.html">Gene Expression</a></li><li><a href="gene-expression.html">Gene Expression</a> <span class="rel">— layer of (transcriptomics) →</span> <a href="multi-omics.html">Multi-Omics</a></li></ul></div>
+  </section>
+</article>
+</main>
+<footer class="foot">
+  <p lang="zh-Hant">教育用途，非臨床診斷工具。所有 PRS 數值皆為模擬資料。</p><p lang="en">For education only — not a clinical tool. All PRS numbers are simulated.</p>
+</footer>
+<script src="../../assets/js/site.js"></script>
+</body>
+</html>

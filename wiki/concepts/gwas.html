@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="zh-Hant" data-lang="zh">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Genome-Wide Association Study · DNA → Precision Medicine</title>
+<link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="../../index.html">DNA<span>→</span>PM</a>
+  <nav class="topnav"><a href="../../wiki/index.html"><span lang="zh-Hant">Wiki</span><span lang="en">Wiki</span></a><a href="../../wiki/glossary.html"><span lang="zh-Hant">術語詞典</span><span lang="en">Glossary</span></a><a href="../../wiki/graph.html"><span lang="zh-Hant">概念關聯</span><span lang="en">Concept Map</span></a><a href="../../wiki/evidence.html"><span lang="zh-Hant">證據追溯</span><span lang="en">Evidence</span></a><a href="../../slides/index.html"><span lang="zh-Hant">教學簡報</span><span lang="en">Slides</span></a><a href="../../workflow.html"><span lang="zh-Hant">工作流程</span><span lang="en">Workflow</span></a></nav>
+  <button class="lang-toggle" type="button" data-lang-toggle aria-label="Switch language">EN</button>
+</header>
+<main class="wrap">
+
+<p class="crumbs"><a href="../index.html">Wiki</a> / <a href="../index.html#gwas"><span lang="zh-Hant">GWAS 與統計遺傳學</span><span lang="en">GWAS &amp; Statistical Genetics</span></a></p>
+<article class="concept" data-concept="gwas">
+  <h1><span lang="zh-Hant">全基因體關聯研究</span><span lang="en">Genome-Wide Association Study</span> <span class="abbr">(GWAS)</span></h1>
+  <p class="meta"><span>Concept ID: <code>gwas</code></span> · <span>Last Updated: 2026-11-13</span></p>
+  <div class="layers">
+    <section class="card layer-beginner"><h2><span lang="zh-Hant">初學者</span><span lang="en">Beginner</span></h2><p lang="zh-Hant">GWAS 比較「有某疾病」和「沒有」的一大群人，在整個基因體裡找出在病人中比較常見的 SNP。找到的是「關聯」，不代表那個 SNP 就是病因：關聯不等於因果。</p><p lang="en">GWAS compares large groups with and without a disease, scanning the whole genome for SNPs that are more common in patients. What it finds is association — not proof that the SNP causes the disease.</p></section>
+    <section class="card layer-advanced"><h2><span lang="zh-Hant">進階</span><span lang="en">Advanced</span></h2><p lang="zh-Hant">對每個 SNP 以迴歸檢定 genotype dosage 與 phenotype 的關聯（連續性狀用線性迴歸、二元性狀用邏輯斯迴歸），並納入主成分等共變數校正族群分層。顯著 SNP 常透過 LD 標記附近未知的因果變異，需要 fine-mapping 與功能研究才能推論機制。</p><p lang="en">Each SNP is tested by regressing phenotype on genotype dosage (linear for quantitative, logistic for binary traits), adjusting for covariates such as principal components to control population stratification. Significant SNPs often tag unknown causal variants via LD; fine-mapping and functional work are needed to infer mechanism.</p></section>
+  </div>
+  <section class="card"><h2><span lang="zh-Hant">例子</span><span lang="en">Examples</span></h2><ul><li><span lang="zh-Hant">（示意）10,000 名病例與 10,000 名對照中，某 SNP 的 T allele 頻率分別為 32% 與 28%。</span><span lang="en">(Illustrative) Among 10,000 cases and 10,000 controls, a SNP&#x27;s T allele frequency is 32% vs 28%.</span></li></ul></section>
+  <section class="card"><h2><span lang="zh-Hant">證據</span><span lang="en">Evidence References</span></h2><ul class="claims"><li class="claim" id="claim-C-GW-01"><div class="claim-head"><a href="../evidence.html#C-GW-01"><code>C-GW-01</code></a> <span class="badge badge-consensus"><span lang="zh-Hant">共識</span><span lang="en">Consensus</span></span></div><p><span lang="zh-Hant">GWAS 在大量個體的基因體中檢測數十萬個變異，找出與特定性狀或疾病「統計上相關」的變異。</span><span lang="en">GWAS test hundreds of thousands of genetic variants across many genomes to find those statistically associated with a specific trait or disease.</span></p><ul class="ev"><li><a href="../papers/S12.html">S12</a> · <span class="loc">Abstract</span> · <a href="../evidence.html#E027">E027</a></li><li><a href="../papers/S01.html">S01</a> · <span class="loc">Glossary entry &quot;Genome-Wide Association Studies (GWAS)&quot;</span> · <a href="../evidence.html#E028">E028</a></li></ul></li><li class="claim" id="claim-C-GW-02"><div class="claim-head"><a href="../evidence.html#C-GW-02"><code>C-GW-02</code></a> <span class="badge badge-consensus"><span lang="zh-Hant">共識</span><span lang="en">Consensus</span></span></div><p><span lang="zh-Hant">GWAS 結果可用於理解性狀生物學、估計遺傳率、計算遺傳相關、臨床風險預測、藥物開發，以及推論風險因子與健康結果之間可能的因果關係。</span><span lang="en">GWAS results are used to gain insight into a phenotype&#x27;s biology, estimate heritability, calculate genetic correlations, make clinical risk predictions, inform drug development and infer potential causal relationships between risk factors and outcomes.</span></p><ul class="ev"><li><a href="../papers/S12.html">S12</a> · <span class="loc">Abstract</span> · <a href="../evidence.html#E029">E029</a></li></ul></li><li class="claim" id="claim-C-GW-05"><div class="claim-head"><a href="../evidence.html#C-GW-05"><code>C-GW-05</code></a> <span class="badge badge-consensus"><span lang="zh-Hant">共識</span><span lang="en">Consensus</span></span></div><p><span lang="zh-Hant">關聯不等於因果：GWAS 找到的顯著 SNP 通常透過 LD 標記附近未知的因果變異，之後仍需搜尋附近直接影響性狀的變異。</span><span lang="en">Association is not causation: a significant GWAS SNP often tags unknown causal variants through LD, and nearby variants that directly contribute to the trait must still be searched for.</span></p><ul class="ev"><li><a href="../papers/S13.html">S13</a> · <span class="loc">Main text, discussion of power and LD (r²) between genotyped and unknown causal variants</span> · <a href="../evidence.html#E032">E032</a></li><li><a href="../papers/S01.html">S01</a> · <span class="loc">Glossary entry &quot;Genome-Wide Association Studies (GWAS)&quot; (definition and narration: correlation, not causation)</span> · <a href="../evidence.html#E033">E033</a></li></ul></li></ul></section>
+  
+  <section class="card two-col">
+    <div><h2><span lang="zh-Hant">相關概念</span><span lang="en">Related Concepts</span></h2><ul><li><a href="snp.html"><span lang="zh-Hant">單核苷酸多態性</span><span lang="en">Single Nucleotide Polymorphism</span></a></li><li><a href="ld.html"><span lang="zh-Hant">連鎖不平衡</span><span lang="en">Linkage Disequilibrium</span></a></li><li><a href="p-value.html"><span lang="zh-Hant">P 值與全基因體顯著性</span><span lang="en">P-value &amp; Genome-wide Significance</span></a></li><li><a href="effect-size.html"><span lang="zh-Hant">效應量（Beta / Odds Ratio）</span><span lang="en">Effect Size (Beta / Odds Ratio)</span></a></li><li><a href="manhattan-plot.html"><span lang="zh-Hant">曼哈頓圖</span><span lang="en">Manhattan Plot</span></a></li><li><a href="prs.html"><span lang="zh-Hant">多基因風險分數</span><span lang="en">Polygenic Risk Score</span></a></li></ul></div>
+    <div><h2><span lang="zh-Hant">概念關係</span><span lang="en">Relationships</span></h2><ul class="edges"><li><a href="snp.html">Single Nucleotide Polymorphism</a> <span class="rel">— tested in →</span> <a href="gwas.html">Genome-Wide Association Study</a></li><li><a href="gwas.html">Genome-Wide Association Study</a> <span class="rel">— estimates →</span> <a href="effect-size.html">Effect Size (Beta / Odds Ratio)</a></li><li><a href="gwas.html">Genome-Wide Association Study</a> <span class="rel">— reports →</span> <a href="p-value.html">P-value &amp; Genome-wide Significance</a></li><li><a href="ld.html">Linkage Disequilibrium</a> <span class="rel">— explains tagging in →</span> <a href="gwas.html">Genome-Wide Association Study</a></li><li><a href="gwas.html">Genome-Wide Association Study</a> <span class="rel">— curated in →</span> <a href="gwas-catalog.html">NHGRI-EBI GWAS Catalog</a></li></ul></div>
+  </section>
+</article>
+</main>
+<footer class="foot">
+  <p lang="zh-Hant">教育用途，非臨床診斷工具。所有 PRS 數值皆為模擬資料。</p><p lang="en">For education only — not a clinical tool. All PRS numbers are simulated.</p>
+</footer>
+<script src="../../assets/js/site.js"></script>
+</body>
+</html>

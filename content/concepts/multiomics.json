@@ -1,0 +1,30 @@
+{
+  "domain": "multiomics",
+  "concepts": [
+    {"id": "multi-omics", "zh": "多體學", "en": "Multi-Omics", "abbr": "",
+     "beginner": {"zh": "只看 DNA 就像只看食譜，只看 RNA 像只看廚房正在煮什麼。多體學把食譜、正在煮的菜、端上桌的成品一起看，更容易了解問題出在哪裡。", "en": "Looking only at DNA is like reading the recipe; looking only at RNA is seeing what is cooking. Multi-omics looks at the recipe, the cooking and the served dish together to find where things go wrong."},
+     "advanced": {"zh": "多體學整合基因體、轉錄體、表觀基因體、蛋白體、代謝體等層次，目標是追蹤疾病背後的資訊流動，而不是單一層次的關聯。它不是 WGS → RNA-seq → GWAS 的固定流程；研究可從任何層次出發。", "en": "Multi-omics integrates genome, transcriptome, epigenome, proteome, metabolome and other layers to follow the flow of information underlying disease, beyond single-layer associations. It is not a fixed WGS → RNA-seq → GWAS pipeline; studies may start from any layer."},
+     "examples": {"zh": ["同一批腫瘤同時有突變、表現與甲基化資料，可交互比對。"], "en": ["The same tumours with mutation, expression and methylation data can be cross-compared."]},
+     "related": ["genomics", "gene-expression", "data-integration", "cancer-genomics"], "claims": ["C-MO-01"], "updated": "2026-11-13"},
+    {"id": "genomics", "zh": "基因體學", "en": "Genomics", "abbr": "",
+     "beginner": {"zh": "基因體學研究「整本說明書」，而不是一次只看一個基因。GWAS、WGS 都屬於基因體學工具。", "en": "Genomics studies the whole instruction book rather than one gene at a time. GWAS and WGS are genomics tools."},
+     "advanced": {"zh": "基因體學涵蓋序列、變異與結構分析。基因分型晶片帶來大規模 GWAS，加上全轉錄本測量，形成 integrative genetics，是多體學的起點。基因體層次的資料多為一生大致固定的 germline 變異（癌症中的 somatic 變異除外）。", "en": "Genomics covers sequence, variation and structure. Genotyping arrays enabled large GWAS and, with transcriptome-wide measurement, gave rise to integrative genetics — the starting point of multi-omics. Genome-level data are mostly germline variants fixed over life (except somatic variants in cancer)."},
+     "examples": {"zh": ["用 WGS 比較一家人的變異以找出遺傳疾病原因。"], "en": ["Using WGS to compare variants across a family to find a hereditary cause."]},
+     "related": ["multi-omics", "wgs", "gwas", "mutation"], "claims": ["C-MO-06"], "updated": "2026-11-13"},
+    {"id": "data-integration", "zh": "資料整合", "en": "Data Integration", "abbr": "",
+     "beginner": {"zh": "把 DNA 變異和 RNA 表現量放在一起看：例如某個變異是不是讓附近基因的表現變高或變低。", "en": "Put DNA variants and RNA expression side by side: for example, does a variant make a nearby gene's expression go up or down?"},
+     "advanced": {"zh": "整合策略可分為 genome first（從 GWAS locus 出發找機制）、phenotype first 與 environment first。典型例子是 eQTL mapping：以 genotype 預測表現量 (expression ~ dosage)。挑戰包括樣本對應、批次效應、不同資料尺度與缺失值。", "en": "Strategies include genome-first (from a GWAS locus toward mechanism), phenotype-first and environment-first. A typical example is eQTL mapping: expression ~ dosage. Challenges include sample matching, batch effects, differing data scales and missing values."},
+     "examples": {"zh": ["（示意）帶 G/G 的人某基因表現量平均高於 A/A：該 SNP 可能是 eQTL。"], "en": ["(Illustrative) G/G carriers express a gene more than A/A carriers on average: the SNP may be an eQTL."]},
+     "related": ["multi-omics", "expression-matrix", "gwas", "mutation"], "claims": ["C-MO-02", "C-MO-07"], "updated": "2026-11-13"},
+    {"id": "pathway-analysis", "zh": "路徑分析", "en": "Pathway Analysis", "abbr": "",
+     "beginner": {"zh": "一次看到幾百個差異基因很難理解。路徑分析問的是：這些基因是不是集中在某些生物功能（例如發炎、細胞分裂）？", "en": "Hundreds of differential genes are hard to interpret. Pathway analysis asks whether they cluster in certain biological functions such as inflammation or cell division."},
+     "advanced": {"zh": "方法包括過度表現分析（超幾何檢定）與 Gene Set Enrichment Analysis（依排序檢定基因集合是否集中於一端）。結果依賴所選基因集合資料庫與背景基因，需多重檢定校正。", "en": "Methods include over-representation analysis (hypergeometric test) and Gene Set Enrichment Analysis (testing whether a gene set concentrates at one end of a ranked list). Results depend on the gene-set database and background, and need multiple-testing correction."},
+     "examples": {"zh": ["（示意）差異基因中有大量細胞週期相關基因 → 提示細胞增生改變。"], "en": ["(Illustrative) Many cell-cycle genes among DE genes → suggests altered proliferation."]},
+     "related": ["differential-expression", "biomarker", "multi-omics"], "claims": ["C-MO-05"], "updated": "2026-11-13"},
+    {"id": "biomarker", "zh": "生物標記", "en": "Biomarker", "abbr": "",
+     "beginner": {"zh": "生物標記是可以測量、能反映身體狀態的指標，例如某個突變或某個基因的表現量，可能幫助判斷疾病類型或治療選擇。", "en": "A biomarker is a measurable indicator of body state — such as a mutation or a gene's expression level — that may help classify disease or choose treatment."},
+     "advanced": {"zh": "分子生物標記可為 DNA（突變）、RNA（表現特徵）、蛋白或代謝物。從研究發現到臨床使用需經分析效度、臨床效度與臨床效用驗證。TCGA Pan-Cancer 的目標之一是依基因體特徵跨癌種延伸療法，這屬研究目標，非已證實結果。", "en": "Molecular biomarkers can be DNA (mutations), RNA (expression signatures), proteins or metabolites. Moving from discovery to clinic requires analytical validity, clinical validity and clinical utility. Extending therapies across cancers by genomic profile is a TCGA Pan-Cancer aim, not a demonstrated result."},
+     "examples": {"zh": ["（示意）某腫瘤帶有特定突變時，可能適用針對該突變的標靶藥物。"], "en": ["(Illustrative) A tumour with a specific mutation may be eligible for a drug targeting it."]},
+     "related": ["cancer-genomics", "pathway-analysis", "clinical-application", "differential-expression"], "claims": ["C-MO-04"], "updated": "2026-11-13"}
+  ]
+}
