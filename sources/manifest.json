@@ -339,7 +339,7 @@
       "batch": 3,
       "ingestion_status": "verified",
       "access_date": "2026-11-13",
-      "notes": "Nature Reviews Methods Primers on GWAS.",
+      "notes": "Nature Reviews Methods Primers on GWAS. Full text (version of record) via VU Research Portal, supplied by the project owner 2026-11-13.",
       "verification": {
         "resolver": "crossref",
         "http_status": 200,
@@ -354,7 +354,8 @@
         "pmid": "openalex",
         "checked_at": "2026-11-13T10:00:16+09:00",
         "errors": []
-      }
+      },
+      "cache_pdf": "https://research.vu.nl/ws/portalfiles/portal/155815846/Genome_wide_association_studies.pdf"
     },
     {
       "id": "S13",

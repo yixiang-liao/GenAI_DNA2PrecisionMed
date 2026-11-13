@@ -136,6 +136,7 @@ def gate_evidence(root):
 
 def norm_quote(text):
     text = unescape(text).translate(str.maketrans("‘’“”–—−  ", "''\"\"---  "))
+    text = re.sub("[​­]", "", text)  # zero-width space / soft hyphen from PDF text
     return re.sub(r"\s+", " ", text).strip().lower()
 
 

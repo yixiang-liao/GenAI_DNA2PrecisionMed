@@ -2,6 +2,7 @@
 
 - DOI sources with an open PMC copy -> NCBI efetch (db=pmc) body text -> sources/cache/fulltext/Sxx.txt
 - Official web sources (S01, S02)   -> every URL in manifest `cache_pages` -> sources/cache/pages/Sxx.txt
+- Paywalled article with an open PDF copy -> manifest `cache_pdf` -> pdftotext -> sources/cache/fulltext/Sxx.txt
 
 The cache is git-ignored (third-party text); re-create it with this script.
 
@@ -10,12 +11,16 @@ Usage: python3 scripts/cache_text.py [--only S24 S01]
 import argparse
 import json
 import re
+import subprocess
 import sys
+import tempfile
 import time
+import urllib.request
 from html import unescape
+from pathlib import Path
 
 from common import ROOT, load_json, save_json
-from ingest import http_get
+from ingest import SSL_CTX, http_get
 
 CACHE = ROOT / "sources/cache"
 
@@ -64,6 +69,19 @@ def main():
                 time.sleep(0.3)
             (CACHE / "pages" / f"{src['id']}.txt").write_text("\n\n".join(parts) + "\n", encoding="utf-8")
             print(f"[{src['id']}] {len(parts)} pages cached")
+        elif src.get("cache_pdf"):
+            # open copy of a paywalled article (e.g. institutional repository); needs poppler's pdftotext
+            with tempfile.TemporaryDirectory() as tmp:
+                pdf = Path(tmp) / "src.pdf"
+                req = urllib.request.Request(src["cache_pdf"], headers={"User-Agent": "Mozilla/5.0"})
+                with urllib.request.urlopen(req, timeout=60, context=SSL_CTX) as resp:
+                    pdf.write_bytes(resp.read())
+                subprocess.run(["pdftotext", str(pdf), str(pdf.with_suffix(".txt"))], check=True, capture_output=True)
+                raw = pdf.with_suffix(".txt").read_text(encoding="utf-8", errors="replace")
+            body = re.sub(r"\s+", " ", re.sub(r"-\n(?=[a-z])", "", raw)).strip()
+            (CACHE / "fulltext" / f"{src['id']}.txt").write_text(
+                f"{src['title']}\n\n{body}\n\n(full text via {src['cache_pdf']})\n", encoding="utf-8")
+            print(f"[{src['id']}] PDF: {len(body)} chars")
         elif ver.get("pmid"):
             try:
                 pmcid = ver.get("pmcid") or pmc_id(ver["pmid"])

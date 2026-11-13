@@ -17,7 +17,7 @@ Failure IDs start at E02; E01 was never assigned.
 | E03 | N1 | S15 year mismatch (manifest 2023, Crossref 2022) | Online-first vs print date; the checker compared only one date field | Compare against `issued`, `published-print`, `published-online` (N1) | 1 | Pass |
 | E04 | N4 | 234 broken links in the wiki | N4 checked links to pages produced by **later** nodes (slides, workflow) | Scope N4 to links inside `wiki/`; cross-artifact links move to the N6 `site` gate (graph change) | 1 | Pass |
 | E05 | N1 | S12 had no abstract to check claims against | Not indexed in PubMed | OpenAlex fallback for abstracts (N1) | 1 | Pass |
-| E06 | N2 | S12 full text behind a login wall; one claim could not be verified | Access limit, not a code bug | **Not worked around**: C-GW-09 set to `pending_verification` and hidden from the site | 0 | Requires Human Review |
+| E06 | N2 | S12 full text behind a login wall; one claim could not be verified | Access limit, not a code bug | **Not worked around**: C-GW-09 set to `pending_verification` and hidden from the site; the project owner later supplied an open PDF of S12 and the claim was verified from its Fig. 2 legend (X29) | 0 → 1 | Resolved by human |
 | E07 | N6 | 71 slide links reported as missing anchors | Slides are JS-rendered; `#sNN` are hash routes, not HTML `id`s | Link checker reads legal slide anchors from `content/slides.json` (N6 checker) | 1 | Pass |
 | E08 | N6 | "390 px" layout test actually ran at 500 px | Headless Chrome enforces a 500 px minimum window width; the test never checked the real width | iframe harness of exact width + new check `innerWidth == target` (N6 checker) | 1 | Pass |
 | E09 | N6 | PRS table unreadable at true 390 px (one character per line) | Overflow check passes when content is squeezed instead of overflowing | Mobile CSS for the table (N5 slide layout) + screenshot inspection added to the N6 gate | 1 | Pass |
@@ -27,7 +27,8 @@ Failure IDs start at E02; E01 was never assigned.
 | E13 | N3 | Bulk-edit script reformatted two concept JSON files (187-line diff) | Script round-tripped the file through `json.dumps` | Rebuilt both from the committed text + the same replacements; asserted parsed JSON equals the intent | 1 | Pass |
 
 No gate needed more than one fix round, so the 3-round cap was never reached. One item
-(E06 / C-GW-09) was stopped and sent to human review instead of being forced through.
+(E06 / C-GW-09) was stopped and sent to human review instead of being forced through; the human
+supplied a readable copy of the source, and the claim was then verified normally (X29).
 
 ## 2. Reproducible test cases (RTC)
 

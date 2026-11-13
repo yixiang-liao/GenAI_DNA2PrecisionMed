@@ -27,7 +27,8 @@ Transcriptomics、GWAS、PRS、Multi-Omics、Precision Medicine 七大領域。
 
 - **真實錯誤（RDF）12 件**（E02–E13），每件都在 1 輪內局部修正；沒有節點達到 3 輪上限。
 - **人工確認項目**：C-GW-09（Manhattan plot 軸定義）的來源 S12 全文需登入，證據不足，
-  依規則標記 `pending_verification`，不在網站發布。
+  依規則先標記 `pending_verification`、不發布；由人工提供 S12 的公開全文（VU Research Portal）後，
+  以 Fig. 2 圖說原文驗證並發布。
 - **可重現錯誤測試（RTC）8 件**，全部被預期的 gate 抓到；與真實錯誤分開記錄。
 
 最有代表性的兩個真實錯誤：

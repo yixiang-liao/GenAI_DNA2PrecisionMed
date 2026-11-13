@@ -773,15 +773,23 @@
     {
       "id": "C-GW-09",
       "concept_id": "manhattan-plot",
-      "classification": "uncertain",
-      "status": "pending_verification",
-      "missing_evidence": "No verified source in the current corpus describes the Manhattan plot axes (genomic position vs −log10 p). S12 (Uffelmann 2021) likely does, but its full text could not be retrieved for verification. Needs a human-approved source (e.g. replace one source or raise the source cap).",
+      "classification": "consensus",
+      "status": "verified",
       "text": {
-        "zh": "曼哈頓圖以 x 軸表示染色體位置、y 軸表示 −log₁₀(p)，每個點代表一個 SNP。",
-        "en": "A Manhattan plot shows genomic position on the x-axis and −log10(p) on the y-axis, one point per SNP."
+        "zh": "曼哈頓圖以 x 軸表示 SNP 在基因體上的位置、y 軸表示關聯強度 −log₁₀(P)，每個點代表一個 SNP；圖中的橫線常標示全基因體顯著門檻 P < 5 × 10⁻⁸。",
+        "en": "A Manhattan plot orders SNPs on the x-axis by genomic position and shows association strength as −log10(P) on the y-axis, one dot per SNP; a horizontal line often marks the genome-wide significance threshold P < 5 × 10⁻⁸."
       },
-      "evidence": [],
-      "related_slide_ids": []
+      "evidence": [
+        {
+          "id": "E068",
+          "source_id": "S12",
+          "location": "Fig. 2 legend (a) (version of record, VU Research Portal)",
+          "quote": "Manhattan plot showing significance of each variant’s association with a phenotype … Each dot represents a single-nucleotide polymorphism (SNP), with SNPs ordered on the x axis according to their genomic position. y axis represents strength of their association measured as –log10 transformed P values. Red line marks genome-wide significance threshold of P < 5 × 10–8."
+        }
+      ],
+      "related_slide_ids": [
+        "s16"
+      ]
     },
     {
       "id": "C-PRS-01",
