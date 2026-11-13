@@ -3,6 +3,7 @@
 - **GitHub Repository：** https://github.com/yixiang-liao/GenAI_DNA2PrecisionMed
 - **GitHub Pages：** https://yixiang-liao.github.io/GenAI_DNA2PrecisionMed/
   - Wiki：`/wiki/index.html`　簡報：`/slides/index.html`　工作流程與報告：`/workflow.html`
+  - 2026-11-13 部署確認：主要頁面皆回應 HTTP 200，線上簡報自我測試 30 頁、無溢出、無互動錯誤。
 
 ## 一、成果摘要
 
