@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="zh-Hant" data-lang="zh">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DNA to Precision Medicine</title>
+<meta name="description" content="從 DNA 到精準醫療：整合基因體學、轉錄體學、GWAS 與多基因風險預測的互動式知識系統（雙語 LLM Wiki、互動簡報、證據追溯、Graph/Loop 工作流程）。">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="index.html">DNA<span>→</span>PM</a>
+  <nav class="topnav">
+    <a href="wiki/index.html"><span lang="zh-Hant">Wiki</span><span lang="en">Wiki</span></a>
+    <a href="wiki/glossary.html"><span lang="zh-Hant">術語詞典</span><span lang="en">Glossary</span></a>
+    <a href="wiki/graph.html"><span lang="zh-Hant">概念關聯</span><span lang="en">Concept Map</span></a>
+    <a href="wiki/evidence.html"><span lang="zh-Hant">證據追溯</span><span lang="en">Evidence</span></a>
+    <a href="slides/index.html"><span lang="zh-Hant">教學簡報</span><span lang="en">Slides</span></a>
+    <a href="workflow.html"><span lang="zh-Hant">工作流程</span><span lang="en">Workflow</span></a>
+  </nav>
+  <button class="lang-toggle" type="button" data-lang-toggle aria-label="Switch language">EN</button>
+</header>
+<main class="wrap">
+  <section class="hero">
+    <p class="muted small">生成式 AI 第十週作業 · Generative AI Week 10</p>
+    <h1><span lang="zh-Hant">從 DNA 到精準醫療</span><span lang="en">From DNA to Precision Medicine</span></h1>
+    <p class="lede">
+      <span lang="zh-Hant">整合基因體學、轉錄體學、GWAS 與多基因風險預測的互動式知識系統。每一個科學主張都能從簡報追溯到 Wiki、證據紀錄與原始文獻。</span>
+      <span lang="en">An interactive knowledge system spanning genomics, transcriptomics, GWAS and polygenic risk prediction. Every scientific claim traces from slide to wiki, evidence record and original source.</span>
+    </p>
+    <div class="cta">
+      <a class="btn primary" href="slides/index.html"><span lang="zh-Hant">開始簡報 →</span><span lang="en">Open the slides →</span></a>
+      <a class="btn ghost" href="wiki/index.html"><span lang="zh-Hant">瀏覽 Wiki</span><span lang="en">Browse the wiki</span></a>
+      <a class="btn ghost" href="workflow.html"><span lang="zh-Hant">Graph / Loop 流程</span><span lang="en">Graph / Loop workflow</span></a>
+    </div>
+    <div class="stats" id="stats">
+      <div class="stat"><b data-stat="domains">7</b><span lang="zh-Hant">知識領域</span><span lang="en">domains</span></div>
+      <div class="stat"><b data-stat="concepts">–</b><span lang="zh-Hant">Wiki 概念</span><span lang="en">wiki concepts</span></div>
+      <div class="stat"><b data-stat="claims">–</b><span lang="zh-Hant">已驗證主張</span><span lang="en">verified claims</span></div>
+      <div class="stat"><b data-stat="sources">–</b><span lang="zh-Hant">驗證來源</span><span lang="en">verified sources</span></div>
+      <div class="stat"><b data-stat="slides">–</b><span lang="zh-Hant">簡報頁數</span><span lang="en">slides</span></div>
+    </div>
+    <p class="disclaimer">
+      <span lang="zh-Hant">⚠️ 本網站為教育用途，<b>非臨床診斷工具</b>，不提供個人疾病風險判定或醫療建議。PRS Calculator 與所有示例基因型皆為模擬資料。</span>
+      <span lang="en">⚠️ Educational use only — <b>not a clinical tool</b>; it does not provide personal risk assessment or medical advice. The PRS Calculator and all example genotypes are simulated, not real patient data.</span>
+    </p>
+  </section>
+
+  <div class="grid">
+    <section class="card"><h2><span lang="zh-Hant">LLM Wiki</span><span lang="en">LLM Wiki</span></h2>
+      <p><span lang="zh-Hant">七大領域、雙層教學（Beginner / Advanced）、中英切換、文獻筆記。</span><span lang="en">Seven domains, two teaching layers, bilingual, with paper notes.</span></p>
+      <p><a href="wiki/index.html">Wiki</a> · <a href="wiki/glossary.html">Glossary</a> · <a href="wiki/graph.html">Concept Map</a></p></section>
+    <section class="card"><h2><span lang="zh-Hant">互動簡報</span><span lang="en">Interactive Slides</span></h2>
+      <p><span lang="zh-Hant">30 頁，含 DNA Explorer、PRS Calculator 與互動測驗。</span><span lang="en">30 slides with a DNA Explorer, PRS Calculator and quiz.</span></p>
+      <p><a href="slides/index.html#s05">DNA Explorer</a> · <a href="slides/index.html#s21">PRS Calculator</a> · <a href="slides/index.html#s29">Quiz</a></p></section>
+    <section class="card"><h2><span lang="zh-Hant">證據追溯</span><span lang="en">Evidence Traceability</span></h2>
+      <p>Slide → Wiki Concept → Evidence Record → Original Source</p>
+      <p><a href="wiki/evidence.html">Evidence</a> · <a href="wiki/evidence.html#conflicts">Conflicts</a> · <a href="wiki/evidence.html#pending">Pending</a></p></section>
+    <section class="card"><h2><span lang="zh-Hant">Graph / Loop 工作流程</span><span lang="en">Graph / Loop Workflow</span></h2>
+      <p><span lang="zh-Hant">8 個節點、驗證關卡、最多 3 輪局部修正，以及真實執行與錯誤修正紀錄。</span><span lang="en">8 nodes, validation gates, at most 3 local fix rounds, real execution and recovery logs.</span></p>
+      <p><a href="workflow.html">Workflow</a> · <a href="workflow.html#validation">Validation</a> · <a href="workflow.html#recovery">Recovery</a></p></section>
+  </div>
+</main>
+<footer class="foot"><p>
+  <span lang="zh-Hant">原始碼：</span><span lang="en">Source: </span><a href="https://github.com/yixiang-liao/GenAI_DNA2PrecisionMed">github.com/yixiang-liao/GenAI_DNA2PrecisionMed</a>
+</p></footer>
+<script src="assets/js/site-data.js"></script>
+<script>
+(function () {
+  var D = window.SITE_DATA;
+  if (!D) return;
+  var n = { concepts: D.concepts.length, claims: D.claims.length, sources: D.sources.length, slides: D.slides.length };
+  Object.keys(n).forEach(function (k) {
+    var el = document.querySelector('[data-stat="' + k + '"]');
+    if (el) el.textContent = n[k];
+  });
+})();
+</script>
+<script src="assets/js/site.js"></script>
+</body>
+</html>

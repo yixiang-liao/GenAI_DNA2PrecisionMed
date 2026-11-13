@@ -13,10 +13,13 @@
         {
           "id": "E001",
           "source_id": "S01",
-          "location": "Glossary entry \"Deoxyribonucleic Acid (DNA)\""
+          "location": "Glossary entry \"Deoxyribonucleic Acid (DNA)\" (genome.gov)",
+          "quote": "Deoxyribonucleic acid (abbreviated DNA) is the molecule that carries genetic information for the development and functioning of an organism. … Attached to each sugar is one of four bases: adenine (A), cytosine (C), guanine (G) or thymine (T). The two strands are connected by chemical bonds between the bases: adenine bonds with thymine, and cytosine bonds with guanine."
         }
       ],
-      "related_slide_ids": []
+      "related_slide_ids": [
+        "s03"
+      ]
     },
     {
       "id": "C-MOL-02",
@@ -31,10 +34,13 @@
         {
           "id": "E002",
           "source_id": "S01",
-          "location": "Glossary entry \"Ribonucleic Acid (RNA)\""
+          "location": "Glossary entry \"Ribonucleic Acid (RNA)\" (genome.gov)",
+          "quote": "Unlike DNA, however, RNA is most often single-stranded. An RNA molecule has a backbone made of alternating phosphate groups and the sugar ribose, rather than the deoxyribose found in DNA. … Attached to each sugar is one of four bases: adenine (A), uracil (U), cytosine (C) or guanine (G). Different types of RNA exist in cells: messenger RNA (mRNA), ribosomal RNA (rRNA) and transfer RNA (tRNA). In addition, some RNAs are involved in regulating gene expression."
         }
       ],
-      "related_slide_ids": []
+      "related_slide_ids": [
+        "s11"
+      ]
     },
     {
       "id": "C-MOL-03",
@@ -49,10 +55,13 @@
         {
           "id": "E003",
           "source_id": "S01",
-          "location": "Glossary entry \"Chromosome\""
+          "location": "Glossary entry \"Chromosome\" (genome.gov)",
+          "quote": "Chromosomes are threadlike structures made of protein and a single molecule of DNA that serve to carry the genomic information from cell to cell. … Humans have 22 pairs of numbered chromosomes (autosomes) and one pair of sex chromosomes (XX or XY), for a total of 46."
         }
       ],
-      "related_slide_ids": []
+      "related_slide_ids": [
+        "s03"
+      ]
     },
     {
       "id": "C-MOL-04",
@@ -67,10 +76,13 @@
         {
           "id": "E004",
           "source_id": "S01",
-          "location": "Glossary entry \"Gene\""
+          "location": "Glossary entry \"Gene\" (genome.gov)",
+          "quote": "The gene is considered the basic unit of inheritance. … Most genes code for specific proteins, or segments of proteins, which have differing functions within the body. Humans have approximately 20,000 protein-coding genes."
         }
       ],
-      "related_slide_ids": []
+      "related_slide_ids": [
+        "s04"
+      ]
     },
     {
       "id": "C-MOL-05",
@@ -85,10 +97,13 @@
         {
           "id": "E005",
           "source_id": "S01",
-          "location": "Glossary entry \"Locus\""
+          "location": "Glossary entry \"Locus\" (genome.gov)",
+          "quote": "A locus, as related to genomics, is a physical site or location within a genome (such as a gene or another DNA segment of interest), somewhat like a street address. The plural of locus is loci."
         }
       ],
-      "related_slide_ids": []
+      "related_slide_ids": [
+        "s04"
+      ]
     },
     {
       "id": "C-MOL-06",
@@ -103,10 +118,13 @@
         {
           "id": "E006",
           "source_id": "S01",
-          "location": "Glossary entry \"Allele\""
+          "location": "Glossary entry \"Allele\" (genome.gov)",
+          "quote": "An allele is one of two or more versions of DNA sequence (a single base or a segment of bases) at a given genomic location. An individual inherits two alleles, one from each parent, for any given genomic location where such variation exists. If the two alleles are the same, the individual is homozygous for that allele. If the alleles are different, the individual is heterozygous."
         }
       ],
-      "related_slide_ids": []
+      "related_slide_ids": [
+        "s05"
+      ]
     },
     {
       "id": "C-MOL-07",
@@ -121,10 +139,13 @@
         {
           "id": "E007",
           "source_id": "S01",
-          "location": "Glossary entry \"Single Nucleotide Polymorphisms (SNPs)\""
+          "location": "Glossary entry \"Single Nucleotide Polymorphisms (SNPs)\" (genome.gov)",
+          "quote": "A single nucleotide polymorphism (abbreviated SNP, pronounced snip) is a genomic variant at a single base position in the DNA. Scientists study if and how SNPs in a genome influence health, disease, drug response and other traits."
         }
       ],
-      "related_slide_ids": []
+      "related_slide_ids": [
+        "s05"
+      ]
     },
     {
       "id": "C-MOL-08",
@@ -139,10 +160,13 @@
         {
           "id": "E008",
           "source_id": "S06",
-          "location": "Abstract"
+          "location": "Abstract",
+          "quote": "Here we report completion of the project, having reconstructed the genomes of 2,504 individuals from 26 populations … in total over 88 million variants (84.7 million single nucleotide polymorphisms (SNPs), 3.6 million short insertions/deletions (indels), and 60,000 structural variants)"
         }
       ],
-      "related_slide_ids": []
+      "related_slide_ids": [
+        "s06"
+      ]
     },
     {
       "id": "C-MOL-09",
@@ -157,10 +181,13 @@
         {
           "id": "E009",
           "source_id": "S01",
-          "location": "Glossary entry \"Genotype\""
+          "location": "Glossary entry \"Genotype\" (genome.gov)",
+          "quote": "A genotype is a scoring of the type of variant present at a given location (i.e., a locus) in the genome. … Some genotypes contribute to an individual’s observable traits, called the phenotype."
         }
       ],
-      "related_slide_ids": []
+      "related_slide_ids": [
+        "s06"
+      ]
     },
     {
       "id": "C-MOL-10",
@@ -175,7 +202,29 @@
         {
           "id": "E010",
           "source_id": "S01",
-          "location": "Glossary entry \"Phenotype\""
+          "location": "Glossary entry \"Phenotype\" (genome.gov)",
+          "quote": "Phenotype refers to an individual’s observable traits, such as height, eye color and blood type. A person’s phenotype is determined by both their genomic makeup (genotype) and environmental factors."
+        }
+      ],
+      "related_slide_ids": [
+        "s06"
+      ]
+    },
+    {
+      "id": "C-MOL-11",
+      "concept_id": "genetic-variant",
+      "classification": "single_study",
+      "status": "verified",
+      "text": {
+        "zh": "在 1000 Genomes 資料中，大多數變異位點是罕見的（約 6,400 萬個體染色體變異頻率 <0.5%）；但單一個人基因體中觀察到的變異，大多數是常見變異。",
+        "en": "In the 1000 Genomes data most variant sites are rare (~64 million autosomal variants have frequency <0.5%), yet most variants observed in a single genome are common."
+      },
+      "evidence": [
+        {
+          "id": "E066",
+          "source_id": "S06",
+          "location": "Main text, section \"A typical genome\"",
+          "quote": "The majority of variants in the data set are rare: ∼64 million autosomal variants have a frequency <0.5% … Nevertheless, the majority of variants observed in a single genome are common"
         }
       ],
       "related_slide_ids": []
@@ -193,10 +242,13 @@
         {
           "id": "E011",
           "source_id": "S03",
-          "location": "Abstract"
+          "location": "Abstract",
+          "quote": "Since the completion of the human genome project in 2003, extraordinary progress has been made in genome sequencing technologies, which has led to a decreased cost per megabase and an increase in the number and diversity of sequenced genomes. … Some approaches maximize the number of bases sequenced in the least amount of time … other approaches now aim to sequence longer contiguous pieces of DNA, which are essential for resolving structurally complex regions."
         }
       ],
-      "related_slide_ids": []
+      "related_slide_ids": [
+        "s07"
+      ]
     },
     {
       "id": "C-SEQ-02",
@@ -212,10 +264,13 @@
         {
           "id": "E012",
           "source_id": "S03",
-          "location": "Main text, section on long-read sequencing"
+          "location": "Main text, introduction (opening section)",
+          "quote": "Although long-read sequencing overcomes the length limitation of other NGS approaches, it remains considerably more expensive and has lower throughput than other platforms, limiting the widespread adoption of this technology in favour of less-expensive approaches."
         }
       ],
-      "related_slide_ids": []
+      "related_slide_ids": [
+        "s07"
+      ]
     },
     {
       "id": "C-SEQ-03",
@@ -230,10 +285,13 @@
         {
           "id": "E013",
           "source_id": "S01",
-          "location": "Glossary entry \"Exome\""
+          "location": "Glossary entry \"Exome\" (genome.gov)",
+          "quote": "An exome is the sequence of all the exons in a genome, reflecting the protein-coding portion of a genome. In humans, the exome is about 1.5% of the genome."
         }
       ],
-      "related_slide_ids": []
+      "related_slide_ids": [
+        "s08"
+      ]
     },
     {
       "id": "C-SEQ-04",
@@ -248,10 +306,14 @@
         {
           "id": "E014",
           "source_id": "S06",
-          "location": "Abstract"
+          "location": "Abstract",
+          "quote": "having reconstructed the genomes of 2,504 individuals from 26 populations using a combination of low-coverage whole-genome sequencing, deep exome sequencing, and dense microarray genotyping."
         }
       ],
-      "related_slide_ids": []
+      "related_slide_ids": [
+        "s02",
+        "s08"
+      ]
     },
     {
       "id": "C-SEQ-05",
@@ -266,10 +328,13 @@
         {
           "id": "E015",
           "source_id": "S04",
-          "location": "Abstract (Summary)"
+          "location": "Abstract (Summary)",
+          "quote": "The variant call format (VCF) is a generic format for storing DNA polymorphism data such as SNPs, insertions, deletions and structural variants, together with rich annotations. VCF is usually stored in a compressed manner and can be indexed for fast data retrieval of variants from a range of positions on the reference genome. The format was developed for the 1000 Genomes Project"
         }
       ],
-      "related_slide_ids": []
+      "related_slide_ids": [
+        "s09"
+      ]
     },
     {
       "id": "C-SEQ-06",
@@ -284,10 +349,13 @@
         {
           "id": "E016",
           "source_id": "S05",
-          "location": "Abstract"
+          "location": "Abstract",
+          "quote": "Here, we discuss our Genome Analysis Toolkit (GATK), a structured programming framework designed to ease the development of efficient and robust analysis tools for next-generation DNA sequencers … robust, scale-tolerant tools like coverage calculators and single nucleotide polymorphism (SNP) calling. … many of which have already been incorporated into large-scale sequencing projects like the 1000 Genomes Project and The Cancer Genome Atlas."
         }
       ],
-      "related_slide_ids": []
+      "related_slide_ids": [
+        "s09"
+      ]
     },
     {
       "id": "C-SEQ-07",
@@ -302,10 +370,13 @@
         {
           "id": "E017",
           "source_id": "S02",
-          "location": "Page \"What is a gene variant and how do variants occur?\""
+          "location": "MedlinePlus page \"What is a gene variant and how do variants occur?\"",
+          "quote": "Inherited (or hereditary) variants are passed from parent to child and are present throughout a person’s life in virtually every cell in the body. These variants are also called germline variants … Non-inherited variants occur at some time during a person’s life and are present only in certain cells, not in every cell in the body. … they are often referred to as somatic variants. These variants cannot be passed to the next generation."
         }
       ],
-      "related_slide_ids": []
+      "related_slide_ids": [
+        "s10"
+      ]
     },
     {
       "id": "C-SEQ-08",
@@ -320,10 +391,13 @@
         {
           "id": "E018",
           "source_id": "S07",
-          "location": "Abstract"
+          "location": "Abstract",
+          "quote": "Addressing the remaining 8% of the genome, the Telomere-to-Telomere (T2T) Consortium presents a complete 3.055 billion-base pair sequence of a human genome, T2T-CHM13, that includes gapless assemblies for all chromosomes except Y"
         }
       ],
-      "related_slide_ids": []
+      "related_slide_ids": [
+        "s07"
+      ]
     },
     {
       "id": "C-SEQ-09",
@@ -338,10 +412,13 @@
         {
           "id": "E019",
           "source_id": "S25",
-          "location": "Abstract"
+          "location": "Abstract",
+          "quote": "This report recommends the use of specific standard terminology-\"pathogenic,\" \"likely pathogenic,\" \"uncertain significance,\" \"likely benign,\" and \"benign\"-to describe variants identified in genes that cause Mendelian disorders. Moreover, this recommendation describes a process for classifying variants into these five categories based on criteria using typical types of variant evidence (e.g., population data, computational data, functional data, segregation data)."
         }
       ],
-      "related_slide_ids": []
+      "related_slide_ids": [
+        "s10"
+      ]
     },
     {
       "id": "C-TX-01",
@@ -349,17 +426,20 @@
       "classification": "consensus",
       "status": "verified",
       "text": {
-        "zh": "RNA-seq 以深度定序技術分析轉錄體，相較其他方法能更精確測量轉錄本及其 isoform 的量。",
-        "en": "RNA-seq profiles the transcriptome with deep-sequencing technologies and measures transcript and isoform levels more precisely than other methods."
+        "zh": "RNA-seq 以深度定序技術分析轉錄體；依 2009 年的回顧，它比當時的其他方法（如 microarray）能更精確測量轉錄本及其 isoform 的量。",
+        "en": "RNA-seq profiles the transcriptome with deep-sequencing technologies; a 2009 review reported that it measures transcript and isoform levels far more precisely than the other methods of that time (e.g., microarrays)."
       },
       "evidence": [
         {
           "id": "E020",
           "source_id": "S08",
-          "location": "Abstract"
+          "location": "Abstract",
+          "quote": "RNA-Seq is a recently developed approach to transcriptome profiling that uses deep-sequencing technologies. … RNA-Seq also provides a far more precise measurement of levels of transcripts and their isoforms than other methods."
         }
       ],
-      "related_slide_ids": []
+      "related_slide_ids": [
+        "s12"
+      ]
     },
     {
       "id": "C-TX-02",
@@ -374,10 +454,13 @@
         {
           "id": "E021",
           "source_id": "S09",
-          "location": "Abstract"
+          "location": "Abstract",
+          "quote": "RNA-sequencing (RNA-seq) has a wide variety of applications, but no single analysis pipeline can be used in all cases. We review all of the major steps in RNA-seq data analysis, including experimental design, quality control, read alignment, quantification of gene and transcript levels, visualization, differential gene expression, alternative splicing, functional analysis, gene fusion detection and eQTL mapping."
         }
       ],
-      "related_slide_ids": []
+      "related_slide_ids": [
+        "s12"
+      ]
     },
     {
       "id": "C-TX-03",
@@ -392,10 +475,13 @@
         {
           "id": "E022",
           "source_id": "S10",
-          "location": "Abstract"
+          "location": "Abstract",
+          "quote": "we show that RPKM does not respect this invariance property and thus cannot be an accurate measure of rmc. We propose a slight modification of RPKM that eliminates this inconsistency and call it TPM for transcripts per million."
         }
       ],
-      "related_slide_ids": []
+      "related_slide_ids": [
+        "s13"
+      ]
     },
     {
       "id": "C-TX-04",
@@ -410,10 +496,13 @@
         {
           "id": "E023",
           "source_id": "S09",
-          "location": "Main text, section \"Quantification\""
+          "location": "Main text, section \"Transcript quantification\"",
+          "quote": "Raw read counts alone are not sufficient to compare expression levels among samples, as these values are affected by factors such as transcript length, total number of reads, and sequencing biases. The measure RPKM (reads per kilobase of exon model per million reads) [] is a within-sample normalization method"
         }
       ],
-      "related_slide_ids": []
+      "related_slide_ids": [
+        "s13"
+      ]
     },
     {
       "id": "C-TX-05",
@@ -428,10 +517,13 @@
         {
           "id": "E024",
           "source_id": "S11",
-          "location": "Abstract"
+          "location": "Abstract",
+          "quote": "Small replicate numbers, discreteness, large dynamic range and the presence of outliers require a suitable statistical approach. We present DESeq2, a method for differential analysis of count data, using shrinkage estimation for dispersions and fold changes to improve stability and interpretability of estimates."
         }
       ],
-      "related_slide_ids": []
+      "related_slide_ids": [
+        "s14"
+      ]
     },
     {
       "id": "C-TX-06",
@@ -446,10 +538,14 @@
         {
           "id": "E025",
           "source_id": "S11",
-          "location": "Abstract"
+          "location": "Abstract",
+          "quote": "In comparative high-throughput sequencing assays, a fundamental task is the analysis of count data, such as read counts per gene in RNA-seq, for evidence of systematic changes across experimental conditions."
         }
       ],
-      "related_slide_ids": []
+      "related_slide_ids": [
+        "s12",
+        "s14"
+      ]
     },
     {
       "id": "C-TX-07",
@@ -464,7 +560,29 @@
         {
           "id": "E026",
           "source_id": "S08",
-          "location": "Abstract"
+          "location": "Abstract",
+          "quote": "Studies using this method have already altered our view of the extent and complexity of eukaryotic transcriptomes."
+        }
+      ],
+      "related_slide_ids": [
+        "s11"
+      ]
+    },
+    {
+      "id": "C-TX-08",
+      "concept_id": "tpm",
+      "classification": "consensus",
+      "status": "verified",
+      "text": {
+        "zh": "相較 RPKM/FPKM，TPM 校正了轉錄本組成的差異，因此被認為在樣本間較可比。",
+        "en": "Compared with RPKM/FPKM, TPM normalizes for differences in transcript composition and is considered more comparable between samples."
+      },
+      "evidence": [
+        {
+          "id": "E067",
+          "source_id": "S09",
+          "location": "Main text, \"Transcript quantification\"",
+          "quote": "TPMs, which effectively normalize for the differences in composition of the transcripts in the denominator rather than simply dividing by the number of reads in the library, are considered more comparable between samples"
         }
       ],
       "related_slide_ids": []
@@ -482,15 +600,19 @@
         {
           "id": "E027",
           "source_id": "S12",
-          "location": "Abstract"
+          "location": "Abstract",
+          "quote": "Genome-wide association studies (GWAS) test hundreds of thousands of genetic variants across many genomes to find those statistically associated with a specific trait or disease."
         },
         {
           "id": "E028",
           "source_id": "S01",
-          "location": "Glossary entry \"Genome-Wide Association Studies (GWAS)\""
+          "location": "Glossary entry \"Genome-Wide Association Studies (GWAS)\" (genome.gov), Definition",
+          "quote": "A genome-wide association study (abbreviated GWAS) is a research approach used to identify genomic variants that are statistically associated with a risk for a disease or a particular trait. The method involves surveying the genomes of many people, looking for genomic variants that occur more frequently in those with a specific disease or trait compared to those without the disease or trait."
         }
       ],
-      "related_slide_ids": []
+      "related_slide_ids": [
+        "s15"
+      ]
     },
     {
       "id": "C-GW-02",
@@ -505,10 +627,13 @@
         {
           "id": "E029",
           "source_id": "S12",
-          "location": "Abstract"
+          "location": "Abstract",
+          "quote": "GWAS results have a range of applications, such as gaining insight into a phenotype’s underlying biology, estimating its heritability, calculating genetic correlations, making clinical risk predictions, informing drug development programmes and inferring potential causal relationships between risk factors and health outcomes."
         }
       ],
-      "related_slide_ids": []
+      "related_slide_ids": [
+        "s15"
+      ]
     },
     {
       "id": "C-GW-03",
@@ -523,10 +648,13 @@
         {
           "id": "E030",
           "source_id": "S13",
-          "location": "Main text, section \"Discoveries\" (definition of strong association)"
+          "location": "Main text, section \"General Results\" > \"Complex Traits Are Highly Polygenic\" (also Table 1)",
+          "quote": "About 10,000 strong associations have been reported between genetic variants and one or more complex traits, 10 where “strong” is defined as statistically significant at the genome-wide p value threshold of 5 × 10 −8"
         }
       ],
-      "related_slide_ids": []
+      "related_slide_ids": [
+        "s16"
+      ]
     },
     {
       "id": "C-GW-04",
@@ -541,10 +669,13 @@
         {
           "id": "E031",
           "source_id": "S14",
-          "location": "Abstract; main text on recombination"
+          "location": "Abstract; Introduction (unheaded opening section)",
+          "quote": "Linkage disequilibrium — the nonrandom association of alleles at different loci — is a sensitive indicator of the population genetic forces that structure a genome. … how natural selection, genetic drift, recombination and mutation all affect levels of LD"
         }
       ],
-      "related_slide_ids": []
+      "related_slide_ids": [
+        "s17"
+      ]
     },
     {
       "id": "C-GW-05",
@@ -559,15 +690,20 @@
         {
           "id": "E032",
           "source_id": "S13",
-          "location": "Main text, discussion of power and LD (r²) between genotyped and unknown causal variants"
+          "location": "Main text, Introduction (power and LD paragraph, before Figure 1)",
+          "quote": "The statistical power to detect associations between DNA variants and a trait depends on the experimental sample size, the distribution of effect sizes of (unknown) causal genetic variants that are segregating in the population, the frequency of those variants, and the LD between observed genotyped DNA variants and the unknown causal variants."
         },
         {
           "id": "E033",
           "source_id": "S01",
-          "location": "Glossary entry \"Genome-Wide Association Studies (GWAS)\" (definition and narration: correlation, not causation)"
+          "location": "Glossary entry \"Genome-Wide Association Studies (GWAS)\" (genome.gov), Definition and Narration",
+          "quote": "Once such genomic variants are identified, they are typically used to search for nearby variants that contribute directly to the disease or trait. … They inform us of correlation not causation."
         }
       ],
-      "related_slide_ids": []
+      "related_slide_ids": [
+        "s17",
+        "s30"
+      ]
     },
     {
       "id": "C-GW-06",
@@ -575,17 +711,21 @@
       "classification": "consensus",
       "status": "verified",
       "text": {
-        "zh": "在二元（病例/對照）性狀中，GWAS 回報的效應量通常是 odds ratio；用於計算 PRS 時會取 log(OR) 作為權重。",
-        "en": "For binary (case/control) phenotypes, GWAS effect sizes are typically reported as odds ratios, and log(OR) is used as the weight when calculating PRS."
+        "zh": "在二元（病例/對照）性狀中，GWAS 效應量屬於 odds ratio 尺度，通常以 log(OR) 回報；計算 PRS 時以 log(OR) 作為權重加總。",
+        "en": "For binary (case/control) phenotypes, GWAS effect sizes are on the odds-ratio scale and are typically reported as log(OR); PRS sums log(OR)-weighted genotypes."
       },
       "evidence": [
         {
           "id": "E034",
           "source_id": "S16",
-          "location": "Main text, section on effect size / PRS calculation"
+          "location": "Main text, section 3.3 \"PRS units\"",
+          "quote": "In calculating PRS on a binary (case/control) phenotype, the effect sizes used as weights are typically reported as log Odds Ratios (log(ORs)). Assuming that relative risks on a disease accumulate on a multiplicative rather than additive scale [], then PRS should be computed as a summation of log(OR)-weighted genotypes."
         }
       ],
-      "related_slide_ids": []
+      "related_slide_ids": [
+        "s18",
+        "s20"
+      ]
     },
     {
       "id": "C-GW-07",
@@ -601,10 +741,13 @@
         {
           "id": "E035",
           "source_id": "S15",
-          "location": "Abstract"
+          "location": "Abstract",
+          "quote": "The Catalog contains variant-trait associations and supporting metadata for >45 000 published GWAS across >5000 human traits, and >40 000 full P-value summary statistics datasets."
         }
       ],
-      "related_slide_ids": []
+      "related_slide_ids": [
+        "s18"
+      ]
     },
     {
       "id": "C-GW-08",
@@ -619,10 +762,13 @@
         {
           "id": "E036",
           "source_id": "S24",
-          "location": "Main text, opening paragraphs (PMC5089703)"
+          "location": "Main text, opening paragraphs and 'Persistent bias' discussion",
+          "quote": "A 2009 analysis revealed that 96% of participants in genome-wide association studies (GWAS) were of European descent … has increased to nearly 20%. Much of this rise, however, is a result of more studies being done in Asia on populations of Asian ancestry. … native or indigenous peoples represent less than 4% of all samples analysed."
         }
       ],
-      "related_slide_ids": []
+      "related_slide_ids": [
+        "s18"
+      ]
     },
     {
       "id": "C-GW-09",
@@ -650,10 +796,13 @@
         {
           "id": "E037",
           "source_id": "S16",
-          "location": "Abstract"
+          "location": "Abstract",
+          "quote": "A polygenic score (PGS) or polygenic risk score (PRS) is an estimate of an individual's genetic liability to a trait or disease, calculated according to their genotype profile and relevant genome-wide association study (GWAS) data. While present PRSs typically explain only a small fraction of trait variance, their correlation with the single largest contributor to phenotypic variation-genetic liability-has led to the routine application of PRSs across biomedical research."
         }
       ],
-      "related_slide_ids": []
+      "related_slide_ids": [
+        "s19"
+      ]
     },
     {
       "id": "C-PRS-02",
@@ -668,10 +817,14 @@
         {
           "id": "E038",
           "source_id": "S16",
-          "location": "Introduction (definition of PRS as weighted sum)"
+          "location": "Introduction (opening section, before \"1 Introduction to Polygenic Risk Scores\")",
+          "quote": "In the standard approach [,–], polygenic risk scores are calculated by computing the sum of risk alleles corresponding to a phenotype of interest in each individual, weighted by the effect size estimate of the most powerful GWAS on the phenotype."
         }
       ],
-      "related_slide_ids": []
+      "related_slide_ids": [
+        "s20",
+        "s21"
+      ]
     },
     {
       "id": "C-PRS-03",
@@ -679,17 +832,20 @@
       "classification": "consensus",
       "status": "verified",
       "text": {
-        "zh": "常見的「標準方法」是 C+T（clumping + thresholding）：以 clumping 處理 LD，再依 P 值門檻篩選 SNP；另有 LASSO、BLUP 等收縮方法。",
-        "en": "The standard approach is C+T (clumping + thresholding): LD is handled by clumping and SNPs are selected by P-value threshold; shrinkage methods such as LASSO or BLUP are alternatives."
+        "zh": "常見的「標準方法」是 C+T（clumping + thresholding）：以 clumping 處理 LD，再依 P 值門檻篩選 SNP。另一類方法對 summary statistics 的權重做收縮（如 LDpred，或 lassosum 這類 LASSO 型懲罰）；以個體層級基因型聯合擬合的 BLUP、LASSO 預測模型則是不同的一類。",
+        "en": "The standard approach is C+T (clumping + thresholding): LD is handled by clumping and SNPs are selected by a P-value threshold. Other methods shrink summary-statistic weights (e.g. LDpred, or LASSO-type penalties as in lassosum); BLUP or LASSO models fitted jointly on individual-level genotypes are a separate class."
       },
       "evidence": [
         {
           "id": "E039",
           "source_id": "S16",
-          "location": "Section 3, PRS calculation methods"
+          "location": "Section 3.2 \"Controlling for Linkage Disequilibrium\"; Section 3.1 \"Shrinkage of GWAS effect size estimates\"; Section 1 \"Introduction to Polygenic Risk Scores\"",
+          "quote": "phenotypic prediction approaches that exploit individual-level data only. In the latter, genotype effect sizes are typically estimated in joint models of multiple variants and prediction performed simultaneously, using approaches such as best linear unbiased prediction (BLUP) [,] or least absolute shrinkage and selection operator (LASSO) [,]. … PRS methods that perform shrinkage of all SNPs [,,,] generally exploit commonly used statistical shrinkage/regularisation techniques, such as LASSO or ridge regression … which in the case of LDpred, for example, includes a parameter for the fraction of causal variants … In the ‘standard approach’ to PRS calculation, option (1) is combined with P -value thresholding and called the C+T ( clumping + thresholding ) method, while option (2) is generally favoured in methods that implement traditional shrinkage methods"
         }
       ],
-      "related_slide_ids": []
+      "related_slide_ids": [
+        "s20"
+      ]
     },
     {
       "id": "C-PRS-04",
@@ -704,15 +860,21 @@
         {
           "id": "E040",
           "source_id": "S18",
-          "location": "Abstract"
+          "location": "Abstract",
+          "quote": "However, the major ethical and scientific challenge surrounding clinical implementation of PRS is that those available today are several times more accurate in individuals of European ancestry than other ancestries. This disparity is an inescapable consequence of Eurocentric biases in genome-wide association studies"
         },
         {
           "id": "E041",
           "source_id": "S24",
-          "location": "Main text, opening paragraphs"
+          "location": "Main text, opening paragraphs",
+          "quote": "A 2009 analysis revealed that 96% of participants in genome-wide association studies (GWAS) were of European descent … Our findings indicate that the proportion of individuals included in GWAS who are not of European descent has increased to nearly 20%."
         }
       ],
-      "related_slide_ids": []
+      "related_slide_ids": [
+        "s22",
+        "s28",
+        "s30"
+      ]
     },
     {
       "id": "C-PRS-05",
@@ -727,7 +889,8 @@
         {
           "id": "E042",
           "source_id": "S19",
-          "location": "Abstract"
+          "location": "Abstract",
+          "quote": "We present the Polygenic Score (PGS) Catalog (https://www.PGSCatalog.org), an open resource of published scores (including variants, alleles and weights) and consistently curated metadata required for reproducibility and independent applications."
         }
       ],
       "related_slide_ids": []
@@ -738,17 +901,20 @@
       "classification": "single_study",
       "status": "verified",
       "text": {
-        "zh": "Khera 等人在 UK Biobank（英國血統參與者）建立並驗證五種疾病的全基因體 PRS，可找出 8.0%（冠狀動脈疾病）到 1.5%（乳癌）的人口具三倍以上風險。",
-        "en": "Khera et al. developed and validated genome-wide PRS for five diseases in UK Biobank participants of British ancestry, identifying 8.0% (coronary artery disease) to 1.5% (breast cancer) of the population at >3-fold risk."
+        "zh": "Khera 等人在 UK Biobank（英國血統參與者）建立並驗證五種疾病的全基因體 PRS，可找出 8.0%（冠狀動脈疾病）到 1.5%（乳癌）的人口，其勝算比（odds ratio）相較其餘人口 ≥3。",
+        "en": "Khera et al. developed and validated genome-wide PRS for five diseases in UK Biobank participants of British ancestry, identifying 8.0% (coronary artery disease) to 1.5% (breast cancer) of the population with an odds ratio ≥3 versus the remainder of the population."
       },
       "evidence": [
         {
           "id": "E043",
           "source_id": "S20",
-          "location": "Abstract; Methods (UK Biobank, 409,258 participants of British ancestry)"
+          "location": "Abstract; Main text (UK Biobank study population); Online Methods \"Statistical analysis within the testing dataset\" (see also Table 2, \"Odds ratio ≥3.0\")",
+          "quote": "Here, we develop and validate genome-wide polygenic scores for five common diseases. The approach identifies 8.0, 6.1, 3.5, 3.2, and 1.5% of the population at greater than threefold increased risk for coronary artery disease, atrial fibrillation, type 2 diabetes, inflammatory bowel disease, and breast cancer, respectively. … The UK Biobank has genotype data and extensive phenotypic information on 409,258 participants of British ancestry … comparing progressively more extreme tails of the distribution to the remainder of the population in a logistic regression model"
         }
       ],
-      "related_slide_ids": []
+      "related_slide_ids": [
+        "s22"
+      ]
     },
     {
       "id": "C-PRS-07",
@@ -763,10 +929,13 @@
         {
           "id": "E044",
           "source_id": "S16",
-          "location": "Section on QC of base and target data, \"Sample overlap\""
+          "location": "Section 2 \"Quality Control of Base and Target data\", subsection \"Sample overlap\"",
+          "quote": "Sample overlap between the base and target data can result in substantial inflation of the association between the PRS and the trait tested in the target data [] and so must be eliminated."
         }
       ],
-      "related_slide_ids": []
+      "related_slide_ids": [
+        "s22"
+      ]
     },
     {
       "id": "C-PRS-08",
@@ -774,22 +943,27 @@
       "classification": "consensus",
       "status": "verified",
       "text": {
-        "zh": "每人在一個位置有兩個 allele（父母各一），因此某 effect allele 的劑量（dosage）為 0、1 或 2；PRS 即加總這些 allele 並以效應量加權。",
-        "en": "Each person carries two alleles at a location (one from each parent), so the dosage of an effect allele is 0, 1 or 2; a PRS sums these alleles weighted by effect size."
+        "zh": "在體染色體上，每人在一個位置有兩個 allele（父母各一），因此某 effect allele 的劑量（dosage）為 0、1 或 2；PRS 即加總這些 allele 並以效應量加權。",
+        "en": "On the autosomes each person carries two alleles at a location (one from each parent), so the dosage of an effect allele is 0, 1 or 2; a PRS sums these alleles weighted by effect size."
       },
       "evidence": [
         {
           "id": "E045",
           "source_id": "S01",
-          "location": "Glossary entry \"Allele\""
+          "location": "Glossary entry \"Allele\" (genome.gov)",
+          "quote": "An individual inherits two alleles, one from each parent, for any given genomic location where such variation exists."
         },
         {
           "id": "E046",
           "source_id": "S16",
-          "location": "Introduction (sum of risk alleles weighted by effect size)"
+          "location": "Introduction (opening section, before \"1 Introduction to Polygenic Risk Scores\")",
+          "quote": "In the standard approach [,–], polygenic risk scores are calculated by computing the sum of risk alleles corresponding to a phenotype of interest in each individual, weighted by the effect size estimate of the most powerful GWAS on the phenotype."
         }
       ],
-      "related_slide_ids": []
+      "related_slide_ids": [
+        "s05",
+        "s21"
+      ]
     },
     {
       "id": "C-PRS-09",
@@ -804,10 +978,13 @@
         {
           "id": "E047",
           "source_id": "S17",
-          "location": "Abstract"
+          "location": "Abstract (only abstract cached)",
+          "quote": "As a result, the practice of utilizing the DNA of an individual to predict disease has been judged to provide little to no useful information. Nevertheless, recent efforts have begun to demonstrate the utility of polygenic risk profiling to identify groups of individuals who could benefit from the knowledge of their probabilistic susceptibility to disease."
         }
       ],
-      "related_slide_ids": []
+      "related_slide_ids": [
+        "s19"
+      ]
     },
     {
       "id": "C-PRS-10",
@@ -815,17 +992,21 @@
       "classification": "single_study",
       "status": "verified",
       "text": {
-        "zh": "PRS 研究多以「相對風險」（例如比其餘人口高三倍）表達結果；作者也指出臨床上需同時評估與溝通絕對風險和相對風險。",
-        "en": "PRS results are usually expressed as relative risk (e.g., >3-fold versus the rest of the population); the authors note that both absolute and relative risks must be assessed and communicated."
+        "zh": "Khera 等人以「相較其餘人口高幾倍」（以勝算比估計）來報告高 PRS 族群的風險，並指出未來需要考慮如何同時評估絕對與相對風險，以及如何向病人溝通。",
+        "en": "Khera et al. report high-PRS groups as fold-increased risk versus the remainder of the population (estimated as odds ratios), and note that it will be important to consider how to assess both absolute and relative risks and how to communicate them."
       },
       "evidence": [
         {
           "id": "E048",
           "source_id": "S20",
-          "location": "Abstract; Discussion (absolute and relative risks)"
+          "location": "Abstract; Online Methods \"Statistical analysis within the testing dataset\"; Discussion (closing paragraphs of main text)",
+          "quote": "The approach identifies 8.0, 6.1, 3.5, 3.2, and 1.5% of the population at greater than threefold increased risk … Moreover, it will be important to consider how to assess both absolute and relative risks and how to communicate these risks to best serve each patient … comparing progressively more extreme tails of the distribution to the remainder of the population in a logistic regression model"
         }
       ],
-      "related_slide_ids": []
+      "related_slide_ids": [
+        "s22",
+        "s30"
+      ]
     },
     {
       "id": "C-PRS-11",
@@ -840,10 +1021,13 @@
         {
           "id": "E049",
           "source_id": "S16",
-          "location": "Introduction"
+          "location": "Section 1 \"Introduction to Polygenic Risk Scores\"; Introduction (opening section)",
+          "quote": "weighted by the effect size estimate of the most powerful GWAS on the phenotype. … We define polygenic risk scores, or polygenic scores, as a single value estimate of an individual’s common genetic liability to a phenotype, calculated as a sum of their genome-wide genotypes, weighted by corresponding genotype effect size estimates (or Z-scores) derived from summary statistic GWAS data."
         }
       ],
-      "related_slide_ids": []
+      "related_slide_ids": [
+        "s20"
+      ]
     },
     {
       "id": "C-PRS-12",
@@ -871,10 +1055,13 @@
         {
           "id": "E050",
           "source_id": "S21",
-          "location": "Abstract"
+          "location": "Abstract; Introduction",
+          "quote": "As compared to studies of a single omics type, multi-omics offers the opportunity to understand the flow of information that underlies disease. … many other omics technologies have been developed that are capable of interrogation of entire pools of transcripts, proteins, and metabolites, as well as the genome (Box 1)."
         }
       ],
-      "related_slide_ids": []
+      "related_slide_ids": [
+        "s23"
+      ]
     },
     {
       "id": "C-MO-02",
@@ -889,10 +1076,14 @@
         {
           "id": "E051",
           "source_id": "S21",
-          "location": "Main text, section on integration approaches"
+          "location": "Main text, section \"Approaches to integrative analysis of multiple omics data\"; Fig. 1 legend",
+          "quote": "The genome first approach implies that one starts from associated locus, while the phenotype first approach implies any other layer as the starting point. … we have grouped these into three categories, “genome first”, “phenotype first”, and “environment first”, depending on the initial focus of the investigation."
         }
       ],
-      "related_slide_ids": []
+      "related_slide_ids": [
+        "s02",
+        "s24"
+      ]
     },
     {
       "id": "C-MO-03",
@@ -907,10 +1098,13 @@
         {
           "id": "E052",
           "source_id": "S22",
-          "location": "Abstract"
+          "location": "Abstract",
+          "quote": "The Cancer Genome Atlas (TCGA) Research Network has profiled and analyzed large numbers of human tumors to discover molecular aberrations at the DNA, RNA, protein and epigenetic levels. … The Pan-Cancer initiative compares the first 12 tumor types profiled by TCGA."
         }
       ],
-      "related_slide_ids": []
+      "related_slide_ids": [
+        "s27"
+      ]
     },
     {
       "id": "C-MO-04",
@@ -926,10 +1120,13 @@
         {
           "id": "E053",
           "source_id": "S22",
-          "location": "Abstract"
+          "location": "Abstract",
+          "quote": "Analysis of the molecular aberrations and their functional roles across tumor types will teach us how to extend therapies effective in one cancer type to others with a similar genomic profile."
         }
       ],
-      "related_slide_ids": []
+      "related_slide_ids": [
+        "s25"
+      ]
     },
     {
       "id": "C-MO-05",
@@ -944,10 +1141,13 @@
         {
           "id": "E054",
           "source_id": "S09",
-          "location": "Abstract; abbreviation list (GSEA)"
+          "location": "Abstract; section \"Functional profiling with RNA-seq\"",
+          "quote": "We discuss the analysis of small RNAs and the integration of RNA-seq with other functional genomics techniques. … gene set enrichment analysis (GSEA), which is based on ranking the transcriptome according to a measurement of differential expression."
         }
       ],
-      "related_slide_ids": []
+      "related_slide_ids": [
+        "s25"
+      ]
     },
     {
       "id": "C-MO-06",
@@ -955,17 +1155,20 @@
       "classification": "consensus",
       "status": "verified",
       "text": {
-        "zh": "基因分型晶片促成大規模 GWAS，全轉錄本測量方法則催生了「integrative genetics」，為多體學奠定基礎。",
-        "en": "Genotyping arrays enabled large-scale GWAS and methods for global transcript levels gave rise to integrative genetics, the foundation of multi-omics."
+        "zh": "基因分型晶片促成大規模 GWAS，加上全轉錄本測量方法，催生了「integrative genetics」領域；之後蛋白體學、代謝體學等其他體學也常被納入研究。",
+        "en": "Genotyping arrays enabled large-scale GWAS and, together with methods for global transcript levels, gave rise to the field of integrative genetics; other omics such as proteomics and metabolomics are now often incorporated as well."
       },
       "evidence": [
         {
           "id": "E055",
           "source_id": "S21",
-          "location": "Abstract"
+          "location": "Abstract",
+          "quote": "The advent of genotyping arrays enabled large-scale genome-wide association studies and methods for examining global transcript levels, which gave rise to the field of \"integrative genetics\". Other omics technologies, such as proteomics and metabolomics, are now often incorporated into the everyday methodology of biological researchers."
         }
       ],
-      "related_slide_ids": []
+      "related_slide_ids": [
+        "s23"
+      ]
     },
     {
       "id": "C-MO-07",
@@ -980,10 +1183,13 @@
         {
           "id": "E056",
           "source_id": "S09",
-          "location": "Abstract"
+          "location": "Main text, section \"Integration with other data types\" > \"DNA sequencing\" (eQTL mapping also listed as a step in the Abstract)",
+          "quote": "such as single nucleotide polymorphism (SNP) discovery, RNA-editing analyses, or expression quantitative trait loci (eQTL) mapping. In a typical eQTL experiment, genotype and transcriptome profiles are obtained from the same tissue type across a relatively large number of individuals (>50) and correlations between genotype and expression levels are then detected."
         }
       ],
-      "related_slide_ids": []
+      "related_slide_ids": [
+        "s24"
+      ]
     },
     {
       "id": "C-PM-01",
@@ -998,10 +1204,13 @@
         {
           "id": "E057",
           "source_id": "S02",
-          "location": "Page \"What is precision medicine?\""
+          "location": "MedlinePlus page \"What is precision medicine?\"",
+          "quote": "According to the Precision Medicine Initiative, precision medicine is \"an emerging approach for disease treatment and prevention that takes into account individual variability in genes, environment, and lifestyle for each person.\" … It is in contrast to a one-size-fits-all approach, in which disease treatment and prevention strategies are developed for the average person, with less consideration for the differences between individuals."
         }
       ],
-      "related_slide_ids": []
+      "related_slide_ids": [
+        "s26"
+      ]
     },
     {
       "id": "C-PM-02",
@@ -1016,10 +1225,13 @@
         {
           "id": "E058",
           "source_id": "S23",
-          "location": "Abstract"
+          "location": "Abstract (2015 date from article header / State of the Union, January 20, 2015)",
+          "quote": "President Obama has announced a research initiative that aims to accelerate progress toward a new era of precision medicine, with a near-term focus on cancers and a longer-term aim to generate knowledge applicable to the whole range of health and disease."
         }
       ],
-      "related_slide_ids": []
+      "related_slide_ids": [
+        "s26"
+      ]
     },
     {
       "id": "C-PM-03",
@@ -1034,10 +1246,13 @@
         {
           "id": "E059",
           "source_id": "S25",
-          "location": "Abstract"
+          "location": "Abstract",
+          "quote": "the ACMG strongly recommends that clinical molecular genetic testing should be performed in a Clinical Laboratory Improvement Amendments-approved laboratory, with results interpreted by a board-certified clinical molecular geneticist or molecular genetic pathologist or the equivalent."
         }
       ],
-      "related_slide_ids": []
+      "related_slide_ids": [
+        "s27"
+      ]
     },
     {
       "id": "C-PM-04",
@@ -1052,10 +1267,13 @@
         {
           "id": "E060",
           "source_id": "S20",
-          "location": "Abstract"
+          "location": "Abstract",
+          "quote": "For coronary artery disease, this prevalence is 20-fold higher than the carrier frequency of rare monogenic mutations conferring comparable risk6. We propose that it is time to contemplate the inclusion of polygenic risk prediction in clinical care, and discuss relevant issues."
         }
       ],
-      "related_slide_ids": []
+      "related_slide_ids": [
+        "s28"
+      ]
     },
     {
       "id": "C-PM-05",
@@ -1070,15 +1288,19 @@
         {
           "id": "E061",
           "source_id": "S18",
-          "location": "Abstract"
+          "location": "Abstract",
+          "quote": "To realize the full and equitable potential of PRS, greater diversity must be prioritized in genetic studies, and summary statistics must be publically disseminated to ensure that health disparities are not increased for those individuals already most underserved."
         },
         {
           "id": "E062",
           "source_id": "S24",
-          "location": "Main text"
+          "location": "Main text, section \"WHAT NOW?\"",
+          "quote": "Funding agencies should develop financial incentives for the creation of diverse cohorts of study participants. One way for them to do this would be to prioritize grant requests that propose investigations in populations of non-European (and especially of African) ancestry."
         }
       ],
-      "related_slide_ids": []
+      "related_slide_ids": [
+        "s28"
+      ]
     },
     {
       "id": "C-PM-06",
@@ -1086,17 +1308,20 @@
       "classification": "consensus",
       "status": "verified",
       "text": {
-        "zh": "癌症基因體研究比較不同腫瘤譜系的分子異常，以建立共通性、差異與新主題的整合圖像。",
-        "en": "Cancer genomics compares molecular aberrations across tumour lineages to build an integrated picture of commonalities, differences and emergent themes."
+        "zh": "TCGA Pan-Cancer 計畫跨腫瘤類型比較 DNA、RNA、蛋白與表觀遺傳層次的分子異常，以建立共通性、差異與新主題的整合圖像。",
+        "en": "The TCGA Pan-Cancer project compares molecular aberrations at the DNA, RNA, protein and epigenetic levels across tumour lineages to build an integrated picture of commonalities, differences and emergent themes."
       },
       "evidence": [
         {
           "id": "E063",
           "source_id": "S22",
-          "location": "Abstract"
+          "location": "Abstract",
+          "quote": "The Cancer Genome Atlas (TCGA) Research Network has profiled and analyzed large numbers of human tumors to discover molecular aberrations at the DNA, RNA, protein and epigenetic levels. The resulting rich data provide a major opportunity to develop an integrated picture of commonalities, differences and emergent themes across tumor lineages."
         }
       ],
-      "related_slide_ids": []
+      "related_slide_ids": [
+        "s27"
+      ]
     },
     {
       "id": "C-PM-07",
@@ -1111,15 +1336,19 @@
         {
           "id": "E064",
           "source_id": "S20",
-          "location": "Abstract (introductory sentences)"
+          "location": "Abstract (introductory sentences)",
+          "quote": "Because most common diseases have a genetic component, one important approach is to stratify individuals based on inherited DNA variation1. … Although most disease risk is polygenic in nature2-5, it has not yet been possible to use polygenic predictors to identify individuals at risk comparable to monogenic mutations."
         },
         {
           "id": "E065",
           "source_id": "S01",
-          "location": "Glossary entry \"Phenotype\""
+          "location": "Glossary entry \"Phenotype\" (genome.gov)",
+          "quote": "A person’s phenotype is determined by both their genomic makeup (genotype) and environmental factors."
         }
       ],
-      "related_slide_ids": []
+      "related_slide_ids": [
+        "s26"
+      ]
     }
   ],
   "conflicts": [

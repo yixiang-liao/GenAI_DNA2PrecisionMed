@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="zh-Hant" data-lang="zh">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DNA to Precision Medicine Slides</title>
+<meta name="description" content="從 DNA 到精準醫療：30 頁互動教學簡報，含 DNA Explorer、PRS Calculator 與互動測驗。">
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="stylesheet" href="../assets/css/slides.css">
+</head>
+<body class="deck">
+<header class="deck-bar">
+  <a class="brand" href="../index.html">DNA<span>→</span>PM</a>
+  <button type="button" id="chap-btn" class="chip" aria-expanded="false" aria-controls="chapters">章節 ▾</button>
+  <div class="seg" role="group" aria-label="教學層級 Level">
+    <button type="button" data-level="beginner" aria-pressed="true">Beginner</button>
+    <button type="button" data-level="advanced" aria-pressed="false">Advanced</button>
+  </div>
+  <a class="chip hide-sm" href="../wiki/index.html">Wiki</a>
+</header>
+<nav id="chapters" class="chapters" hidden aria-label="章節導覽"></nav>
+<main id="stage" class="stage" tabindex="-1"></main>
+<footer class="deck-foot">
+  <button type="button" id="prev" class="nav-btn" aria-label="上一頁 Previous">←</button>
+  <div class="progress"><div id="bar"></div></div>
+  <span id="counter" class="counter">1 / 30</span>
+  <button type="button" id="next" class="nav-btn" aria-label="下一頁 Next">→</button>
+</footer>
+<p class="deck-note">教育用途，<b>非臨床診斷工具</b>；PRS 與示例基因型皆為模擬資料（simulated, not real patients）。鍵盤：← → 翻頁、L 切換層級。</p>
+<pre id="selftest" hidden></pre>
+<script src="../assets/js/site-data.js"></script>
+<script src="../assets/js/prs.js"></script>
+<script src="../assets/js/slides.js"></script>
+</body>
+</html>

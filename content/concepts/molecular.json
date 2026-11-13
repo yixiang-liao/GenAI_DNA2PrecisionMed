@@ -47,10 +47,10 @@
       },
       "examples": {
         "zh": [
-          "DNA 片段 ATG 轉錄成 mRNA 時，對應序列為 AUG。"
+          "在編碼股（coding / sense strand）上的 ATG，對應到 mRNA 的 AUG。"
         ],
         "en": [
-          "The DNA segment ATG corresponds to AUG in the transcribed mRNA."
+          "On the coding (sense) strand, ATG corresponds to AUG in the mRNA."
         ]
       },
       "related": [
@@ -164,8 +164,8 @@
       "en": "Allele",
       "abbr": "",
       "beginner": {
-        "zh": "同一個地址上可能有不同「版本」的字，例如有人是 A、有人是 G，這些版本就叫 allele。每人在每個位置有兩份：一份來自爸爸、一份來自媽媽。",
-        "en": "The same address can hold different \"versions\" — some people have A, others G. Those versions are alleles. Everyone has two copies at each position: one from each parent."
+        "zh": "同一個地址上可能有不同「版本」的字，例如有人是 A、有人是 G，這些版本就叫 allele。在體染色體上，每人在每個位置有兩份：一份來自爸爸、一份來自媽媽（男性 X 染色體上多數位置只有一份）。",
+        "en": "The same address can hold different \"versions\" — some people have A, others G. Those versions are alleles. On the autosomes everyone has two copies at each position, one from each parent (males carry one copy of most X-chromosome positions)."
       },
       "advanced": {
         "zh": "Allele 是某基因體位置上的序列版本，可以是單一鹼基或一段序列。兩份相同為 homozygous，不同為 heterozygous。在 GWAS/PRS 中需明確區分 reference allele、alternate allele 與 effect allele。",
@@ -192,7 +192,7 @@
     },
     {
       "id": "snp",
-      "zh": "單核苷酸多態性",
+      "zh": "單核苷酸多型性",
       "en": "Single Nucleotide Polymorphism",
       "abbr": "SNP",
       "beginner": {
@@ -228,12 +228,12 @@
       "en": "Genetic Variant",
       "abbr": "",
       "beginner": {
-        "zh": "任何和參考序列不一樣的地方都叫變異：可能是換一個字（SNP）、少幾個字或多幾個字（indel），或是一大段被搬動（結構變異）。",
-        "en": "Any difference from the reference sequence is a variant: a swapped letter (SNP), a few letters missing or added (indel), or a large rearranged segment (structural variant)."
+        "zh": "任何和參考序列不一樣的地方都叫變異：可能是換一個字（SNV；在族群中常見的稱為 SNP）、少幾個字或多幾個字（indel），或是一大段被搬動（結構變異）。",
+        "en": "Any difference from the reference sequence is a variant: a swapped letter (an SNV; one that is common in a population is called an SNP), a few letters missing or added (indel), or a large rearranged segment (structural variant)."
       },
       "advanced": {
-        "zh": "變異依大小與型態分為 SNV/SNP、indel 與 structural variant（含 CNV）。1000 Genomes Project 在 2,504 人中描述超過 8,800 萬個變異，說明人類變異極為豐富，且大多數是常見、非致病的。",
-        "en": "Variants are classified by size and form: SNV/SNP, indel, and structural variants (including CNVs). The 1000 Genomes Project described >88 million variants in 2,504 people, showing that human variation is abundant and mostly common and benign."
+        "zh": "變異依大小與型態分為 SNV/SNP、indel 與 structural variant（含 CNV）。1000 Genomes Project 在 2,504 人中描述超過 8,800 萬個變異，說明人類變異極為豐富；其中大多數變異位點是罕見的，但單一個人基因體中的變異多數是常見變異。",
+        "en": "Variants are classified by size and form: SNV/SNP, indel, and structural variants (including CNVs). The 1000 Genomes Project described >88 million variants in 2,504 people, showing that human variation is abundant; most variant sites are rare, yet most variants in any one genome are common."
       },
       "examples": {
         "zh": [
@@ -250,7 +250,7 @@
         "reference-genome"
       ],
       "claims": [
-        "C-MOL-08"
+        "C-MOL-08", "C-MOL-11"
       ],
       "updated": "2026-11-13"
     },

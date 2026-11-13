@@ -8,7 +8,7 @@
      "related": ["genomics", "gene-expression", "data-integration", "cancer-genomics"], "claims": ["C-MO-01"], "updated": "2026-11-13"},
     {"id": "genomics", "zh": "基因體學", "en": "Genomics", "abbr": "",
      "beginner": {"zh": "基因體學研究「整本說明書」，而不是一次只看一個基因。GWAS、WGS 都屬於基因體學工具。", "en": "Genomics studies the whole instruction book rather than one gene at a time. GWAS and WGS are genomics tools."},
-     "advanced": {"zh": "基因體學涵蓋序列、變異與結構分析。基因分型晶片帶來大規模 GWAS，加上全轉錄本測量，形成 integrative genetics，是多體學的起點。基因體層次的資料多為一生大致固定的 germline 變異（癌症中的 somatic 變異除外）。", "en": "Genomics covers sequence, variation and structure. Genotyping arrays enabled large GWAS and, with transcriptome-wide measurement, gave rise to integrative genetics — the starting point of multi-omics. Genome-level data are mostly germline variants fixed over life (except somatic variants in cancer)."},
+     "advanced": {"zh": "基因體學涵蓋序列、變異與結構分析。基因分型晶片帶來大規模 GWAS，加上全轉錄本測量，催生了 integrative genetics；之後蛋白體學、代謝體學等其他體學也常被納入。基因體層次的資料多為一生大致固定的 germline 變異（癌症中的 somatic 變異除外）。", "en": "Genomics covers sequence, variation and structure. Genotyping arrays enabled large GWAS and, with transcriptome-wide measurement, gave rise to integrative genetics; other omics such as proteomics and metabolomics are now often incorporated too. Genome-level data are mostly germline variants fixed over life (except somatic variants in cancer)."},
      "examples": {"zh": ["用 WGS 比較一家人的變異以找出遺傳疾病原因。"], "en": ["Using WGS to compare variants across a family to find a hereditary cause."]},
      "related": ["multi-omics", "wgs", "gwas", "mutation"], "claims": ["C-MO-06"], "updated": "2026-11-13"},
     {"id": "data-integration", "zh": "資料整合", "en": "Data Integration", "abbr": "",
@@ -23,7 +23,7 @@
      "related": ["differential-expression", "biomarker", "multi-omics"], "claims": ["C-MO-05"], "updated": "2026-11-13"},
     {"id": "biomarker", "zh": "生物標記", "en": "Biomarker", "abbr": "",
      "beginner": {"zh": "生物標記是可以測量、能反映身體狀態的指標，例如某個突變或某個基因的表現量，可能幫助判斷疾病類型或治療選擇。", "en": "A biomarker is a measurable indicator of body state — such as a mutation or a gene's expression level — that may help classify disease or choose treatment."},
-     "advanced": {"zh": "分子生物標記可為 DNA（突變）、RNA（表現特徵）、蛋白或代謝物。從研究發現到臨床使用需經分析效度、臨床效度與臨床效用驗證。TCGA Pan-Cancer 的目標之一是依基因體特徵跨癌種延伸療法，這屬研究目標，非已證實結果。", "en": "Molecular biomarkers can be DNA (mutations), RNA (expression signatures), proteins or metabolites. Moving from discovery to clinic requires analytical validity, clinical validity and clinical utility. Extending therapies across cancers by genomic profile is a TCGA Pan-Cancer aim, not a demonstrated result."},
+     "advanced": {"zh": "分子生物標記可為 DNA（突變）、RNA（表現特徵）、蛋白或代謝物。從研究發現到臨床使用需經分析效度、臨床效度與臨床效用驗證（一般框架，本站未引用來源）。TCGA Pan-Cancer 的目標之一是依基因體特徵跨癌種延伸療法，這屬研究目標，非已證實結果。", "en": "Molecular biomarkers can be DNA (mutations), RNA (expression signatures), proteins or metabolites. Moving from discovery to clinic requires analytical validity, clinical validity and clinical utility (a general framework, not sourced on this site). Extending therapies across cancers by genomic profile is a TCGA Pan-Cancer aim, not a demonstrated result."},
      "examples": {"zh": ["（示意）某腫瘤帶有特定突變時，可能適用針對該突變的標靶藥物。"], "en": ["(Illustrative) A tumour with a specific mutation may be eligible for a drug targeting it."]},
      "related": ["cancer-genomics", "pathway-analysis", "clinical-application", "differential-expression"], "claims": ["C-MO-04"], "updated": "2026-11-13"}
   ]

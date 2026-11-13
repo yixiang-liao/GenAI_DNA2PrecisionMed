@@ -40,6 +40,7 @@ Never hand-edit generated files; edit the content JSON and rebuild.
 
 ```bash
 python3 scripts/ingest.py --batch N      # verify one source batch (DOI/URL resolution, metadata)
+python3 scripts/cache_text.py             # cache PMC full text + official pages for quote checks
 python3 scripts/build.py                 # content/*.json -> wiki/ + assets/js/site-data.js
 python3 scripts/validate.py              # all gates; writes reports/validation-report.md
 python3 scripts/validate.py --gate wiki  # one gate: sources | evidence | wiki | slides | prs | site
@@ -55,7 +56,8 @@ layout/overflow check (both tests skip with a message if the binary is missing).
 
 1. **No claim without evidence.** Every scientific claim shown in the wiki or slides must
    be a claim in `evidence/claims.json` with ≥1 evidence record pointing to a source whose
-   `ingestion_status` is `verified`.
+   `ingestion_status` is `verified`. Each evidence record carries a verbatim `quote` that the evidence gate finds
+   in the cached source text.
 2. **No invented sources.** A source enters the manifest only with a DOI or official URL,
    and becomes `verified` only after `ingest.py` resolved it and the metadata matched.
 3. **Classify evidence** as `consensus`, `single_study`, or `uncertain`. These describe the

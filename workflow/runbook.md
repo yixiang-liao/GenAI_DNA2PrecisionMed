@@ -30,8 +30,10 @@ No `pip install` is required.
 
 ## N2 Evidence Validation
 
-1. Draft claims in `evidence/claims.json`; each needs `evidence[]` with `source_id` and
-   `source_location` (e.g. `Abstract`, `Fig. 1`, `Glossary entry "Allele"`).
+0. `python3 scripts/cache_text.py` — caches PMC full text (tables and figure legends
+   included) and the official pages in `cache_pages` to `sources/cache/` (git-ignored).
+1. Draft claims in `evidence/claims.json`; each needs `evidence[]` with `source_id`, a
+   verbatim `quote` copied from the cached text, and `location` (e.g. `Abstract`, `Fig. 1`, `Glossary entry "Allele"`).
 2. Check the claim against the cached abstract / official page. If the source does not
    support it: reword, reclassify, or mark `pending_verification` + `missing_evidence`.
 3. `python3 scripts/validate.py --gate evidence`

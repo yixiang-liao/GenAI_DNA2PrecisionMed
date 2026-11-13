@@ -18,15 +18,22 @@
    * snps: [{ id, beta, dosage }] — dosage may be fractional (imputed), must be within [0, 2].
    * Returns { total, contributions: [{ id, beta, dosage, contribution }] }.
    */
+  function blank(x) {
+    return x === null || x === undefined || String(x).trim() === "";
+  }
+
   function compute(snps) {
     var total = 0;
     var contributions = snps.map(function (s) {
+      // Number("") and Number(null) are 0, so a blank field would silently count as 0 (review R17)
+      if (blank(s.beta)) throw new Error(s.id + ": beta is missing");
+      if (blank(s.dosage)) throw new Error(s.id + ": dosage is missing");
       var beta = Number(s.beta), dosage = Number(s.dosage);
       if (!isFinite(beta)) throw new Error(s.id + ": beta must be a number");
       if (!isFinite(dosage) || dosage < 0 || dosage > 2) {
         throw new Error(s.id + ": dosage must be within [0, 2]");
       }
-      var c = s.beta * s.dosage;
+      var c = beta * dosage;
       total += c;
       return { id: s.id, beta: beta, dosage: dosage, contribution: c };
     });

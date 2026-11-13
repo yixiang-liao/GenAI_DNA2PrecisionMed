@@ -14,6 +14,7 @@ import shutil
 import subprocess
 import sys
 import tempfile
+from html import unescape
 from html.parser import HTMLParser
 from pathlib import Path
 
@@ -110,6 +111,15 @@ def gate_evidence(root):
     g.check("Verified claims cite only verified sources", not unverified, short(unverified))
     no_loc = [e["id"] for c in claims for e in c.get("evidence", []) if not e.get("location")]
     g.check("Evidence records have a source location", not no_loc, short(no_loc))
+    # review R02: a verified claim needs a verbatim quote, and the quote must occur in the cached source text
+    no_quote = [e["id"] for c in verified for e in c["evidence"] if not e.get("quote")]
+    g.check("Verified evidence records carry a verbatim quote", not no_quote, short(no_quote))
+    if (root / "sources/cache").is_dir():
+        misses = [f"{e['id']}({e['source_id']})" for c in verified for e in c["evidence"]
+                  if e.get("quote") and not quote_in_cache(root, e["source_id"], e["quote"])]
+        g.check("Quotes found in cached source text", not misses, short(misses))
+    else:
+        g.check("Quotes found in cached source text", True, "SKIPPED: sources/cache/ absent (run cache_text.py)")
     pending = [c for c in claims if c.get("status") == "pending_verification"]
     unexplained = [c["id"] for c in pending if not c.get("missing_evidence")]
     g.check("Pending claims document missing evidence", not unexplained,
@@ -122,6 +132,29 @@ def gate_evidence(root):
                 and set(cf.get("source_ids", [])) <= set(sources))
     g.check("At least one literature conflict documented", data.get("conflicts"))
     return g
+
+
+def norm_quote(text):
+    text = unescape(text).translate(str.maketrans("‘’“”–—−  ", "''\"\"---  "))
+    return re.sub(r"\s+", " ", text).strip().lower()
+
+
+def quote_in_cache(root, source_id, quote):
+    """True if `quote` (whitespace/quote-mark/dash-insensitive) occurs in any cached text of the source.
+    `…` in a quote separates fragments that must each occur."""
+    cache = root / "sources/cache"
+    files = [cache / f"{source_id}.txt", cache / "fulltext" / f"{source_id}.txt", cache / "pages" / f"{source_id}.txt"]
+    text = norm_quote(" ".join(f.read_text(encoding="utf-8") for f in files if f.exists()))
+    parts = [norm_quote(p) for p in re.split(r"\s*(?:…|\.\.\.)\s*", quote) if p.strip()]
+    if not parts or any(len(p) < 20 for p in parts):  # follow-up review N4: no trivially short fragments
+        return False
+    pos = 0
+    for p in parts:  # fragments must appear in the source in the quoted order
+        pos = text.find(p, pos)
+        if pos < 0:
+            return False
+        pos += len(p)
+    return True
 
 
 # ---------------------------------------------------------------- N4 wiki
@@ -148,6 +181,10 @@ def broken_links(root, html_files, within=None):
         if path not in parsed:
             p = LinkParser()
             p.feed(path.read_text(encoding="utf-8"))
+            # slides are rendered by JS; their #sNN hash routes come from content/slides.json
+            deck = root / "content/slides.json"
+            if path.resolve() == (root / "slides/index.html").resolve() and deck.exists():
+                p.ids.update(s["id"] for s in json.loads(deck.read_text(encoding="utf-8"))["slides"])
             parsed[path] = p
         return parsed[path]
 
@@ -265,6 +302,8 @@ def prs_reference(snps):
     """Independent reference implementation: PRS = Σ βi × Gi."""
     total = 0.0
     for s in snps:
+        if not all(isinstance(s.get(k), (int, float)) for k in ("beta", "dosage")):
+            raise ValueError("beta and dosage must be numbers")
         if not 0 <= s["dosage"] <= 2:
             raise ValueError("dosage out of range")
         total += s["beta"] * s["dosage"]
@@ -302,13 +341,21 @@ def chrome_binary():
 
 
 def chrome_selftest(root, width):
-    """Load slides in headless Chrome with ?selftest; the page writes a JSON report into #selftest."""
+    """Load slides in headless Chrome with ?selftest; the page writes a JSON report into #selftest.
+    Headless windows have a 500px minimum width (execution-log E07), so the deck runs inside an
+    iframe of exactly `width` px and posts its report to the harness page."""
     chrome = chrome_binary()
     url = (root / "slides/index.html").as_uri() + "?selftest=1"
-    with tempfile.TemporaryDirectory() as prof:
-        proc = subprocess.run([chrome, "--headless=new", "--disable-gpu", f"--user-data-dir={prof}",
-                               f"--window-size={width},800", "--virtual-time-budget=8000",
-                               "--dump-dom", url], capture_output=True, text=True, timeout=90)
+    harness = ('<!doctype html><body style="margin:0"><pre id="selftest"></pre>'
+               f'<iframe src="{url}" style="border:0;width:{width}px;height:800px"></iframe><script>'
+               'addEventListener("message",function(e){if(e.data&&e.data.selftest)'
+               'document.getElementById("selftest").textContent=JSON.stringify(e.data.selftest)})</script>')
+    with tempfile.TemporaryDirectory() as tmp:
+        page = Path(tmp) / "harness.html"
+        page.write_text(harness, encoding="utf-8")
+        proc = subprocess.run([chrome, "--headless=new", "--disable-gpu", f"--user-data-dir={tmp}/prof",
+                               f"--window-size={max(width, 500) + 40},900", "--virtual-time-budget=8000",
+                               "--dump-dom", page.as_uri()], capture_output=True, text=True, timeout=90)
     m = re.search(r'<pre id="selftest"[^>]*>(.*?)</pre>', proc.stdout, re.S)
     if not m:
         return None
@@ -349,6 +396,7 @@ def gate_site(root):
         if rep is None:
             g.check(f"Layout self-test @{width}px", False, "no #selftest output")
             continue
+        g.check(f"Layout self-test @{width}px: tested at real viewport width", rep["width"] == width, f"innerWidth={rep['width']}")
         g.check(f"Layout self-test @{width}px: slides rendered", rep["slides"] >= 25, f"{rep['slides']} slides")
         g.check(f"Layout self-test @{width}px: no horizontal overflow", not rep["overflow"], short(rep["overflow"]))
         g.check(f"Layout self-test @{width}px: interactions", not rep["errors"], short(rep["errors"], 4))
@@ -384,13 +432,21 @@ def inject(root, case):
         p.write_text(p.read_text(encoding="utf-8").replace("s.beta * s.dosage", "Math.abs(s.beta) * s.dosage"),
                      encoding="utf-8")
         return "prs"
+    if case == "fake-quote":
+        edit("evidence/claims.json", lambda d: d["claims"][0]["evidence"][0].update(
+            quote="DNA is made of three linked strands"))
+        return "evidence"
+    if case == "mobile-overflow":
+        p = root / "assets/css/slides.css"
+        p.write_text(p.read_text(encoding="utf-8") + "\n.points { min-width: 460px; }\n", encoding="utf-8")
+        return "site"
     raise SystemExit(f"unknown case {case}")
 
 
 def run_inject(case):
     with tempfile.TemporaryDirectory() as tmp:
         copy = Path(tmp) / "repo"
-        shutil.copytree(ROOT, copy, ignore=shutil.ignore_patterns(".git", "cache"))
+        shutil.copytree(ROOT, copy, ignore=shutil.ignore_patterns(".git"))
         gate = inject(copy, case)
         g = GATE_FUNCS[gate](copy)
         caught = not g.passed

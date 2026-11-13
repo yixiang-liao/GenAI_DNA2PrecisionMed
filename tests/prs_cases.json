@@ -1,43 +1,251 @@
 {
   "note": "Hand-computed expected values. All SNP IDs and weights are SIMULATED demo data, not real GWAS results.",
   "cases": [
-    {"name": "single hom-ref", "tags": ["hom_ref"],
-     "snps": [{"id": "demo1", "beta": 0.2, "dosage": 0}], "expected": 0.0},
-    {"name": "single het", "tags": ["het"],
-     "snps": [{"id": "demo1", "beta": 0.2, "dosage": 1}], "expected": 0.2},
-    {"name": "single hom-alt", "tags": ["hom_alt"],
-     "snps": [{"id": "demo1", "beta": 0.2, "dosage": 2}], "expected": 0.4},
-    {"name": "negative beta het", "tags": ["negative_beta", "het"],
-     "snps": [{"id": "demo2", "beta": -0.15, "dosage": 1}], "expected": -0.15},
-    {"name": "negative beta hom-alt", "tags": ["negative_beta", "hom_alt"],
-     "snps": [{"id": "demo2", "beta": -0.15, "dosage": 2}], "expected": -0.3},
-    {"name": "mixed signs cancel", "tags": ["negative_beta", "multi_snp"],
-     "snps": [{"id": "demo1", "beta": 0.1, "dosage": 2}, {"id": "demo2", "beta": -0.2, "dosage": 1}],
-     "expected": 0.0},
-    {"name": "five SNP sum", "tags": ["multi_snp", "hom_ref", "het", "hom_alt", "negative_beta"],
-     "snps": [
-       {"id": "demo1", "beta": 0.12, "dosage": 2},
-       {"id": "demo2", "beta": -0.08, "dosage": 1},
-       {"id": "demo3", "beta": 0.30, "dosage": 0},
-       {"id": "demo4", "beta": 0.05, "dosage": 1},
-       {"id": "demo5", "beta": -0.20, "dosage": 2}
-     ],
-     "expected": -0.19},
-    {"name": "fractional imputed dosage", "tags": ["fractional_dosage"],
-     "snps": [{"id": "demo1", "beta": 0.25, "dosage": 1.4}], "expected": 0.35},
-    {"name": "fractional multi", "tags": ["fractional_dosage", "multi_snp", "negative_beta"],
-     "snps": [{"id": "demo1", "beta": 0.5, "dosage": 0.3}, {"id": "demo2", "beta": -0.1, "dosage": 1.75}],
-     "expected": -0.025},
-    {"name": "empty list", "tags": ["edge"], "snps": [], "expected": 0.0}
+    {
+      "name": "single hom-ref",
+      "tags": [
+        "hom_ref"
+      ],
+      "snps": [
+        {
+          "id": "demo1",
+          "beta": 0.2,
+          "dosage": 0
+        }
+      ],
+      "expected": 0.0
+    },
+    {
+      "name": "single het",
+      "tags": [
+        "het"
+      ],
+      "snps": [
+        {
+          "id": "demo1",
+          "beta": 0.2,
+          "dosage": 1
+        }
+      ],
+      "expected": 0.2
+    },
+    {
+      "name": "single hom-alt",
+      "tags": [
+        "hom_alt"
+      ],
+      "snps": [
+        {
+          "id": "demo1",
+          "beta": 0.2,
+          "dosage": 2
+        }
+      ],
+      "expected": 0.4
+    },
+    {
+      "name": "negative beta het",
+      "tags": [
+        "negative_beta",
+        "het"
+      ],
+      "snps": [
+        {
+          "id": "demo2",
+          "beta": -0.15,
+          "dosage": 1
+        }
+      ],
+      "expected": -0.15
+    },
+    {
+      "name": "negative beta hom-alt",
+      "tags": [
+        "negative_beta",
+        "hom_alt"
+      ],
+      "snps": [
+        {
+          "id": "demo2",
+          "beta": -0.15,
+          "dosage": 2
+        }
+      ],
+      "expected": -0.3
+    },
+    {
+      "name": "mixed signs cancel",
+      "tags": [
+        "negative_beta",
+        "multi_snp"
+      ],
+      "snps": [
+        {
+          "id": "demo1",
+          "beta": 0.1,
+          "dosage": 2
+        },
+        {
+          "id": "demo2",
+          "beta": -0.2,
+          "dosage": 1
+        }
+      ],
+      "expected": 0.0
+    },
+    {
+      "name": "five SNP sum",
+      "tags": [
+        "multi_snp",
+        "hom_ref",
+        "het",
+        "hom_alt",
+        "negative_beta"
+      ],
+      "snps": [
+        {
+          "id": "demo1",
+          "beta": 0.12,
+          "dosage": 2
+        },
+        {
+          "id": "demo2",
+          "beta": -0.08,
+          "dosage": 1
+        },
+        {
+          "id": "demo3",
+          "beta": 0.3,
+          "dosage": 0
+        },
+        {
+          "id": "demo4",
+          "beta": 0.05,
+          "dosage": 1
+        },
+        {
+          "id": "demo5",
+          "beta": -0.2,
+          "dosage": 2
+        }
+      ],
+      "expected": -0.19
+    },
+    {
+      "name": "fractional imputed dosage",
+      "tags": [
+        "fractional_dosage"
+      ],
+      "snps": [
+        {
+          "id": "demo1",
+          "beta": 0.25,
+          "dosage": 1.4
+        }
+      ],
+      "expected": 0.35
+    },
+    {
+      "name": "fractional multi",
+      "tags": [
+        "fractional_dosage",
+        "multi_snp",
+        "negative_beta"
+      ],
+      "snps": [
+        {
+          "id": "demo1",
+          "beta": 0.5,
+          "dosage": 0.3
+        },
+        {
+          "id": "demo2",
+          "beta": -0.1,
+          "dosage": 1.75
+        }
+      ],
+      "expected": -0.025
+    },
+    {
+      "name": "empty list",
+      "tags": [
+        "edge"
+      ],
+      "snps": [],
+      "expected": 0.0
+    }
   ],
   "invalid": [
-    {"name": "dosage above 2", "snps": [{"id": "x", "beta": 0.1, "dosage": 3}]},
-    {"name": "negative dosage", "snps": [{"id": "x", "beta": 0.1, "dosage": -1}]}
+    {
+      "name": "dosage above 2",
+      "snps": [
+        {
+          "id": "x",
+          "beta": 0.1,
+          "dosage": 3
+        }
+      ]
+    },
+    {
+      "name": "negative dosage",
+      "snps": [
+        {
+          "id": "x",
+          "beta": 0.1,
+          "dosage": -1
+        }
+      ]
+    },
+    {
+      "name": "blank beta",
+      "snps": [
+        {
+          "id": "x",
+          "beta": "",
+          "dosage": 1
+        }
+      ]
+    },
+    {
+      "name": "null dosage",
+      "snps": [
+        {
+          "id": "x",
+          "beta": 0.1,
+          "dosage": null
+        }
+      ]
+    },
+    {
+      "name": "missing dosage",
+      "snps": [
+        {
+          "id": "x",
+          "beta": 0.1
+        }
+      ]
+    }
   ],
   "genotype": [
-    {"genotype": "AA", "effect": "G", "dosage": 0},
-    {"genotype": "AG", "effect": "G", "dosage": 1},
-    {"genotype": "GA", "effect": "G", "dosage": 1},
-    {"genotype": "gg", "effect": "G", "dosage": 2}
+    {
+      "genotype": "AA",
+      "effect": "G",
+      "dosage": 0
+    },
+    {
+      "genotype": "AG",
+      "effect": "G",
+      "dosage": 1
+    },
+    {
+      "genotype": "GA",
+      "effect": "G",
+      "dosage": 1
+    },
+    {
+      "genotype": "gg",
+      "effect": "G",
+      "dosage": 2
+    }
   ]
 }

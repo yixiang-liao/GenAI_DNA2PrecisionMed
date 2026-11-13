@@ -33,7 +33,7 @@
      "related": ["gwas", "pgs-catalog", "effect-weight"], "claims": ["C-GW-07"], "updated": "2026-11-13"},
     {"id": "gwas-diversity", "zh": "研究族群多樣性", "en": "Population Diversity in GWAS", "abbr": "",
      "beginner": {"zh": "過去大部分 GWAS 的參與者是歐洲血統。只用某一群人找到的結果，套用到其他族群時不一定準確。", "en": "Most past GWAS participants were of European ancestry. Results from one group may not hold as well in others."},
-     "advanced": {"zh": "Popejoy & Fullerton（2016）：2009 年 96% 為歐洲血統，2016 年非歐洲約 20%，但非洲、拉丁美洲與原住民族群合計 <4%。族群間 allele 頻率與 LD 結構不同，造成發現偏差與 PRS 移植性下降。", "en": "Popejoy & Fullerton (2016): 96% European in 2009; ~20% non-European by 2016, but African, Latin American and indigenous groups together <4%. Differences in allele frequencies and LD cause discovery bias and reduced PRS portability."},
+     "advanced": {"zh": "Popejoy & Fullerton（2016）：2009 年 96% 為歐洲血統，2016 年非歐洲約 20%，但非洲、拉丁美洲血統、西語裔與原住民族群合計 <4%。族群間 allele 頻率與 LD 結構不同，造成發現偏差與 PRS 移植性下降。", "en": "Popejoy & Fullerton (2016): 96% European in 2009; ~20% non-European by 2016, but African and Latin American ancestry, Hispanic and indigenous groups together <4%. Differences in allele frequencies and LD cause discovery bias and reduced PRS portability."},
      "examples": {"zh": ["某 SNP 在一族群常見、在另一族群罕見，其可檢測性就不同。"], "en": ["A SNP common in one population but rare in another has different detectability."]},
      "related": ["gwas", "prs-portability", "ethics-equity", "ld"], "claims": ["C-GW-08"], "updated": "2026-11-13"}
   ]

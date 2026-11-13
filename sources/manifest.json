@@ -23,7 +23,20 @@
         "resolved_title": "Talking Glossary of Genetic Terms | NHGRI",
         "checked_at": "2026-11-13T09:57:12+09:00",
         "errors": []
-      }
+      },
+      "cache_pages": [
+        "https://www.genome.gov/genetics-glossary/Deoxyribonucleic-Acid-DNA",
+        "https://www.genome.gov/genetics-glossary/Ribonucleic-Acid-RNA",
+        "https://www.genome.gov/genetics-glossary/Chromosome",
+        "https://www.genome.gov/genetics-glossary/Gene",
+        "https://www.genome.gov/genetics-glossary/Locus",
+        "https://www.genome.gov/genetics-glossary/Allele",
+        "https://www.genome.gov/genetics-glossary/Single-Nucleotide-Polymorphisms-SNPs",
+        "https://www.genome.gov/genetics-glossary/genotype",
+        "https://www.genome.gov/genetics-glossary/Phenotype",
+        "https://www.genome.gov/genetics-glossary/Exome",
+        "https://www.genome.gov/genetics-glossary/Genome-Wide-Association-Studies-GWAS"
+      ]
     },
     {
       "id": "S02",
@@ -47,7 +60,11 @@
         "resolved_title": "Help Me Understand Genetics: MedlinePlus Genetics",
         "checked_at": "2026-11-13T09:57:12+09:00",
         "errors": []
-      }
+      },
+      "cache_pages": [
+        "https://medlineplus.gov/genetics/understanding/mutationsanddisorders/genemutation/",
+        "https://medlineplus.gov/genetics/understanding/precisionmedicine/definition/"
+      ]
     },
     {
       "id": "S03",
@@ -73,7 +90,8 @@
         "title_similarity": 1.0,
         "pmid": "27184599",
         "checked_at": "2026-11-13T09:57:12+09:00",
-        "errors": []
+        "errors": [],
+        "pmcid": "PMC10373632"
       }
     },
     {
@@ -100,7 +118,8 @@
         "title_similarity": 1.0,
         "pmid": "21653522",
         "checked_at": "2026-11-13T09:57:12+09:00",
-        "errors": []
+        "errors": [],
+        "pmcid": "PMC3137218"
       }
     },
     {
@@ -156,7 +175,8 @@
         "title_similarity": 1.0,
         "pmid": "26432245",
         "checked_at": "2026-11-13T09:57:26+09:00",
-        "errors": []
+        "errors": [],
+        "pmcid": "PMC4750478"
       }
     },
     {
@@ -184,7 +204,8 @@
         "title_similarity": 1.0,
         "pmid": "35357919",
         "checked_at": "2026-11-13T09:57:26+09:00",
-        "errors": []
+        "errors": [],
+        "pmcid": "PMC9186530"
       }
     },
     {
@@ -211,7 +232,8 @@
         "title_similarity": 1.0,
         "pmid": "19015660",
         "checked_at": "2026-11-13T09:57:26+09:00",
-        "errors": []
+        "errors": [],
+        "pmcid": "PMC2949280"
       }
     },
     {
@@ -239,7 +261,8 @@
         "title_similarity": 1.0,
         "pmid": "26813401",
         "checked_at": "2026-11-13T09:57:26+09:00",
-        "errors": []
+        "errors": [],
+        "pmcid": "PMC4728800"
       }
     },
     {
@@ -297,7 +320,8 @@
         "title_similarity": 1.0,
         "pmid": "25516281",
         "checked_at": "2026-11-13T10:00:16+09:00",
-        "errors": []
+        "errors": [],
+        "pmcid": "PMC4302049"
       }
     },
     {
@@ -424,7 +448,8 @@
         "title_similarity": 1.0,
         "pmid": "36350656",
         "checked_at": "2026-11-13T10:00:16+09:00",
-        "errors": []
+        "errors": [],
+        "pmcid": "PMC9825413"
       }
     },
     {
@@ -456,7 +481,8 @@
         "title_similarity": 1.0,
         "pmid": "32709988",
         "checked_at": "2026-11-13T09:58:15+09:00",
-        "errors": []
+        "errors": [],
+        "pmcid": "PMC7612115"
       }
     },
     {
@@ -523,7 +549,8 @@
         "title_similarity": 1.0,
         "pmid": "30926966",
         "checked_at": "2026-11-13T09:58:15+09:00",
-        "errors": []
+        "errors": [],
+        "pmcid": "PMC6563838"
       }
     },
     {
@@ -555,7 +582,8 @@
         "title_similarity": 1.0,
         "pmid": "33692568",
         "checked_at": "2026-11-13T09:58:15+09:00",
-        "errors": []
+        "errors": [],
+        "pmcid": "PMC11165303"
       }
     },
     {
@@ -588,7 +616,8 @@
         "title_similarity": 1.0,
         "pmid": "30104762",
         "checked_at": "2026-11-13T09:58:15+09:00",
-        "errors": []
+        "errors": [],
+        "pmcid": "PMC6128408"
       }
     },
     {
@@ -621,7 +650,8 @@
         "title_similarity": 1.0,
         "pmid": "28476144",
         "checked_at": "2026-11-13T09:58:27+09:00",
-        "errors": []
+        "errors": [],
+        "pmcid": "PMC5418815"
       }
     },
     {
@@ -655,7 +685,8 @@
         "title_similarity": 1.0,
         "pmid": "24071849",
         "checked_at": "2026-11-13T09:58:27+09:00",
-        "errors": []
+        "errors": [],
+        "pmcid": "PMC3919969"
       }
     },
     {
@@ -720,7 +751,8 @@
         "title_similarity": 1.0,
         "pmid": "27734877",
         "checked_at": "2026-11-13T09:58:27+09:00",
-        "errors": []
+        "errors": [],
+        "pmcid": "PMC5089703"
       }
     },
     {
@@ -752,7 +784,8 @@
         "title_similarity": 1.0,
         "pmid": "25741868",
         "checked_at": "2026-11-13T09:58:27+09:00",
-        "errors": []
+        "errors": [],
+        "pmcid": "PMC4544753"
       }
     }
   ]

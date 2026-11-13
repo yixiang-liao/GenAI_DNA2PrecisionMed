@@ -4,6 +4,7 @@ sources/references.md. Also syncs claims.related_slide_ids from content/slides.j
 Usage: python3 scripts/build.py
 """
 import json
+import re
 import shutil
 import sys
 from html import escape
@@ -205,7 +206,8 @@ def evidence_page(ctx):
             continue
         ev = "".join(
             f'<li id="{e["id"]}"><code>{e["id"]}</code> → <a href="papers/{e["source_id"]}.html">{e["source_id"]}</a> '
-            f'<span class="loc">{escape(e["location"])}</span> · {source_link(sources[e["source_id"]], "../")}</li>'
+            f'<span class="loc">{escape(e["location"])}</span> · {source_link(sources[e["source_id"]], "../")}'
+            f'<blockquote class="quote">“{escape(e["quote"])}”</blockquote></li>'
             for e in cl["evidence"])
         slides = " ".join(f'<a href="../slides/index.html#{s}">{s}</a>' for s in cl.get("related_slide_ids", [])) or "—"
         note = f'<p class="note">{escape(cl["note"])}</p>' if cl.get("note") else ""
@@ -243,6 +245,94 @@ document.getElementById('ev-q').addEventListener('input', function (e) {{
 }});
 </script>"""
     return page("Evidence", body, 1, "wiki/evidence.html")
+
+
+def md_inline(s):
+    s = escape(s, quote=False)
+    s = re.sub(r"`([^`]+)`", r"<code>\1</code>", s)
+    s = re.sub(r"\*\*([^*]+)\*\*", r"<b>\1</b>", s)
+    s = re.sub(r"\[([^\]]+)\]\(([^)]+)\)", lambda m: f'<a href="{md_link(m.group(2))}">{m.group(1)}</a>', s)
+    return s
+
+
+def md_link(href):
+    """Rewrite repo-relative markdown links so they work from workflow.html (site root)."""
+    if re.match(r"^(https?:|#)", href):
+        return href
+    if href.endswith(".md"):
+        return "https://github.com/yixiang-liao/GenAI_DNA2PrecisionMed/blob/main/" + href.lstrip("./").replace("../", "")
+    return href
+
+
+def md_to_html(text):
+    """Minimal Markdown for our own report files: headings, tables, lists, code blocks, paragraphs."""
+    out, lines, i = [], text.splitlines(), 0
+    while i < len(lines):
+        line = lines[i]
+        if line.startswith("```"):
+            j = i + 1
+            while j < len(lines) and not lines[j].startswith("```"):
+                j += 1
+            out.append("<pre class=\"code\">" + escape("\n".join(lines[i + 1:j])) + "</pre>")
+            i = j + 1
+            continue
+        m = re.match(r"^(#{1,4}) (.*)", line)
+        if m:
+            lvl = min(len(m.group(1)) + 1, 4)
+            out.append(f"<h{lvl}>{md_inline(m.group(2))}</h{lvl}>")
+        elif line.startswith("|"):
+            rows = []
+            while i < len(lines) and lines[i].startswith("|"):
+                cells = [c.strip() for c in lines[i].strip().strip("|").split("|")]
+                if not all(re.match(r"^:?-+:?$", c) for c in cells):
+                    rows.append(cells)
+                i += 1
+            head = "".join(f"<th>{md_inline(c)}</th>" for c in rows[0])
+            body = "".join("<tr>" + "".join(f"<td>{md_inline(c)}</td>" for c in r) + "</tr>" for r in rows[1:])
+            out.append(f'<div class="table-wrap"><table><thead><tr>{head}</tr></thead><tbody>{body}</tbody></table></div>')
+            continue
+        elif re.match(r"^\s*([-*]|\d+\.) ", line):
+            tag = "ol" if re.match(r"^\s*\d+\.", line) else "ul"
+            items = []
+            while i < len(lines) and re.match(r"^\s*([-*]|\d+\.) ", lines[i]):
+                items.append(re.sub(r"^\s*([-*]|\d+\.) ", "", lines[i]))
+                i += 1
+            out.append(f"<{tag}>" + "".join(f"<li>{md_inline(x)}</li>" for x in items) + f"</{tag}>")
+            continue
+        elif line.strip() and not line.startswith(">"):
+            out.append(f"<p>{md_inline(line)}</p>")
+        elif line.startswith(">"):
+            out.append(f"<blockquote>{md_inline(line.lstrip('> '))}</blockquote>")
+        i += 1
+    return "\n".join(out)
+
+
+def workflow_page():
+    sections = [("graph", "workflow/graph.md", "Graph 與 Loop 設計", "Graph & Loop design"),
+                ("execution", "reports/execution-log.md", "執行紀錄", "Execution log"),
+                ("validation", "reports/validation-report.md", "驗證報告", "Validation report"),
+                ("recovery", "reports/failure-recovery.md", "錯誤修正與流程改善", "Failure recovery & improvement"),
+                ("review", "reports/independent-review.md", "獨立 AI 審查", "Independent AI review"),
+                ("followup", "reports/independent-review-followup.md", "獨立 AI 複審", "Independent AI follow-up review")]
+    nodes = [("N1", "Source Ingestion"), ("N2", "Evidence Validation"), ("N3", "Wiki Generation"), ("N4", "Wiki Quality Gate"),
+             ("N5", "Slide Generation"), ("N6", "HTML & Scientific Validation"), ("N7", "Independent AI Review"), ("N8", "Publish & Report")]
+    flow = "".join(f'<div class="node-box"><b>{n}</b>{escape(label)}</div>' for n, label in nodes)
+    toc = " · ".join(f'<a href="#{sid}">{bi(zh, en)}</a>' for sid, _, zh, en in sections if (ROOT / path_of(sections, sid)).exists())
+    body = [f'<h1>{bi("Graph / Loop 工作流程", "Graph / Loop Workflow")}</h1>',
+            f'<p class="lede">{bi("本網站的每一份內容都由下列 8 個節點產生與驗證；失敗時最多 3 輪局部修正，仍失敗就交由人工。", "Every artifact on this site was produced and validated by the 8 nodes below; failures get at most 3 local fix rounds, then go to a human.")}</p>',
+            f'<div class="flow">{flow}</div>', f'<p class="small">{toc}</p>']
+    for sid, rel, zh, en in sections:
+        path = ROOT / rel
+        if not path.exists():
+            continue
+        md = path.read_text(encoding="utf-8")
+        md = re.sub(r"^# .*\n", "", md, count=1)
+        body.append(f'<section class="card" id="{sid}"><h2>{bi(zh, en)}</h2><p class="small muted">Source: <code>{rel}</code></p>{md_to_html(md)}</section>')
+    return page("Workflow", "\n".join(body), 0, "workflow.html")
+
+
+def path_of(sections, sid):
+    return next(rel for s, rel, _, _ in sections if s == sid)
 
 
 def references_md(sources):
@@ -294,6 +384,7 @@ def main():
     (wiki / "graph.html").write_text(graph_page(ctx), encoding="utf-8")
     (wiki / "evidence.html").write_text(evidence_page(ctx), encoding="utf-8")
     (ROOT / "sources/references.md").write_text(references_md(sources_list), encoding="utf-8")
+    (ROOT / "workflow.html").write_text(workflow_page(), encoding="utf-8")
 
     # data bundle for slides / glossary / graph (works from file:// and GitHub Pages)
     published_claims = [{k: c[k] for k in ("id", "concept_id", "classification", "text", "evidence")}
