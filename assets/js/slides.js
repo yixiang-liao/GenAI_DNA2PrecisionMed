@@ -175,15 +175,21 @@
         '</table></div><p class="cap"><span class="sim">模擬</span> GENE_A 與 GENE_B 讀段相同，但 B 長一倍，所以 TPM 只有 A 的一半；三者 TPM 總和 = 1,000,000。</p>';
     },
     volcano: function () {
-      var r = rng(3), out = "";
-      for (var i = 0; i < 160; i++) {
-        var fc = (r() - 0.5) * 6, p = Math.abs(fc) * (1.2 + r() * 2.2) + r() * 1.2;
-        var sig = Math.abs(fc) > 1 && p > 3;
-        out += '<circle cx="' + (210 + fc * 60) + '" cy="' + (150 - p * 16) + '" r="3" ' + (sig ? 'class="svg-accent"' : 'class="svg-muted" opacity=".45"') + "/>";
+      var r = rng(3), out = "", L = 40, R = 470, T = 12, B = 160, up = 0, dn = 0;
+      var xs = function (fc) { return (L + R) / 2 + fc / 3.2 * (R - L) / 2; }, ys = function (p) { return B - p / 8 * (B - T); };
+      [-3, -2, -1, 0, 1, 2, 3].forEach(function (v) { out += t(xs(v), B + 14, String(v), "tick", 'text-anchor="middle"'); });
+      [0, 2, 4, 6, 8].forEach(function (v) { out += '<line class="grid-l" x1="' + L + '" x2="' + R + '" y1="' + ys(v) + '" y2="' + ys(v) + '"/>' + t(L - 8, ys(v) + 3, String(v), "tick", 'text-anchor="end"'); });
+      out += '<line class="thr" x1="' + L + '" x2="' + R + '" y1="' + ys(3) + '" y2="' + ys(3) + '"/><line class="thr" x1="' + xs(-1) + '" x2="' + xs(-1) + '" y1="' + T + '" y2="' + B + '"/><line class="thr" x1="' + xs(1) + '" x2="' + xs(1) + '" y1="' + T + '" y2="' + B + '"/>';
+      for (var i = 0; i < 220; i++) {
+        var fc = (r() - 0.5) * 6, p = Math.min(7.8, Math.abs(fc) * (0.6 + r() * 1.6) + r() * 1.3);
+        var cls = Math.abs(fc) > 1 && p > 3 ? (fc > 0 ? "c-up" : "c-down") : "c-ns";
+        if (cls === "c-up") up++; if (cls === "c-down") dn++;
+        out += '<circle cx="' + xs(fc).toFixed(1) + '" cy="' + ys(p).toFixed(1) + '" r="2.6" class="' + cls + '" opacity="' + (cls === "c-ns" ? 0.35 : 0.9) + '"/>';
       }
-      out += '<line x1="20" y1="102" x2="400" y2="102" class="svg-line" stroke-dasharray="4 3"/><line x1="150" y1="10" x2="150" y2="150" class="svg-line" stroke-dasharray="4 3"/><line x1="270" y1="10" x2="270" y2="150" class="svg-line" stroke-dasharray="4 3"/>';
-      out += t(170, 168, "log₂ fold change", "svg-muted", 'font-size="11"') + t(2, 12, "−log₁₀(adj. p)", "svg-muted", 'font-size="11"');
-      return svg(420, 175, out, "Simulated volcano plot") + '<p class="cap"><span class="sim">模擬</span> 彩色點＝|log₂FC| > 1 且校正後顯著。</p>';
+      out += '<line class="ax" x1="' + L + '" x2="' + R + '" y1="' + B + '" y2="' + B + '"/><line class="ax" x1="' + L + '" x2="' + L + '" y1="' + T + '" y2="' + B + '"/>';
+      out += t(R - 4, T + 12, "↑ 上調 up: " + up, "tick", 'text-anchor="end" style="fill:var(--d-gwas);font-weight:700"') + t(L + 6, T + 12, "↓ 下調 down: " + dn, "tick", 'style="fill:var(--d-sequencing);font-weight:700"');
+      out += t((L + R) / 2, B + 30, "log₂ fold change", "tick", 'text-anchor="middle"') + t(12, (T + B) / 2, "−log₁₀(adj. p)", "tick", 'transform="rotate(-90 12 ' + (T + B) / 2 + ')" text-anchor="middle"');
+      return svg(480, B + 36, out, "Simulated volcano plot") + '<p class="cap"><span class="sim">模擬</span> 彩色點＝|log₂FC| > 1 且校正後顯著；橘＝上調、藍＝下調。</p>';
     },
     "case-control": function () {
       var bar = function (y, label, f) {
@@ -194,24 +200,32 @@
         '<p class="cap"><span class="sim">模擬</span> 頻率差異經統計檢定 → 關聯；仍不代表因果。</p>';
     },
     manhattan: function () {
-      var r = rng(19), out = "", x = 30, H = 170, thr = -Math.log10(5e-8);
-      var ys = function (v) { return H - v * 15; };
-      for (var c = 1; c <= 12; c++) {
-        var n = 26 - c;
+      var r = rng(19), out = "", L = 40, R = 470, T = 14, B = 176, thr = -Math.log10(5e-8), ymax = 10;
+      var ys = function (v) { return B - v / ymax * (B - T); };
+      var sizes = [], total = 0;
+      for (var c = 1; c <= 12; c++) { sizes.push(60 - c * 3); total += 60 - c * 3; }
+      var scale = (R - L) / total, x0 = L;
+      [0, 2, 4, 6, 8, 10].forEach(function (v) {
+        out += '<line class="grid-l" x1="' + L + '" x2="' + R + '" y1="' + ys(v) + '" y2="' + ys(v) + '"/>' + t(L - 8, ys(v) + 3, String(v), "tick", 'text-anchor="end"');
+      });
+      sizes.forEach(function (n, ci) {
+        var c = ci + 1;
         for (var i = 0; i < n; i++) {
-          var v = -Math.log10(Math.max(r(), 1e-4));
-          if (c === 4 && i === 10) v = 9.2;
-          if (c === 9 && i === 6) v = 8.1;
-          if (c === 4 && (i === 9 || i === 11)) v = 6.2;
-          out += '<circle cx="' + (x + i * 1.2) + '" cy="' + ys(v) + '" r="2.3" class="' + (v > thr ? "svg-accent" : (c % 2 ? "svg-muted" : "svg-text")) + '" opacity="' + (v > thr ? 1 : 0.55) + '"/>';
+          var v = -Math.log10(Math.max(r(), 1e-4)) * 0.9;
+          var peak = function (chr, at, h, w) { if (c === chr && Math.abs(i - at) <= w) v = Math.max(v, h - Math.abs(i - at) * (h / (w + 1)) + r() * 0.6); };
+          peak(4, 22, 9.3, 5); peak(9, 14, 8.2, 4); peak(2, 30, 6.4, 3);
+          var cls = v > thr ? "c-hit" : (c % 2 ? "c-odd" : "c-even");
+          out += '<circle cx="' + (x0 + (i + 0.5) * scale).toFixed(1) + '" cy="' + ys(v).toFixed(1) + '" r="2.4" class="' + cls + '" opacity="' + (v > thr ? 1 : 0.7) + '"/>';
         }
-        out += t(x + 4, H + 14, String(c), "svg-muted", 'font-size="10"');
-        x += n * 1.2 + 6;
-      }
-      out += '<line x1="26" y1="' + ys(thr) + '" x2="' + x + '" y2="' + ys(thr) + '" class="svg-stroke-accent" stroke-dasharray="5 3" stroke-width="1.3"/>';
-      out += t(x - 96, ys(thr) - 5, "p = 5×10⁻⁸", "svg-text", 'font-size="11"') + t(0, 12, "−log₁₀(p)", "svg-muted", 'font-size="10"');
-      out += t(140, H + 28, "模擬 SNP 位置（依染色體 1–12）", "svg-muted", 'font-size="10"');
-      return svg(Math.max(420, x + 10), H + 34, out, "Simulated GWAS result plot") + '<p class="cap"><span class="sim">模擬資料</span> 本圖為自製示意，非真實 GWAS。</p>';
+        out += t(x0 + n * scale / 2, B + 14, String(c), "tick", 'text-anchor="middle"');
+        x0 += n * scale;
+      });
+      out += '<line class="ax" x1="' + L + '" x2="' + R + '" y1="' + B + '" y2="' + B + '"/><line class="ax" x1="' + L + '" x2="' + L + '" y1="' + T + '" y2="' + B + '"/>';
+      out += '<line class="thr" x1="' + L + '" x2="' + R + '" y1="' + ys(thr) + '" y2="' + ys(thr) + '"/>';
+      out += t(R, ys(thr) - 5, "p = 5×10⁻⁸", "tick", 'text-anchor="end" style="fill:var(--d-gwas);font-weight:700"');
+      out += t(12, (T + B) / 2, "−log₁₀(p)", "tick", 'transform="rotate(-90 12 ' + (T + B) / 2 + ')" text-anchor="middle"');
+      out += t((L + R) / 2, B + 30, "染色體 Chromosome（模擬 SNP 位置）", "tick", 'text-anchor="middle"');
+      return svg(480, B + 36, out, "Simulated Manhattan-style GWAS plot") + '<p class="cap"><span class="sim">模擬資料</span> 每個點是一個 SNP；橘色點超過全基因體顯著門檻。本圖為自製示意，非真實 GWAS。</p>';
     },
     ld: function () {
       var haps = ["A G C T", "A G C T", "G T C A", "A G T T", "G T C A", "A G C T"], out = "";
@@ -366,8 +380,31 @@
       '<div class="hscroll"><table class="prs-table"><thead><tr><th>SNP</th><th>Effect allele</th><th>β 權重</th><th>G dosage</th><th>β×G</th><th>貢獻</th></tr></thead><tbody id="prs-rows"></tbody></table></div>' +
       '<div class="prs-total">PRS = Σ βᵢ×Gᵢ = <b id="prs-total">0</b><span class="muted small" id="prs-expl"></span></div><div class="prs-err" id="prs-err" role="alert"></div>' +
       '<div class="prs-actions"><button type="button" data-preset="reset">重設 Reset</button><button type="button" data-preset="zero">全部 G=0</button><button type="button" data-preset="max">全部 G=2</button><button type="button" data-preset="frac">小數 dosage（imputed）</button></div>' +
+      '<div class="prs-dist" id="prs-dist"></div>' +
       '<p class="cap">限制：原始 PRS 沒有臨床單位，需在參考族群中標準化；分數是相對位置而非絕對風險，且在與 GWAS 不同的族群中準確度較低。</p>';
     var tbody = host.querySelector("#prs-rows");
+    var FREQ = [0.30, 0.50, 0.20, 0.40, 0.35]; // simulated effect-allele frequencies of the reference population
+    function ncdf(z) { var t1 = 1 / (1 + 0.2316419 * Math.abs(z)), d = 0.3989423 * Math.exp(-z * z / 2);
+      var p = d * t1 * (0.3193815 + t1 * (-0.3565638 + t1 * (1.781478 + t1 * (-1.821256 + t1 * 1.330274)))); return z > 0 ? 1 - p : p; }
+    function drawDist(total) {
+      var box = host.querySelector("#prs-dist");
+      if (total === null) { box.innerHTML = ""; return; }
+      var mu = 0, v = 0;
+      rows.forEach(function (r, i) { mu += r.beta * 2 * FREQ[i]; v += r.beta * r.beta * 2 * FREQ[i] * (1 - FREQ[i]); });
+      var sd = Math.sqrt(v) || 1e-6, L = 20, R = 460, T = 16, B = 96, lo = mu - 3.6 * sd, hi = mu + 3.6 * sd;
+      var xs = function (x) { return L + (x - lo) / (hi - lo) * (R - L); };
+      var pts = [];
+      for (var k = 0; k <= 80; k++) { var x = lo + (hi - lo) * k / 80, y = Math.exp(-Math.pow((x - mu) / sd, 2) / 2); pts.push(xs(x).toFixed(1) + "," + (B - y * (B - T)).toFixed(1)); }
+      var clamped = Math.max(lo, Math.min(hi, total)), mx = xs(clamped), pct = Math.round(ncdf((total - mu) / sd) * 100);
+      pct = Math.max(1, Math.min(99, pct));
+      var out = '<path class="curve" d="M' + L + "," + B + " L" + pts.join(" L") + " L" + R + "," + B + ' Z"/>' +
+        '<line class="ax" x1="' + L + '" x2="' + R + '" y1="' + B + '" y2="' + B + '"/>' +
+        '<line class="marker" x1="' + mx + '" x2="' + mx + '" y1="' + (T - 4) + '" y2="' + B + '"/><circle class="mk-dot" cx="' + mx + '" cy="' + (T - 4) + '" r="4"/>' +
+        t(Math.min(R - 60, Math.max(L + 60, mx)), T - 10 + 0, "", "pct") +
+        t(L, B + 14, "較低 lower", "tick") + t(R, B + 14, "較高 higher", "tick", 'text-anchor="end"') + t((L + R) / 2, B + 14, "模擬參考族群的 PRS 分布", "tick", 'text-anchor="middle"');
+      box.innerHTML = svg(480, B + 20, out, "Simulated reference distribution of PRS with the current score marked") +
+        '<p class="cap"><b id="prs-pct">約第 ' + pct + ' 百分位</b>（相對於<b>模擬</b>參考族群；不是疾病機率）。</p>';
+    }
     function build() {
       tbody.innerHTML = rows.map(function (r, i) {
         return "<tr><td class=mono>" + r.id + "</td><td class=mono>" + r.ea + '</td><td><input type="number" step="0.01" value="' + r.beta + '" data-i="' + i + '" data-f="beta" aria-label="beta ' + r.id + '"></td>' +
@@ -389,12 +426,14 @@
           bar.style.width = w + "%";
         });
         host.querySelector("#prs-total").textContent = fmt(res.total, 3);
+        drawDist(res.total);
         var top = res.contributions.slice().sort(function (a, b) { return Math.abs(b.contribution) - Math.abs(a.contribution); })[0];
         host.querySelector("#prs-expl").textContent = top && top.contribution !== 0
           ? "影響最大：" + top.id + "（" + (top.contribution > 0 ? "+" : "") + fmt(top.contribution, 3) + "）" : "";
       } catch (e) {
         err.textContent = "輸入錯誤：" + e.message;
         host.querySelector("#prs-total").textContent = "—";
+        drawDist(null);
       }
     }
     host.addEventListener("input", function (e) {
@@ -420,7 +459,7 @@
 
   W.quiz = function (host) {
     var Q = D.quiz, answered = {}, correct = 0;
-    host.innerHTML = '<p class="quiz-score" id="quiz-score">得分 0 / ' + Q.length + '</p><div class="quiz">' + Q.map(function (q, qi) {
+    host.innerHTML = '<div class="quiz-head"><p class="quiz-score" id="quiz-score">得分 0 / ' + Q.length + '</p><div class="quiz-meter" aria-hidden="true"><span class="ok" id="qm-ok" style="width:0"></span><span class="bad" id="qm-bad" style="width:0"></span></div></div><div class="quiz">' + Q.map(function (q, qi) {
       return '<div class="qcard" data-q="' + qi + '"><h3>' + (qi + 1) + ". " + esc(q.q) + '</h3><div class="opts">' +
         q.options.map(function (o, oi) { return '<button type="button" data-o="' + oi + '">' + esc(o) + "</button>"; }).join("") +
         '</div><p class="fb" aria-live="polite"></p></div>';
@@ -439,7 +478,12 @@
       });
       card.querySelector(".fb").innerHTML = (ok ? "✅ 正確！" : "❌ 不正確。") + " " + esc(q.explanation) +
         ' <a href="../wiki/concepts/' + q.concept_id + '.html">相關 Wiki →</a>';
-      host.querySelector("#quiz-score").textContent = "得分 " + correct + " / " + Q.length;
+      card.classList.add(ok ? "done-ok" : "done-bad");
+      card.querySelectorAll("[data-o]").forEach(function (x) { x.disabled = true; });
+      var nAns = Object.keys(answered).length;
+      host.querySelector("#quiz-score").textContent = "得分 " + correct + " / " + Q.length + (nAns === Q.length ? (correct >= Q.length * 0.8 ? "　🎉 很棒！" : "　再複習相關 Wiki 吧") : "");
+      host.querySelector("#qm-ok").style.width = (correct / Q.length * 100) + "%";
+      host.querySelector("#qm-bad").style.width = ((nAns - correct) / Q.length * 100) + "%";
     });
   };
 
@@ -449,7 +493,7 @@
     var pts = s[state.level] || [];
     var hasSide = s.visual || s.widget;
     var wide = s.widget === "quiz" || s.widget === "prs-calculator";
-    stage.innerHTML = '<section class="slide" id="' + s.id + '" data-domain="' + s.domain + '">' +
+    stage.innerHTML = '<section class="slide' + (state.i < prevI ? " back" : "") + '" id="' + s.id + '" data-domain="' + s.domain + '">' +
       '<div class="slide-head"><span class="chapter-tag">' + esc(domName[s.domain] || s.domain) + "</span><h1>" + esc(s.title) + "</h1>" +
       (s.subtitle ? '<p class="subtitle">' + esc(s.subtitle) + "</p>" : "") + "</div>" +
       '<div class="slide-body' + (wide ? " full" : "") + '"><div class="text"><span class="level-tag' + (state.level === "advanced" ? " adv" : "") + '">' +
@@ -460,6 +504,10 @@
     if (s.widget && W[s.widget]) W[s.widget](document.getElementById("vis"));
     document.getElementById("counter").textContent = (state.i + 1) + " / " + SLIDES.length;
     document.getElementById("bar").style.width = ((state.i + 1) / SLIDES.length * 100) + "%";
+    segs.forEach(function (g) {
+      var f = Math.max(0, Math.min(1, (state.i + 1 - g.start) / g.n));
+      g.fill.style.width = (f * 100) + "%";
+    });
     document.getElementById("prev").disabled = state.i === 0;
     document.getElementById("next").disabled = state.i === SLIDES.length - 1;
     document.querySelectorAll("#chapters a").forEach(function (a) {
@@ -468,7 +516,8 @@
     stage.scrollTop = 0;
     if (location.hash !== "#" + s.id && history.replaceState) history.replaceState(null, "", location.pathname + location.search + "#" + s.id);
   }
-  function go(i) { state.i = Math.max(0, Math.min(SLIDES.length - 1, i)); render(); }
+  var prevI = 0;
+  function go(i) { prevI = state.i; state.i = Math.max(0, Math.min(SLIDES.length - 1, i)); render(); }
   function setLevel(l) {
     state.level = l;
     document.querySelectorAll("[data-level]").forEach(function (b) { b.setAttribute("aria-pressed", String(b.getAttribute("data-level") === l)); });
@@ -476,11 +525,28 @@
     render();
   }
 
+  // progress bar segmented by chapter (domain color)
+  var segs = [], progress = document.querySelector(".progress");
+  SLIDES.forEach(function (s, i) {
+    var last = segs[segs.length - 1];
+    if (last && last.domain === s.domain) last.n++;
+    else segs.push({ domain: s.domain, start: i, n: 1 });
+  });
+  segs.forEach(function (g) {
+    var d = document.createElement("span");
+    d.className = "seg-d"; d.setAttribute("data-domain", g.domain); d.style.setProperty("--n", g.n);
+    d.title = domName[g.domain] || g.domain;
+    d.innerHTML = "<i></i>";
+    d.addEventListener("click", function () { go(g.start); });
+    progress.appendChild(d);
+    g.fill = d.firstChild;
+  });
+
   // chapters menu
   var chap = document.getElementById("chapters"), chapBtn = document.getElementById("chap-btn");
   var lastDom = null, menu = "";
   SLIDES.forEach(function (s, i) {
-    if (s.domain !== lastDom) { menu += '<div class="ch-title">' + esc(domName[s.domain]) + "</div>"; lastDom = s.domain; }
+    if (s.domain !== lastDom) { menu += '<div class="ch-title" data-domain="' + s.domain + '"><span class="dot"></span>' + esc(domName[s.domain]) + "</div>"; lastDom = s.domain; }
     menu += '<a href="#' + s.id + '" data-go="' + i + '">' + (i + 1) + ". " + esc(s.title) + "</a>";
   });
   chap.innerHTML = menu;

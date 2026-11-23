@@ -34,8 +34,8 @@
       var rel = (c.related || []).map(function (r) {
         return '<a href="#' + r + '" data-jump="' + r + '">' + esc(byId[r].abbr || byId[r].en) + "</a>";
       }).join("");
-      return '<article class="term" id="' + c.id + '">' +
-        '<div class="dom">' + esc(domName[c.domain].en) + "</div>" +
+      return '<article class="term" id="' + c.id + '" data-domain="' + c.domain + '">' +
+        '<div class="dom"><span class="dot"></span>' + bi(domName[c.domain].zh, domName[c.domain].en) + "</div>" +
         "<h3>" + esc(c.zh) + (c.abbr ? ' <span class="abbr">' + esc(c.abbr) + "</span>" : "") + "</h3>" +
         '<div class="term-en">' + esc(c.en) + "</div>" +
         "<p>" + bi(body.zh, body.en) + "</p>" +

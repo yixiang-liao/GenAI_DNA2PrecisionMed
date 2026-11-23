@@ -118,3 +118,60 @@ body.deck { height: 100vh; height: 100dvh; display: flex; flex-direction: column
   .prs-table .contrib { min-width: 44px; }
   .visual { padding: 12px 8px; }
 }
+
+/* ================================================================ v2 deck refinements */
+.slide-head .chapter-tag { color: var(--d); background: color-mix(in srgb, var(--d) 13%, transparent); display: inline-flex; align-items: center; gap: 6px; }
+.slide-head .chapter-tag::before { content: ""; width: .55em; height: .55em; border-radius: 50%; background: var(--d); }
+.slide-head h1 { letter-spacing: -.01em; }
+.slide { border-top: 0; }
+.points li::marker { color: var(--d); }
+.points b, .points strong { color: color-mix(in srgb, var(--d) 70%, var(--text)); }
+.visual { border-top: 3px solid var(--d); box-shadow: var(--shadow); }
+@media (prefers-reduced-motion: no-preference) {
+  .slide { animation: slide-in .28s ease-out; }
+  .slide.back { animation-name: slide-in-back; }
+}
+@keyframes slide-in { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+@keyframes slide-in-back { from { opacity: 0; transform: translateY(-8px); } to { opacity: 1; transform: none; } }
+.progress { position: relative; height: 8px; display: flex; gap: 2px; background: transparent; overflow: visible; }
+.progress .seg-d { flex: var(--n) 1 0; height: 100%; border-radius: 3px; background: color-mix(in srgb, var(--d) 18%, var(--surface-2)); position: relative; overflow: hidden; cursor: pointer; }
+.progress .seg-d i { position: absolute; inset: 0 auto 0 0; background: var(--d); border-radius: 3px; transition: width .25s; }
+.progress .seg-d:hover { filter: brightness(1.08); }
+#bar { display: none; }
+.deck-bar .brand { font-size: 1rem; }
+.nav-btn:not(:disabled):hover { transform: translateY(-1px); box-shadow: var(--shadow-lg); }
+.chapters a { display: flex; gap: 8px; align-items: center; }
+.chapters a .dot { width: .5em; height: .5em; }
+.chapters .ch-title { display: flex; align-items: center; gap: 6px; }
+.kbd { font: 600 .7rem var(--mono); border: 1px solid var(--line); border-bottom-width: 2px; border-radius: 4px; padding: 0 5px; background: var(--surface); }
+.trace { border-left: 3px solid var(--d); }
+
+/* svg charts */
+.ax { stroke: var(--muted); stroke-width: 1; }
+.grid-l { stroke: var(--line); stroke-width: 1; }
+.tick { fill: var(--muted); font: 10px var(--font); }
+.c-odd { fill: var(--d-sequencing); } .c-even { fill: var(--d-molecular); }
+.c-hit { fill: var(--d-gwas); }
+.c-up { fill: var(--d-gwas); } .c-down { fill: var(--d-sequencing); } .c-ns { fill: var(--muted); }
+.thr { stroke: var(--d-gwas); stroke-width: 1.4; stroke-dasharray: 5 3; }
+
+/* PRS distribution */
+.prs-dist { margin-top: 12px; max-width: 560px; }
+.prs-dist svg { width: 100%; height: auto; display: block; }
+.prs-dist .curve { fill: color-mix(in srgb, var(--d-prs) 18%, transparent); stroke: var(--d-prs); stroke-width: 1.6; }
+.prs-dist .marker { stroke: var(--text); stroke-width: 2; }
+.prs-dist .mk-dot { fill: var(--text); }
+.prs-dist .pct { fill: var(--text); font: 700 12px var(--font); }
+.prs-total b { transition: color .2s; }
+.prs-table tr:hover td { background: color-mix(in srgb, var(--accent) 5%, transparent); }
+
+/* quiz */
+.quiz-head { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; position: sticky; top: 0; z-index: 2; background: var(--surface); padding: 6px 0; }
+.quiz-meter { flex: 1; min-width: 140px; height: 8px; border-radius: 999px; background: var(--surface-2); overflow: hidden; display: flex; }
+.quiz-meter .ok { background: var(--c-consensus); transition: width .25s; }
+.quiz-meter .bad { background: var(--danger); transition: width .25s; }
+.qcard.done-ok { border-color: var(--c-consensus); }
+.qcard.done-bad { border-color: var(--danger); }
+.qcard .opts button:not(:disabled):hover { border-color: var(--accent); background: var(--accent-soft); }
+:root[data-theme="dark"] .qcard .opts button.wrong { background: #3a1d1b; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .qcard .opts button.wrong { background: #3a1d1b; } }

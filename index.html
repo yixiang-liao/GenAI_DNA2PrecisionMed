@@ -8,6 +8,7 @@
 <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+<a class="skip" href="#main"><span lang="zh-Hant">跳到主要內容</span><span lang="en">Skip to content</span></a>
 <header class="topbar">
   <a class="brand" href="index.html">DNA<span>→</span>PM</a>
   <nav class="topnav">
@@ -20,46 +21,60 @@
   </nav>
   <button class="lang-toggle" type="button" data-lang-toggle aria-label="Switch language">EN</button>
 </header>
-<main class="wrap">
-  <section class="hero">
-    <p class="muted small">生成式 AI 第十週作業 · Generative AI Week 10</p>
-    <h1><span lang="zh-Hant">從 DNA 到精準醫療</span><span lang="en">From DNA to Precision Medicine</span></h1>
-    <p class="lede">
-      <span lang="zh-Hant">整合基因體學、轉錄體學、GWAS 與多基因風險預測的互動式知識系統。每一個科學主張都能從簡報追溯到 Wiki、證據紀錄與原始文獻。</span>
-      <span lang="en">An interactive knowledge system spanning genomics, transcriptomics, GWAS and polygenic risk prediction. Every scientific claim traces from slide to wiki, evidence record and original source.</span>
-    </p>
-    <div class="cta">
-      <a class="btn primary" href="slides/index.html"><span lang="zh-Hant">開始簡報 →</span><span lang="en">Open the slides →</span></a>
-      <a class="btn ghost" href="wiki/index.html"><span lang="zh-Hant">瀏覽 Wiki</span><span lang="en">Browse the wiki</span></a>
-      <a class="btn ghost" href="workflow.html"><span lang="zh-Hant">Graph / Loop 流程</span><span lang="en">Graph / Loop workflow</span></a>
+<main class="wrap" id="main">
+  <section class="hero hero-grid">
+    <div>
+      <span class="eyebrow"><span lang="zh-Hant">生成式 AI · 第十週</span><span lang="en">Generative AI · Week 10</span></span>
+      <h1><span lang="zh-Hant">從 <span class="grad">DNA</span> 到精準醫療</span><span lang="en">From <span class="grad">DNA</span> to Precision Medicine</span></h1>
+      <p class="lede">
+        <span lang="zh-Hant">整合基因體學、轉錄體學、GWAS 與多基因風險預測的互動式知識系統。每一個科學主張都能從簡報追溯到 Wiki、證據紀錄與原始文獻。</span>
+        <span lang="en">An interactive knowledge system spanning genomics, transcriptomics, GWAS and polygenic risk prediction. Every scientific claim traces from slide to wiki, evidence record and original source.</span>
+      </p>
+      <div class="cta">
+        <a class="btn primary" href="slides/index.html"><span lang="zh-Hant">開始簡報 →</span><span lang="en">Open the slides →</span></a>
+        <a class="btn ghost" href="wiki/index.html"><span lang="zh-Hant">瀏覽 Wiki</span><span lang="en">Browse the wiki</span></a>
+        <a class="btn ghost" href="wiki/graph.html"><span lang="zh-Hant">概念關聯圖</span><span lang="en">Concept map</span></a>
+      </div>
     </div>
-    <div class="stats" id="stats">
-      <div class="stat"><b data-stat="domains">7</b><span lang="zh-Hant">知識領域</span><span lang="en">domains</span></div>
-      <div class="stat"><b data-stat="concepts">–</b><span lang="zh-Hant">Wiki 概念</span><span lang="en">wiki concepts</span></div>
-      <div class="stat"><b data-stat="claims">–</b><span lang="zh-Hant">已驗證主張</span><span lang="en">verified claims</span></div>
-      <div class="stat"><b data-stat="sources">–</b><span lang="zh-Hant">驗證來源</span><span lang="en">verified sources</span></div>
-      <div class="stat"><b data-stat="slides">–</b><span lang="zh-Hant">簡報頁數</span><span lang="en">slides</span></div>
-    </div>
-    <p class="disclaimer">
-      <span lang="zh-Hant">⚠️ 本網站為教育用途，<b>非臨床診斷工具</b>，不提供個人疾病風險判定或醫療建議。PRS Calculator 與所有示例基因型皆為模擬資料。</span>
-      <span lang="en">⚠️ Educational use only — <b>not a clinical tool</b>; it does not provide personal risk assessment or medical advice. The PRS Calculator and all example genotypes are simulated, not real patient data.</span>
-    </p>
+    <div class="hero-art"><svg class="helix-art" viewBox="0 0 240 180" role="img" aria-label="DNA double helix illustration">
+  <defs><clipPath id="hx-clip"><rect x="0" y="0" width="240" height="180" rx="16"/></clipPath>
+  <linearGradient id="hx-fade" x1="0" x2="1"><stop offset="0" stop-color="var(--bg)" stop-opacity="1"/><stop offset=".12" stop-color="var(--bg)" stop-opacity="0"/><stop offset=".88" stop-color="var(--bg)" stop-opacity="0"/><stop offset="1" stop-color="var(--bg)" stop-opacity="1"/></linearGradient></defs>
+  <g clip-path="url(#hx-clip)"><g class="spin"><line class="rung" x1="10" y1="90.0" x2="10" y2="90.0"/><circle cx="10" cy="90.0" r="6" fill="var(--base-a)"/><circle cx="10" cy="90.0" r="6" fill="var(--base-t)"/><line class="rung" x1="25" y1="109.9" x2="25" y2="70.1"/><circle cx="25" cy="109.9" r="6" fill="var(--base-t)"/><circle cx="25" cy="70.1" r="6" fill="var(--base-a)"/><line class="rung" x1="40" y1="126.8" x2="40" y2="53.2"/><circle cx="40" cy="126.8" r="6" fill="var(--base-g)"/><circle cx="40" cy="53.2" r="6" fill="var(--base-c)"/><line class="rung" x1="55" y1="138.0" x2="55" y2="42.0"/><circle cx="55" cy="138.0" r="6" fill="var(--base-c)"/><circle cx="55" cy="42.0" r="6" fill="var(--base-g)"/><line class="rung" x1="70" y1="142.0" x2="70" y2="38.0"/><circle cx="70" cy="142.0" r="6" fill="var(--base-g)"/><circle cx="70" cy="38.0" r="6" fill="var(--base-c)"/><line class="rung" x1="85" y1="138.0" x2="85" y2="42.0"/><circle cx="85" cy="138.0" r="6" fill="var(--base-t)"/><circle cx="85" cy="42.0" r="6" fill="var(--base-a)"/><line class="rung" x1="100" y1="126.8" x2="100" y2="53.2"/><circle cx="100" cy="126.8" r="6" fill="var(--base-a)"/><circle cx="100" cy="53.2" r="6" fill="var(--base-t)"/><line class="rung" x1="115" y1="109.9" x2="115" y2="70.1"/><circle cx="115" cy="109.9" r="6" fill="var(--base-c)"/><circle cx="115" cy="70.1" r="6" fill="var(--base-g)"/><line class="rung" x1="130" y1="90.0" x2="130" y2="90.0"/><circle cx="130" cy="90.0" r="6" fill="var(--base-c)"/><circle cx="130" cy="90.0" r="6" fill="var(--base-g)"/><line class="rung" x1="145" y1="70.1" x2="145" y2="109.9"/><circle cx="145" cy="70.1" r="6" fill="var(--base-g)"/><circle cx="145" cy="109.9" r="6" fill="var(--base-c)"/><line class="rung" x1="160" y1="53.2" x2="160" y2="126.8"/><circle cx="160" cy="53.2" r="6" fill="var(--base-a)"/><circle cx="160" cy="126.8" r="6" fill="var(--base-t)"/><line class="rung" x1="175" y1="42.0" x2="175" y2="138.0"/><circle cx="175" cy="42.0" r="6" fill="var(--base-t)"/><circle cx="175" cy="138.0" r="6" fill="var(--base-a)"/><line class="rung" x1="190" y1="38.0" x2="190" y2="142.0"/><circle cx="190" cy="38.0" r="6" fill="var(--base-t)"/><circle cx="190" cy="142.0" r="6" fill="var(--base-a)"/><line class="rung" x1="205" y1="42.0" x2="205" y2="138.0"/><circle cx="205" cy="42.0" r="6" fill="var(--base-g)"/><circle cx="205" cy="138.0" r="6" fill="var(--base-c)"/><line class="rung" x1="220" y1="53.2" x2="220" y2="126.8"/><circle cx="220" cy="53.2" r="6" fill="var(--base-c)"/><circle cx="220" cy="126.8" r="6" fill="var(--base-g)"/><line class="rung" x1="235" y1="70.1" x2="235" y2="109.9"/><circle cx="235" cy="70.1" r="6" fill="var(--base-a)"/><circle cx="235" cy="109.9" r="6" fill="var(--base-t)"/><line class="rung" x1="250" y1="90.0" x2="250" y2="90.0"/><circle cx="250" cy="90.0" r="6" fill="var(--base-a)"/><circle cx="250" cy="90.0" r="6" fill="var(--base-t)"/><line class="rung" x1="265" y1="109.9" x2="265" y2="70.1"/><circle cx="265" cy="109.9" r="6" fill="var(--base-t)"/><circle cx="265" cy="70.1" r="6" fill="var(--base-a)"/><line class="rung" x1="280" y1="126.8" x2="280" y2="53.2"/><circle cx="280" cy="126.8" r="6" fill="var(--base-g)"/><circle cx="280" cy="53.2" r="6" fill="var(--base-c)"/><line class="rung" x1="295" y1="138.0" x2="295" y2="42.0"/><circle cx="295" cy="138.0" r="6" fill="var(--base-c)"/><circle cx="295" cy="42.0" r="6" fill="var(--base-g)"/><line class="rung" x1="310" y1="142.0" x2="310" y2="38.0"/><circle cx="310" cy="142.0" r="6" fill="var(--base-g)"/><circle cx="310" cy="38.0" r="6" fill="var(--base-c)"/><line class="rung" x1="325" y1="138.0" x2="325" y2="42.0"/><circle cx="325" cy="138.0" r="6" fill="var(--base-t)"/><circle cx="325" cy="42.0" r="6" fill="var(--base-a)"/><line class="rung" x1="340" y1="126.8" x2="340" y2="53.2"/><circle cx="340" cy="126.8" r="6" fill="var(--base-a)"/><circle cx="340" cy="53.2" r="6" fill="var(--base-t)"/><line class="rung" x1="355" y1="109.9" x2="355" y2="70.1"/><circle cx="355" cy="109.9" r="6" fill="var(--base-c)"/><circle cx="355" cy="70.1" r="6" fill="var(--base-g)"/><line class="rung" x1="370" y1="90.0" x2="370" y2="90.0"/><circle cx="370" cy="90.0" r="6" fill="var(--base-c)"/><circle cx="370" cy="90.0" r="6" fill="var(--base-g)"/><line class="rung" x1="385" y1="70.1" x2="385" y2="109.9"/><circle cx="385" cy="70.1" r="6" fill="var(--base-g)"/><circle cx="385" cy="109.9" r="6" fill="var(--base-c)"/><line class="rung" x1="400" y1="53.2" x2="400" y2="126.8"/><circle cx="400" cy="53.2" r="6" fill="var(--base-a)"/><circle cx="400" cy="126.8" r="6" fill="var(--base-t)"/><line class="rung" x1="415" y1="42.0" x2="415" y2="138.0"/><circle cx="415" cy="42.0" r="6" fill="var(--base-t)"/><circle cx="415" cy="138.0" r="6" fill="var(--base-a)"/><line class="rung" x1="430" y1="38.0" x2="430" y2="142.0"/><circle cx="430" cy="38.0" r="6" fill="var(--base-t)"/><circle cx="430" cy="142.0" r="6" fill="var(--base-a)"/><line class="rung" x1="445" y1="42.0" x2="445" y2="138.0"/><circle cx="445" cy="42.0" r="6" fill="var(--base-g)"/><circle cx="445" cy="138.0" r="6" fill="var(--base-c)"/><line class="rung" x1="460" y1="53.2" x2="460" y2="126.8"/><circle cx="460" cy="53.2" r="6" fill="var(--base-c)"/><circle cx="460" cy="126.8" r="6" fill="var(--base-g)"/><line class="rung" x1="475" y1="70.1" x2="475" y2="109.9"/><circle cx="475" cy="70.1" r="6" fill="var(--base-a)"/><circle cx="475" cy="109.9" r="6" fill="var(--base-t)"/></g></g>
+  <rect width="240" height="180" fill="url(#hx-fade)"/>
+</svg></div>
   </section>
 
-  <div class="grid">
-    <section class="card"><h2><span lang="zh-Hant">LLM Wiki</span><span lang="en">LLM Wiki</span></h2>
-      <p><span lang="zh-Hant">七大領域、雙層教學（Beginner / Advanced）、中英切換、文獻筆記。</span><span lang="en">Seven domains, two teaching layers, bilingual, with paper notes.</span></p>
-      <p><a href="wiki/index.html">Wiki</a> · <a href="wiki/glossary.html">Glossary</a> · <a href="wiki/graph.html">Concept Map</a></p></section>
-    <section class="card"><h2><span lang="zh-Hant">互動簡報</span><span lang="en">Interactive Slides</span></h2>
-      <p><span lang="zh-Hant">30 頁，含 DNA Explorer、PRS Calculator 與互動測驗。</span><span lang="en">30 slides with a DNA Explorer, PRS Calculator and quiz.</span></p>
-      <p><a href="slides/index.html#s05">DNA Explorer</a> · <a href="slides/index.html#s21">PRS Calculator</a> · <a href="slides/index.html#s29">Quiz</a></p></section>
-    <section class="card"><h2><span lang="zh-Hant">證據追溯</span><span lang="en">Evidence Traceability</span></h2>
-      <p>Slide → Wiki Concept → Evidence Record → Original Source</p>
-      <p><a href="wiki/evidence.html">Evidence</a> · <a href="wiki/evidence.html#conflicts">Conflicts</a> · <a href="wiki/evidence.html#pending">Pending</a></p></section>
-    <section class="card"><h2><span lang="zh-Hant">Graph / Loop 工作流程</span><span lang="en">Graph / Loop Workflow</span></h2>
-      <p><span lang="zh-Hant">8 個節點、驗證關卡、最多 3 輪局部修正，以及真實執行與錯誤修正紀錄。</span><span lang="en">8 nodes, validation gates, at most 3 local fix rounds, real execution and recovery logs.</span></p>
-      <p><a href="workflow.html">Workflow</a> · <a href="workflow.html#validation">Validation</a> · <a href="workflow.html#recovery">Recovery</a></p></section>
+  <div class="stats" id="stats">
+    <div class="stat" data-domain="molecular"><b data-stat="domains">7</b><span lang="zh-Hant">知識領域</span><span lang="en">domains</span></div>
+    <div class="stat" data-domain="sequencing"><b data-stat="concepts">–</b><span lang="zh-Hant">Wiki 概念</span><span lang="en">wiki concepts</span></div>
+    <div class="stat" data-domain="transcriptomics"><b data-stat="claims">–</b><span lang="zh-Hant">已驗證主張</span><span lang="en">verified claims</span></div>
+    <div class="stat" data-domain="gwas"><b data-stat="sources">–</b><span lang="zh-Hant">驗證來源</span><span lang="en">verified sources</span></div>
+    <div class="stat" data-domain="prs"><b data-stat="slides">–</b><span lang="zh-Hant">簡報頁數</span><span lang="en">slides</span></div>
   </div>
+
+  <div class="section-title"><h2><span lang="zh-Hant">學習路徑：七個領域</span><span lang="en">Learning path: seven domains</span></h2><a class="small" href="wiki/graph.html"><span lang="zh-Hant">看概念如何相連 →</span><span lang="en">See how concepts connect →</span></a></div>
+  <ol class="journey"><li data-domain="molecular"><a href="wiki/index.html#molecular"><span class="n">01</span><span class="t"><span lang="zh-Hant">分子生物學</span><span lang="en">Molecular biology</span></span><span class="q"><span lang="zh-Hant">DNA、基因、等位基因</span><span lang="en">DNA, genes, alleles</span></span></a></li><li data-domain="sequencing"><a href="wiki/index.html#sequencing"><span class="n">02</span><span class="t"><span lang="zh-Hant">定序與變異</span><span lang="en">Sequencing & variants</span></span><span class="q"><span lang="zh-Hant">讀出變異在哪裡</span><span lang="en">Read out the variants</span></span></a></li><li data-domain="transcriptomics"><a href="wiki/index.html#transcriptomics"><span class="n">03</span><span class="t"><span lang="zh-Hant">轉錄體學</span><span lang="en">Transcriptomics</span></span><span class="q"><span lang="zh-Hant">哪些基因在表現</span><span lang="en">Which genes are on</span></span></a></li><li data-domain="gwas"><a href="wiki/index.html#gwas"><span class="n">04</span><span class="t"><span lang="zh-Hant">GWAS</span><span lang="en">GWAS</span></span><span class="q"><span lang="zh-Hant">哪些位置與性狀相關</span><span lang="en">Which loci associate</span></span></a></li><li data-domain="prs"><a href="wiki/index.html#prs"><span class="n">05</span><span class="t"><span lang="zh-Hant">PRS</span><span lang="en">PRS</span></span><span class="q"><span lang="zh-Hant">許多小效應加總</span><span lang="en">Many small effects summed</span></span></a></li><li data-domain="multiomics"><a href="wiki/index.html#multiomics"><span class="n">06</span><span class="t"><span lang="zh-Hant">多體學</span><span lang="en">Multi-omics</span></span><span class="q"><span lang="zh-Hant">多層資料互相解釋</span><span lang="en">Layers explain each other</span></span></a></li><li data-domain="precision"><a href="wiki/index.html#precision"><span class="n">07</span><span class="t"><span lang="zh-Hant">精準醫療</span><span lang="en">Precision medicine</span></span><span class="q"><span lang="zh-Hant">結合臨床做決策</span><span lang="en">Decisions with clinical data</span></span></a></li></ol>
+
+  <div class="section-title"><h2><span lang="zh-Hant">四個入口</span><span lang="en">Four ways in</span></h2></div>
+  <div class="feature-grid">
+    <section class="feature"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V3H6.5A2.5 2.5 0 0 0 4 5.5z"/><path d="M4 19.5A2.5 2.5 0 0 0 6.5 22H20v-5"/></svg></div><h2>LLM Wiki</h2>
+      <p><span lang="zh-Hant">七大領域、雙層教學（Beginner / Advanced）、中英切換、文獻筆記。</span><span lang="en">Seven domains, two teaching layers, bilingual, with paper notes.</span></p>
+      <div class="links"><a href="wiki/index.html">Wiki</a><a href="wiki/glossary.html">Glossary</a><a href="wiki/graph.html">Concept Map</a></div></section>
+    <section class="feature"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M12 16v4M8 20h8M10 8l4 2-4 2z"/></svg></div><h2><span lang="zh-Hant">互動簡報</span><span lang="en">Interactive Slides</span></h2>
+      <p><span lang="zh-Hant">30 頁，含 DNA Explorer、PRS Calculator 與互動測驗。</span><span lang="en">30 slides with a DNA Explorer, PRS Calculator and quiz.</span></p>
+      <div class="links"><a href="slides/index.html#s05">DNA Explorer</a><a href="slides/index.html#s21">PRS Calculator</a><a href="slides/index.html#s29">Quiz</a></div></section>
+    <section class="feature"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3M8 11l2 2 4-4"/></svg></div><h2><span lang="zh-Hant">證據追溯</span><span lang="en">Evidence Traceability</span></h2>
+      <div class="trace-flow"><span>Slide</span><i>→</i><span>Wiki</span><i>→</i><span>Evidence</span><i>→</i><span>Source</span></div>
+      <div class="links"><a href="wiki/evidence.html">Evidence</a><a href="wiki/evidence.html#conflicts">Conflicts</a><a href="wiki/evidence.html#pending">Pending</a></div></section>
+    <section class="feature"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="5" cy="6" r="2.5"/><circle cx="19" cy="6" r="2.5"/><circle cx="12" cy="18" r="2.5"/><path d="M7.5 6h9M6.3 8.2l4.5 7.6M17.7 8.2l-4.5 7.6"/></svg></div><h2><span lang="zh-Hant">Graph / Loop 工作流程</span><span lang="en">Graph / Loop Workflow</span></h2>
+      <p><span lang="zh-Hant">8 個節點、驗證關卡、最多 3 輪局部修正，以及真實執行與錯誤修正紀錄。</span><span lang="en">8 nodes, validation gates, at most 3 local fix rounds, real execution and recovery logs.</span></p>
+      <div class="links"><a href="workflow.html">Workflow</a><a href="workflow.html#validation">Validation</a><a href="workflow.html#recovery">Recovery</a></div></section>
+  </div>
+
+  <p class="disclaimer" style="margin-top:28px">
+    <span lang="zh-Hant">⚠️ 本網站為教育用途，<b>非臨床診斷工具</b>，不提供個人疾病風險判定或醫療建議。PRS Calculator 與所有示例基因型皆為模擬資料。</span>
+    <span lang="en">⚠️ Educational use only — <b>not a clinical tool</b>; it does not provide personal risk assessment or medical advice. The PRS Calculator and all example genotypes are simulated, not real patient data.</span>
+  </p>
 </main>
 <footer class="foot"><p>
   <span lang="zh-Hant">原始碼：</span><span lang="en">Source: </span><a href="https://github.com/yixiang-liao/GenAI_DNA2PrecisionMed">github.com/yixiang-liao/GenAI_DNA2PrecisionMed</a>
