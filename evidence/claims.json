@@ -230,6 +230,44 @@
       "related_slide_ids": []
     },
     {
+      "id": "C-MOL-12",
+      "concept_id": "haplotype",
+      "classification": "consensus",
+      "status": "verified",
+      "text": {
+        "zh": "同一條染色體上兩個基因座的 allele 組合（例如 AB）稱為 haplotype（單倍型），其在族群中的出現頻率稱為 haplotype frequency。",
+        "en": "For loci on the same chromosome, an allele pair such as AB is called a haplotype, and its population frequency is the haplotype frequency."
+      },
+      "evidence": [
+        {
+          "id": "E069",
+          "source_id": "S14",
+          "location": "Section \"Measures of LD\" (definition of D_AB)",
+          "quote": "The usual application now is to loci on the same chromosome, in which case the allele pair AB is called a haplotype and p AB is the haplotype frequency."
+        }
+      ],
+      "related_slide_ids": []
+    },
+    {
+      "id": "C-MOL-13",
+      "concept_id": "haplotype",
+      "classification": "consensus",
+      "status": "verified",
+      "text": {
+        "zh": "定相（phasing）是推估所測得的 allele 來自母方或父方染色體的過程。",
+        "en": "Phasing is the process of estimating whether genotyped alleles derive from the maternal or the paternal chromosome."
+      },
+      "evidence": [
+        {
+          "id": "E101",
+          "source_id": "S12",
+          "location": "Glossary, \"Phasing\"",
+          "quote": "The process of estimating whether genotyped alleles derive from the maternal or paternal allele."
+        }
+      ],
+      "related_slide_ids": []
+    },
+    {
       "id": "C-SEQ-01",
       "concept_id": "ngs",
       "classification": "consensus",
@@ -421,6 +459,103 @@
       ]
     },
     {
+      "id": "C-SEQ-10",
+      "concept_id": "structural-variant",
+      "classification": "single_study",
+      "status": "verified",
+      "text": {
+        "zh": "1000 Genomes Project 第三期共描述超過 8,800 萬個變異：8,470 萬個 SNP、360 萬個短 indel 與 60,000 個結構變異，全部定相（phased）到高品質 haplotype 上。",
+        "en": "Phase 3 of the 1000 Genomes Project characterized over 88 million variants — 84.7 million SNPs, 3.6 million short indels and 60,000 structural variants — all phased onto high-quality haplotypes."
+      },
+      "evidence": [
+        {
+          "id": "E070",
+          "source_id": "S06",
+          "location": "Abstract",
+          "quote": "We characterized a broad spectrum of genetic variation, in total over 88 million variants (84.7 million single nucleotide polymorphisms (SNPs), 3.6 million short insertions/deletions (indels), and 60,000 structural variants), all phased onto high-quality haplotypes."
+        }
+      ],
+      "related_slide_ids": []
+    },
+    {
+      "id": "C-SEQ-11",
+      "concept_id": "structural-variant",
+      "classification": "consensus",
+      "status": "verified",
+      "text": {
+        "zh": "結構變異包含缺失、重複、多等位拷貝數變異、Alu/L1 插入與倒位等類型；1000 Genomes 以微陣列與長讀段定序等正交方法加以確認。",
+        "en": "Structural variants include deletions, duplications, multi-allelic copy-number variants, Alu and L1 insertions and inversions; the 1000 Genomes Project confirmed them with orthogonal methods such as microarrays and long-read sequencing."
+      },
+      "evidence": [
+        {
+          "id": "E071",
+          "source_id": "S06",
+          "location": "Results, \"Data set overview\"",
+          "quote": "For structural variants, additional orthogonal methods were used for confirmation, including microarrays and long-read sequencing, resulting in FDR < 5% for deletions, duplications, multi-allelic copy-number variants, Alu and L1 insertions, and <20% for inversions"
+        }
+      ],
+      "related_slide_ids": []
+    },
+    {
+      "id": "C-SEQ-12",
+      "concept_id": "sequencing-depth",
+      "classification": "consensus",
+      "status": "verified",
+      "text": {
+        "zh": "覆蓋深度（coverage）指基因體每個位置平均被讀到的次數；人類全基因體常以約 30× 定序，例如 Illumina HiSeq X 每年可將約 1,800 個人類基因體定序到 30×。",
+        "en": "Coverage is how many times each genomic position is read on average; human genomes are commonly sequenced to about 30×, e.g. the Illumina HiSeq X can sequence ~1,800 human genomes to 30× per year."
+      },
+      "evidence": [
+        {
+          "id": "E072",
+          "source_id": "S03",
+          "location": "Section on short-read sequencing (Illumina instruments)",
+          "quote": "capable of sequencing ~1,800 human genomes to 30× coverage per year"
+        }
+      ],
+      "related_slide_ids": []
+    },
+    {
+      "id": "C-SEQ-13",
+      "concept_id": "sequencing-depth",
+      "classification": "consensus",
+      "status": "verified",
+      "text": {
+        "zh": "當定序錯誤在讀段中隨機分布時（例如 PacBio 長讀段），足夠高的覆蓋深度可以克服高錯誤率。",
+        "en": "When sequencing errors are randomly distributed within reads (as for PacBio long reads), sufficiently high coverage can overcome a high error rate."
+      },
+      "evidence": [
+        {
+          "id": "E073",
+          "source_id": "S03",
+          "location": "Section on single-molecule real-time long-read sequencing",
+          "quote": "these errors are randomly distributed within each read and hence sufficiently high coverage can overcome the high error rate"
+        }
+      ],
+      "related_slide_ids": []
+    },
+    {
+      "id": "C-SEQ-14",
+      "concept_id": "sequencing-depth",
+      "classification": "consensus",
+      "status": "verified",
+      "text": {
+        "zh": "在 RNA-seq 中，定序深度（library size）是每個樣本被定序的讀段數；最適深度取決於實驗目的。",
+        "en": "In RNA-seq, sequencing depth (library size) is the number of sequenced reads for a sample; the optimal depth depends on the aims of the experiment."
+      },
+      "evidence": [
+        {
+          "id": "E074",
+          "source_id": "S09",
+          "location": "Experimental design, \"Sequencing depth\"",
+          "quote": "Another important factor is sequencing depth or library size, which is the number of sequenced reads for a given sample. … optimal sequencing depth again depends on the aims of the experiment"
+        }
+      ],
+      "related_slide_ids": [
+        "s31"
+      ]
+    },
+    {
       "id": "C-TX-01",
       "concept_id": "rna-seq",
       "classification": "consensus",
@@ -583,6 +718,151 @@
           "source_id": "S09",
           "location": "Main text, \"Transcript quantification\"",
           "quote": "TPMs, which effectively normalize for the differences in composition of the transcripts in the denominator rather than simply dividing by the number of reads in the library, are considered more comparable between samples"
+        }
+      ],
+      "related_slide_ids": []
+    },
+    {
+      "id": "C-TX-09",
+      "concept_id": "alternative-splicing",
+      "classification": "consensus",
+      "status": "verified",
+      "text": {
+        "zh": "轉錄體學的主要目標包括：盤點所有轉錄本、決定基因的轉錄結構（起始位置、5′/3′ 端、剪接模式等），以及量化各轉錄本在不同條件下的表現量。",
+        "en": "Key aims of transcriptomics are to catalogue all transcripts, to determine the transcriptional structure of genes — start sites, 5′ and 3′ ends, splicing patterns and other post-transcriptional modifications — and to quantify each transcript's expression under different conditions."
+      },
+      "evidence": [
+        {
+          "id": "E075",
+          "source_id": "S08",
+          "location": "Introduction",
+          "quote": "The key aims of transcriptomics are: to catalogue all species of transcript, including mRNAs, non-coding RNAs and small RNAs; to determine the transcriptional structure of genes, in terms of their start sites, 5′ and 3′ ends, splicing patterns and other post-transcriptional modifications; and to quantify the changing expression levels of each transcript during development and under different conditions."
+        }
+      ],
+      "related_slide_ids": []
+    },
+    {
+      "id": "C-TX-10",
+      "concept_id": "alternative-splicing",
+      "classification": "consensus",
+      "status": "verified",
+      "text": {
+        "zh": "剪接時 intron 被移除；RNA-seq 可藉由剪接位點兩側的 GT–AG 二核苷酸辨識 exon–exon junction，並以 intron 序列的低表現加以確認。",
+        "en": "Introns are removed during splicing; RNA-seq can identify exon–exon junctions by the GT–AG dinucleotides flanking splice sites and confirm them by the low expression of intronic sequence."
+      },
+      "evidence": [
+        {
+          "id": "E076",
+          "source_id": "S08",
+          "location": "Section \"Challenges: bioinformatics\"",
+          "quote": "Exon–exon junctions can be identified by the presence of a specific sequence context (the GT–AG dinucleotides that flank splice sites) and confirmed by the low expression of intronic sequences, which are removed during splicing."
+        }
+      ],
+      "related_slide_ids": []
+    },
+    {
+      "id": "C-TX-11",
+      "concept_id": "alternative-splicing",
+      "classification": "consensus",
+      "status": "verified",
+      "text": {
+        "zh": "同一基因的不同 isoform 共用部分 exon，因此讀段比對到轉錄體時會出現較多 multi-mapping reads；paired-end 讀段較適合 isoform 表現分析。",
+        "en": "Isoforms of the same gene share exons, so mapping reads to the transcriptome yields more multi-mapping reads; paired-end reads are preferable for isoform expression analysis."
+      },
+      "evidence": [
+        {
+          "id": "E077",
+          "source_id": "S09",
+          "location": "Read alignment",
+          "quote": "significantly more multi-mapping reads because of reads falling onto exons that are shared by different transcript isoforms of the same gene"
+        },
+        {
+          "id": "E078",
+          "source_id": "S09",
+          "location": "Experimental design, \"Choice of sequencing type\"",
+          "quote": "single-end (SE) or paired-end (PE) reads, although the latter is preferable for de novo transcript discovery or isoform expression analysis"
+        }
+      ],
+      "related_slide_ids": []
+    },
+    {
+      "id": "C-TX-12",
+      "concept_id": "batch-effect",
+      "classification": "consensus",
+      "status": "verified",
+      "text": {
+        "zh": "大型 RNA-seq 實驗若分批處理，應將樣本隨機分配到不同的建庫批次與定序 lane，避免技術因素與實驗因素混淆（confounded）。",
+        "en": "When a large RNA-seq experiment is processed in batches, samples should be randomized across library-preparation batches and lanes so that technical factors are not confounded with experimental factors."
+      },
+      "evidence": [
+        {
+          "id": "E079",
+          "source_id": "S09",
+          "location": "Experimental design",
+          "quote": "caution should be taken to randomize samples across library preparation batches and lanes so as to avoid technical factors becoming confounded with experimental factors"
+        }
+      ],
+      "related_slide_ids": [
+        "s31"
+      ]
+    },
+    {
+      "id": "C-TX-13",
+      "concept_id": "batch-effect",
+      "classification": "consensus",
+      "status": "verified",
+      "text": {
+        "zh": "即使做了樣本層級的標準化，資料中仍可能殘留批次效應；可透過適當的實驗設計降低，或以 ComBat、ARSyN 等方法校正。",
+        "en": "Batch effects can remain even after sample-level normalization; they can be minimized by good experimental design or removed with batch-correction methods such as ComBat or ARSyN."
+      },
+      "evidence": [
+        {
+          "id": "E080",
+          "source_id": "S09",
+          "location": "Normalization",
+          "quote": "despite these sample-specific normalization methods, batch effects may still be present in the data. … These effects can be minimized by appropriate experimental design … removed by batch-correction methods such as COMBAT"
+        }
+      ],
+      "related_slide_ids": [
+        "s31"
+      ]
+    },
+    {
+      "id": "C-TX-14",
+      "concept_id": "multiple-testing",
+      "classification": "consensus",
+      "status": "verified",
+      "text": {
+        "zh": "DESeq2 將通過 independent filtering 的基因之 Wald 檢定 P 值，以 Benjamini–Hochberg 程序進行多重檢定校正。",
+        "en": "DESeq2 adjusts the Wald-test P values of genes that pass independent filtering for multiple testing using the Benjamini–Hochberg procedure."
+      },
+      "evidence": [
+        {
+          "id": "E081",
+          "source_id": "S11",
+          "location": "Methods, \"Wald test\"",
+          "quote": "The Wald test P values from the subset of genes that pass an independent filtering step, described in the next section, are adjusted for multiple testing using the procedure of Benjamini and Hochberg"
+        }
+      ],
+      "related_slide_ids": [
+        "s31"
+      ]
+    },
+    {
+      "id": "C-TX-15",
+      "concept_id": "multiple-testing",
+      "classification": "consensus",
+      "status": "verified",
+      "text": {
+        "zh": "Bonferroni 校正是一種多重檢定校正：把顯著門檻除以獨立檢定的次數。",
+        "en": "The Bonferroni correction for multiple testing divides the significance threshold by the number of independent tests carried out."
+      },
+      "evidence": [
+        {
+          "id": "E082",
+          "source_id": "S12",
+          "location": "Glossary, \"Bonferroni testing threshold\"",
+          "quote": "A correction for multiple testing that is typically applied by dividing the significance threshold by the number of independent tests that are carried out."
         }
       ],
       "related_slide_ids": []
@@ -789,6 +1069,207 @@
       ],
       "related_slide_ids": [
         "s16"
+      ]
+    },
+    {
+      "id": "C-GW-10",
+      "concept_id": "genotype-imputation",
+      "classification": "consensus",
+      "status": "verified",
+      "text": {
+        "zh": "基因型插補（imputation）利用觀測到的多個 SNP 推得的 haplotype，對照完整定序的參考面板，來預測未直接測量之變異的基因型。",
+        "en": "Genotype imputation predicts the genotypes of unobserved variants from haplotypes inferred from observed SNPs and haplotypes in a fully sequenced reference panel."
+      },
+      "evidence": [
+        {
+          "id": "E083",
+          "source_id": "S13",
+          "location": "Section on GWAS technology (statistical imputation)",
+          "quote": "Imputation is enabled by the fact that the genotypes of unobserved genetic variants can be predicted by the haplotypes inferred from multiple observed SNPs and the haplotypes observed from a fully sequenced reference panel."
+        }
+      ],
+      "related_slide_ids": [
+        "s32"
+      ]
+    },
+    {
+      "id": "C-GW-11",
+      "concept_id": "genotype-imputation",
+      "classification": "consensus",
+      "status": "verified",
+      "text": {
+        "zh": "個體之間共享 haplotype 是 GWAS 進行 imputation 的基礎，這也是 1000 Genomes 資料的主要用途之一。",
+        "en": "Haplotype sharing among individuals is widely used for imputation in GWAS — a primary use of 1000 Genomes data."
+      },
+      "evidence": [
+        {
+          "id": "E084",
+          "source_id": "S06",
+          "location": "Section \"Sharing of haplotypes and imputation\"",
+          "quote": "The sharing of haplotypes among individuals is widely used for imputation in GWAS, a primary use of 1000 Genomes data."
+        }
+      ],
+      "related_slide_ids": []
+    },
+    {
+      "id": "C-GW-12",
+      "concept_id": "population-stratification",
+      "classification": "consensus",
+      "status": "verified",
+      "text": {
+        "zh": "族群分層（population stratification）指樣本中存在多個遺傳上不同、且表現型平均值不同的亞族群；若未妥善處理，會造成假陽性或假陰性訊號與偏誤的檢定統計量。",
+        "en": "Population stratification is the presence of genetically distinct subpopulations that differ in mean phenotype; if not accounted for, it causes false positive or negative signals and biased test statistics."
+      },
+      "evidence": [
+        {
+          "id": "E085",
+          "source_id": "S12",
+          "location": "Glossary, \"Population stratification\"",
+          "quote": "The presence of multiple genetically distinct subpopulations that differ in their mean phenotypic values."
+        },
+        {
+          "id": "E086",
+          "source_id": "S12",
+          "location": "Experimental design: ancestry and relatedness",
+          "quote": "Ancestry and relatedness must be carefully considered and accounted for in GWAS, and indeed all genetic studies — particularly in data sets from participants of diverse backgrounds to avoid false positive or negative genetic signals and biased test statistics owing to population stratification"
+        }
+      ],
+      "related_slide_ids": [
+        "s32"
+      ]
+    },
+    {
+      "id": "C-GW-13",
+      "concept_id": "fine-mapping",
+      "classification": "consensus",
+      "status": "verified",
+      "text": {
+        "zh": "Fine-mapping 試圖找出造成 GWAS 訊號的一個或多個因果變異；僅靠統計關聯的 fine-mapping 受樣本數與 LD 限制，區分因果變異與其 LD 夥伴的統計證據與 n(1 − r²) 成正比。",
+        "en": "Fine-mapping tries to identify the causal variant(s) responsible for a GWAS signal; by statistical association alone it is limited by sample size and LD, as the evidence separating a causal variant from a variant in LD with it is proportional to n(1 − r²)."
+      },
+      "evidence": [
+        {
+          "id": "E087",
+          "source_id": "S13",
+          "location": "Section \"Fine-mapping\"",
+          "quote": "Fine-mapping of SNP-trait associations is the attempt to identify one or more causal variants that are responsible for the observed GWAS signals."
+        },
+        {
+          "id": "E088",
+          "source_id": "S13",
+          "location": "Section \"Fine-mapping\"",
+          "quote": "Fine-mapping solely by statistical association is limited by experimental sample size and LD, given that the statistical evidence to separate a causal variant from a variant in LD with it is proportional to n(1 – r 2 )"
+        }
+      ],
+      "related_slide_ids": [
+        "s32"
+      ]
+    },
+    {
+      "id": "C-GW-14",
+      "concept_id": "pleiotropy",
+      "classification": "consensus",
+      "status": "verified",
+      "text": {
+        "zh": "多方證據顯示，複雜性狀普遍存在多效性（pleiotropy）：同一變異可與多個性狀相關。",
+        "en": "Multiple lines of evidence are consistent with widespread pleiotropy — the same variants associated with several traits — for complex traits."
+      },
+      "evidence": [
+        {
+          "id": "E089",
+          "source_id": "S13",
+          "location": "Section \"Pleiotropy Is Pervasive\"",
+          "quote": "Multiple lines of evidence are consistent with widespread pleiotropy for complex traits."
+        }
+      ],
+      "related_slide_ids": [
+        "s32"
+      ]
+    },
+    {
+      "id": "C-GW-15",
+      "concept_id": "pleiotropy",
+      "classification": "single_study",
+      "status": "verified",
+      "text": {
+        "zh": "一項分析數千個複雜性狀的研究（Watanabe 2019，S12 引述）發現，性狀相關基因座遍布大部分基因體，且多數與不止一個性狀相關。",
+        "en": "A study of thousands of complex traits (Watanabe 2019, as summarized in S12) found trait-associated loci across much of the genome, most of them associated with more than one trait."
+      },
+      "evidence": [
+        {
+          "id": "E090",
+          "source_id": "S12",
+          "location": "Annotated reference list (Watanabe et al.)",
+          "quote": "This paper analyses thousands of complex traits to chart the extent of pleiotropy in the human genome, finding trait-associated loci spread across much of the genome, and the majority associated with more than one trait."
+        }
+      ],
+      "related_slide_ids": []
+    },
+    {
+      "id": "C-GW-16",
+      "concept_id": "population-stratification",
+      "classification": "consensus",
+      "status": "verified",
+      "text": {
+        "zh": "GWAS 通常以主成分分析（PCA）處理血統：先找出並排除離群個體，再將主成分作為共變數放入迴歸模型；個體特異隨機效應的混合模型可進一步控制分層與親緣。",
+        "en": "GWAS usually handles ancestry with principal component analysis — first to exclude outliers, then including principal components as covariates in the regression; mixed models with an individual-specific random effect further control stratification and relatedness."
+      },
+      "evidence": [
+        {
+          "id": "E102",
+          "source_id": "S12",
+          "location": "Quality control: ancestry",
+          "quote": "Ancestry is usually considered in GWAS through an iterative process using principal component analysis … This is done first to identify and exclude outliers, and then to compute and include principal components as covariates in subsequent GWAS regression models"
+        },
+        {
+          "id": "E103",
+          "source_id": "S12",
+          "location": "Association testing",
+          "quote": "individual-specific in linear or logistic mixed models to account for genetic relatedness among individuals — can improve statistical power for genomic discovery and increase control for stratification"
+        }
+      ],
+      "related_slide_ids": [
+        "s32"
+      ]
+    },
+    {
+      "id": "C-GW-17",
+      "concept_id": "genotype-imputation",
+      "classification": "consensus",
+      "status": "verified",
+      "text": {
+        "zh": "PRS 教學指引建議的標準品質控制條件之一是 imputation info score > 0.8。",
+        "en": "A PRS tutorial recommends, among standard QC criteria, an imputation info score > 0.8."
+      },
+      "evidence": [
+        {
+          "id": "E104",
+          "source_id": "S16",
+          "location": "Section 3 \"QC of base and target data\"",
+          "quote": "We recommend the following QC criteria for standard analyses … imputation ‘info score’ > 0.8"
+        }
+      ],
+      "related_slide_ids": []
+    },
+    {
+      "id": "C-GW-18",
+      "concept_id": "pleiotropy",
+      "classification": "consensus",
+      "status": "verified",
+      "text": {
+        "zh": "遺傳相關可來自不同型態的多效性：垂直多效性（性狀 A 導致性狀 B）、水平多效性（一個變異直接影響兩個性狀）、LD 誘發的水平多效性，以及多基因性誘發的多效性。",
+        "en": "Genetic correlation can arise from vertical pleiotropy (trait A causes trait B), horizontal pleiotropy (a variant directly influences two traits), LD-induced horizontal pleiotropy, or polygenicity-induced pleiotropy."
+      },
+      "evidence": [
+        {
+          "id": "E105",
+          "source_id": "S12",
+          "location": "Applications: genetic correlation",
+          "quote": "genetic correlation can be caused by vertical pleiotropy, where trait A causes trait B; horizontal pleiotropy, where a variant directly influences two traits; linkage disequilibrium-​induced horizontal pleiotropy"
+        }
+      ],
+      "related_slide_ids": [
+        "s33"
       ]
     },
     {
@@ -1051,6 +1532,106 @@
       "related_slide_ids": []
     },
     {
+      "id": "C-PRS-13",
+      "concept_id": "snp-heritability",
+      "classification": "consensus",
+      "status": "verified",
+      "text": {
+        "zh": "SNP 遺傳率（SNP-based heritability）是所有 SNP 能解釋的表現型變異比例，它決定了多基因分數的最大預測準確度。",
+        "en": "SNP-based heritability — the proportion of phenotypic variance explained by all SNPs — determines the maximum predictive accuracy of polygenic scores."
+      },
+      "evidence": [
+        {
+          "id": "E091",
+          "source_id": "S12",
+          "location": "Section on polygenic risk scores",
+          "quote": "The maximum predictive accuracy of polygenic scores is determined by the SNP-based heritability of the disease — the proportion of phenotypic variance explained by all SNPs"
+        }
+      ],
+      "related_slide_ids": []
+    },
+    {
+      "id": "C-PRS-14",
+      "concept_id": "snp-heritability",
+      "classification": "consensus",
+      "status": "verified",
+      "text": {
+        "zh": "對「SNP 遺傳率」的量化，可以提供性狀未知遺傳架構的資訊，並引導研究設計（例如增加 GWAS 樣本數）。",
+        "en": "Quantifying \"SNP heritability\" is informative about a trait's unknown genetic architecture and has guided study design, such as increasing GWAS sample size."
+      },
+      "evidence": [
+        {
+          "id": "E092",
+          "source_id": "S13",
+          "location": "Section on SNP heritability",
+          "quote": "This quantification of “SNP heritability” is informative with respect to the unknown genetic architecture of the trait."
+        },
+        {
+          "id": "E093",
+          "source_id": "S13",
+          "location": "Section on SNP heritability",
+          "quote": "SNP heritability has provided objective guidance to inform decisions about which experimental designs are most efficient at detecting novel trait-locus associations"
+        }
+      ],
+      "related_slide_ids": []
+    },
+    {
+      "id": "C-PRS-15",
+      "concept_id": "clumping-thresholding",
+      "classification": "consensus",
+      "status": "verified",
+      "text": {
+        "zh": "標準 PRS 計算方法 C+T（clumping + thresholding）結合以 LD 移除相關 SNP 的 clumping 與 P 值門檻；clumping 與 LD 建模都需要估計 SNP 之間的 LD。",
+        "en": "The standard PRS approach, C+T (clumping + thresholding), combines LD clumping with P-value thresholding; both clumping and LD modelling require estimating LD between SNPs."
+      },
+      "evidence": [
+        {
+          "id": "E094",
+          "source_id": "S16",
+          "location": "Section 4.4 \"Shrinkage of GWAS effect size estimates\"",
+          "quote": "is combined with P -value thresholding and called the C+T ( clumping + thresholding ) method"
+        },
+        {
+          "id": "E095",
+          "source_id": "S16",
+          "location": "Section 4.5 \"Controlling for linkage disequilibrium\"",
+          "quote": "Both clumping and LD modelling require estimation of LD between SNPs."
+        },
+        {
+          "id": "E096",
+          "source_id": "S16",
+          "location": "Section 4 summary",
+          "quote": "LD adjustment via clumping, beta shrinkage using lasso regression, P -value thresholding"
+        }
+      ],
+      "related_slide_ids": []
+    },
+    {
+      "id": "C-PRS-16",
+      "concept_id": "clumping-thresholding",
+      "classification": "consensus",
+      "status": "verified",
+      "text": {
+        "zh": "對 clumping 的批評是：研究者常任意選擇移除 LD 中 SNP 的相關係數門檻；而在多個 P 值門檻中挑選最佳 PRS 也可能過度擬合目標資料。",
+        "en": "A criticism of clumping is the arbitrarily chosen correlation threshold for removing SNPs in LD; choosing the most predictive PRS across many P-value thresholds can also overfit the target data."
+      },
+      "evidence": [
+        {
+          "id": "E097",
+          "source_id": "S16",
+          "location": "Section 4.5 \"Controlling for linkage disequilibrium\"",
+          "quote": "A criticism of clumping, however, is that researchers typically select an arbitrarily chosen correlation threshold"
+        },
+        {
+          "id": "E098",
+          "source_id": "S16",
+          "location": "Section 4.6 \"Overfitting in PRS association testing\"",
+          "quote": "whether the use of the most predictive PRS – based on testing at many P -value thresholds – overfits to the target data and thus produces inflated results and false conclusions"
+        }
+      ],
+      "related_slide_ids": []
+    },
+    {
       "id": "C-MO-01",
       "concept_id": "multi-omics",
       "classification": "consensus",
@@ -1197,6 +1778,54 @@
       ],
       "related_slide_ids": [
         "s24"
+      ]
+    },
+    {
+      "id": "C-MO-08",
+      "concept_id": "mendelian-randomization",
+      "classification": "consensus",
+      "status": "verified",
+      "text": {
+        "zh": "孟德爾隨機化（Mendelian randomization）是一種流行病學技術，以遺傳變異作為工具變數，代表某種環境暴露；可利用 GWAS 摘要統計評估不同表現型之間的因果關係。",
+        "en": "Mendelian randomization is an epidemiological technique that uses genetic variants as instrumental variables standing in for an exposure; it can assess causal relations between phenotypes using GWAS summary statistics."
+      },
+      "evidence": [
+        {
+          "id": "E099",
+          "source_id": "S12",
+          "location": "Glossary, \"Mendelian randomization\"",
+          "quote": "Mendelian randomization is an epidemiological technique that uses genetic variants as instrumental variables acting as proxy measures for an environmental exposure."
+        },
+        {
+          "id": "E100",
+          "source_id": "S12",
+          "location": "Applications section",
+          "quote": "Mendelian randomization can be employed to assess causal relations between different phenotypes using GWAS summary statistics"
+        }
+      ],
+      "related_slide_ids": [
+        "s33"
+      ]
+    },
+    {
+      "id": "C-MO-09",
+      "concept_id": "mendelian-randomization",
+      "classification": "consensus",
+      "status": "verified",
+      "text": {
+        "zh": "MR 有幾個強假設：作為工具變數的遺傳變異必須與暴露相關、不與任何混雜變數相關，且只透過暴露影響結果。",
+        "en": "MR rests on strong assumptions: the instrumental genetic variants must be associated with the exposure, not associated with any confounders, and associated with the outcome only through the exposure."
+      },
+      "evidence": [
+        {
+          "id": "E106",
+          "source_id": "S12",
+          "location": "Applications: Mendelian randomization",
+          "quote": "Although Mendelian randomization is a powerful design, there are several strong assumptions: the genetic variants used as instrumental variables need to be associated with the exposure; those genetic variants should not be associated with any confounding variables; and those genetic variants are only associated with the outcome through their effect on the exposure"
+        }
+      ],
+      "related_slide_ids": [
+        "s33"
       ]
     },
     {
@@ -1357,6 +1986,44 @@
       "related_slide_ids": [
         "s26"
       ]
+    },
+    {
+      "id": "C-PM-09",
+      "concept_id": "pharmacogenomics",
+      "classification": "consensus",
+      "status": "verified",
+      "text": {
+        "zh": "ACMG/AMP 序列變異解讀指引不適用於體細胞變異、藥物基因體變異，以及多基因複雜疾病相關基因中的變異。",
+        "en": "The ACMG/AMP sequence-variant interpretation guideline is not intended for somatic variation, pharmacogenomic variants, or variants in genes associated with multigenic complex disorders."
+      },
+      "evidence": [
+        {
+          "id": "E107",
+          "source_id": "S25",
+          "location": "Introduction (scope)",
+          "quote": "It is not intended for the interpretation of somatic variation, pharmacogenomic variants, or variants in genes associated with multigenic non-Mendelian complex disorders."
+        }
+      ],
+      "related_slide_ids": []
+    },
+    {
+      "id": "C-PM-08",
+      "concept_id": "pharmacogenomics",
+      "classification": "consensus",
+      "status": "verified",
+      "text": {
+        "zh": "藥物基因體學（pharmacogenomics）的目標是「對的病人、對的藥物、對的劑量」；暴露於多種療法的大型研究世代可望提供早期線索。",
+        "en": "Pharmacogenomics aims at the right drug at the right dose for the right patient; large research cohorts exposed to many therapies may provide early insights."
+      },
+      "evidence": [
+        {
+          "id": "E108",
+          "source_id": "S23",
+          "location": "Section on the long-term (cohort) component",
+          "quote": "studies of a large research cohort exposed to many kinds of therapies may provide early insights into pharmacogenomics — enabling the provision of the right drug at the right dose to the right patient."
+        }
+      ],
+      "related_slide_ids": []
     }
   ],
   "conflicts": [

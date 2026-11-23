@@ -191,6 +191,60 @@
       out += t((L + R) / 2, B + 30, "log₂ fold change", "tick", 'text-anchor="middle"') + t(12, (T + B) / 2, "−log₁₀(adj. p)", "tick", 'transform="rotate(-90 12 ' + (T + B) / 2 + ')" text-anchor="middle"');
       return svg(480, B + 36, out, "Simulated volcano plot") + '<p class="cap"><span class="sim">模擬</span> 彩色點＝|log₂FC| > 1 且校正後顯著；橘＝上調、藍＝下調。</p>';
     },
+    batch: function () {
+      // simulated PCA: left = confounded design (batch == group), right = randomized design
+      var panel = function (x0, title, confounded, seed) {
+        var r = rng(seed), o = t(x0 + 100, 14, title, "svg-text", 'font-size="12" font-weight="700" text-anchor="middle"');
+        o += '<rect x="' + x0 + '" y="22" width="200" height="140" rx="8" fill="none" class="svg-line"/>';
+        for (var i = 0; i < 24; i++) {
+          var isCase = i % 2 === 0, batch2 = confounded ? isCase : (i % 4 < 2);
+          var cx = x0 + (batch2 ? 140 : 60) + (r() - 0.5) * 50, cy = 92 + (r() - 0.5) * 90;
+          o += isCase ? '<circle cx="' + cx.toFixed(1) + '" cy="' + cy.toFixed(1) + '" r="5" class="c-up" opacity=".85"/>'
+                      : '<rect x="' + (cx - 4.5).toFixed(1) + '" y="' + (cy - 4.5).toFixed(1) + '" width="9" height="9" class="c-down" opacity=".85"/>';
+        }
+        o += t(x0 + 60, 176, "批次 1", "tick", 'text-anchor="middle"') + t(x0 + 140, 176, "批次 2", "tick", 'text-anchor="middle"');
+        return o;
+      };
+      var out = panel(10, "❌ 批次 = 組別（混淆）", true, 41) + panel(250, "✅ 隨機分配到批次", false, 43);
+      out += '<circle cx="150" cy="196" r="5" class="c-up"/>' + t(160, 200, "病例 case", "tick") + '<rect x="225" y="191" width="9" height="9" class="c-down"/>' + t(240, 200, "對照 control", "tick");
+      return svg(460, 208, out, "Simulated PCA showing a confounded versus randomized batch design") +
+        '<p class="cap"><span class="sim">模擬</span> 左：病例全在批次 2，無法分辨差異來自疾病還是批次。右：每批次都有病例與對照，批次效應可被估計與校正。</p>';
+    },
+    finemap: function () {
+      // simulated association at one locus; the lead SNP is not necessarily causal
+      var r = rng(29), out = "", L = 40, R = 450, T = 14, B = 130, causal = 23;
+      var ys = function (v) { return B - v / 12 * (B - T); };
+      [0, 4, 8, 12].forEach(function (v) { out += '<line class="grid-l" x1="' + L + '" x2="' + R + '" y1="' + ys(v) + '" y2="' + ys(v) + '"/>' + t(L - 6, ys(v) + 3, String(v), "tick", 'text-anchor="end"'); });
+      for (var i = 0; i < 46; i++) {
+        var ld = Math.max(0, 1 - Math.abs(i - causal) / 9), v = 11 * ld * (0.85 + r() * 0.25) + r() * 1.2;
+        if (i === causal) v = 10.4; if (i === causal + 2) v = 11.1;
+        var x = L + 6 + i * (R - L - 12) / 45;
+        out += '<circle cx="' + x.toFixed(1) + '" cy="' + ys(v).toFixed(1) + '" r="' + (i === causal ? 5.5 : 3.4) + '" class="' + (i === causal ? "c-hit" : (ld > 0.5 ? "c-odd" : "c-ns")) + '" opacity="' + (ld > 0.5 || i === causal ? 0.95 : 0.45) + '"/>';
+        if (i === causal) out += '<line x1="' + x + '" x2="' + (x - 40) + '" y1="' + ys(v) + '" y2="' + (ys(v) + 34) + '" class="ax"/>' + t(x - 44, ys(v) + 46, "真正的因果變異", "tick", 'text-anchor="middle" style="fill:var(--d-gwas);font-weight:700"');
+        if (i === causal + 2) out += '<circle cx="' + x.toFixed(1) + '" cy="' + ys(v).toFixed(1) + '" r="7" fill="none" stroke="var(--text)" stroke-width="1.4"/>' + t(x + 12, ys(v) + 3, "最顯著 SNP（leading）", "tick");
+      }
+      out += '<line class="ax" x1="' + L + '" x2="' + R + '" y1="' + B + '" y2="' + B + '"/><line class="ax" x1="' + L + '" x2="' + L + '" y1="' + T + '" y2="' + B + '"/>';
+      out += t((L + R) / 2, B + 16, "同一基因座內的 SNP 位置（模擬）", "tick", 'text-anchor="middle"') + t(12, (T + B) / 2, "−log₁₀(p)", "tick", 'transform="rotate(-90 12 ' + (T + B) / 2 + ')" text-anchor="middle"');
+      return svg(460, B + 24, out, "Simulated locus where the lead SNP differs from the causal variant") +
+        '<p class="cap"><span class="sim">模擬</span> 藍點與因果變異高度 LD，因此一起顯著；最顯著的 SNP 不一定是因果變異。區分證據 ∝ n(1 − r²)。</p>';
+    },
+    mr: function () {
+      var box = function (x, y, w, label, sub, cls) {
+        return '<rect x="' + x + '" y="' + y + '" width="' + w + '" height="46" rx="9" fill="none" class="svg-stroke-accent" stroke-width="1.8"' + (cls ? ' stroke-dasharray="5 3"' : "") + "/>" +
+          t(x + w / 2, y + 20, label, "svg-text", 'font-weight="700" font-size="13" text-anchor="middle"') + t(x + w / 2, y + 37, sub, "svg-muted", 'font-size="10.5" text-anchor="middle"');
+      };
+      var ar = function (d, dashed, col) {
+        return '<path d="' + d + '" fill="none" stroke="' + (col || "var(--accent)") + '" stroke-width="2"' + (dashed ? ' stroke-dasharray="5 3"' : "") + ' marker-end="url(#mr-a)"/>';
+      };
+      var out = '<defs><marker id="mr-a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" style="fill:var(--muted)"/></marker></defs>';
+      out += box(10, 90, 110, "G 遺傳變異", "工具變數") + box(175, 90, 110, "X 暴露", "例：LDL") + box(340, 90, 110, "Y 結果", "例：冠心病") + box(240, 8, 130, "U 混雜因子", "生活型態等", true);
+      out += ar("M120,113 L172,113") + ar("M285,113 L337,113") + ar("M285,46 L240,88", true, "var(--muted)") + ar("M325,46 L380,88", true, "var(--muted)");
+      out += '<path d="M65,138 C65,190 395,190 395,140" fill="none" stroke="var(--danger)" stroke-width="1.8" stroke-dasharray="4 4" marker-end="url(#mr-a)"/>';
+      out += t(230, 204, "✗ 水平多效性：G 直接影響 Y（違反假設 3）", "tick", 'text-anchor="middle" style="fill:var(--danger)"');
+      out += t(146, 106, "①", "svg-text", 'text-anchor="middle" font-size="12"') + t(160, 60, "② G ⟂ U", "svg-text", 'font-size="12"') + t(311, 106, "③", "svg-text", 'text-anchor="middle" font-size="12"');
+      return svg(460, 212, out, "Mendelian randomization diagram with instrument, exposure, outcome and confounder") +
+        '<p class="cap">① G 與 X 相關　② G 與混雜因子無關　③ G 只透過 X 影響 Y（Uffelmann 2021，S12）。</p>';
+    },
     "case-control": function () {
       var bar = function (y, label, f) {
         return t(10, y + 14, label, "svg-text", 'font-size="12"') + '<rect x="120" y="' + y + '" width="260" height="18" rx="3" class="svg-line" fill="none" stroke-width="1"/>' +

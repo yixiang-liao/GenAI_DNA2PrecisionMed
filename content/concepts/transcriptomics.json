@@ -25,6 +25,21 @@
      "beginner": {"zh": "比較兩組（例如病人與健康者），找出哪些基因的表現量明顯不同。要有多個重複樣本，才能分辨真實差異與隨機波動。", "en": "Compare two groups (e.g. patients vs healthy) to find genes whose expression clearly differs. Replicates are needed to tell real differences from noise."},
      "advanced": {"zh": "DESeq2 以負二項分布建模計數：Kᵢⱼ ~ NB(μᵢⱼ, αᵢ)，log₂ μᵢⱼ 以實驗設計線性建模；對 dispersion αᵢ 與 log₂ fold change 做 shrinkage 以穩定估計，再以多重檢定校正（如 Benjamini–Hochberg FDR）。", "en": "DESeq2 models counts as Kᵢⱼ ~ NB(μᵢⱼ, αᵢ) with log₂ μᵢⱼ linear in the design; dispersions αᵢ and log₂ fold changes are shrunk for stability, followed by multiple-testing correction (e.g. Benjamini–Hochberg FDR)."},
      "examples": {"zh": ["log₂FC = 1 代表表現量約為對照組的 2 倍。"], "en": ["log₂FC = 1 means roughly 2× the control expression."]},
-     "related": ["expression-matrix", "rna-seq", "pathway-analysis", "biomarker"], "claims": ["C-TX-05"], "updated": "2026-11-13"}
+     "related": ["expression-matrix", "rna-seq", "pathway-analysis", "biomarker"], "claims": ["C-TX-05"], "updated": "2026-11-13"},
+    {"id": "alternative-splicing", "zh": "選擇性剪接", "en": "Alternative Splicing & Isoforms", "abbr": "",
+     "beginner": {"zh": "基因像一份有很多段落的食譜，做菜前會剪掉不需要的段落（intron）。不同的剪法可以從同一個基因做出不同版本的 RNA（isoform）。", "en": "A gene is like a recipe with many paragraphs; unneeded ones (introns) are cut out before cooking. Different cuts make different RNA versions (isoforms) from one gene."},
+     "advanced": {"zh": "轉錄體學的目標之一是決定基因的轉錄結構（起始點、5′/3′ 端、剪接模式）。剪接移除 intron；RNA-seq 可藉 GT–AG 辨識 exon–exon junction。同一基因的 isoform 共用 exon，比對到轉錄體時 multi-mapping reads 增加；isoform 分析較適合 paired-end 讀段。", "en": "Determining transcript structure — start sites, 5′/3′ ends, splicing patterns — is a core aim of transcriptomics. Splicing removes introns; RNA-seq finds exon–exon junctions via GT–AG motifs. Isoforms share exons, raising multi-mapping when reads are aligned to the transcriptome; paired-end reads suit isoform analysis."},
+     "examples": {"zh": ["（示意）基因 X 的 isoform 1 含 exon 1-2-3，isoform 2 跳過 exon 2。"], "en": ["(Illustrative) Isoform 1 of gene X uses exons 1-2-3; isoform 2 skips exon 2."]},
+     "related": ["rna-seq", "gene-expression", "gene", "rna"], "claims": ["C-TX-09", "C-TX-10", "C-TX-11"], "updated": "2026-11-23"},
+    {"id": "batch-effect", "zh": "批次效應", "en": "Batch Effect", "abbr": "",
+     "beginner": {"zh": "如果病人的樣本都在星期一處理、健康人的都在星期五處理，看到的差異可能只是「哪一天做的」，不是生物差異。這就是批次效應。", "en": "If all patient samples are processed on Monday and all controls on Friday, differences may reflect the day, not biology. That is a batch effect."},
+     "advanced": {"zh": "批次效應是技術因素（建庫批次、定序 lane、日期）造成的系統性差異。設計上應把樣本隨機分配到批次與 lane，避免技術因素與實驗因素混淆；標準化後仍可能殘留，可用 ComBat、ARSyN 等方法校正。", "en": "Batch effects are systematic differences from technical factors (library batch, lane, date). Randomize samples across batches and lanes so technical and experimental factors are not confounded; residual effects after normalization can be corrected with ComBat or ARSyN."},
+     "examples": {"zh": ["（示意）PCA 圖上樣本依「處理日期」而不是「病例/對照」分成兩群。"], "en": ["(Illustrative) On a PCA plot, samples cluster by processing date instead of case/control."]},
+     "related": ["rna-seq", "differential-expression", "expression-matrix", "data-integration"], "claims": ["C-TX-12", "C-TX-13"], "updated": "2026-11-23"},
+    {"id": "multiple-testing", "zh": "多重檢定校正", "en": "Multiple Testing Correction", "abbr": "FDR",
+     "beginner": {"zh": "一次檢定兩萬個基因，就算全都沒差異，用 p < 0.05 也會「碰巧」找到約 1,000 個。所以要把門檻變嚴格。", "en": "Test 20,000 genes at p < 0.05 and about 1,000 will look significant by chance even if none differ. So the threshold must be tightened."},
+     "advanced": {"zh": "Bonferroni 把顯著門檻除以獨立檢定數；GWAS 的 5 × 10⁻⁸ 即約為 0.05 / 10⁶。差異表現分析常用 Benjamini–Hochberg 程序控制 false discovery rate，例如 DESeq2 對通過 independent filtering 的基因校正 Wald 檢定 P 值。", "en": "Bonferroni divides the threshold by the number of independent tests; GWAS's 5 × 10⁻⁸ ≈ 0.05 / 10⁶. Differential expression usually controls the false discovery rate with Benjamini–Hochberg, e.g. DESeq2 adjusts Wald-test P values for genes passing independent filtering."},
+     "examples": {"zh": ["（示意）20,000 個基因 × 0.05 = 預期 1,000 個假陽性；Bonferroni 門檻 = 0.05 / 20,000 = 2.5 × 10⁻⁶。"], "en": ["(Illustrative) 20,000 genes × 0.05 = 1,000 expected false positives; Bonferroni threshold = 0.05 / 20,000 = 2.5 × 10⁻⁶."]},
+     "related": ["differential-expression", "p-value", "gwas"], "claims": ["C-TX-14", "C-TX-15"], "updated": "2026-11-23"}
   ]
 }

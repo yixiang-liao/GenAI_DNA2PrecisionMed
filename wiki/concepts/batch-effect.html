@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="zh-Hant" data-lang="zh">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Batch Effect · DNA → Precision Medicine</title>
+<link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+<a class="skip" href="#main"><span lang="zh-Hant">跳到主要內容</span><span lang="en">Skip to content</span></a>
+<header class="topbar">
+  <a class="brand" href="../../index.html">DNA<span>→</span>PM</a>
+  <nav class="topnav"><a href="../../wiki/index.html"><span lang="zh-Hant">Wiki</span><span lang="en">Wiki</span></a><a href="../../wiki/glossary.html"><span lang="zh-Hant">術語詞典</span><span lang="en">Glossary</span></a><a href="../../wiki/graph.html"><span lang="zh-Hant">概念關聯</span><span lang="en">Concept Map</span></a><a href="../../wiki/evidence.html"><span lang="zh-Hant">證據追溯</span><span lang="en">Evidence</span></a><a href="../../slides/index.html"><span lang="zh-Hant">教學簡報</span><span lang="en">Slides</span></a><a href="../../workflow.html"><span lang="zh-Hant">工作流程</span><span lang="en">Workflow</span></a></nav>
+  <button class="lang-toggle" type="button" data-lang-toggle aria-label="Switch language">EN</button>
+</header>
+<main class="wrap" id="main">
+
+<p class="crumbs"><a href="../index.html">Wiki</a> / <a href="../index.html#transcriptomics"><span lang="zh-Hant">轉錄體學</span><span lang="en">Transcriptomics</span></a></p>
+<article class="concept" data-concept="batch-effect" data-domain="transcriptomics">
+  <header class="concept-hero">
+    <a class="domain-pill" href="../index.html#transcriptomics"><span class="dot"></span><span lang="zh-Hant">轉錄體學</span><span lang="en">Transcriptomics</span> · 7/8</a>
+    <h1><span lang="zh-Hant">批次效應</span><span lang="en">Batch Effect</span></h1>
+    <p class="meta"><span>Concept ID: <code>batch-effect</code></span> · <span>Last Updated: 2026-11-23</span></p>
+  </header>
+  <div class="layers">
+    <section class="card layer-beginner"><h2><span lang="zh-Hant">初學者</span><span lang="en">Beginner</span> <span class="lv">L1</span></h2><p lang="zh-Hant">如果病人的樣本都在星期一處理、健康人的都在星期五處理，看到的差異可能只是「哪一天做的」，不是生物差異。這就是批次效應。</p><p lang="en">If all patient samples are processed on Monday and all controls on Friday, differences may reflect the day, not biology. That is a batch effect.</p></section>
+    <section class="card layer-advanced"><h2><span lang="zh-Hant">進階</span><span lang="en">Advanced</span> <span class="lv">L2</span></h2><p lang="zh-Hant">批次效應是技術因素（建庫批次、定序 lane、日期）造成的系統性差異。設計上應把樣本隨機分配到批次與 lane，避免技術因素與實驗因素混淆；標準化後仍可能殘留，可用 ComBat、ARSyN 等方法校正。</p><p lang="en">Batch effects are systematic differences from technical factors (library batch, lane, date). Randomize samples across batches and lanes so technical and experimental factors are not confounded; residual effects after normalization can be corrected with ComBat or ARSyN.</p></section>
+  </div>
+  <section class="card"><h2><span lang="zh-Hant">例子</span><span lang="en">Examples</span></h2><ul><li><span lang="zh-Hant">（示意）PCA 圖上樣本依「處理日期」而不是「病例/對照」分成兩群。</span><span lang="en">(Illustrative) On a PCA plot, samples cluster by processing date instead of case/control.</span></li></ul></section>
+  <section class="card"><h2><span lang="zh-Hant">概念關係圖</span><span lang="en">Relationship diagram</span></h2><div class="hscroll"><svg class="ego" viewBox="0 0 600 74" role="img" aria-label="Relationships of Batch Effect" style="min-width:560px"><defs><marker id="ah-batch-effect" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="arrow" d="M0,0 L10,5 L0,10 z"/></marker></defs><path class="e" marker-end="url(#ah-batch-effect)" d="M174,37 C300,37 300,37 422,37"/><text class="el" x="363" y="31" text-anchor="middle">confounds</text><a href="differential-expression.html"><g class="n " data-domain="transcriptomics" transform="translate(426,20)"><rect width="168" height="34" rx="9"/><text x="84.0" y="21.0" text-anchor="middle" lang="zh-Hant">差異基因表現分析</text><text x="84.0" y="21.0" text-anchor="middle" lang="en">DGE</text><title>Differential Gene Expression · 差異基因表現分析</title></g></a><g class="n c" data-domain="transcriptomics" transform="translate(6,20)"><rect width="168" height="34" rx="9"/><text x="84.0" y="21.0" text-anchor="middle" lang="zh-Hant">批次效應</text><text x="84.0" y="21.0" text-anchor="middle" lang="en">Batch Effect</text><title>Batch Effect · 批次效應</title></g></svg></div>
+    <details><summary class="small muted"><span lang="zh-Hant">文字版關係列表</span><span lang="en">Text list of relationships</span></summary><ul class="edges"><li><a href="batch-effect.html">Batch Effect</a> <span class="rel">— confounds →</span> <a href="differential-expression.html">Differential Gene Expression</a></li></ul></details></section>
+  <section class="card"><h2><span lang="zh-Hant">證據</span><span lang="en">Evidence References</span></h2><ul class="claims"><li class="claim" id="claim-C-TX-12"><div class="claim-head"><a href="../evidence.html#C-TX-12"><code>C-TX-12</code></a> <span class="badge badge-consensus"><span lang="zh-Hant">共識</span><span lang="en">Consensus</span></span></div><p><span lang="zh-Hant">大型 RNA-seq 實驗若分批處理，應將樣本隨機分配到不同的建庫批次與定序 lane，避免技術因素與實驗因素混淆（confounded）。</span><span lang="en">When a large RNA-seq experiment is processed in batches, samples should be randomized across library-preparation batches and lanes so that technical factors are not confounded with experimental factors.</span></p><ul class="ev"><li><a href="../papers/S09.html">S09</a> · <span class="loc">Experimental design</span> · <a href="../evidence.html#E079">E079</a></li></ul></li><li class="claim" id="claim-C-TX-13"><div class="claim-head"><a href="../evidence.html#C-TX-13"><code>C-TX-13</code></a> <span class="badge badge-consensus"><span lang="zh-Hant">共識</span><span lang="en">Consensus</span></span></div><p><span lang="zh-Hant">即使做了樣本層級的標準化，資料中仍可能殘留批次效應；可透過適當的實驗設計降低，或以 ComBat、ARSyN 等方法校正。</span><span lang="en">Batch effects can remain even after sample-level normalization; they can be minimized by good experimental design or removed with batch-correction methods such as ComBat or ARSyN.</span></p><ul class="ev"><li><a href="../papers/S09.html">S09</a> · <span class="loc">Normalization</span> · <a href="../evidence.html#E080">E080</a></li></ul></li></ul></section>
+  
+  <section class="card"><h2><span lang="zh-Hant">相關概念</span><span lang="en">Related Concepts</span></h2><ul class="chips"><li><a href="rna-seq.html" data-domain="transcriptomics"><span class="dot"></span><span lang="zh-Hant">RNA 定序</span><span lang="en">RNA Sequencing</span></a></li><li><a href="differential-expression.html" data-domain="transcriptomics"><span class="dot"></span><span lang="zh-Hant">差異基因表現分析</span><span lang="en">Differential Gene Expression</span></a></li><li><a href="expression-matrix.html" data-domain="transcriptomics"><span class="dot"></span><span lang="zh-Hant">基因表現矩陣</span><span lang="en">Gene Expression Matrix</span></a></li><li><a href="data-integration.html" data-domain="multiomics"><span class="dot"></span><span lang="zh-Hant">資料整合</span><span lang="en">Data Integration</span></a></li></ul></section>
+  <nav class="pager" aria-label="Domain navigation"><a href="alternative-splicing.html"><small><span lang="zh-Hant">上一個概念</span><span lang="en">Previous</span></small>← <span lang="zh-Hant">選擇性剪接</span><span lang="en">Alternative Splicing &amp; Isoforms</span></a><a class="next" href="multiple-testing.html"><small><span lang="zh-Hant">下一個概念</span><span lang="en">Next</span></small><span lang="zh-Hant">多重檢定校正</span><span lang="en">Multiple Testing Correction</span> →</a></nav>
+</article>
+</main>
+<footer class="foot">
+  <p lang="zh-Hant">教育用途，非臨床診斷工具。所有 PRS 數值皆為模擬資料。</p><p lang="en">For education only — not a clinical tool. All PRS numbers are simulated.</p>
+</footer>
+<script src="../../assets/js/site.js"></script>
+</body>
+</html>

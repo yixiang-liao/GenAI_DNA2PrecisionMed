@@ -13,8 +13,8 @@ Generative AI course, week 10.
 
 | Part | Entry | Contents |
 |------|-------|----------|
-| LLM Wiki | [`wiki/index.html`](wiki/index.html) | 7 domains, 49 concepts, Beginner + Advanced layers, zh/en toggle, glossary, concept map, 25 paper notes |
-| Slides | [`slides/index.html`](slides/index.html) | 30 slides, Beginner/Advanced per chapter, DNA Explorer, PRS Calculator, 12-question quiz, keyboard navigation |
+| LLM Wiki | [`wiki/index.html`](wiki/index.html) | 7 domains, 63 concepts, Beginner + Advanced layers, zh/en toggle, glossary, concept map, 25 paper notes |
+| Slides | [`slides/index.html`](slides/index.html) | 33 slides, Beginner/Advanced per chapter, DNA Explorer, PRS Calculator, 15-question quiz, keyboard navigation |
 | Evidence | [`evidence/claims.json`](evidence/claims.json), [`wiki/evidence.html`](wiki/evidence.html) | Claims with evidence records, classification (consensus / single study / uncertain), conflicts, pending items |
 | Sources | [`sources/manifest.json`](sources/manifest.json), [`sources/references.md`](sources/references.md) | 25 verified sources (peer-reviewed papers, NIH / NHGRI / MedlinePlus pages) |
 | Workflow | [`workflow.html`](workflow.html), [`workflow/graph.md`](workflow/graph.md), [`workflow/runbook.md`](workflow/runbook.md) | 8-node Graph / Loop with validation gates and a 3-round fix cap |

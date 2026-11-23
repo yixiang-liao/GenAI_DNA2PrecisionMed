@@ -80,8 +80,8 @@ def ego_svg(c, edges, concepts):
         return f'<p class="muted">{bi("此概念尚無標註關係。", "No labeled relationships yet.")}</p>'
     left = [r for r in edges if r["to"] == c["id"]]
     right = [r for r in edges if r["from"] == c["id"]]
-    NW, NH, GAP = 176, 34, 50
-    W = 760 if (left and right) else 560
+    NW, NH, GAP = 168, 34, 50
+    W = 860 if (left and right) else 600
     rows = max(len(left), len(right), 1)
     H = rows * GAP + 24
     cx = (W - NW) / 2 if (left and right) else (6 if right else W - NW - 6)
@@ -111,8 +111,9 @@ def ego_svg(c, edges, concepts):
                 x1, y1, x2, y2 = cx + NW, cy + NH / 2, x, y + NH / 2
             mx = (x1 + x2) / 2
             out.append(f'<path class="e" marker-end="url(#ah-{c["id"]})" d="M{x1:.0f},{y1:.0f} C{mx:.0f},{y1:.0f} {mx:.0f},{y2:.0f} {x2 - 4:.0f},{y2:.0f}"/>')
-            lx = x2 - 10 if side == "r" else x1 + 10
-            out.append(f'<text class="el" x="{lx:.0f}" y="{y2 - 5 if side == "r" else y1 - 5:.0f}" text-anchor="{"end" if side == "r" else "start"}">{escape(short(r["label"], 26))}</text>')
+            ly = (y2 if side == "r" else y1) - 6
+            lx = (mx + x2) / 2 if side == "r" else (x1 + mx) / 2 + 24
+            out.append(f'<text class="el" x="{lx:.0f}" y="{ly:.0f}" text-anchor="middle">{escape(short(r["label"], 28))}</text>')
             out.append(node(x, y, other))
     out.append(node(cx, cy, c["id"], "c"))
     defs = (f'<defs><marker id="ah-{c["id"]}" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">'

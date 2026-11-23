@@ -48,6 +48,23 @@
     {"from": "biomarker", "to": "precision-medicine", "label": "supports"},
     {"from": "disease-prediction", "to": "clinical-application", "label": "requires validation for"},
     {"from": "prs-portability", "to": "ethics-equity", "label": "raises"},
-    {"from": "precision-medicine", "to": "clinical-application", "label": "delivered through"}
+    {"from": "precision-medicine", "to": "clinical-application", "label": "delivered through"},
+    {"from": "haplotype", "to": "genotype-imputation", "label": "enables"},
+    {"from": "ld", "to": "haplotype", "label": "measured on"},
+    {"from": "sequencing-depth", "to": "variant-calling", "label": "determines confidence of"},
+    {"from": "structural-variant", "to": "genetic-variant", "label": "is a type of"},
+    {"from": "alternative-splicing", "to": "gene-expression", "label": "diversifies"},
+    {"from": "batch-effect", "to": "differential-expression", "label": "confounds"},
+    {"from": "multiple-testing", "to": "differential-expression", "label": "controls false positives in"},
+    {"from": "multiple-testing", "to": "p-value", "label": "sets threshold for"},
+    {"from": "genotype-imputation", "to": "gwas", "label": "expands variants for"},
+    {"from": "population-stratification", "to": "gwas", "label": "biases"},
+    {"from": "fine-mapping", "to": "ld", "label": "is limited by"},
+    {"from": "gwas", "to": "fine-mapping", "label": "followed by"},
+    {"from": "pleiotropy", "to": "mendelian-randomization", "label": "can violate"},
+    {"from": "snp-heritability", "to": "prs", "label": "caps accuracy of"},
+    {"from": "clumping-thresholding", "to": "prs-calculation", "label": "is a method of"},
+    {"from": "mendelian-randomization", "to": "gwas", "label": "uses summary statistics of"},
+    {"from": "pharmacogenomics", "to": "precision-medicine", "label": "is a pillar of"}
   ]
 }

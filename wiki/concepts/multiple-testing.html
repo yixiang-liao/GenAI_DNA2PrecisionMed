@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="zh-Hant" data-lang="zh">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Multiple Testing Correction · DNA → Precision Medicine</title>
+<link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+<a class="skip" href="#main"><span lang="zh-Hant">跳到主要內容</span><span lang="en">Skip to content</span></a>
+<header class="topbar">
+  <a class="brand" href="../../index.html">DNA<span>→</span>PM</a>
+  <nav class="topnav"><a href="../../wiki/index.html"><span lang="zh-Hant">Wiki</span><span lang="en">Wiki</span></a><a href="../../wiki/glossary.html"><span lang="zh-Hant">術語詞典</span><span lang="en">Glossary</span></a><a href="../../wiki/graph.html"><span lang="zh-Hant">概念關聯</span><span lang="en">Concept Map</span></a><a href="../../wiki/evidence.html"><span lang="zh-Hant">證據追溯</span><span lang="en">Evidence</span></a><a href="../../slides/index.html"><span lang="zh-Hant">教學簡報</span><span lang="en">Slides</span></a><a href="../../workflow.html"><span lang="zh-Hant">工作流程</span><span lang="en">Workflow</span></a></nav>
+  <button class="lang-toggle" type="button" data-lang-toggle aria-label="Switch language">EN</button>
+</header>
+<main class="wrap" id="main">
+
+<p class="crumbs"><a href="../index.html">Wiki</a> / <a href="../index.html#transcriptomics"><span lang="zh-Hant">轉錄體學</span><span lang="en">Transcriptomics</span></a></p>
+<article class="concept" data-concept="multiple-testing" data-domain="transcriptomics">
+  <header class="concept-hero">
+    <a class="domain-pill" href="../index.html#transcriptomics"><span class="dot"></span><span lang="zh-Hant">轉錄體學</span><span lang="en">Transcriptomics</span> · 8/8</a>
+    <h1><span lang="zh-Hant">多重檢定校正</span><span lang="en">Multiple Testing Correction</span> <span class="abbr">(FDR)</span></h1>
+    <p class="meta"><span>Concept ID: <code>multiple-testing</code></span> · <span>Last Updated: 2026-11-23</span></p>
+  </header>
+  <div class="layers">
+    <section class="card layer-beginner"><h2><span lang="zh-Hant">初學者</span><span lang="en">Beginner</span> <span class="lv">L1</span></h2><p lang="zh-Hant">一次檢定兩萬個基因，就算全都沒差異，用 p &lt; 0.05 也會「碰巧」找到約 1,000 個。所以要把門檻變嚴格。</p><p lang="en">Test 20,000 genes at p &lt; 0.05 and about 1,000 will look significant by chance even if none differ. So the threshold must be tightened.</p></section>
+    <section class="card layer-advanced"><h2><span lang="zh-Hant">進階</span><span lang="en">Advanced</span> <span class="lv">L2</span></h2><p lang="zh-Hant">Bonferroni 把顯著門檻除以獨立檢定數；GWAS 的 5 × 10⁻⁸ 即約為 0.05 / 10⁶。差異表現分析常用 Benjamini–Hochberg 程序控制 false discovery rate，例如 DESeq2 對通過 independent filtering 的基因校正 Wald 檢定 P 值。</p><p lang="en">Bonferroni divides the threshold by the number of independent tests; GWAS&#x27;s 5 × 10⁻⁸ ≈ 0.05 / 10⁶. Differential expression usually controls the false discovery rate with Benjamini–Hochberg, e.g. DESeq2 adjusts Wald-test P values for genes passing independent filtering.</p></section>
+  </div>
+  <section class="card"><h2><span lang="zh-Hant">例子</span><span lang="en">Examples</span></h2><ul><li><span lang="zh-Hant">（示意）20,000 個基因 × 0.05 = 預期 1,000 個假陽性；Bonferroni 門檻 = 0.05 / 20,000 = 2.5 × 10⁻⁶。</span><span lang="en">(Illustrative) 20,000 genes × 0.05 = 1,000 expected false positives; Bonferroni threshold = 0.05 / 20,000 = 2.5 × 10⁻⁶.</span></li></ul></section>
+  <section class="card"><h2><span lang="zh-Hant">概念關係圖</span><span lang="en">Relationship diagram</span></h2><div class="hscroll"><svg class="ego" viewBox="0 0 600 124" role="img" aria-label="Relationships of Multiple Testing Correction" style="min-width:560px"><defs><marker id="ah-multiple-testing" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="arrow" d="M0,0 L10,5 L0,10 z"/></marker></defs><path class="e" marker-end="url(#ah-multiple-testing)" d="M174,62 C300,62 300,37 422,37"/><text class="el" x="363" y="31" text-anchor="middle">controls false positives in</text><a href="differential-expression.html"><g class="n " data-domain="transcriptomics" transform="translate(426,20)"><rect width="168" height="34" rx="9"/><text x="84.0" y="21.0" text-anchor="middle" lang="zh-Hant">差異基因表現分析</text><text x="84.0" y="21.0" text-anchor="middle" lang="en">DGE</text><title>Differential Gene Expression · 差異基因表現分析</title></g></a><path class="e" marker-end="url(#ah-multiple-testing)" d="M174,62 C300,62 300,87 422,87"/><text class="el" x="363" y="81" text-anchor="middle">sets threshold for</text><a href="p-value.html"><g class="n " data-domain="gwas" transform="translate(426,70)"><rect width="168" height="34" rx="9"/><text x="84.0" y="21.0" text-anchor="middle" lang="zh-Hant">P 值與全基因體顯著性</text><text x="84.0" y="21.0" text-anchor="middle" lang="en">P-value &amp; Genome-wide S…</text><title>P-value &amp; Genome-wide Significance · P 值與全基因體顯著性</title></g></a><g class="n c" data-domain="transcriptomics" transform="translate(6,45)"><rect width="168" height="34" rx="9"/><text x="84.0" y="21.0" text-anchor="middle" lang="zh-Hant">多重檢定校正 (FDR)</text><text x="84.0" y="21.0" text-anchor="middle" lang="en">FDR</text><title>Multiple Testing Correction · 多重檢定校正</title></g></svg></div>
+    <details><summary class="small muted"><span lang="zh-Hant">文字版關係列表</span><span lang="en">Text list of relationships</span></summary><ul class="edges"><li><a href="multiple-testing.html">Multiple Testing Correction</a> <span class="rel">— controls false positives in →</span> <a href="differential-expression.html">Differential Gene Expression</a></li><li><a href="multiple-testing.html">Multiple Testing Correction</a> <span class="rel">— sets threshold for →</span> <a href="p-value.html">P-value &amp; Genome-wide Significance</a></li></ul></details></section>
+  <section class="card"><h2><span lang="zh-Hant">證據</span><span lang="en">Evidence References</span></h2><ul class="claims"><li class="claim" id="claim-C-TX-14"><div class="claim-head"><a href="../evidence.html#C-TX-14"><code>C-TX-14</code></a> <span class="badge badge-consensus"><span lang="zh-Hant">共識</span><span lang="en">Consensus</span></span></div><p><span lang="zh-Hant">DESeq2 將通過 independent filtering 的基因之 Wald 檢定 P 值，以 Benjamini–Hochberg 程序進行多重檢定校正。</span><span lang="en">DESeq2 adjusts the Wald-test P values of genes that pass independent filtering for multiple testing using the Benjamini–Hochberg procedure.</span></p><ul class="ev"><li><a href="../papers/S11.html">S11</a> · <span class="loc">Methods, &quot;Wald test&quot;</span> · <a href="../evidence.html#E081">E081</a></li></ul></li><li class="claim" id="claim-C-TX-15"><div class="claim-head"><a href="../evidence.html#C-TX-15"><code>C-TX-15</code></a> <span class="badge badge-consensus"><span lang="zh-Hant">共識</span><span lang="en">Consensus</span></span></div><p><span lang="zh-Hant">Bonferroni 校正是一種多重檢定校正：把顯著門檻除以獨立檢定的次數。</span><span lang="en">The Bonferroni correction for multiple testing divides the significance threshold by the number of independent tests carried out.</span></p><ul class="ev"><li><a href="../papers/S12.html">S12</a> · <span class="loc">Glossary, &quot;Bonferroni testing threshold&quot;</span> · <a href="../evidence.html#E082">E082</a></li></ul></li></ul></section>
+  
+  <section class="card"><h2><span lang="zh-Hant">相關概念</span><span lang="en">Related Concepts</span></h2><ul class="chips"><li><a href="differential-expression.html" data-domain="transcriptomics"><span class="dot"></span><span lang="zh-Hant">差異基因表現分析</span><span lang="en">Differential Gene Expression</span></a></li><li><a href="p-value.html" data-domain="gwas"><span class="dot"></span><span lang="zh-Hant">P 值與全基因體顯著性</span><span lang="en">P-value &amp; Genome-wide Significance</span></a></li><li><a href="gwas.html" data-domain="gwas"><span class="dot"></span><span lang="zh-Hant">全基因體關聯研究</span><span lang="en">Genome-Wide Association Study</span></a></li></ul></section>
+  <nav class="pager" aria-label="Domain navigation"><a href="batch-effect.html"><small><span lang="zh-Hant">上一個概念</span><span lang="en">Previous</span></small>← <span lang="zh-Hant">批次效應</span><span lang="en">Batch Effect</span></a></nav>
+</article>
+</main>
+<footer class="foot">
+  <p lang="zh-Hant">教育用途，非臨床診斷工具。所有 PRS 數值皆為模擬資料。</p><p lang="en">For education only — not a clinical tool. All PRS numbers are simulated.</p>
+</footer>
+<script src="../../assets/js/site.js"></script>
+</body>
+</html>

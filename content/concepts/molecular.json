@@ -317,6 +317,11 @@
         "C-MOL-10"
       ],
       "updated": "2026-11-13"
-    }
+    },
+    {"id": "haplotype", "zh": "單倍型", "en": "Haplotype", "abbr": "",
+     "beginner": {"zh": "同一條染色體上、彼此靠近的幾個 allele 常常一起遺傳下去，這一組 allele 就叫 haplotype，像一串綁在一起的鑰匙。", "en": "Alleles close together on the same chromosome tend to be inherited as a set; that set is a haplotype — like keys on one keyring."},
+     "advanced": {"zh": "對同一染色體上的兩個基因座，allele 組合 AB 即為一個 haplotype，p_AB 為 haplotype frequency；LD 量度 D_AB = p_AB − p_A·p_B 便是建立在 haplotype 頻率上。將基因型「定相」（phasing）成 haplotype 是 imputation 與族群遺傳分析的基礎。", "en": "For two loci on one chromosome, the allele pair AB is a haplotype with frequency p_AB; the LD measure D_AB = p_AB − p_A·p_B is built on haplotype frequencies. Phasing genotypes into haplotypes underpins imputation and population-genetic analysis."},
+     "examples": {"zh": ["（示意）某人在兩個 SNP 的基因型為 A/G 與 C/T：可能的 haplotype 是 A–C 與 G–T，也可能是 A–T 與 G–C，需要定相才知道。"], "en": ["(Illustrative) Genotypes A/G and C/T at two SNPs could come from haplotypes A–C + G–T or A–T + G–C; phasing tells which."]},
+     "related": ["allele", "ld", "chromosome", "genotype-imputation"], "claims": ["C-MOL-12", "C-MOL-13"], "updated": "2026-11-23"}
   ]
 }

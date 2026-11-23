@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="zh-Hant" data-lang="zh">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Clumping + Thresholding · DNA → Precision Medicine</title>
+<link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+<a class="skip" href="#main"><span lang="zh-Hant">跳到主要內容</span><span lang="en">Skip to content</span></a>
+<header class="topbar">
+  <a class="brand" href="../../index.html">DNA<span>→</span>PM</a>
+  <nav class="topnav"><a href="../../wiki/index.html"><span lang="zh-Hant">Wiki</span><span lang="en">Wiki</span></a><a href="../../wiki/glossary.html"><span lang="zh-Hant">術語詞典</span><span lang="en">Glossary</span></a><a href="../../wiki/graph.html"><span lang="zh-Hant">概念關聯</span><span lang="en">Concept Map</span></a><a href="../../wiki/evidence.html"><span lang="zh-Hant">證據追溯</span><span lang="en">Evidence</span></a><a href="../../slides/index.html"><span lang="zh-Hant">教學簡報</span><span lang="en">Slides</span></a><a href="../../workflow.html"><span lang="zh-Hant">工作流程</span><span lang="en">Workflow</span></a></nav>
+  <button class="lang-toggle" type="button" data-lang-toggle aria-label="Switch language">EN</button>
+</header>
+<main class="wrap" id="main">
+
+<p class="crumbs"><a href="../index.html">Wiki</a> / <a href="../index.html#prs"><span lang="zh-Hant">多基因風險分數</span><span lang="en">Polygenic Risk Score</span></a></p>
+<article class="concept" data-concept="clumping-thresholding" data-domain="prs">
+  <header class="concept-hero">
+    <a class="domain-pill" href="../index.html#prs"><span class="dot"></span><span lang="zh-Hant">多基因風險分數</span><span lang="en">Polygenic Risk Score</span> · 10/10</a>
+    <h1><span lang="zh-Hant">C+T 方法</span><span lang="en">Clumping + Thresholding</span> <span class="abbr">(C+T)</span></h1>
+    <p class="meta"><span>Concept ID: <code>clumping-thresholding</code></span> · <span>Last Updated: 2026-11-23</span></p>
+  </header>
+  <div class="layers">
+    <section class="card layer-beginner"><h2><span lang="zh-Hant">初學者</span><span lang="en">Beginner</span> <span class="lv">L1</span></h2><p lang="zh-Hant">把 GWAS 結果做成 PRS 前，先把「一起遺傳、重複計算」的 SNP 只留一個（clumping），再只保留 P 值夠小的（thresholding）。</p><p lang="en">Before building a PRS, keep one SNP per group of co-inherited ones (clumping), then keep only those with small enough P values (thresholding).</p></section>
+    <section class="card layer-advanced"><h2><span lang="zh-Hant">進階</span><span lang="en">Advanced</span> <span class="lv">L2</span></h2><p lang="zh-Hant">C+T 是標準 PRS 方法：依 LD 進行 clumping，再以多個 P 值門檻篩選 SNP，兩者都需要估計 LD。批評包括 LD 相關門檻常被任意選定，以及在多個 P 值門檻中挑最佳 PRS 會過度擬合目標資料，因此需獨立驗證樣本。另一類方法以 lasso 迴歸等收縮（shrinkage）處理效應量。</p><p lang="en">C+T is the standard PRS method: clump by LD, then filter SNPs at several P-value thresholds; both require LD estimates. Criticisms: the LD correlation threshold is often arbitrary, and picking the best of many thresholds overfits the target data, so an independent validation sample is needed. Other methods shrink effect sizes, e.g. with lasso regression.</p></section>
+  </div>
+  <section class="card"><h2><span lang="zh-Hant">例子</span><span lang="en">Examples</span></h2><ul><li><span lang="zh-Hant">（示意）r² &lt; 0.1、窗口 250 kb clumping 後，於 P &lt; 5×10⁻⁸、10⁻⁴、0.05 等門檻分別建分數。</span><span lang="en">(Illustrative) Clump at r² &lt; 0.1 within 250 kb, then build scores at P &lt; 5×10⁻⁸, 10⁻⁴ and 0.05.</span></li></ul></section>
+  <section class="card"><h2><span lang="zh-Hant">概念關係圖</span><span lang="en">Relationship diagram</span></h2><div class="hscroll"><svg class="ego" viewBox="0 0 600 74" role="img" aria-label="Relationships of Clumping + Thresholding" style="min-width:560px"><defs><marker id="ah-clumping-thresholding" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="arrow" d="M0,0 L10,5 L0,10 z"/></marker></defs><path class="e" marker-end="url(#ah-clumping-thresholding)" d="M174,37 C300,37 300,37 422,37"/><text class="el" x="363" y="31" text-anchor="middle">is a method of</text><a href="prs-calculation.html"><g class="n " data-domain="prs" transform="translate(426,20)"><rect width="168" height="34" rx="9"/><text x="84.0" y="21.0" text-anchor="middle" lang="zh-Hant">PRS 計算</text><text x="84.0" y="21.0" text-anchor="middle" lang="en">PRS Calculation</text><title>PRS Calculation · PRS 計算</title></g></a><g class="n c" data-domain="prs" transform="translate(6,20)"><rect width="168" height="34" rx="9"/><text x="84.0" y="21.0" text-anchor="middle" lang="zh-Hant">C+T 方法 (C+T)</text><text x="84.0" y="21.0" text-anchor="middle" lang="en">C+T</text><title>Clumping + Thresholding · C+T 方法</title></g></svg></div>
+    <details><summary class="small muted"><span lang="zh-Hant">文字版關係列表</span><span lang="en">Text list of relationships</span></summary><ul class="edges"><li><a href="clumping-thresholding.html">Clumping + Thresholding</a> <span class="rel">— is a method of →</span> <a href="prs-calculation.html">PRS Calculation</a></li></ul></details></section>
+  <section class="card"><h2><span lang="zh-Hant">證據</span><span lang="en">Evidence References</span></h2><ul class="claims"><li class="claim" id="claim-C-PRS-15"><div class="claim-head"><a href="../evidence.html#C-PRS-15"><code>C-PRS-15</code></a> <span class="badge badge-consensus"><span lang="zh-Hant">共識</span><span lang="en">Consensus</span></span></div><p><span lang="zh-Hant">標準 PRS 計算方法 C+T（clumping + thresholding）結合以 LD 移除相關 SNP 的 clumping 與 P 值門檻；clumping 與 LD 建模都需要估計 SNP 之間的 LD。</span><span lang="en">The standard PRS approach, C+T (clumping + thresholding), combines LD clumping with P-value thresholding; both clumping and LD modelling require estimating LD between SNPs.</span></p><ul class="ev"><li><a href="../papers/S16.html">S16</a> · <span class="loc">Section 4.4 &quot;Shrinkage of GWAS effect size estimates&quot;</span> · <a href="../evidence.html#E094">E094</a></li><li><a href="../papers/S16.html">S16</a> · <span class="loc">Section 4.5 &quot;Controlling for linkage disequilibrium&quot;</span> · <a href="../evidence.html#E095">E095</a></li><li><a href="../papers/S16.html">S16</a> · <span class="loc">Section 4 summary</span> · <a href="../evidence.html#E096">E096</a></li></ul></li><li class="claim" id="claim-C-PRS-16"><div class="claim-head"><a href="../evidence.html#C-PRS-16"><code>C-PRS-16</code></a> <span class="badge badge-consensus"><span lang="zh-Hant">共識</span><span lang="en">Consensus</span></span></div><p><span lang="zh-Hant">對 clumping 的批評是：研究者常任意選擇移除 LD 中 SNP 的相關係數門檻；而在多個 P 值門檻中挑選最佳 PRS 也可能過度擬合目標資料。</span><span lang="en">A criticism of clumping is the arbitrarily chosen correlation threshold for removing SNPs in LD; choosing the most predictive PRS across many P-value thresholds can also overfit the target data.</span></p><ul class="ev"><li><a href="../papers/S16.html">S16</a> · <span class="loc">Section 4.5 &quot;Controlling for linkage disequilibrium&quot;</span> · <a href="../evidence.html#E097">E097</a></li><li><a href="../papers/S16.html">S16</a> · <span class="loc">Section 4.6 &quot;Overfitting in PRS association testing&quot;</span> · <a href="../evidence.html#E098">E098</a></li></ul></li></ul></section>
+  
+  <section class="card"><h2><span lang="zh-Hant">相關概念</span><span lang="en">Related Concepts</span></h2><ul class="chips"><li><a href="prs-calculation.html" data-domain="prs"><span class="dot"></span><span lang="zh-Hant">PRS 計算</span><span lang="en">PRS Calculation</span></a></li><li><a href="ld.html" data-domain="gwas"><span class="dot"></span><span lang="zh-Hant">連鎖不平衡</span><span lang="en">Linkage Disequilibrium</span></a></li><li><a href="prs-validation.html" data-domain="prs"><span class="dot"></span><span lang="zh-Hant">PRS 驗證</span><span lang="en">PRS Validation</span></a></li><li><a href="p-value.html" data-domain="gwas"><span class="dot"></span><span lang="zh-Hant">P 值與全基因體顯著性</span><span lang="en">P-value &amp; Genome-wide Significance</span></a></li></ul></section>
+  <nav class="pager" aria-label="Domain navigation"><a href="snp-heritability.html"><small><span lang="zh-Hant">上一個概念</span><span lang="en">Previous</span></small>← <span lang="zh-Hant">SNP 遺傳率</span><span lang="en">SNP-Based Heritability</span></a></nav>
+</article>
+</main>
+<footer class="foot">
+  <p lang="zh-Hant">教育用途，非臨床診斷工具。所有 PRS 數值皆為模擬資料。</p><p lang="en">For education only — not a clinical tool. All PRS numbers are simulated.</p>
+</footer>
+<script src="../../assets/js/site.js"></script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="zh-Hant" data-lang="zh">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Haplotype · DNA → Precision Medicine</title>
+<link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+<a class="skip" href="#main"><span lang="zh-Hant">跳到主要內容</span><span lang="en">Skip to content</span></a>
+<header class="topbar">
+  <a class="brand" href="../../index.html">DNA<span>→</span>PM</a>
+  <nav class="topnav"><a href="../../wiki/index.html"><span lang="zh-Hant">Wiki</span><span lang="en">Wiki</span></a><a href="../../wiki/glossary.html"><span lang="zh-Hant">術語詞典</span><span lang="en">Glossary</span></a><a href="../../wiki/graph.html"><span lang="zh-Hant">概念關聯</span><span lang="en">Concept Map</span></a><a href="../../wiki/evidence.html"><span lang="zh-Hant">證據追溯</span><span lang="en">Evidence</span></a><a href="../../slides/index.html"><span lang="zh-Hant">教學簡報</span><span lang="en">Slides</span></a><a href="../../workflow.html"><span lang="zh-Hant">工作流程</span><span lang="en">Workflow</span></a></nav>
+  <button class="lang-toggle" type="button" data-lang-toggle aria-label="Switch language">EN</button>
+</header>
+<main class="wrap" id="main">
+
+<p class="crumbs"><a href="../index.html">Wiki</a> / <a href="../index.html#molecular"><span lang="zh-Hant">分子生物學基礎</span><span lang="en">Molecular Biology Foundations</span></a></p>
+<article class="concept" data-concept="haplotype" data-domain="molecular">
+  <header class="concept-hero">
+    <a class="domain-pill" href="../index.html#molecular"><span class="dot"></span><span lang="zh-Hant">分子生物學基礎</span><span lang="en">Molecular Biology Foundations</span> · 11/11</a>
+    <h1><span lang="zh-Hant">單倍型</span><span lang="en">Haplotype</span></h1>
+    <p class="meta"><span>Concept ID: <code>haplotype</code></span> · <span>Last Updated: 2026-11-23</span></p>
+  </header>
+  <div class="layers">
+    <section class="card layer-beginner"><h2><span lang="zh-Hant">初學者</span><span lang="en">Beginner</span> <span class="lv">L1</span></h2><p lang="zh-Hant">同一條染色體上、彼此靠近的幾個 allele 常常一起遺傳下去，這一組 allele 就叫 haplotype，像一串綁在一起的鑰匙。</p><p lang="en">Alleles close together on the same chromosome tend to be inherited as a set; that set is a haplotype — like keys on one keyring.</p></section>
+    <section class="card layer-advanced"><h2><span lang="zh-Hant">進階</span><span lang="en">Advanced</span> <span class="lv">L2</span></h2><p lang="zh-Hant">對同一染色體上的兩個基因座，allele 組合 AB 即為一個 haplotype，p_AB 為 haplotype frequency；LD 量度 D_AB = p_AB − p_A·p_B 便是建立在 haplotype 頻率上。將基因型「定相」（phasing）成 haplotype 是 imputation 與族群遺傳分析的基礎。</p><p lang="en">For two loci on one chromosome, the allele pair AB is a haplotype with frequency p_AB; the LD measure D_AB = p_AB − p_A·p_B is built on haplotype frequencies. Phasing genotypes into haplotypes underpins imputation and population-genetic analysis.</p></section>
+  </div>
+  <section class="card"><h2><span lang="zh-Hant">例子</span><span lang="en">Examples</span></h2><ul><li><span lang="zh-Hant">（示意）某人在兩個 SNP 的基因型為 A/G 與 C/T：可能的 haplotype 是 A–C 與 G–T，也可能是 A–T 與 G–C，需要定相才知道。</span><span lang="en">(Illustrative) Genotypes A/G and C/T at two SNPs could come from haplotypes A–C + G–T or A–T + G–C; phasing tells which.</span></li></ul></section>
+  <section class="card"><h2><span lang="zh-Hant">概念關係圖</span><span lang="en">Relationship diagram</span></h2><div class="hscroll"><svg class="ego" viewBox="0 0 860 74" role="img" aria-label="Relationships of Haplotype" style="min-width:560px"><defs><marker id="ah-haplotype" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="arrow" d="M0,0 L10,5 L0,10 z"/></marker></defs><path class="e" marker-end="url(#ah-haplotype)" d="M174,37 C260,37 260,37 342,37"/><text class="el" x="241" y="31" text-anchor="middle">measured on</text><a href="ld.html"><g class="n " data-domain="gwas" transform="translate(6,20)"><rect width="168" height="34" rx="9"/><text x="84.0" y="21.0" text-anchor="middle" lang="zh-Hant">連鎖不平衡 (LD)</text><text x="84.0" y="21.0" text-anchor="middle" lang="en">LD</text><title>Linkage Disequilibrium · 連鎖不平衡</title></g></a><path class="e" marker-end="url(#ah-haplotype)" d="M514,37 C600,37 600,37 682,37"/><text class="el" x="643" y="31" text-anchor="middle">enables</text><a href="genotype-imputation.html"><g class="n " data-domain="gwas" transform="translate(686,20)"><rect width="168" height="34" rx="9"/><text x="84.0" y="21.0" text-anchor="middle" lang="zh-Hant">基因型插補</text><text x="84.0" y="21.0" text-anchor="middle" lang="en">Genotype Imputation</text><title>Genotype Imputation · 基因型插補</title></g></a><g class="n c" data-domain="molecular" transform="translate(346,20)"><rect width="168" height="34" rx="9"/><text x="84.0" y="21.0" text-anchor="middle" lang="zh-Hant">單倍型</text><text x="84.0" y="21.0" text-anchor="middle" lang="en">Haplotype</text><title>Haplotype · 單倍型</title></g></svg></div>
+    <details><summary class="small muted"><span lang="zh-Hant">文字版關係列表</span><span lang="en">Text list of relationships</span></summary><ul class="edges"><li><a href="haplotype.html">Haplotype</a> <span class="rel">— enables →</span> <a href="genotype-imputation.html">Genotype Imputation</a></li><li><a href="ld.html">Linkage Disequilibrium</a> <span class="rel">— measured on →</span> <a href="haplotype.html">Haplotype</a></li></ul></details></section>
+  <section class="card"><h2><span lang="zh-Hant">證據</span><span lang="en">Evidence References</span></h2><ul class="claims"><li class="claim" id="claim-C-MOL-12"><div class="claim-head"><a href="../evidence.html#C-MOL-12"><code>C-MOL-12</code></a> <span class="badge badge-consensus"><span lang="zh-Hant">共識</span><span lang="en">Consensus</span></span></div><p><span lang="zh-Hant">同一條染色體上兩個基因座的 allele 組合（例如 AB）稱為 haplotype（單倍型），其在族群中的出現頻率稱為 haplotype frequency。</span><span lang="en">For loci on the same chromosome, an allele pair such as AB is called a haplotype, and its population frequency is the haplotype frequency.</span></p><ul class="ev"><li><a href="../papers/S14.html">S14</a> · <span class="loc">Section &quot;Measures of LD&quot; (definition of D_AB)</span> · <a href="../evidence.html#E069">E069</a></li></ul></li><li class="claim" id="claim-C-MOL-13"><div class="claim-head"><a href="../evidence.html#C-MOL-13"><code>C-MOL-13</code></a> <span class="badge badge-consensus"><span lang="zh-Hant">共識</span><span lang="en">Consensus</span></span></div><p><span lang="zh-Hant">定相（phasing）是推估所測得的 allele 來自母方或父方染色體的過程。</span><span lang="en">Phasing is the process of estimating whether genotyped alleles derive from the maternal or the paternal chromosome.</span></p><ul class="ev"><li><a href="../papers/S12.html">S12</a> · <span class="loc">Glossary, &quot;Phasing&quot;</span> · <a href="../evidence.html#E101">E101</a></li></ul></li></ul></section>
+  
+  <section class="card"><h2><span lang="zh-Hant">相關概念</span><span lang="en">Related Concepts</span></h2><ul class="chips"><li><a href="allele.html" data-domain="molecular"><span class="dot"></span><span lang="zh-Hant">對偶基因</span><span lang="en">Allele</span></a></li><li><a href="ld.html" data-domain="gwas"><span class="dot"></span><span lang="zh-Hant">連鎖不平衡</span><span lang="en">Linkage Disequilibrium</span></a></li><li><a href="chromosome.html" data-domain="molecular"><span class="dot"></span><span lang="zh-Hant">染色體</span><span lang="en">Chromosome</span></a></li><li><a href="genotype-imputation.html" data-domain="gwas"><span class="dot"></span><span lang="zh-Hant">基因型插補</span><span lang="en">Genotype Imputation</span></a></li></ul></section>
+  <nav class="pager" aria-label="Domain navigation"><a href="phenotype.html"><small><span lang="zh-Hant">上一個概念</span><span lang="en">Previous</span></small>← <span lang="zh-Hant">表現型</span><span lang="en">Phenotype</span></a></nav>
+</article>
+</main>
+<footer class="foot">
+  <p lang="zh-Hant">教育用途，非臨床診斷工具。所有 PRS 數值皆為模擬資料。</p><p lang="en">For education only — not a clinical tool. All PRS numbers are simulated.</p>
+</footer>
+<script src="../../assets/js/site.js"></script>
+</body>
+</html>

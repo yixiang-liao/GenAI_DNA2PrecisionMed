@@ -30,6 +30,11 @@
      "beginner": {"zh": "基因資料可以辨識個人、也牽涉家人，必須保護隱私。若研究只包含少數族群，工具可能對其他人比較不準，造成不公平。", "en": "Genetic data can identify a person and implicates relatives, so privacy must be protected. If research includes only some groups, tools may be less accurate for others, creating inequity."},
      "advanced": {"zh": "Martin 2019 主張公平的 PRS 需要提升研究族群多樣性並公開 summary statistics；Popejoy 2016 記錄 GWAS 族群組成偏差。其他議題包括知情同意、資料再識別風險、結果回饋與歧視風險。", "en": "Martin 2019 argues equitable PRS requires diverse cohorts and public summary statistics; Popejoy 2016 documents the skewed ancestry of GWAS. Other issues include informed consent, re-identification risk, return of results and discrimination."},
      "examples": {"zh": ["本專案只使用模擬基因型，不收集任何個人資料。"], "en": ["This project uses only simulated genotypes and collects no personal data."]},
-     "related": ["prs-portability", "gwas-diversity", "clinical-application"], "claims": ["C-PM-05", "C-GW-08"], "updated": "2026-11-13"}
+     "related": ["prs-portability", "gwas-diversity", "clinical-application"], "claims": ["C-PM-05", "C-GW-08"], "updated": "2026-11-13"},
+    {"id": "pharmacogenomics", "zh": "藥物基因體學", "en": "Pharmacogenomics", "abbr": "PGx",
+     "beginner": {"zh": "同一種藥，有人很有效、有人沒效、有人出現副作用，部分原因在基因。藥物基因體學希望做到「對的病人、對的藥、對的劑量」。", "en": "The same drug works well for some, not for others, and causes side effects in a few — partly because of genes. Pharmacogenomics aims for the right drug at the right dose for the right patient."},
+     "advanced": {"zh": "藥物基因體學研究遺傳差異如何影響藥物反應與劑量需求。精準醫療計畫指出，暴露於多種療法的大型研究世代可望提供早期線索。注意：ACMG/AMP 序列變異解讀指引明言不適用於藥物基因體變異。", "en": "Pharmacogenomics studies how genetic differences shape drug response and dose. The Precision Medicine Initiative noted that large cohorts exposed to many therapies may provide early insights. Note that the ACMG/AMP sequence-variant guideline states it is not intended for pharmacogenomic variants."},
+     "examples": {"zh": ["（示意）某代謝酵素活性低的人，標準劑量下血中藥物濃度可能過高。"], "en": ["(Illustrative) A person with a low-activity drug-metabolizing enzyme may reach excessive drug levels at a standard dose."]},
+     "related": ["precision-medicine", "clinical-application", "genetic-variant", "variant-classification"], "claims": ["C-PM-08", "C-PM-09"], "updated": "2026-11-23"}
   ]
 }

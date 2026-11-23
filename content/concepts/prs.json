@@ -40,6 +40,16 @@
      "beginner": {"zh": "PGS Catalog 是公開的「分數食譜庫」：每個已發表的 PRS 用了哪些 SNP、哪個 allele、多少權重，都可以下載。", "en": "The PGS Catalog is a public \"recipe library\" of published scores: which SNPs, which alleles and what weights, all downloadable."},
      "advanced": {"zh": "提供評分檔（variant、effect allele、weight）與標準化 metadata（開發族群、評估族群、效能指標），支援再現與獨立評估。選用分數時應檢查其開發與評估族群是否符合目標族群。", "en": "It provides scoring files (variant, effect allele, weight) and standardized metadata (development and evaluation ancestry, performance metrics) for reproducibility. When choosing a score, check that its development and evaluation populations match the target."},
      "examples": {"zh": ["每個分數有 PGS 編號（如 PGS000001 格式）。"], "en": ["Each score has an ID in the format PGS000001."]},
-     "related": ["prs", "gwas-catalog", "effect-weight"], "claims": ["C-PRS-05"], "updated": "2026-11-13"}
+     "related": ["prs", "gwas-catalog", "effect-weight"], "claims": ["C-PRS-05"], "updated": "2026-11-13"},
+    {"id": "snp-heritability", "zh": "SNP 遺傳率", "en": "SNP-Based Heritability", "abbr": "h²_SNP",
+     "beginner": {"zh": "一個性狀的個體差異裡，有多少能用所有 SNP 加起來解釋？這個比例就是 SNP 遺傳率，也是 PRS 預測能力的天花板。", "en": "How much of the person-to-person variation in a trait can all SNPs together explain? That share is SNP heritability — the ceiling for PRS prediction."},
+     "advanced": {"zh": "SNP 遺傳率是所有（常見）SNP 能解釋的表現型變異比例，決定多基因分數的最大預測準確度；實際 PRS 表現還取決於多基因性與因果效應大小，以及 GWAS 樣本數。它也提供性狀遺傳架構的資訊，並引導研究設計（例如擴大樣本數）。", "en": "SNP heritability is the share of phenotypic variance explained by all (common) SNPs and sets the maximum predictive accuracy of polygenic scores; realised PRS accuracy also depends on polygenicity, effect sizes and GWAS sample size. It informs genetic architecture and study design."},
+     "examples": {"zh": ["（示意）h²_SNP = 0.25 → 即使 GWAS 無限大，PRS 最多解釋約 25% 的變異。"], "en": ["(Illustrative) h²_SNP = 0.25 → even an infinitely large GWAS lets a PRS explain at most ~25% of variance."]},
+     "related": ["prs", "prs-validation", "gwas", "effect-size"], "claims": ["C-PRS-13", "C-PRS-14"], "updated": "2026-11-23"},
+    {"id": "clumping-thresholding", "zh": "C+T 方法", "en": "Clumping + Thresholding", "abbr": "C+T",
+     "beginner": {"zh": "把 GWAS 結果做成 PRS 前，先把「一起遺傳、重複計算」的 SNP 只留一個（clumping），再只保留 P 值夠小的（thresholding）。", "en": "Before building a PRS, keep one SNP per group of co-inherited ones (clumping), then keep only those with small enough P values (thresholding)."},
+     "advanced": {"zh": "C+T 是標準 PRS 方法：依 LD 進行 clumping，再以多個 P 值門檻篩選 SNP，兩者都需要估計 LD。批評包括 LD 相關門檻常被任意選定，以及在多個 P 值門檻中挑最佳 PRS 會過度擬合目標資料，因此需獨立驗證樣本。另一類方法以 lasso 迴歸等收縮（shrinkage）處理效應量。", "en": "C+T is the standard PRS method: clump by LD, then filter SNPs at several P-value thresholds; both require LD estimates. Criticisms: the LD correlation threshold is often arbitrary, and picking the best of many thresholds overfits the target data, so an independent validation sample is needed. Other methods shrink effect sizes, e.g. with lasso regression."},
+     "examples": {"zh": ["（示意）r² < 0.1、窗口 250 kb clumping 後，於 P < 5×10⁻⁸、10⁻⁴、0.05 等門檻分別建分數。"], "en": ["(Illustrative) Clump at r² < 0.1 within 250 kb, then build scores at P < 5×10⁻⁸, 10⁻⁴ and 0.05."]},
+     "related": ["prs-calculation", "ld", "prs-validation", "p-value"], "claims": ["C-PRS-15", "C-PRS-16"], "updated": "2026-11-23"}
   ]
 }

@@ -25,6 +25,11 @@
      "beginner": {"zh": "生物標記是可以測量、能反映身體狀態的指標，例如某個突變或某個基因的表現量，可能幫助判斷疾病類型或治療選擇。", "en": "A biomarker is a measurable indicator of body state — such as a mutation or a gene's expression level — that may help classify disease or choose treatment."},
      "advanced": {"zh": "分子生物標記可為 DNA（突變）、RNA（表現特徵）、蛋白或代謝物。從研究發現到臨床使用需經分析效度、臨床效度與臨床效用驗證（一般框架，本站未引用來源）。TCGA Pan-Cancer 的目標之一是依基因體特徵跨癌種延伸療法，這屬研究目標，非已證實結果。", "en": "Molecular biomarkers can be DNA (mutations), RNA (expression signatures), proteins or metabolites. Moving from discovery to clinic requires analytical validity, clinical validity and clinical utility (a general framework, not sourced on this site). Extending therapies across cancers by genomic profile is a TCGA Pan-Cancer aim, not a demonstrated result."},
      "examples": {"zh": ["（示意）某腫瘤帶有特定突變時，可能適用針對該突變的標靶藥物。"], "en": ["(Illustrative) A tumour with a specific mutation may be eligible for a drug targeting it."]},
-     "related": ["cancer-genomics", "pathway-analysis", "clinical-application", "differential-expression"], "claims": ["C-MO-04"], "updated": "2026-11-13"}
+     "related": ["cancer-genomics", "pathway-analysis", "clinical-application", "differential-expression"], "claims": ["C-MO-04"], "updated": "2026-11-13"},
+    {"id": "mendelian-randomization", "zh": "孟德爾隨機化", "en": "Mendelian Randomization", "abbr": "MR",
+     "beginner": {"zh": "出生時拿到哪個 allele 像抽籤，跟生活習慣無關。所以可以用「天生帶有提高某指標的變異」當作天然實驗，推論該指標是否真的導致疾病。", "en": "Which alleles you inherit is like a lottery at conception, unrelated to lifestyle. So variants that raise a measure can serve as a natural experiment to ask whether that measure causes disease."},
+     "advanced": {"zh": "MR 以遺傳變異作為工具變數（instrumental variable），代表某暴露（如血脂），可利用 GWAS 摘要統計評估暴露與結果間的因果關係。三個強假設：變異與暴露相關、與任何混雜變數無關、只透過暴露影響結果；水平多效性會違反第三個假設。", "en": "MR uses genetic variants as instrumental variables for an exposure (e.g. blood lipids) and can assess causal relations from GWAS summary statistics. Three strong assumptions: the variant is associated with the exposure, not with any confounder, and with the outcome only through the exposure; horizontal pleiotropy breaks the third."},
+     "examples": {"zh": ["（示意）以提高 LDL 的變異為工具，估計 LDL 對冠心病的因果效應。"], "en": ["(Illustrative) Using LDL-raising variants as instruments to estimate the causal effect of LDL on coronary disease."]},
+     "related": ["pleiotropy", "data-integration", "gwas", "population-stratification"], "claims": ["C-MO-08", "C-MO-09"], "updated": "2026-11-23"}
   ]
 }

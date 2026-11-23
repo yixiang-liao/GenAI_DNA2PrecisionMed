@@ -285,7 +285,7 @@ h1 { letter-spacing: -.01em; }
 .chips a:hover { border-color: var(--d); background: color-mix(in srgb, var(--d) 10%, var(--surface)); }
 .ego { width: 100%; height: auto; display: block; max-height: 340px; }
 .ego .e { stroke: var(--line); stroke-width: 1.6; fill: none; }
-.ego .el { fill: var(--muted); font: 10.5px var(--font); }
+.ego .el { fill: var(--muted); font: 10.5px var(--font); paint-order: stroke; stroke: var(--surface); stroke-width: 3px; }
 .ego .n rect { fill: var(--surface); stroke: var(--d); stroke-width: 1.6; }
 .ego .n text { fill: var(--text); font: 600 12px var(--font); }
 .ego .n.c rect { fill: var(--d); }

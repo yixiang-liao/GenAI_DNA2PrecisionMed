@@ -47,6 +47,18 @@
     {"id": "q12", "domain": "precision", "concept_id": "precision-medicine",
      "q": "精準醫療考量的個體差異包括？",
      "options": ["只有基因", "基因、環境與生活型態", "只有年齡", "只有 PRS"],
-     "answer": 1, "explanation": "精準醫療考慮個體在基因、環境與生活型態上的差異（C-PM-01）。"}
+     "answer": 1, "explanation": "精準醫療考慮個體在基因、環境與生活型態上的差異（C-PM-01）。"},
+    {"id": "q13", "domain": "transcriptomics", "concept_id": "batch-effect",
+     "q": "病例樣本都在週一建庫、對照樣本都在週五建庫，最大的問題是？",
+     "options": ["定序深度一定不夠", "技術批次與實驗組別混淆，差異可能只是批次效應", "會自動產生更多 isoform", "沒有問題，標準化即可完全解決"],
+     "answer": 1, "explanation": "應把樣本隨機分配到不同建庫批次與 lane，避免技術因素與實驗因素混淆；標準化後批次效應仍可能殘留（C-TX-12、C-TX-13）。"},
+    {"id": "q14", "domain": "gwas", "concept_id": "population-stratification",
+     "q": "族群分層（population stratification）未處理時，GWAS 最可能出現？",
+     "options": ["樣本數自動增加", "假陽性或假陰性訊號與偏誤的檢定統計量", "所有 P 值都變成 1", "LD 消失"],
+     "answer": 1, "explanation": "遺傳上不同、表現型平均值不同的亞族群會造成假陽性 / 假陰性與偏誤統計量（C-GW-12）。"},
+    {"id": "q15", "domain": "multiomics", "concept_id": "mendelian-randomization",
+     "q": "Mendelian randomization 用什麼作為工具變數？",
+     "options": ["病人的問卷答案", "遺傳變異", "藥物劑量", "RNA-seq 的 TPM"],
+     "answer": 1, "explanation": "MR 以遺傳變異作為工具變數代表某暴露，並可用 GWAS 摘要統計評估因果（C-MO-08）。"}
   ]
 }

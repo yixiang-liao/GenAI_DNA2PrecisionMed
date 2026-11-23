@@ -40,6 +40,16 @@
      "beginner": {"zh": "找到變異後，要判斷它是「會致病」、「不會致病」，還是「還不知道」。臨床上用五個等級來表示。", "en": "After a variant is found, labs judge whether it causes disease, is harmless, or is still unknown, using five standard levels."},
      "advanced": {"zh": "ACMG/AMP（2015）五級：Pathogenic、Likely pathogenic、Uncertain significance（VUS）、Likely benign、Benign，依族群頻率、計算預測、功能與共分離等證據組合判定；適用於孟德爾疾病基因，不適用於 GWAS 的常見風險變異。", "en": "ACMG/AMP (2015) five tiers — Pathogenic, Likely pathogenic, Uncertain significance (VUS), Likely benign, Benign — combining population, computational, functional and segregation evidence; designed for Mendelian disease genes, not common GWAS risk variants."},
      "examples": {"zh": ["證據不足的變異標為 VUS，不應作為臨床決策依據。"], "en": ["A variant with insufficient evidence is a VUS and should not drive clinical decisions."]},
-     "related": ["mutation", "clinical-application"], "claims": ["C-SEQ-09"], "updated": "2026-11-13"}
+     "related": ["mutation", "clinical-application"], "claims": ["C-SEQ-09"], "updated": "2026-11-13"},
+    {"id": "sequencing-depth", "zh": "定序深度 / 覆蓋度", "en": "Sequencing Depth & Coverage", "abbr": "",
+     "beginner": {"zh": "同一段 DNA 被讀到越多次，結果越可靠。30× 的意思是每個位置平均被讀了 30 次，就像同一句話請 30 個人聽寫再對答案。", "en": "The more times a stretch of DNA is read, the more reliable the result. 30× means each position was read about 30 times on average — like 30 people transcribing the same sentence."},
+     "advanced": {"zh": "Coverage = 讀段總長 / 基因體長度。人類 WGS 常以約 30× 進行；隨機分布的定序錯誤（如 PacBio 長讀段）可靠足夠高的覆蓋度克服。在 RNA-seq 中，深度（library size）是每個樣本的讀段總數，需依實驗目的與重複數一起規劃，也是 TPM 等標準化要校正的因素。", "en": "Coverage = total read length / genome length. Human WGS is commonly run at ~30×; randomly distributed errors (e.g. PacBio long reads) can be overcome by high coverage. In RNA-seq, depth (library size) is the read count per sample, planned together with the number of replicates and corrected for by normalizations such as TPM."},
+     "examples": {"zh": ["（示意）3 Gb 基因體、9×10¹⁰ 個鹼基的讀段 → 約 30× 覆蓋。"], "en": ["(Illustrative) 9×10¹⁰ sequenced bases over a 3 Gb genome → about 30× coverage."]},
+     "related": ["ngs", "wgs", "variant-calling", "tpm"], "claims": ["C-SEQ-12", "C-SEQ-13", "C-SEQ-14"], "updated": "2026-11-23"},
+    {"id": "structural-variant", "zh": "結構變異", "en": "Structural Variant", "abbr": "SV",
+     "beginner": {"zh": "除了單一字母的改變，DNA 也可能有一大段被刪掉、重複、插入或倒過來，這些較大的改變叫結構變異。", "en": "Besides single-letter changes, DNA can have large stretches deleted, duplicated, inserted or flipped; these bigger changes are structural variants."},
+     "advanced": {"zh": "結構變異涵蓋缺失、重複、多等位 CNV、移動元件（Alu、L1）插入與倒位等。1000 Genomes 第三期描述超過 8,800 萬個變異，其中約 60,000 個 SV，並以微陣列與長讀段定序等正交方法確認。", "en": "Structural variants include deletions, duplications, multi-allelic CNVs, mobile-element (Alu, L1) insertions and inversions. 1000 Genomes phase 3 described over 88 million variants including ~60,000 SVs, confirmed with orthogonal methods such as microarrays and long-read sequencing."},
+     "examples": {"zh": ["（示意）某段 5 kb 的序列在一條染色體上缺失，造成拷貝數由 2 變成 1。"], "en": ["(Illustrative) A 5 kb segment deleted on one chromosome changes the copy number from 2 to 1."]},
+     "related": ["genetic-variant", "mutation", "ngs", "variant-calling"], "claims": ["C-SEQ-10", "C-SEQ-11"], "updated": "2026-11-23"}
   ]
 }
